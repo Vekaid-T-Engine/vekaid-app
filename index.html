@@ -5,14 +5,14 @@ body{margin:0}
 #vekaidLaunch.vekaid-launch{position:fixed;inset:0;z-index:2147483000;background:#050505;display:grid;place-items:center;overflow:hidden;pointer-events:auto;opacity:1;visibility:visible;contain:layout paint style;transform:translateZ(0);backface-visibility:hidden}
 #vekaidLaunch .vekaid-launch__stage{position:relative;width:min(42vw,180px);aspect-ratio:1;display:grid;place-items:center;transform:translateZ(0)}
 #vekaidLaunch .vekaid-launch__v{width:76%;height:76%;overflow:visible;transform:translateZ(0)}
-#vekaidLaunch .vekaid-launch__v path{fill:none;stroke:#f3f3f3;stroke-width:15;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:190;stroke-dashoffset:190}
-#vekaidLaunch .vekaid-launch__v .left{animation:vekDraw .42s .08s cubic-bezier(.2,.8,.2,1) forwards}
-#vekaidLaunch .vekaid-launch__v .right{animation:vekDraw .42s .18s cubic-bezier(.2,.8,.2,1) forwards}
+#vekaidLaunch .vekaid-launch__v path{fill:none;stroke:#f3f3f3;stroke-width:15;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:190;stroke-dashoffset:0}
+#vekaidLaunch .vekaid-launch__v{animation:vekSettle .42s .04s cubic-bezier(.2,.8,.2,1) both}
+
 #vekaidLaunch .vekaid-launch__halo{position:absolute;inset:18%;border-radius:50%;border:1px solid #ffffff14;opacity:0;transform:scale(.82) translateZ(0);animation:vekHalo .58s .24s ease-out forwards}
 #vekaidLaunch .vekaid-launch__brand{position:absolute;top:calc(50% + min(27vw,116px));left:50%;transform:translate3d(-50%,6px,0);font:700 10px/1 -apple-system,BlinkMacSystemFont,"SF Pro Text",system-ui,sans-serif;letter-spacing:.32em;color:#8e8e8e;white-space:nowrap;opacity:0;animation:vekBrand .24s .40s ease-out forwards}
 #vekaidLaunch .vekaid-launch__ghost,#vekaidLaunch .vekaid-launch__line{display:none!important}
 #vekaidLaunch.is-done{pointer-events:none;animation:vekLaunchOut .26s cubic-bezier(.2,.8,.2,1) forwards}
-@keyframes vekDraw{to{stroke-dashoffset:0}}
+@keyframes vekDraw{to{stroke-dashoffset:0}}@keyframes vekSettle{0%{transform:scale(.985) translateZ(0);opacity:.96}100%{transform:scale(1) translateZ(0);opacity:1}}
 @keyframes vekHalo{0%{opacity:0;transform:scale(.82) translateZ(0)}45%{opacity:.5}100%{opacity:0;transform:scale(1.28) translateZ(0)}}
 @keyframes vekBrand{to{opacity:1;transform:translate3d(-50%,0,0)}}
 @keyframes vekLaunchOut{to{opacity:0;visibility:hidden}}
@@ -150,7 +150,7 @@ button:active,a.button:active,.button:active{transform:scale(.96)!important}
 .motion-off *, .motion-off *::before,.motion-off *::after{animation:none!important;transition:none!important}
 .motion-switch{border:1px solid #c0c0c0;border-radius:7px;background:#ffffff;color:#343434;padding:7px 10px;min-height:44px;font-size:12px;cursor:pointer}
 .top{flex-wrap:wrap;gap:8px}.motion-edition-label{font-size:10px;letter-spacing:.08em;color:#606060}
-</style><link rel="apple-touch-icon" href="assets/icon-192.png"><meta name="apple-mobile-web-app-capable" content="yes"><style>/* V15: mobile hierarchy, native motion and data visualization */
+</style><link rel="apple-touch-icon" href="assets/icon-192.png"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><link rel="apple-touch-startup-image" href="./startup-1206x2622.png" media="(device-width: 402px) and (device-height: 874px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"><style>/* V15: mobile hierarchy, native motion and data visualization */
 #intel{background:#141414;color:#f4f4f4;padding-bottom:calc(32px + env(safe-area-inset-bottom));}#intel .itop{margin-bottom:22px}#intel h1{font-size:clamp(32px,8vw,52px);letter-spacing:-2px}#intel .radar{display:none!important}#intel .inav{gap:10px;margin:24px 0;position:sticky;top:0;z-index:3;background:#141414;padding:10px 0}#intel .inav button{min-height:48px;border-radius:9px;font-weight:600}#intel .ipanel{gap:22px}#intel .skillrow{padding:18px 0;background:transparent;border:0;border-bottom:1px solid #3e3e3e;border-radius:0}#intel .ifield{margin:0 0 4px}#intel textarea{min-height:140px}#intel .entry{gap:14px}#intel .metric{display:grid;grid-template-columns:112px 1fr;gap:20px;align-items:center;padding:20px;background:#1f1f1f;border-radius:18px}#intel .metric svg{width:112px;height:112px}#intel .metric strong{font-size:32px;display:block;line-height:1.1}#intel .metric small{color:#c1c1c1}#intel .metric circle:last-child{transition:stroke-dashoffset .65s cubic-bezier(.2,.8,.2,1)}#intel .primary{margin:0}#intel .secondary{margin-top:8px}#intel .entry button.on{background:#cacaca;color:#1b1b1b}#intel .entry button{white-space:normal}#intel .ipanel pre{overflow:auto}#intel .motion-off *, .motion-off #intel *{animation:none!important;transition:none!important}@media(max-width:360px){#intel .metric{grid-template-columns:84px 1fr;gap:12px}#intel .metric svg{width:84px;height:84px}#intel .inav button{font-size:12px}}</style><style id="v18-art">
 :root{--bg:#111111;--canvas:#171717;--surface:#202020;--surface2:#292929;--stroke:#393939;--ink:#f1f1f1;--muted:#b0b0b0;--sub:#9c9c9c;--lime:#bfbfbf;--mint:#bfbfbf;--radius:20px}
 body,#intel{background:radial-gradient(ellipse at 90% 0%,#343434 0%,transparent 45%),linear-gradient(150deg,#191919,#101010 65%)!important;color:var(--ink)}
@@ -166,7 +166,7 @@ body:before,#intel:before{content:'';position:fixed;inset:0;pointer-events:none;
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="format-detection" content="telephone=no">
 <meta name="color-scheme" content="dark">
-<link rel="stylesheet" href="./v23.css?v=23.5.2"><meta name="vekaid-version" content="23.5.2"><link rel="canonical" href="https://vekaid-t-engine.github.io/vekaid-app/"><meta property="og:title" content="VEKAID"><meta property="og:description" content="Personal Engineering Operating System"><meta property="og:type" content="website"><meta property="og:url" content="https://vekaid-t-engine.github.io/vekaid-app/"></head>
+<link rel="stylesheet" href="./v23.css?v=23.5.3"><meta name="vekaid-version" content="23.5.3"><link rel="canonical" href="https://vekaid-t-engine.github.io/vekaid-app/"><meta property="og:title" content="VEKAID"><meta property="og:description" content="Personal Engineering Operating System"><meta property="og:type" content="website"><meta property="og:url" content="https://vekaid-t-engine.github.io/vekaid-app/"></head>
 <body style="background:#050505;color:#f5f5f5"><div id="vekaidLaunch" class="vekaid-launch" aria-hidden="true">
   <div class="vekaid-launch__stage">
     <div class="vekaid-launch__halo"></div>
@@ -380,4 +380,4 @@ button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,te
  document.documentElement.dataset.appMode=standalone?'standalone':'browser';
  if('serviceWorker' in navigator){addEventListener('load',async()=>{try{const r=await navigator.serviceWorker.register('./service-worker.js',{scope:'./'});r.update();}catch(e){console.warn('VEKAID offline engine unavailable',e);}});}
 })();
-</script><script src="./v23-core.js?v=23.5.2" defer></script></body></html>
+</script><script src="./v23-core.js?v=23.5.3" defer></script></body></html>
