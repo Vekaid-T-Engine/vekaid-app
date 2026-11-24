@@ -1,4 +1,4 @@
-(()=>{'use strict';const V='23.5.1',DB='vekaid-v23';let db;const $=(s,r=document)=>r.querySelector(s),esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));const uid=()=>crypto.randomUUID?.()||Date.now()+'-'+Math.random();
+(()=>{'use strict';const V='23.5.2',DB='vekaid-v23';let db;const $=(s,r=document)=>r.querySelector(s),esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));const uid=()=>crypto.randomUUID?.()||Date.now()+'-'+Math.random();
 function openDB(){return new Promise((ok,no)=>{const r=indexedDB.open(DB,2);r.onupgradeneeded=()=>{for(const n of ['meta','tickets','skills','releases'])if(!r.result.objectStoreNames.contains(n))r.result.createObjectStore(n,{keyPath:'id'})};r.onsuccess=()=>{db=r.result;ok()};r.onerror=()=>no(r.error)})}
 function all(s){return new Promise((ok,no)=>{const r=db.transaction(s).objectStore(s).getAll();r.onsuccess=()=>ok(r.result);r.onerror=()=>no(r.error)})}function put(s,v){return new Promise((ok,no)=>{const r=db.transaction(s,'readwrite').objectStore(s).put(v);r.onsuccess=()=>ok(v);r.onerror=()=>no(r.error)})}
 function layer(title,sub,html){$('.v23-layer')?.remove();const l=document.createElement('div');l.className='v23-layer';l.innerHTML='<section class="v23-panel"><div class="v23-head"><div><h2>'+esc(title)+'</h2><p>'+esc(sub||'')+'</p></div><button class="v23-close">×</button></div><div class="v23-body">'+html+'</div></section>';l.onclick=e=>{if(e.target===l)l.remove()};$('.v23-close',l).onclick=()=>l.remove();document.body.append(l);return $('.v23-body',l)}
@@ -57,7 +57,7 @@ function playLaunchIdent(force=false){
   const reduce=window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
   const el=buildLaunchIdent();
   requestAnimationFrame(()=>requestAnimationFrame(()=>{
-    setTimeout(()=>{el.classList.add('is-done');setTimeout(()=>el.remove(),reduce?180:420)},reduce?120:1150);
+    setTimeout(()=>{el.classList.add('is-done');setTimeout(()=>el.remove(),reduce?150:320)},reduce?100:900);
   }));
 }
 function installLaunchLifecycle(){
