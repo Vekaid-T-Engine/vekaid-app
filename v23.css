@@ -14,10 +14,10 @@
 .v23-group .v23-row:last-child{border-bottom:0}
 .v23-row,.v23-btn,.v23-dock button{transition:transform .16s var(--v23-ease),background-color .16s ease,color .16s ease,border-color .16s ease}
 .v23-row:active,.v23-btn:active,.v23-dock button:active{transform:scale(.985)}
-.v23-layer{animation:v23Fade .18s ease-out both}
-.v23-panel{animation:v23Rise .28s var(--v23-ease) both}
+.v23-layer{animation:none}
+.v23-panel{animation:v23Rise .22s var(--v23-ease) both}
 @keyframes v23Fade{from{opacity:0}to{opacity:1}}
-@keyframes v23Rise{from{opacity:.6;transform:translateY(16px) scale(.99)}to{opacity:1;transform:none}}
+@keyframes v23Rise{from{opacity:.75;transform:translateY(5px)}to{opacity:1;transform:none}}
 .v23-icon{width:22px;height:22px;display:block;margin:0 auto 4px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
 .v23-dock button span{display:none}
 .v23-metric{display:flex;align-items:baseline;justify-content:space-between;gap:16px;padding:13px 2px;border-bottom:1px solid #262626}
