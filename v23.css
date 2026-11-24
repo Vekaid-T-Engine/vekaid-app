@@ -53,3 +53,32 @@
 
 .v23-note,.v23-empty{font-size:12px;line-height:1.55;color:var(--v23m);padding:14px 4px}
 .v23-empty{padding:16px;border:1px dashed #343434;border-radius:16px;margin-top:12px}
+
+/* V23.8 — video-derived design refinements */
+:root{--v23-side:20px;--v23-copy:400;--v23-copy-line:1.55}
+.v23-layer,.v23-panel,.v23-row,.v23-card,.v23-note,.v23-empty{text-align:left}
+.v23-panel{padding-left:max(var(--v23-side),env(safe-area-inset-left));padding-right:max(var(--v23-side),env(safe-area-inset-right))}
+.v23-row{padding:17px 18px;gap:11px}
+.v23-row strong{line-height:1.08;letter-spacing:-.02em}
+.v23-row small,.v23-note,.v23-empty,.v23-muted{font-weight:var(--v23-copy);line-height:var(--v23-copy-line)}
+.v23-section{margin-top:26px}
+.v23-section-title{margin-bottom:11px}
+.v23-group{box-shadow:0 14px 34px #00000020,0 1px 0 #ffffff08 inset}
+.v23-actions{gap:10px;align-items:stretch}
+.v23-actions .v23-btn{min-height:48px;padding:12px 16px}
+.v23-actions .v23-btn.primary{min-height:52px;font-weight:760}
+.v23-metric{align-items:baseline}
+.v23-metric strong{min-width:2.2ch;text-align:right;font-variant-numeric:tabular-nums}
+.v23-empty{margin-top:14px;padding:18px}
+.v23-empty .v23-btn{margin-top:14px;width:100%;min-height:48px}
+.v23-progress{margin-top:10px}
+@media(max-width:600px){
+  :root{--v23-side:18px}
+  .v23-panel{padding-top:22px;padding-bottom:26px}
+  .v23-row{padding:18px 16px}
+}
+/* launch → product continuity: the field emerges before the shell */
+body.vekaid-entering .v20-field{opacity:.16!important;transform:scale(1.025);filter:blur(2px)}
+body.vekaid-ready .v20-field{opacity:1!important;transform:scale(1);filter:none;transition:opacity .82s cubic-bezier(.16,.84,.2,1),transform .82s cubic-bezier(.16,.84,.2,1),filter .62s ease}
+body.vekaid-entering .app,body.vekaid-entering #intel{opacity:.34;transform:translateY(8px) scale(.992);filter:blur(2.5px)}
+body.vekaid-ready .app,body.vekaid-ready #intel{opacity:1;transform:none;filter:none;transition:opacity .74s .08s cubic-bezier(.16,.84,.2,1),transform .74s .08s cubic-bezier(.16,.84,.2,1),filter .56s .08s ease}
