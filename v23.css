@@ -82,3 +82,19 @@ body.vekaid-entering .v20-field{opacity:.16!important;transform:scale(1.025);fil
 body.vekaid-ready .v20-field{opacity:1!important;transform:scale(1);filter:none;transition:opacity .82s cubic-bezier(.16,.84,.2,1),transform .82s cubic-bezier(.16,.84,.2,1),filter .62s ease}
 body.vekaid-entering .app,body.vekaid-entering #intel{opacity:.34;transform:translateY(8px) scale(.992);filter:blur(2.5px)}
 body.vekaid-ready .app,body.vekaid-ready #intel{opacity:1;transform:none;filter:none;transition:opacity .74s .08s cubic-bezier(.16,.84,.2,1),transform .74s .08s cubic-bezier(.16,.84,.2,1),filter .56s .08s ease}
+
+/* V23.9 — form interaction refinements */
+.v23-form-chunk{margin:20px 0 28px;padding:0}
+.v23-form-chunk+.v23-form-chunk{padding-top:22px;border-top:1px solid #282828}
+.v23-field{position:relative;margin:14px 0 18px}
+.v23-field label{display:block;margin-bottom:8px;font-size:12px;font-weight:700;color:#d8d8d8}
+.v23-field input,.v23-field textarea,.v23-field select{width:100%;border:1px solid #393939;background:#111;color:#f4f4f4;border-radius:14px;padding:13px 14px;outline:none;transition:border-color .18s ease,box-shadow .18s ease,background .18s ease}
+.v23-field textarea{min-height:92px;resize:vertical}
+.v23-field input:focus,.v23-field textarea:focus,.v23-field select:focus{border-color:#7b7b7b;box-shadow:0 0 0 3px #ffffff0a;background:#141414}
+.v23-field-hint,.v23-inline-feedback{display:block;margin-top:7px;font-size:11px;line-height:1.4;color:#818181}
+.v23-field.is-valid .v23-inline-feedback{color:#bdbdbd}
+.v23-field.is-valid input,.v23-field.is-valid textarea{border-color:#595959}
+.v23-field.is-invalid input,.v23-field.is-invalid textarea{border-color:#6f6f6f;box-shadow:0 0 0 3px #ffffff08}
+.v23-field.is-invalid .v23-inline-feedback{color:#b0b0b0}
+.v23-btn.is-busy{opacity:.68;cursor:wait}
+.v23-btn.is-success{transform:scale(.985);box-shadow:0 0 0 1px #ffffff18 inset}
