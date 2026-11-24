@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /vekaid-app/
+
+Sitemap: https://vekaid-t-engine.github.io/vekaid-app/sitemap.xml
