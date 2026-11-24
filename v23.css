@@ -28,7 +28,7 @@
 @media(prefers-reduced-motion:reduce){.v23-layer,.v23-panel{animation:none!important}.v23-row,.v23-btn,.v23-dock button{transition:none!important}}
 
 /* VEKAID Launch Ident — V23.5 */
-.vekaid-launch{position:fixed;inset:0;z-index:2147483000;background:#050505;display:grid;place-items:center;overflow:hidden;pointer-events:auto;opacity:1;visibility:visible}
+.vekaid-launch{position:fixed;inset:0;z-index:2147483000;background:#4e4e4e;display:grid;place-items:center;overflow:hidden;pointer-events:auto;opacity:1;visibility:visibleanimation:vekBgBlend .34s .02s cubic-bezier(.2,.8,.2,1) forwards}
 .vekaid-launch.is-done{pointer-events:none;animation:vekLaunchOut .34s cubic-bezier(.2,.8,.2,1) forwards}
 .vekaid-launch__stage{position:relative;width:min(42vw,180px);aspect-ratio:1;display:grid;place-items:center}
 .vekaid-launch__halo{position:absolute;inset:12%;border-radius:50%;border:1px solid #ffffff16;transform:scale(.72);opacity:0;animation:vekHalo .9s .18s cubic-bezier(.2,.8,.2,1) forwards}
@@ -52,3 +52,4 @@
  .vekaid-launch.is-done{animation:vekLaunchOut .12s ease forwards}
 }
 @keyframes vekSettle{0%{transform:scale(.985) translateZ(0);opacity:.96}100%{transform:scale(1) translateZ(0);opacity:1}}\n
+@keyframes vekBgBlend{0%{background:#4e4e4e}100%{background:#050505}}
