@@ -1,6 +1,6 @@
-(()=>{'use strict';const V='23.13.0',DB='vekaid-v23';let db;const $=(s,r=document)=>r.querySelector(s),esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));const uid=()=>crypto.randomUUID?.()||Date.now()+'-'+Math.random();
+(()=>{'use strict';const V='23.14.0',DB='vekaid-v23';let db;const $=(s,r=document)=>r.querySelector(s),esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));const uid=()=>crypto.randomUUID?.()||Date.now()+'-'+Math.random();
 function openDB(){return new Promise((ok,no)=>{const r=indexedDB.open(DB,2);r.onupgradeneeded=()=>{for(const n of ['meta','tickets','skills','releases'])if(!r.result.objectStoreNames.contains(n))r.result.createObjectStore(n,{keyPath:'id'})};r.onsuccess=()=>{db=r.result;ok()};r.onerror=()=>no(r.error)})}
-function all(s){return new Promise((ok,no)=>{const r=db.transaction(s).objectStore(s).getAll();r.onsuccess=()=>ok(r.result);r.onerror=()=>no(r.error)})}function put(s,v){return new Promise((ok,no)=>{const r=db.transaction(s,'readwrite').objectStore(s).put(v);r.onsuccess=()=>ok(v);r.onerror=()=>no(r.error)})}
+function all(s){return new Promise((ok,no)=>{const r=db.transaction(s).objectStore(s).getAll();r.onsuccess=()=>ok(r.result);r.onerror=()=>no(r.error)})}function put(s,v){return new Promise((ok,no)=>{const r=db.transaction(s,'readwrite').objectStore(s).put(v);r.transaction.oncomplete=()=>ok(v);r.transaction.onabort=()=>no(r.transaction.error||new Error('Transaction annulée'));r.onerror=()=>no(r.error)})}
 function enhanceVekForm(form,{requiredName,readyText='Prêt',errorText='Champ requis'}={}){
   if(!form)return;
   const field=requiredName?form.elements[requiredName]:null;
@@ -25,8 +25,8 @@ function submitState(form,label){
   const btn=form?.querySelector('button[type="submit"],button:not([type])');
   if(!btn)return()=>{};
   const original=btn.textContent;
-  btn.disabled=true;btn.classList.add('is-busy');btn.textContent=label;
-  return(success=true)=>{btn.classList.remove('is-busy');btn.classList.toggle('is-success',success);btn.textContent=success?'Enregistré ✓':original;};
+  btn.disabled=true;btn.setAttribute('aria-busy','true');btn.classList.add('is-busy');btn.textContent=label;
+  return(success=true)=>{btn.disabled=false;btn.removeAttribute('aria-busy');btn.classList.remove('is-busy');btn.classList.toggle('is-success',success);btn.textContent=success?'Enregistré ✓':original;};
 }
 function layer(title,sub,html){$('.v23-layer')?.remove();const l=document.createElement('div');l.className='v23-layer';l.innerHTML='<section class="v23-panel"><div class="v23-head"><div><h2>'+esc(title)+'</h2><p>'+esc(sub||'')+'</p></div><button class="v23-close">×</button></div><div class="v23-body">'+html+'</div></section>';l.onclick=e=>{if(e.target===l)l.remove()};$('.v23-close',l).onclick=()=>l.remove();document.body.append(l);return $('.v23-body',l)}
 async function today(){const t=await all('tickets'),s=await all('skills'),active=t.filter(x=>x.status!=='done');const b=layer("Aujourd’hui",'Une priorité, sa raison et la prochaine action.',`
