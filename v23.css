@@ -28,12 +28,12 @@
 @media(prefers-reduced-motion:reduce){.v23-layer,.v23-panel{animation:none!important}.v23-row,.v23-btn,.v23-dock button{transition:none!important}}
 
 /* VEKAID Launch Ident — V23.5 */
-.vekaid-launch{position:fixed;inset:0;z-index:2147483000;background:#4e4e4e;display:grid;place-items:center;overflow:hidden;pointer-events:auto;opacity:1;visibility:visibleanimation:vekBgBlend .34s .02s cubic-bezier(.2,.8,.2,1) forwards}
+.vekaid-launch{position:fixed;inset:0;z-index:2147483000;background:#050505;display:grid;place-items:center;overflow:hidden;pointer-events:auto;opacity:1;visibility:visible;contain:layout paint style;transform:translateZ(0);backface-visibility:hidden}
 .vekaid-launch.is-done{pointer-events:none;animation:vekLaunchOut .34s cubic-bezier(.2,.8,.2,1) forwards}
 .vekaid-launch__stage{position:relative;width:min(42vw,180px);aspect-ratio:1;display:grid;place-items:center}
 .vekaid-launch__halo{position:absolute;inset:12%;border-radius:50%;border:1px solid #ffffff16;transform:scale(.72);opacity:0;animation:vekHalo .9s .18s cubic-bezier(.2,.8,.2,1) forwards}
-.vekaid-launch__v{width:76%;height:76%;overflow:visible;transform:translateZ(0)}
-.vekaid-launch__v path{fill:none;stroke:#f3f3f3;stroke-width:15;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:190;stroke-dashoffset:0}
+.vekaid-launch__v{width:76%;height:76%;overflow:visible;transform-origin:50% 50%;animation:vekVIntro .72s .04s cubic-bezier(.22,.82,.24,1) both}
+.vekaid-launch__v path{fill:none;stroke:#f3f3f3;stroke-width:15;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:190;stroke-dashoffset:190;animation:vekDraw .54s .12s cubic-bezier(.22,.82,.24,1) forwards}
 .vekaid-launch__v{animation:vekSettle .42s .04s cubic-bezier(.2,.8,.2,1) both}
 
 .vekaid-launch__ghost{display:none!important}
@@ -51,7 +51,9 @@
  .vekaid-launch{transition:opacity .12s ease}
  .vekaid-launch.is-done{animation:vekLaunchOut .12s ease forwards}
 }
-@keyframes vekSettle{0%{transform:scale(.985) translateZ(0);opacity:.96}100%{transform:scale(1) translateZ(0);opacity:1}}\n
-@keyframes vekBgBlend{0%{background:#4e4e4e}100%{background:#050505}}
+100%{transform:scale(1) translateZ(0);opacity:1}}\n
+100%{background:#050505}}
 
-@keyframes vekStageIn{from{opacity:0;transform:scale(.985) translateZ(0)}to{opacity:1;transform:scale(1) translateZ(0)}}
+to{opacity:1;transform:scale(1) translateZ(0)}}
+
+@keyframes vekVIntro{0%{opacity:0;transform:scale(.82) translateZ(0)}18%{opacity:1}72%{transform:scale(1.04) translateZ(0)}100%{opacity:1;transform:scale(1) translateZ(0)}}
