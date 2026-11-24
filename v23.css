@@ -50,3 +50,6 @@
 @keyframes vekBrand{to{opacity:1;transform:translate3d(-50%,0,0)}}
 @keyframes vekLaunchOut{0%{opacity:1;visibility:visible;transform:scale(1)}100%{opacity:0;visibility:hidden;transform:scale(1.018)}}
 @media(prefers-reduced-motion:reduce){.vekaid-launch__v path{animation:none!important;stroke-dashoffset:0!important}.vekaid-launch__ring,.vekaid-launch__sweep,.vekaid-launch__halo,.vekaid-launch__brand{animation:none!important}.vekaid-launch.is-done{animation:vekLaunchOut .18s ease forwards}}
+
+.v23-note,.v23-empty{font-size:12px;line-height:1.55;color:var(--v23m);padding:14px 4px}
+.v23-empty{padding:16px;border:1px dashed #343434;border-radius:16px;margin-top:12px}
