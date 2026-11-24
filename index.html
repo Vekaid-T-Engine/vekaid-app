@@ -1,18 +1,19 @@
 <!doctype html>
-<html lang="fr" class="vekaid-boot"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#0A0D13"><style id="vekaid-launch-critical">
-html.vekaid-boot,html.vekaid-boot body{background:#4e4e4e!important}
+<html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#0A0D13"><style id="vekaid-launch-critical">
+html,body{background:#050505!important}
 body{margin:0}
-#vekaidLaunch.vekaid-launch{position:fixed;inset:0;z-index:2147483000;background:#4e4e4e;display:grid;place-items:center;overflow:hidden;pointer-events:auto;opacity:1;visibility:visible;contain:layout paint style;transform:translateZ(0);backface-visibility:hidden;animation:vekBgBlend .34s .02s cubic-bezier(.2,.8,.2,1) forwards}
-#vekaidLaunch .vekaid-launch__stage{position:relative;width:min(42vw,180px);aspect-ratio:1;display:grid;place-items:center;transform:translateZ(0);opacity:0;animation:vekStageIn .26s .10s ease-out forwards}
-#vekaidLaunch .vekaid-launch__v{width:76%;height:76%;overflow:visible;transform:translateZ(0)}
-#vekaidLaunch .vekaid-launch__v path{fill:none;stroke:#f3f3f3;stroke-width:15;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:190;stroke-dashoffset:0}
+#vekaidLaunch.vekaid-launch{position:fixed;inset:0;z-index:2147483000;background:#050505;display:grid;place-items:center;overflow:hidden;pointer-events:auto;opacity:1;visibility:visible;contain:layout paint style;transform:translateZ(0);backface-visibility:hidden;}
+#vekaidLaunch .vekaid-launch__stage{position:relative;width:min(42vw,180px);aspect-ratio:1;display:grid;place-items:center;transform:translateZ(0);opacity:1}
+#vekaidLaunch .vekaid-launch__v{width:76%;height:76%;overflow:visible;transform-origin:50% 50%;animation:vekVIntro .72s .04s cubic-bezier(.22,.82,.24,1) both}
+#vekaidLaunch .vekaid-launch__v path{fill:none;stroke:#f3f3f3;stroke-width:15;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:190;stroke-dashoffset:190;animation:vekDraw .54s .12s cubic-bezier(.22,.82,.24,1) forwards}
 #vekaidLaunch .vekaid-launch__v{animation:vekSettle .42s .04s cubic-bezier(.2,.8,.2,1) both}
 
-#vekaidLaunch .vekaid-launch__halo{position:absolute;inset:18%;border-radius:50%;border:1px solid #ffffff14;opacity:0;transform:scale(.82) translateZ(0);animation:vekHalo .58s .24s ease-out forwards}
-#vekaidLaunch .vekaid-launch__brand{position:absolute;top:calc(50% + min(27vw,116px));left:50%;transform:translate3d(-50%,6px,0);font:700 10px/1 -apple-system,BlinkMacSystemFont,"SF Pro Text",system-ui,sans-serif;letter-spacing:.32em;color:#8e8e8e;white-space:nowrap;opacity:0;animation:vekBrand .24s .40s ease-out forwards}
+#vekaidLaunch .vekaid-launch__halo{position:absolute;inset:18%;border-radius:50%;border:1px solid #ffffff14;opacity:0;transform:scale(.82) translateZ(0);animation:vekHalo .7s .32s ease-out forwards}
+#vekaidLaunch .vekaid-launch__brand{position:absolute;top:calc(50% + min(27vw,116px));left:50%;transform:translate3d(-50%,10px,0);font:700 10px/1 -apple-system,BlinkMacSystemFont,"SF Pro Text",system-ui,sans-serif;letter-spacing:.32em;color:#8e8e8e;white-space:nowrap;opacity:0;animation:vekBrand .36s .52s ease-out forwards}
 #vekaidLaunch .vekaid-launch__ghost,#vekaidLaunch .vekaid-launch__line{display:none!important}
-#vekaidLaunch.is-done{pointer-events:none;animation:vekLaunchOut .26s cubic-bezier(.2,.8,.2,1) forwards}
-@keyframes vekBgBlend{0%{background:#4e4e4e}100%{background:#050505}}@keyframes vekStageIn{from{opacity:0;transform:scale(.985) translateZ(0)}to{opacity:1;transform:scale(1) translateZ(0)}}@keyframes vekDraw{to{stroke-dashoffset:0}}@keyframes vekSettle{0%{transform:scale(.985) translateZ(0);opacity:.96}100%{transform:scale(1) translateZ(0);opacity:1}}
+#vekaidLaunch.is-done{pointer-events:none;animation:vekLaunchOut .34s cubic-bezier(.2,.8,.2,1) forwards}
+100%{background:#050505}}to{opacity:1;transform:scale(1) translateZ(0)}}@keyframes vekDraw{to{stroke-dashoffset:0}}
+@keyframes vekVIntro{0%{opacity:0;transform:scale(.82) translateZ(0)}18%{opacity:1}72%{transform:scale(1.04) translateZ(0)}100%{opacity:1;transform:scale(1) translateZ(0)}}100%{transform:scale(1) translateZ(0);opacity:1}}
 @keyframes vekHalo{0%{opacity:0;transform:scale(.82) translateZ(0)}45%{opacity:.5}100%{opacity:0;transform:scale(1.28) translateZ(0)}}
 @keyframes vekBrand{to{opacity:1;transform:translate3d(-50%,0,0)}}
 @keyframes vekLaunchOut{to{opacity:0;visibility:hidden}}
@@ -166,7 +167,7 @@ body:before,#intel:before{content:'';position:fixed;inset:0;pointer-events:none;
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="format-detection" content="telephone=no">
 <meta name="color-scheme" content="dark">
-<link rel="stylesheet" href="./v23.css?v=23.5.5"><meta name="vekaid-version" content="23.5.5"><link rel="canonical" href="https://vekaid-t-engine.github.io/vekaid-app/"><meta property="og:title" content="VEKAID"><meta property="og:description" content="Personal Engineering Operating System"><meta property="og:type" content="website"><meta property="og:url" content="https://vekaid-t-engine.github.io/vekaid-app/"></head>
+<link rel="stylesheet" href="./v23.css?v=23.5.6"><meta name="vekaid-version" content="23.5.6"><link rel="canonical" href="https://vekaid-t-engine.github.io/vekaid-app/"><meta property="og:title" content="VEKAID"><meta property="og:description" content="Personal Engineering Operating System"><meta property="og:type" content="website"><meta property="og:url" content="https://vekaid-t-engine.github.io/vekaid-app/"></head>
 <body style="background:#050505;color:#f5f5f5"><div id="vekaidLaunch" class="vekaid-launch" aria-hidden="true">
   <div class="vekaid-launch__stage">
     <div class="vekaid-launch__halo"></div>
@@ -380,4 +381,4 @@ button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,te
  document.documentElement.dataset.appMode=standalone?'standalone':'browser';
  if('serviceWorker' in navigator){addEventListener('load',async()=>{try{const r=await navigator.serviceWorker.register('./service-worker.js',{scope:'./'});r.update();}catch(e){console.warn('VEKAID offline engine unavailable',e);}});}
 })();
-</script><script src="./v23-core.js?v=23.5.5" defer></script></body></html>
+</script><script src="./v23-core.js?v=23.5.6" defer></script></body></html>
