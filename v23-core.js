@@ -1,4 +1,4 @@
-(()=>{'use strict';const V='23.5.0',DB='vekaid-v23';let db;const $=(s,r=document)=>r.querySelector(s),esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));const uid=()=>crypto.randomUUID?.()||Date.now()+'-'+Math.random();
+(()=>{'use strict';const V='23.5.1',DB='vekaid-v23';let db;const $=(s,r=document)=>r.querySelector(s),esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));const uid=()=>crypto.randomUUID?.()||Date.now()+'-'+Math.random();
 function openDB(){return new Promise((ok,no)=>{const r=indexedDB.open(DB,2);r.onupgradeneeded=()=>{for(const n of ['meta','tickets','skills','releases'])if(!r.result.objectStoreNames.contains(n))r.result.createObjectStore(n,{keyPath:'id'})};r.onsuccess=()=>{db=r.result;ok()};r.onerror=()=>no(r.error)})}
 function all(s){return new Promise((ok,no)=>{const r=db.transaction(s).objectStore(s).getAll();r.onsuccess=()=>ok(r.result);r.onerror=()=>no(r.error)})}function put(s,v){return new Promise((ok,no)=>{const r=db.transaction(s,'readwrite').objectStore(s).put(v);r.onsuccess=()=>ok(v);r.onerror=()=>no(r.error)})}
 function layer(title,sub,html){$('.v23-layer')?.remove();const l=document.createElement('div');l.className='v23-layer';l.innerHTML='<section class="v23-panel"><div class="v23-head"><div><h2>'+esc(title)+'</h2><p>'+esc(sub||'')+'</p></div><button class="v23-close">×</button></div><div class="v23-body">'+html+'</div></section>';l.onclick=e=>{if(e.target===l)l.remove()};$('.v23-close',l).onclick=()=>l.remove();document.body.append(l);return $('.v23-body',l)}
@@ -41,7 +41,33 @@ function intel(){const b=layer('Intel','Accès aux modules d’intelligence exis
 async function you(){const t=await all('tickets'),s=await all('skills'),reg=await navigator.serviceWorker?.getRegistration?.('./').catch(()=>null),standalone=matchMedia('(display-mode: standalone)').matches||navigator.standalone===true;const b=layer('You','Santé de l’application, données locales et continuité',`<div class="v23-grid"><article class="v23-card"><span class="v23-k">VERSION</span><b>V${V}</b><small>Schema IndexedDB 1</small></article><article class="v23-card"><span class="v23-k">PWA</span><b>${standalone?'Installée':'Navigateur'}</b><small>Service worker : ${reg?'actif':'à vérifier'}</small></article><article class="v23-card"><span class="v23-k">DONNÉES</span><b>${t.length} missions</b><small>${s.length} preuves</small></article><article class="v23-card"><span class="v23-k">RÉSEAU</span><b>${navigator.onLine?'En ligne':'Hors ligne'}</b><small>cache PWA disponible</small></article><article class="v23-card wide"><div class="v23-actions"><button class="v23-btn primary" id="exp23">Exporter backup</button><button class="v23-btn" id="pal23">Command Palette</button></div></article></div>`);$('#exp23',b).onclick=backup;$('#pal23',b).onclick=palette}
 async function backup(){const payload={format:'vekaid.backup.v23',version:V,at:new Date().toISOString(),tickets:await all('tickets'),skills:await all('skills'),legacy:{atlas:localStorage.getItem('vekaid.atlas.v5.offline'),intel:localStorage.getItem('vekaid.intel.v1')}};const a=document.createElement('a'),u=URL.createObjectURL(new Blob([JSON.stringify(payload,null,2)],{type:'application/json'}));a.href=u;a.download='vekaid-backup-'+new Date().toISOString().slice(0,10)+'.json';a.click();setTimeout(()=>URL.revokeObjectURL(u),1000)}
 function palette(){const b=layer('Search VEKAID','Recherche et commandes locales','<input class="v23-search" id="q23" placeholder="Mission, skill, projet…"><div class="v23-list" id="r23"></div>'),q=$('#q23',b),r=$('#r23',b),cmd=[['Aujourd’hui','today',today],['Nouvelle mission','work',work],['Skills & preuves','learn',learn],['Studio image & média','work',studio],['Release & Discover','work',releaseCenter],['Agents','intel',()=>{b.closest('.v23-layer').remove();window.tab?.('agents')}],['Projets','work',()=>{b.closest('.v23-layer').remove();window.tab?.('projects')}],['Sécurité','intel',()=>{b.closest('.v23-layer').remove();window.tab?.('security')}]];const draw=()=>{const v=q.value.toLowerCase();r.innerHTML='';cmd.filter(x=>x[0].toLowerCase().includes(v)||x[1].includes(v)).forEach(x=>{const z=document.createElement('button');z.className='v23-row';z.innerHTML='<strong>'+x[0]+'</strong><small>'+x[1]+'</small>';z.onclick=x[2];r.append(z)})};q.oninput=draw;draw();q.focus()}
-function finishLaunchIdent(){const el=document.getElementById('vekaidLaunch');if(!el)return;const reduce=window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;setTimeout(()=>{el.classList.add('is-done');setTimeout(()=>el.remove(),reduce?180:420)},reduce?120:1150)}
+let vekaidLaunchLast=0,vekaidHiddenAt=0;
+function buildLaunchIdent(){
+  document.getElementById('vekaidLaunch')?.remove();
+  const el=document.createElement('div');
+  el.id='vekaidLaunch';el.className='vekaid-launch';el.setAttribute('aria-hidden','true');
+  el.innerHTML='<div class="vekaid-launch__stage"><div class="vekaid-launch__halo"></div><div class="vekaid-launch__ghost"></div><div class="vekaid-launch__line"></div><svg class="vekaid-launch__v" viewBox="0 0 160 160" aria-hidden="true"><path class="left" d="M34 34 L80 128"></path><path class="right" d="M126 34 L80 128"></path></svg><div class="vekaid-launch__brand">VEKAID</div></div>';
+  document.body.append(el);
+  return el;
+}
+function playLaunchIdent(force=false){
+  const now=Date.now();
+  if(!force && now-vekaidLaunchLast<900)return;
+  vekaidLaunchLast=now;
+  const reduce=window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
+  const el=buildLaunchIdent();
+  requestAnimationFrame(()=>requestAnimationFrame(()=>{
+    setTimeout(()=>{el.classList.add('is-done');setTimeout(()=>el.remove(),reduce?180:420)},reduce?120:1150);
+  }));
+}
+function installLaunchLifecycle(){
+  playLaunchIdent(true);
+  document.addEventListener('visibilitychange',()=>{
+    if(document.hidden){vekaidHiddenAt=Date.now();return;}
+    if(Date.now()-vekaidHiddenAt>500)playLaunchIdent(true);
+  });
+  window.addEventListener('pageshow',e=>{if(e.persisted)playLaunchIdent(true)});
+}
 function mount(){if($('.v23-dock'))return;const icons={
 today:'<svg class="v23-icon" viewBox="0 0 24 24"><path d="M4 10.5 12 4l8 6.5V20H4z"/><path d="M9 20v-6h6v6"/></svg>',
 work:'<svg class="v23-icon" viewBox="0 0 24 24"><rect x="4" y="6" width="16" height="14" rx="2"/><path d="M9 6V4h6v2M4 11h16"/></svg>',
@@ -49,5 +75,5 @@ learn:'<svg class="v23-icon" viewBox="0 0 24 24"><path d="m3 8 9-4 9 4-9 4z"/><p
 intel:'<svg class="v23-icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="M12 7v5l3 2"/></svg>',
 you:'<svg class="v23-icon" viewBox="0 0 24 24"><circle cx="12" cy="8" r="3"/><path d="M5 20c.7-4 3-6 7-6s6.3 2 7 6"/></svg>'
 };const n=document.createElement('nav');n.className='v23-dock';[['today','Aujourd’hui',today],['work','Work',work],['learn','Learn',learn],['intel','Intel',intel],['you','You',you]].forEach(([i,l,f])=>{const b=document.createElement('button');b.innerHTML=icons[i]+l;b.onclick=()=>{n.querySelectorAll('button').forEach(x=>x.classList.remove('active'));b.classList.add('active');f()};n.append(b)});document.body.append(n)}
-async function init(){finishLaunchIdent();try{await openDB();await put('meta',{id:'app',appVersion:V,schemaVersion:1,updatedAt:new Date().toISOString()})}catch(e){console.warn('V23 DB unavailable',e)}mount();document.documentElement.dataset.vekaidVersion=V}
+async function init(){installLaunchLifecycle();try{await openDB();await put('meta',{id:'app',appVersion:V,schemaVersion:1,updatedAt:new Date().toISOString()})}catch(e){console.warn('V23 DB unavailable',e)}mount();document.documentElement.dataset.vekaidVersion=V}
 document.readyState==='loading'?document.addEventListener('DOMContentLoaded',init,{once:true}):init()})();
