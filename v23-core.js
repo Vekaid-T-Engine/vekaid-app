@@ -1,4 +1,4 @@
-(()=>{'use strict';const V='23.5.6',DB='vekaid-v23';let db;const $=(s,r=document)=>r.querySelector(s),esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));const uid=()=>crypto.randomUUID?.()||Date.now()+'-'+Math.random();
+(()=>{'use strict';const V='23.6.0',DB='vekaid-v23';let db;const $=(s,r=document)=>r.querySelector(s),esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));const uid=()=>crypto.randomUUID?.()||Date.now()+'-'+Math.random();
 function openDB(){return new Promise((ok,no)=>{const r=indexedDB.open(DB,2);r.onupgradeneeded=()=>{for(const n of ['meta','tickets','skills','releases'])if(!r.result.objectStoreNames.contains(n))r.result.createObjectStore(n,{keyPath:'id'})};r.onsuccess=()=>{db=r.result;ok()};r.onerror=()=>no(r.error)})}
 function all(s){return new Promise((ok,no)=>{const r=db.transaction(s).objectStore(s).getAll();r.onsuccess=()=>ok(r.result);r.onerror=()=>no(r.error)})}function put(s,v){return new Promise((ok,no)=>{const r=db.transaction(s,'readwrite').objectStore(s).put(v);r.onsuccess=()=>ok(v);r.onerror=()=>no(r.error)})}
 function layer(title,sub,html){$('.v23-layer')?.remove();const l=document.createElement('div');l.className='v23-layer';l.innerHTML='<section class="v23-panel"><div class="v23-head"><div><h2>'+esc(title)+'</h2><p>'+esc(sub||'')+'</p></div><button class="v23-close">×</button></div><div class="v23-body">'+html+'</div></section>';l.onclick=e=>{if(e.target===l)l.remove()};$('.v23-close',l).onclick=()=>l.remove();document.body.append(l);return $('.v23-body',l)}
@@ -46,7 +46,7 @@ function buildLaunchIdent(){
   document.getElementById('vekaidLaunch')?.remove();
   const el=document.createElement('div');
   el.id='vekaidLaunch';el.className='vekaid-launch';el.setAttribute('aria-hidden','true');
-  el.innerHTML='<div class="vekaid-launch__stage"><div class="vekaid-launch__halo"></div><div class="vekaid-launch__ghost"></div><div class="vekaid-launch__line"></div><svg class="vekaid-launch__v" viewBox="0 0 160 160" aria-hidden="true"><path class="left" d="M34 34 L80 128"></path><path class="right" d="M126 34 L80 128"></path></svg><div class="vekaid-launch__brand">VEKAID</div></div>';
+  el.innerHTML='<div class="vekaid-launch__stage"><div class="vekaid-launch__halo"></div><svg class="vekaid-launch__v" viewBox="0 0 160 160" aria-hidden="true"><path class="left" d="M34 34 L80 128"></path><path class="right" d="M126 34 L80 128"></path></svg><div class="vekaid-launch__brand">VEKAID</div></div>';
   document.body.append(el);
   return el;
 }
@@ -56,9 +56,9 @@ function playLaunchIdent(force=false,reuseExisting=false){
   vekaidLaunchLast=now;
   const reduce=window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
   let el=reuseExisting?document.getElementById('vekaidLaunch'):null;
-  if(!el)el=buildLaunchIdent();
+  if(!el){document.body.classList.remove('vekaid-ready');document.body.classList.add('vekaid-entering');el=buildLaunchIdent();}
   requestAnimationFrame(()=>requestAnimationFrame(()=>{
-    setTimeout(()=>{el.classList.add('is-done');setTimeout(()=>el.remove(),reduce?150:380)},reduce?120:1200);
+    setTimeout(()=>{document.body.classList.remove('vekaid-entering');document.body.classList.add('vekaid-ready');requestAnimationFrame(()=>el.classList.add('is-done'));setTimeout(()=>el.remove(),reduce?180:620)},reduce?120:1280);
   }));
 }
 function installLaunchLifecycle(){
