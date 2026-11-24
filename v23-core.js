@@ -1,4 +1,4 @@
-(()=>{'use strict';const V='23.5.5',DB='vekaid-v23';let db;const $=(s,r=document)=>r.querySelector(s),esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));const uid=()=>crypto.randomUUID?.()||Date.now()+'-'+Math.random();
+(()=>{'use strict';const V='23.5.6',DB='vekaid-v23';let db;const $=(s,r=document)=>r.querySelector(s),esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));const uid=()=>crypto.randomUUID?.()||Date.now()+'-'+Math.random();
 function openDB(){return new Promise((ok,no)=>{const r=indexedDB.open(DB,2);r.onupgradeneeded=()=>{for(const n of ['meta','tickets','skills','releases'])if(!r.result.objectStoreNames.contains(n))r.result.createObjectStore(n,{keyPath:'id'})};r.onsuccess=()=>{db=r.result;ok()};r.onerror=()=>no(r.error)})}
 function all(s){return new Promise((ok,no)=>{const r=db.transaction(s).objectStore(s).getAll();r.onsuccess=()=>ok(r.result);r.onerror=()=>no(r.error)})}function put(s,v){return new Promise((ok,no)=>{const r=db.transaction(s,'readwrite').objectStore(s).put(v);r.onsuccess=()=>ok(v);r.onerror=()=>no(r.error)})}
 function layer(title,sub,html){$('.v23-layer')?.remove();const l=document.createElement('div');l.className='v23-layer';l.innerHTML='<section class="v23-panel"><div class="v23-head"><div><h2>'+esc(title)+'</h2><p>'+esc(sub||'')+'</p></div><button class="v23-close">×</button></div><div class="v23-body">'+html+'</div></section>';l.onclick=e=>{if(e.target===l)l.remove()};$('.v23-close',l).onclick=()=>l.remove();document.body.append(l);return $('.v23-body',l)}
@@ -50,23 +50,24 @@ function buildLaunchIdent(){
   document.body.append(el);
   return el;
 }
-function playLaunchIdent(force=false){
+function playLaunchIdent(force=false,reuseExisting=false){
   const now=Date.now();
   if(!force && now-vekaidLaunchLast<900)return;
   vekaidLaunchLast=now;
   const reduce=window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
-  const el=buildLaunchIdent();
+  let el=reuseExisting?document.getElementById('vekaidLaunch'):null;
+  if(!el)el=buildLaunchIdent();
   requestAnimationFrame(()=>requestAnimationFrame(()=>{
-    setTimeout(()=>{el.classList.add('is-done');document.documentElement.classList.remove('vekaid-boot');setTimeout(()=>el.remove(),reduce?150:320)},reduce?100:900);
+    setTimeout(()=>{el.classList.add('is-done');setTimeout(()=>el.remove(),reduce?150:380)},reduce?120:1200);
   }));
 }
 function installLaunchLifecycle(){
-  playLaunchIdent(true);
+  playLaunchIdent(true,true);
   document.addEventListener('visibilitychange',()=>{
     if(document.hidden){vekaidHiddenAt=Date.now();return;}
-    if(Date.now()-vekaidHiddenAt>500)playLaunchIdent(true);
+    if(Date.now()-vekaidHiddenAt>500)playLaunchIdent(true,false);
   });
-  window.addEventListener('pageshow',e=>{if(e.persisted)playLaunchIdent(true)});
+  window.addEventListener('pageshow',e=>{if(e.persisted)playLaunchIdent(true,false)});
 }
 function mount(){if($('.v23-dock'))return;const icons={
 today:'<svg class="v23-icon" viewBox="0 0 24 24"><path d="M4 10.5 12 4l8 6.5V20H4z"/><path d="M9 20v-6h6v6"/></svg>',
