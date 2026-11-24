@@ -20,7 +20,7 @@
 @keyframes v23Rise{from{opacity:.75;transform:translateY(5px)}to{opacity:1;transform:none}}
 .v23-icon{width:22px;height:22px;display:block;margin:0 auto 4px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
 .v23-dock button span{display:none}
-.v23-metric{display:flex;align-items:baseline;justify-content:space-between;gap:16px;padding:13px 2px;border-bottom:1px solid #262626}
+.v23-metric{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:16px 18px;border-bottom:1px solid #262626}
 .v23-metric:last-child{border-bottom:0}
 .v23-metric strong{font-size:22px}
 .v23-metric small{color:var(--v23m)}
@@ -169,3 +169,6 @@ html{scroll-padding-top:calc(var(--vek-safe-top) + 72px);scroll-padding-bottom:c
   .view.active{animation:none!important}
   #intel #iview{transition:none!important}
 }
+
+/* Shared card interior */
+.v23-group .v23-metric,.v23-group .v23-row{padding:16px 18px!important;box-sizing:border-box}.v23-metric span{min-width:0;overflow-wrap:anywhere}.v23-metric strong{flex-shrink:0;font-variant-numeric:tabular-nums}.v23-group .v23-empty{padding:20px!important;margin:0!important;border:0!important;background:transparent!important}.v23-empty p{margin:8px 0 16px;line-height:1.5}.v23-group>.v23-muted{padding:16px 18px;margin:0}
