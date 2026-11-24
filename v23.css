@@ -98,3 +98,25 @@ body.vekaid-ready .app,body.vekaid-ready #intel{opacity:1;transform:none;filter:
 .v23-field.is-invalid .v23-inline-feedback{color:#b0b0b0}
 .v23-btn.is-busy{opacity:.68;cursor:wait}
 .v23-btn.is-success{transform:scale(.985);box-shadow:0 0 0 1px #ffffff18 inset}
+
+/* V23.10 — squircle + account-ready refinements */
+:root{--v23-squircle:18px;--v23-squircle-lg:24px;--v23-squircle-sm:14px}
+.v23-panel,.v23-group,.v23-card,.v23-row,.v23-btn,.v23-field input,.v23-field textarea,.v23-field select,.v23-search,.v23-empty,.v23-dock{
+  border-radius:var(--v23-squircle);
+}
+.v23-panel,.v23-group{border-radius:var(--v23-squircle-lg)}
+.v23-btn,.v23-field input,.v23-field textarea,.v23-field select,.v23-search{border-radius:var(--v23-squircle-sm)}
+@supports (corner-shape:squircle){
+  .v23-panel,.v23-group,.v23-card,.v23-row,.v23-btn,.v23-field input,.v23-field textarea,.v23-field select,.v23-search,.v23-empty,.v23-dock{
+    corner-shape:squircle;
+  }
+}
+.v23-privacy{margin-top:22px;padding-top:20px;border-top:1px solid #292929}
+.v23-privacy h3{margin:0 0 8px;font-size:14px;letter-spacing:-.01em}
+.v23-privacy p{margin:0;color:var(--v23m);font-size:12px;line-height:1.55}
+.v23-privacy-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px}
+.v23-privacy-item{padding:14px;border:1px solid #303030;background:#111;border-radius:16px}
+.v23-privacy-item strong{display:block;font-size:12px;margin-bottom:4px}
+.v23-privacy-item small{display:block;color:var(--v23m);line-height:1.45}
+@supports (corner-shape:squircle){.v23-privacy-item{corner-shape:squircle}}
+@media(max-width:560px){.v23-privacy-grid{grid-template-columns:1fr}}
