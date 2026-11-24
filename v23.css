@@ -120,3 +120,52 @@ body.vekaid-ready .app,body.vekaid-ready #intel{opacity:1;transform:none;filter:
 .v23-privacy-item small{display:block;color:var(--v23m);line-height:1.45}
 @supports (corner-shape:squircle){.v23-privacy-item{corner-shape:squircle}}
 @media(max-width:560px){.v23-privacy-grid{grid-template-columns:1fr}}
+
+/* V23.11 — iPhone safe-area + native navigation polish */
+:root{
+  --vek-safe-top:env(safe-area-inset-top,0px);
+  --vek-safe-bottom:env(safe-area-inset-bottom,0px);
+  --vek-dock-space:78px;
+  --vek-view-ease:cubic-bezier(.2,.82,.2,1);
+}
+html{scroll-padding-top:calc(var(--vek-safe-top) + 72px);scroll-padding-bottom:calc(var(--vek-safe-bottom) + var(--vek-dock-space))}
+.view.active{animation:vekViewIn .34s var(--vek-view-ease) both}
+@keyframes vekViewIn{from{opacity:.18;transform:translateY(10px) scale(.997)}to{opacity:1;transform:none}}
+@media(max-width:1024px){
+  body{padding-bottom:0!important}
+  .workspace{padding-bottom:calc(18px + var(--vek-dock-space) + var(--vek-safe-bottom))!important}
+  .workspace>.top{
+    padding-top:calc(16px + var(--vek-safe-top))!important;
+    padding-left:max(18px,var(--vek-safe-left,0px))!important;
+    padding-right:max(18px,var(--vek-safe-right,0px))!important;
+  }
+  .page{padding-bottom:24px!important}
+  #intel{
+    padding-top:calc(var(--vek-safe-top) + 14px)!important;
+    padding-bottom:calc(20px + var(--vek-dock-space) + var(--vek-safe-bottom))!important;
+    min-height:auto!important;
+  }
+  #intel .itop{padding-top:4px!important}
+  #intel .inav{
+    top:calc(var(--vek-safe-top) + 6px)!important;
+    scroll-margin-top:calc(var(--vek-safe-top) + 10px);
+  }
+  #intel #iview{min-height:0!important}
+  .v23-dock{
+    bottom:calc(7px + var(--vek-safe-bottom))!important;
+    left:max(10px,env(safe-area-inset-left,0px))!important;
+    right:max(10px,env(safe-area-inset-right,0px))!important;
+  }
+  .v23-layer{
+    padding-top:calc(var(--vek-safe-top) + 14px)!important;
+    padding-bottom:calc(var(--vek-safe-bottom) + 18px)!important;
+  }
+}
+#intel #iview{transition:opacity .18s ease,transform .22s var(--vek-view-ease)}
+#intel #iview.vek-switching{opacity:.18;transform:translateY(8px)}
+#intel .inav button{transition:transform .16s ease,background-color .2s ease,color .2s ease,opacity .2s ease!important}
+#intel .inav button:active{transform:scale(.96)}
+@media(prefers-reduced-motion:reduce){
+  .view.active{animation:none!important}
+  #intel #iview{transition:none!important}
+}
