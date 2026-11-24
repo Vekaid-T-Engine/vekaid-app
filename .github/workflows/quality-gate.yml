@@ -1,0 +1,137 @@
+name: VEKAID Quality Gate
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  quality:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Verify required PWA files
+        shell: bash
+        run: |
+          set -euo pipefail
+          for f in index.html manifest.webmanifest service-worker.js v23.css v23-core.js icon-192.png icon-512.png icon-maskable-512.png apple-touch-icon.png; do
+            test -f "$f" || { echo "Missing required file: $f"; exit 1; }
+          done
+
+      - name: Validate JSON manifest
+        shell: python
+        run: |
+          import json
+          with open("manifest.webmanifest","r",encoding="utf-8") as f:
+              m=json.load(f)
+          required=["name","short_name","start_url","scope","display","icons"]
+          missing=[k for k in required if k not in m]
+          assert not missing, f"Missing manifest keys: {missing}"
+          assert m["display"]=="standalone", "PWA display must remain standalone"
+          assert m["start_url"].startswith("/vekaid-app/"), "Unexpected start_url"
+          sizes={i.get("sizes") for i in m.get("icons",[])}
+          assert "192x192" in sizes and "512x512" in sizes, "Required icon sizes missing"
+          print("Manifest OK")
+
+      - name: Static security and integrity checks
+        shell: python
+        run: |
+          from pathlib import Path
+          import re, json, sys
+
+          text = Path("index.html").read_text(encoding="utf-8") + "\n" + Path("v23-core.js").read_text(encoding="utf-8")
+          sw = Path("service-worker.js").read_text(encoding="utf-8")
+
+          failures=[]
+          warnings=[]
+
+          # High-signal checks only. Avoid false positives on ordinary words like "token".
+          secret_patterns = [
+              r"sk-[A-Za-z0-9_-]{20,}",
+              r"ghp_[A-Za-z0-9]{20,}",
+              r"github_pat_[A-Za-z0-9_]{20,}",
+              r"AKIA[0-9A-Z]{16}",
+              r"BEGIN (?:RSA |EC |OPENSSH )?PRIVATE KEY",
+          ]
+          for p in secret_patterns:
+              if re.search(p,text):
+                  failures.append(f"Potential secret matched pattern: {p}")
+
+          if re.search(r"\beval\s*\(", text):
+              failures.append("eval() detected")
+
+          if "Content-Security-Policy" not in Path("index.html").read_text(encoding="utf-8"):
+              failures.append("CSP meta policy missing")
+
+          if "vekaid-shell-v23-" not in sw:
+              failures.append("Versioned service-worker cache missing")
+
+          if "v23-core.js?v=" not in Path("index.html").read_text(encoding="utf-8"):
+              failures.append("Version-busted V23 JS missing")
+
+          if "v23.css?v=" not in Path("index.html").read_text(encoding="utf-8"):
+              failures.append("Version-busted V23 CSS missing")
+
+          blank = len(re.findall(r'target=["\']_blank["\']', text, flags=re.I))
+          noopener = len(re.findall(r'noopener', text, flags=re.I))
+          if blank and noopener < blank:
+              failures.append(f"target=_blank count ({blank}) exceeds noopener count ({noopener})")
+
+          if failures:
+              print("\n".join("FAIL: "+x for x in failures))
+              sys.exit(1)
+
+          print("Static security checks OK")
+
+      - name: PWA cross-reference checks
+        shell: python
+        run: |
+          from pathlib import Path
+          import re, sys
+          html=Path("index.html").read_text(encoding="utf-8")
+          sw=Path("service-worker.js").read_text(encoding="utf-8")
+          manifest=Path("manifest.webmanifest").read_text(encoding="utf-8")
+          for ref in ["manifest.webmanifest","service-worker.js","v23.css","v23-core.js"]:
+              if ref not in html and ref not in sw:
+                  print("Missing reference:", ref)
+                  sys.exit(1)
+          for icon in ["icon-192.png","icon-512.png","icon-maskable-512.png"]:
+              if icon not in manifest:
+                  print("Manifest missing icon:",icon)
+                  sys.exit(1)
+          print("PWA references OK")
+
+      - name: Size budget
+        shell: python
+        run: |
+          from pathlib import Path
+          limits={
+              "index.html": 500_000,
+              "v23-core.js": 100_000,
+              "v23.css": 100_000,
+              "service-worker.js": 20_000,
+          }
+          bad=[]
+          for file,limit in limits.items():
+              size=Path(file).stat().st_size
+              print(f"{file}: {size} bytes / budget {limit}")
+              if size>limit: bad.append((file,size,limit))
+          if bad:
+              raise SystemExit("Size budget exceeded: "+repr(bad))
+
+      - name: Quality gate summary
+        run: |
+          echo "VEKAID QUALITY GATE: PASS"
+          echo "Build structure: PASS"
+          echo "Manifest: PASS"
+          echo "Static security: PASS"
+          echo "PWA references: PASS"
+          echo "Size budget: PASS"
