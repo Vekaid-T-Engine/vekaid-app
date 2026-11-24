@@ -33,9 +33,9 @@
 .vekaid-launch__stage{position:relative;width:min(42vw,180px);aspect-ratio:1;display:grid;place-items:center}
 .vekaid-launch__halo{position:absolute;inset:12%;border-radius:50%;border:1px solid #ffffff16;transform:scale(.72);opacity:0;animation:vekHalo .9s .18s cubic-bezier(.2,.8,.2,1) forwards}
 .vekaid-launch__v{width:76%;height:76%;overflow:visible;transform:translateZ(0)}
-.vekaid-launch__v path{fill:none;stroke:#f3f3f3;stroke-width:15;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:190;stroke-dashoffset:190}
-.vekaid-launch__v .left{animation:vekDraw .46s .10s cubic-bezier(.2,.8,.2,1) forwards}
-.vekaid-launch__v .right{animation:vekDraw .46s .22s cubic-bezier(.2,.8,.2,1) forwards}
+.vekaid-launch__v path{fill:none;stroke:#f3f3f3;stroke-width:15;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:190;stroke-dashoffset:0}
+.vekaid-launch__v{animation:vekSettle .42s .04s cubic-bezier(.2,.8,.2,1) both}
+
 .vekaid-launch__ghost{display:none!important}
 .vekaid-launch__line{display:none!important}
 .vekaid-launch__brand{position:absolute;top:calc(50% + min(27vw,116px));left:50%;transform:translateX(-50%) translateY(8px);font:700 10px/1 -apple-system,BlinkMacSystemFont,"SF Pro Text",system-ui,sans-serif;letter-spacing:.32em;color:#8e8e8e;white-space:nowrap;opacity:0;animation:vekBrand .30s .52s ease-out forwards}
@@ -51,3 +51,4 @@
  .vekaid-launch{transition:opacity .12s ease}
  .vekaid-launch.is-done{animation:vekLaunchOut .12s ease forwards}
 }
+@keyframes vekSettle{0%{transform:scale(.985) translateZ(0);opacity:.96}100%{transform:scale(1) translateZ(0);opacity:1}}\n
