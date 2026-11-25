@@ -18,5 +18,10 @@ def translate(s):
     out=engine.translate(s).strip()
     assert out and len(out)<=6000
     return out
-rows=[{k:translate(x[k]) for k in ('title','summary','category')} for x in data['items']]
+rows=[]
+for x in data['items']:
+    old=x.get('translations',{}).get(code,{})
+    row={k:old.get(k) or translate(x[k]) for k in ('title','summary','category')}
+    row['sections']=[{k:translate(s[k]) for k in ('heading','body')} for s in x.get('sections',[])]
+    rows.append(row)
 pathlib.Path('news-'+code+'.json').write_text(json.dumps({'generatedAt':data['generatedAt'],'rows':rows},ensure_ascii=False))

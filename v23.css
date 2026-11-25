@@ -238,3 +238,5 @@ button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,te
 #daily-feed>.v23-group>.v23-row strong{line-height:1.25}
 #daily-feed>.v23-group>.v23-note{padding:0;margin:0;line-height:1.55;overflow-wrap:anywhere}
 #daily-feed .v23-btn{display:flex;align-items:center;justify-content:center;position:static;float:none;width:100%;max-width:100%;min-width:0;min-height:48px;height:auto;box-sizing:border-box;margin:0;padding:12px 16px;white-space:normal;overflow-wrap:anywhere;text-align:center;line-height:1.35;text-decoration:none}
+
+#daily-feed .news-lesson{border-top:1px solid var(--line,#383838);padding:10px 0 0;min-width:0;overflow-wrap:anywhere}#daily-feed .news-lesson summary{min-height:44px;cursor:pointer;font-weight:600;line-height:1.45;padding:10px 0;box-sizing:border-box}#daily-feed .news-lesson p{margin:4px 0 12px;line-height:1.65;white-space:pre-wrap}

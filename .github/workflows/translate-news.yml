@@ -17,7 +17,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - id: check
-        run: node -e 'const d=require("./daily-briefing.json");const codes=["en","de","zh-Hans","es","it","pt","ja","ko","ar","ru","hi","tr","vi","nl","id"];console.log("needed="+(d.items.length>0&&d.items.some(x=>codes.some(c=>!["title","summary","category"].every(k=>typeof x.translations?.[c]?.[k]==="string"&&x.translations[c][k].trim())))))' >> "$GITHUB_OUTPUT"
+        run: node -e 'const d=require("./daily-briefing.json");const codes=["en","de","zh-Hans","es","it","pt","ja","ko","ar","ru","hi","tr","vi","nl","id"];console.log("needed="+(d.items.length>0&&d.items.some(x=>codes.some(c=>(!["title","summary","category"].every(k=>typeof x.translations?.[c]?.[k]==="string"&&x.translations[c][k].trim())||(x.sections?.length||0)!==(x.translations?.[c]?.sections?.length||0))))))' >> "$GITHUB_OUTPUT"
   translate:
     needs: check
     if: needs.check.outputs.needed == 'true'

@@ -85,7 +85,33 @@
           "summary": "Sebuah pemberitahuan menunjukkan kerentanan dalam versi Chrome Desktop sebelum 158.0.8127,88 / .89 pada Windows dan maCO, dan .88 pada Linux. Periksa versi yang terpasang dan menerapkan pemutakhiran yang sesuai.",
           "category": "Dukungan IT / Cyber"
         }
-      }
+      },
+      "sections": [
+        {
+          "heading": "Contexte et fonctionnement",
+          "body": "Chrome est un navigateur : il interprète du code provenant de sites web. Une erreur dans cette interprétation peut compromettre la sécurité du poste. L'avis cité indique les versions à mettre à jour, sans établir à lui seul une attaque réussie."
+        },
+        {
+          "heading": "Termes techniques expliqués",
+          "body": "Vulnérabilité : faiblesse logicielle. Correctif (patch) : modification qui répare une faille. Version : numéro permettant de savoir si le correctif est installé."
+        },
+        {
+          "heading": "Impact mondial et en entreprise",
+          "body": "Chrome équipe de nombreux postes de travail. Une faille peut exposer les entreprises à des incidents selon ses conditions d'exploitation ; un retard de mise à jour augmente la fenêtre d'exposition. L'ampleur réelle de cette faille n'est pas établie ici."
+        },
+        {
+          "heading": "Exemple professionnel",
+          "body": "En support N1, un utilisateur demande si son navigateur est à jour. Ouvre À propos de Chrome, relève la version, compare avec l'avis officiel, applique la procédure de l'entreprise et vérifie après redémarrage."
+        },
+        {
+          "heading": "Prévention et actions",
+          "body": "Vérifier les versions, déployer les correctifs via la procédure approuvée et contrôler leur installation. Escalader les postes qui ne peuvent pas être mis à jour."
+        },
+        {
+          "heading": "À retenir",
+          "body": "Un correctif disponible ne protège pas un poste tant qu'il n'est pas installé et vérifié."
+        }
+      ]
     },
     {
       "title": "VMware : avis de sécurité vCenter",
@@ -170,7 +196,33 @@
           "summary": "Beberapa cabang vCenter terlibat. Versi inventaris, melihat perbaikan penyunting dan pemutakhiran jadwal dengan kendali cadangan dan ketersediaan.",
           "category": "Infrastruktur / Cloud"
         }
-      }
+      },
+      "sections": [
+        {
+          "heading": "Contexte et fonctionnement",
+          "body": "vCenter centralise la gestion des hôtes et machines virtuelles VMware. L'administration centralisée permet de gérer de nombreux services depuis une même interface, ce qui rend sa protection importante."
+        },
+        {
+          "heading": "Termes techniques expliqués",
+          "body": "Machine virtuelle (VM) : ordinateur simulé. Hyperviseur : logiciel qui exécute les VM. vCenter : gestion centralisée. Patch : correctif logiciel."
+        },
+        {
+          "heading": "Impact mondial et en entreprise",
+          "body": "Une compromission du plan d'administration pourrait affecter plusieurs services hébergés, selon les conditions de la faille. Les organisations doivent arbitrer entre disponibilité et rapidité des correctifs. Aucun incident mondial n'est établi par cet avis seul."
+        },
+        {
+          "heading": "Exemple professionnel",
+          "body": "Un technicien N1 reçoit plusieurs tickets d'indisponibilité. Il identifie les services concernés, collecte les symptômes et transmet à l'équipe infrastructure, sans modifier lui-même vCenter sans autorisation."
+        },
+        {
+          "heading": "Prévention et actions",
+          "body": "Inventorier les versions, vérifier les avis de l'éditeur, limiter les accès administratifs, planifier les correctifs et contrôler sauvegardes et disponibilité."
+        },
+        {
+          "heading": "À retenir",
+          "body": "La centralisation facilite l'administration mais concentre aussi certains risques."
+        }
+      ]
     },
     {
       "title": "n8n : vérifier les versions des instances d’automatisation",
@@ -255,7 +307,33 @@
           "summary": "Salah satu pendapat menyangkut beberapa cabang n8n. Bandingkan versi setiap instansi ke versi yang dikoreksi dalam pemberitahuan, kemudian uji arus kerja setelah memperbarui.",
           "category": "Automatisasi / Cyber"
         }
-      }
+      },
+      "sections": [
+        {
+          "heading": "Contexte et fonctionnement",
+          "body": "n8n permet de relier des applications et de déclencher automatiquement des tâches. Une instance peut détenir des identifiants permettant d'accéder à d'autres services. L'avis concerne certaines versions ; ses conditions exactes doivent être consultées."
+        },
+        {
+          "heading": "Termes techniques expliqués",
+          "body": "Workflow : suite automatisée d'étapes. API : interface permettant à des logiciels d'échanger. Identifiant secret : information utilisée pour authentifier un service."
+        },
+        {
+          "heading": "Impact mondial et en entreprise",
+          "body": "Une faille dans un outil d'automatisation peut avoir des conséquences sur les systèmes connectés si les permissions sont étendues. Cela ne signifie pas que toutes les instances sont compromises."
+        },
+        {
+          "heading": "Exemple professionnel",
+          "body": "Une équipe constate qu'un workflow ne fonctionne plus après une mise à jour. Vérifier les journaux, les versions et les permissions ; tester sur un environnement de recette avant de remettre en production."
+        },
+        {
+          "heading": "Prévention et actions",
+          "body": "Comparer les versions aux correctifs officiels, limiter les permissions, sauvegarder les configurations et tester les workflows après mise à jour."
+        },
+        {
+          "heading": "À retenir",
+          "body": "Une automatisation doit être maintenue et sécurisée comme n'importe quelle autre application."
+        }
+      ]
     },
     {
       "title": "Drupal : vulnérabilité ajoutée au catalogue KEV",
@@ -340,7 +418,33 @@
           "summary": "Orang Kanada melaporkan tambahan CVE-2026- 132165 kepada ClSA 's Vulnerabilities Catalog pada 24 November. Prioritas verifikasi situs Drupal dan menerapkan patch yang tepat.",
           "category": "Keamanan Internet"
         }
-      }
+      },
+      "sections": [
+        {
+          "heading": "Contexte et fonctionnement",
+          "body": "Drupal est un système de gestion de contenu pour créer des sites web. Selon l'avis cité, la faille a été ajoutée au catalogue KEV de la CISA. Ce signal indique une exploitation connue, pas que chaque site Drupal est compromis."
+        },
+        {
+          "heading": "Termes techniques expliqués",
+          "body": "CMS : système de gestion de contenu. CVE : identifiant public d'une vulnérabilité. CISA : agence américaine de cybersécurité. KEV : catalogue des vulnérabilités dont l'exploitation est connue."
+        },
+        {
+          "heading": "Impact mondial et en entreprise",
+          "body": "Les organisations exploitant des versions concernées doivent prioriser leur évaluation. Selon la faille, un site exposé peut subir une compromission ou une interruption. Vérifier la portée exacte dans les avis."
+        },
+        {
+          "heading": "Exemple professionnel",
+          "body": "En support, un ticket signale un comportement étrange sur un site. Documenter l'heure et les symptômes, prévenir l'équipe web et sécurité, vérifier les versions via les procédures autorisées."
+        },
+        {
+          "heading": "Prévention et actions",
+          "body": "Inventorier les sites, appliquer les correctifs éditeur, examiner les journaux et escalader les signes de compromission."
+        },
+        {
+          "heading": "À retenir",
+          "body": "Le catalogue KEV aide à prioriser les vulnérabilités exploitées plutôt que de traiter toutes les alertes de manière identique."
+        }
+      ]
     },
     {
       "title": "GitHub : évolution des notifications",
@@ -425,7 +529,33 @@
           "summary": "Alasan untuk pemberitahuan sekarang mengikuti prioritas yang konsisten dan pernyataan tim mencerminkan keanggotaan saat ini. Periksa filter pesan atau otomatisasi yang tergantung pada pola-pola ini.",
           "category": "Pengembangan / DevOps"
         }
-      }
+      },
+      "sections": [
+        {
+          "heading": "Contexte et fonctionnement",
+          "body": "GitHub permet de collaborer sur du code. Les notifications informent les utilisateurs des changements et discussions. L'annonce concerne la priorité des motifs de notification et les mentions d'équipe."
+        },
+        {
+          "heading": "Termes techniques expliqués",
+          "body": "Dépôt : ensemble des fichiers et de leur historique. Mention : notification adressée à une personne ou équipe. Changelog : journal des changements d'un produit."
+        },
+        {
+          "heading": "Impact mondial et en entreprise",
+          "body": "Cette évolution peut faciliter le tri des messages ou modifier le comportement de filtres existants. Elle concerne principalement les équipes qui utilisent GitHub ; aucun incident de sécurité n'est indiqué."
+        },
+        {
+          "heading": "Exemple professionnel",
+          "body": "Une équipe DevOps reçoit trop de notifications. Vérifier les motifs et les filtres pour que les alertes de revue de code ou d'incident ne soient pas ignorées."
+        },
+        {
+          "heading": "Prévention et actions",
+          "body": "Relire le changelog, contrôler les filtres de notification et tester les automatisations qui utilisent ces motifs."
+        },
+        {
+          "heading": "À retenir",
+          "body": "Une modification mineure d'un service peut avoir des effets sur les outils qui en dépendent."
+        }
+      ]
     },
     {
       "title": "Les valeurs liées à l’IA sous pression en Bourse",
@@ -510,7 +640,33 @@
           "summary": "Reuters melaporkan penurunan kontrak dan pabrik loak di Nasdaq sebelum pembukaan AS. Mengenai keuntungan investasi AI dan pandangan ekonomi; Ini bukan harga tutup.",
           "category": "IA / Enterprises"
         }
-      }
+      },
+      "sections": [
+        {
+          "heading": "Contexte et fonctionnement",
+          "body": "Les investissements en IA nécessitent notamment des puces, des centres de données et de l'électricité. L'article cité décrit un mouvement des contrats à terme avant l'ouverture du marché, pas un résultat de clôture ni une prévision certaine."
+        },
+        {
+          "heading": "Termes techniques expliqués",
+          "body": "Nasdaq : marché américain et nom d'indices associés. Contrat à terme : contrat financier portant sur une transaction future. Rentabilité : capacité d'un investissement à produire un gain."
+        },
+        {
+          "heading": "Impact mondial et en entreprise",
+          "body": "Les inquiétudes sur la rentabilité peuvent influencer les décisions d'investissement dans l'IA et les infrastructures. L'effet sur l'emploi, les prix du cloud ou les projets reste incertain."
+        },
+        {
+          "heading": "Exemple professionnel",
+          "body": "Dans une équipe informatique, un projet IA doit justifier son coût : comparer les besoins matériels, les coûts récurrents, les bénéfices attendus et les alternatives."
+        },
+        {
+          "heading": "Prévention et actions",
+          "body": "Suivre les annonces financières et techniques, distinguer prévisions et résultats, évaluer les coûts et éviter les conclusions basées sur une seule séance."
+        },
+        {
+          "heading": "À retenir",
+          "body": "Les performances techniques et la viabilité économique sont deux questions différentes."
+        }
+      ]
     }
   ]
 }
