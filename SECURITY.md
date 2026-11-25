@@ -35,3 +35,25 @@ Any future connector requiring authentication must keep credentials outside the 
 ## Release requirements
 
 Every main-branch change must pass the GitHub Actions **VEKAID Quality Gate** before being considered release-ready.
+
+## Expanded security review (2026-11-25)
+For each control record applicable / not applicable with reason / unverified / tested / remediated, evidence and residual risk.
+37. Vulnerable dependencies: inventory and audit.
+38. Malicious packages: provenance, pinned versions, review install scripts.
+39. Prompt injection: treat external content as untrusted data.
+40. Unpermissioned AI access: least privilege, approval for sensitive actions.
+41. Excessive DB permissions: server-side least privilege if introduced.
+42. Missing audit logs: useful events without secrets.
+43. No monitoring: risk-based alerts, no invented telemetry.
+44. No backups/restore: test export, restore and migrations.
+45. Exposed dashboards: never publish private data or admin interfaces.
+46. Missing headers: verify actual HTTP headers; meta CSP is not equivalent.
+47. Insecure cookies: Secure, HttpOnly, SameSite where applicable.
+48. Unencrypted data: HTTPS and appropriate at-rest protection; browser storage is not a vault.
+49. Poor tenant isolation: server-side authorization if multi-user.
+50. Unreviewed code: independent review and tests.
+51. Mass assignment: explicit field allowlists.
+52. Command injection: avoid shell execution and validate arguments.
+53. Insecure deserialization: bounded JSON, schema and validation.
+54. Misconfigured OAuth: PKCE, state, strict redirects, no frontend secrets.
+Also review XSS, CSRF, SSRF, CORS, sessions, file imports, secrets and access controls. Backend-specific checks are conditional, not automatically passed. No claim of full security or penetration test.
