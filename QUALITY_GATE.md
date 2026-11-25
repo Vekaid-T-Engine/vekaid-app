@@ -36,3 +36,6 @@ Extract source, date, observable claim, applicability, verification, decision an
 
 ## Role-based local routing (experimental)
 Coordinator, research, engineering, design, security and QA roles receive bounded tickets and evidence requirements. Local Ollama output is a draft, verified against source before use. Benchmark small models in isolation before adoption; no paid API, no exposed local endpoint, no installation without approval. No claimed savings without measurements.
+
+## Data engineering gate
+Apply [Data Engineering & System Design](docs/data-engineering-quality-gate.md) to every architecture. The CI regression suite must preserve Academy lesson positions, verify feed validation, coherent snapshot exports and cache version alignment. Restore and actual device tests remain separate release requirements.

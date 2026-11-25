@@ -137,6 +137,9 @@ jobs:
           test -s QUALITY_GATE.md
           test -s SECURITY.md
 
+      - name: Data engineering regression checks
+        run: node tests/data-engineering.cjs
+
       - name: Quality gate summary
         run: |
           echo "VEKAID QUALITY GATE: PASS"
