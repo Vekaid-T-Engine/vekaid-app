@@ -1,0 +1,270 @@
+{
+  "ar": {
+    "required": 91,
+    "missing": [],
+    "unchanged": [
+      "Canonical + Open Graph",
+      "Version"
+    ],
+    "unresolved": [
+      {
+        "key": "尚无电脑报告、GitHub 快照或可用性记录。请选择第一项检查。",
+        "reason": "empty"
+      },
+      {
+        "key": "浏览智能体及其职责、查看 PR 和分支、复制简报、跟踪本地任务并查看证明。运行 Unreal、Ollama 或 Windows 客户端需要联网的执行环境，本应用不提供该环境。",
+        "reason": "empty"
+      },
+      {
+        "key": "电脑诊断、GitHub 快照和可用性记录。",
+        "reason": "empty"
+      }
+    ]
+  },
+  "de": {
+    "required": 91,
+    "missing": [],
+    "unchanged": [
+      "Systems Lab",
+      "Release & Discover",
+      "Canonical + Open Graph"
+    ],
+    "unresolved": [
+      {
+        "key": "尚无电脑报告、GitHub 快照或可用性记录。请选择第一项检查。",
+        "reason": "empty"
+      },
+      {
+        "key": "浏览智能体及其职责、查看 PR 和分支、复制简报、跟踪本地任务并查看证明。运行 Unreal、Ollama 或 Windows 客户端需要联网的执行环境，本应用不提供该环境。",
+        "reason": "empty"
+      }
+    ]
+  },
+  "en": {
+    "required": 91,
+    "missing": [],
+    "unchanged": [
+      "Core Instructions",
+      "Production Lab",
+      "Systems Lab",
+      "Instructions → Agents",
+      "Production → Unreal Engine",
+      "Missions → Agents → GitHub",
+      "Release & Discover",
+      "Build → Test → Secure → Deploy → Discover → Prove",
+      "Title + meta description",
+      "Canonical + Open Graph",
+      "Certification Center",
+      "Version"
+    ],
+    "unresolved": [
+      {
+        "key": "尚无电脑报告、GitHub 快照或可用性记录。请选择第一项检查。",
+        "reason": "empty"
+      },
+      {
+        "key": "浏览智能体及其职责、查看 PR 和分支、复制简报、跟踪本地任务并查看证明。运行 Unreal、Ollama 或 Windows 客户端需要联网的执行环境，本应用不提供该环境。",
+        "reason": "empty"
+      }
+    ]
+  },
+  "es": {
+    "required": 91,
+    "missing": [],
+    "unchanged": [],
+    "unresolved": [
+      {
+        "key": "尚无电脑报告、GitHub 快照或可用性记录。请选择第一项检查。",
+        "reason": "empty"
+      },
+      {
+        "key": "浏览智能体及其职责、查看 PR 和分支、复制简报、跟踪本地任务并查看证明。运行 Unreal、Ollama 或 Windows 客户端需要联网的执行环境，本应用不提供该环境。",
+        "reason": "empty"
+      }
+    ]
+  },
+  "hi": {
+    "required": 91,
+    "missing": [],
+    "unchanged": [
+      "Canonical + Open Graph"
+    ],
+    "unresolved": [
+      {
+        "key": "尚无电脑报告、GitHub 快照或可用性记录。请选择第一项检查。",
+        "reason": "empty"
+      },
+      {
+        "key": "浏览智能体及其职责、查看 PR 和分支、复制简报、跟踪本地任务并查看证明。运行 Unreal、Ollama 或 Windows 客户端需要联网的执行环境，本应用不提供该环境。",
+        "reason": "empty"
+      }
+    ]
+  },
+  "id": {
+    "required": 91,
+    "missing": [],
+    "unchanged": [],
+    "unresolved": [
+      {
+        "key": "尚无电脑报告、GitHub 快照或可用性记录。请选择第一项检查。",
+        "reason": "empty"
+      },
+      {
+        "key": "浏览智能体及其职责、查看 PR 和分支、复制简报、跟踪本地任务并查看证明。运行 Unreal、Ollama 或 Windows 客户端需要联网的执行环境，本应用不提供该环境。",
+        "reason": "empty"
+      },
+      {
+        "key": "电脑诊断、GitHub 快照和可用性记录。",
+        "reason": "empty"
+      }
+    ]
+  },
+  "it": {
+    "required": 91,
+    "missing": [],
+    "unchanged": [],
+    "unresolved": [
+      {
+        "key": "尚无电脑报告、GitHub 快照或可用性记录。请选择第一项检查。",
+        "reason": "empty"
+      },
+      {
+        "key": "浏览智能体及其职责、查看 PR 和分支、复制简报、跟踪本地任务并查看证明。运行 Unreal、Ollama 或 Windows 客户端需要联网的执行环境，本应用不提供该环境。",
+        "reason": "empty"
+      }
+    ]
+  },
+  "ja": {
+    "required": 91,
+    "missing": [],
+    "unchanged": [],
+    "unresolved": [
+      {
+        "key": "尚无电脑报告、GitHub 快照或可用性记录。请选择第一项检查。",
+        "reason": "empty"
+      },
+      {
+        "key": "浏览智能体及其职责、查看 PR 和分支、复制简报、跟踪本地任务并查看证明。运行 Unreal、Ollama 或 Windows 客户端需要联网的执行环境，本应用不提供该环境。",
+        "reason": "empty"
+      }
+    ]
+  },
+  "ko": {
+    "required": 91,
+    "missing": [],
+    "unchanged": [],
+    "unresolved": [
+      {
+        "key": "尚无电脑报告、GitHub 快照或可用性记录。请选择第一项检查。",
+        "reason": "empty"
+      },
+      {
+        "key": "浏览智能体及其职责、查看 PR 和分支、复制简报、跟踪本地任务并查看证明。运行 Unreal、Ollama 或 Windows 客户端需要联网的执行环境，本应用不提供该环境。",
+        "reason": "empty"
+      }
+    ]
+  },
+  "nl": {
+    "required": 91,
+    "missing": [],
+    "unchanged": [
+      "Canonical + Open Graph"
+    ],
+    "unresolved": [
+      {
+        "key": "尚无电脑报告、GitHub 快照或可用性记录。请选择第一项检查。",
+        "reason": "empty"
+      },
+      {
+        "key": "浏览智能体及其职责、查看 PR 和分支、复制简报、跟踪本地任务并查看证明。运行 Unreal、Ollama 或 Windows 客户端需要联网的执行环境，本应用不提供该环境。",
+        "reason": "empty"
+      }
+    ]
+  },
+  "pt": {
+    "required": 91,
+    "missing": [],
+    "unchanged": [],
+    "unresolved": [
+      {
+        "key": "尚无电脑报告、GitHub 快照或可用性记录。请选择第一项检查。",
+        "reason": "empty"
+      },
+      {
+        "key": "浏览智能体及其职责、查看 PR 和分支、复制简报、跟踪本地任务并查看证明。运行 Unreal、Ollama 或 Windows 客户端需要联网的执行环境，本应用不提供该环境。",
+        "reason": "empty"
+      }
+    ]
+  },
+  "ru": {
+    "required": 91,
+    "missing": [],
+    "unchanged": [],
+    "unresolved": [
+      {
+        "key": "尚无电脑报告、GitHub 快照或可用性记录。请选择第一项检查。",
+        "reason": "empty"
+      },
+      {
+        "key": "本地 · 无 API",
+        "reason": "empty"
+      },
+      {
+        "key": "浏览智能体及其职责、查看 PR 和分支、复制简报、跟踪本地任务并查看证明。运行 Unreal、Ollama 或 Windows 客户端需要联网的执行环境，本应用不提供该环境。",
+        "reason": "empty"
+      }
+    ]
+  },
+  "tr": {
+    "required": 91,
+    "missing": [],
+    "unchanged": [
+      "Systems Lab",
+      "Canonical + Open Graph"
+    ],
+    "unresolved": [
+      {
+        "key": "尚无电脑报告、GitHub 快照或可用性记录。请选择第一项检查。",
+        "reason": "empty"
+      },
+      {
+        "key": "本地 · 无 API",
+        "reason": "empty"
+      },
+      {
+        "key": "浏览智能体及其职责、查看 PR 和分支、复制简报、跟踪本地任务并查看证明。运行 Unreal、Ollama 或 Windows 客户端需要联网的执行环境，本应用不提供该环境。",
+        "reason": "empty"
+      }
+    ]
+  },
+  "vi": {
+    "required": 91,
+    "missing": [],
+    "unchanged": [],
+    "unresolved": [
+      {
+        "key": "尚无电脑报告、GitHub 快照或可用性记录。请选择第一项检查。",
+        "reason": "empty"
+      },
+      {
+        "key": "浏览智能体及其职责、查看 PR 和分支、复制简报、跟踪本地任务并查看证明。运行 Unreal、Ollama 或 Windows 客户端需要联网的执行环境，本应用不提供该环境。",
+        "reason": "empty"
+      }
+    ]
+  },
+  "zh-Hans": {
+    "required": 91,
+    "missing": [],
+    "unchanged": [],
+    "unresolved": [
+      {
+        "key": "尚无电脑报告、GitHub 快照或可用性记录。请选择第一项检查。",
+        "reason": "empty"
+      },
+      {
+        "key": "浏览智能体及其职责、查看 PR 和分支、复制简报、跟踪本地任务并查看证明。运行 Unreal、Ollama 或 Windows 客户端需要联网的执行环境，本应用不提供该环境。",
+        "reason": "empty"
+      }
+    ]
+  }
+}
