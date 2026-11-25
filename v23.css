@@ -207,3 +207,16 @@ html{scroll-padding-top:calc(var(--vek-safe-top) + 72px);scroll-padding-bottom:c
 .academy-detail .v23-section>p{margin:0}
 .academy-detail #acanswers{gap:12px;margin:0}
 @media(max-width:420px){.academy-home .academy-pathways{grid-template-columns:minmax(0,1fr)}}
+
+/* Academy final layout: explicit sibling margins for legacy/mobile compatibility. */
+.v23-layer .v23-body.academy-home{display:block!important;padding-top:12px!important}
+.v23-layer .academy-home> * + *{margin-top:24px!important}
+.v23-layer .academy-home>.v23-section{display:block!important}
+.v23-layer .academy-home>.v23-section> * + *{margin-top:16px!important}
+.v23-layer .academy-home .academy-pathways{display:grid!important;gap:14px!important;grid-template-columns:minmax(0,1fr)!important}
+.v23-layer .academy-home .v23-btn{display:flex!important;width:100%!important;min-height:52px!important;white-space:normal!important;position:static!important;float:none!important}
+.v23-layer .academy-home #acdaily{margin-top:16px!important}
+.v23-layer .academy-home #aclist{display:grid!important;gap:16px!important}
+.v23-layer .academy-home #acq{margin-top:24px!important}
+.v23-layer .academy-home #acback{margin-top:24px!important}
+@media(min-width:600px){.v23-layer .academy-home .academy-pathways{grid-template-columns:repeat(2,minmax(0,1fr))!important}}
