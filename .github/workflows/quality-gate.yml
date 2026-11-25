@@ -127,6 +127,16 @@ jobs:
           if bad:
               raise SystemExit("Size budget exceeded: "+repr(bad))
 
+
+      - name: JavaScript syntax and release policy
+        shell: bash
+        run: |
+          set -euo pipefail
+          node --check v23-core.js
+          node --check service-worker.js
+          test -s QUALITY_GATE.md
+          test -s SECURITY.md
+
       - name: Quality gate summary
         run: |
           echo "VEKAID QUALITY GATE: PASS"
