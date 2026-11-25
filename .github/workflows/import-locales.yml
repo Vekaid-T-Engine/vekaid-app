@@ -1,0 +1,38 @@
+name: Import verified localization artifacts
+on:
+  push:
+    branches: ['engineering/locale-import-v2338']
+  workflow_dispatch:
+permissions:
+  actions: read
+  contents: write
+jobs:
+  import:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          run-id: 45543428391
+          github-token: ${{ github.token }}
+          pattern: offline-*
+          merge-multiple: true
+          path: locales
+      - name: Validate all packs and existing localization
+        run: |
+          node --check v23-core.js
+          node --check service-worker.js
+          node tests/localization.cjs
+          node tests/generated-locales.cjs
+          node tests/refresh.cjs
+          node tests/academy-spacing.cjs
+          node tests/playbook.cjs
+      - name: Commit validated artifacts
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add locales
+          git diff --cached --quiet && exit 0
+          git commit -m 'Import all 15 validated Argos locale packs from run 45543428391'
+          git push origin HEAD:${{ github.ref_name }}

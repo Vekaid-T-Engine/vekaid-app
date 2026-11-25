@@ -148,7 +148,9 @@ jobs:
         run: node tests/data-engineering.cjs
 
       - name: Localization regression checks
-        run: node tests/localization.cjs
+        run: |
+          node tests/localization.cjs
+          node tests/generated-locales.cjs
 
       - name: Quality gate summary
         run: |

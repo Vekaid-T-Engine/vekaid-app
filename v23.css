@@ -224,3 +224,6 @@ html{scroll-padding-top:calc(var(--vek-safe-top) + 72px);scroll-padding-bottom:c
 .refresh-card{display:grid;gap:12px;grid-column:1/-1}.refresh-card .v23-btn{display:block;width:100%;min-height:48px;white-space:normal;margin:0}.refresh-card #refresh-status{margin:0;overflow-wrap:anywhere}.refresh-card #refresh-status:empty{display:none}
 
 #refresh-home-status:empty{display:none}.v23-dock button{min-width:0;overflow-wrap:anywhere}
+
+/* Preserve responsive wrapping and RTL navigation for generated locales. */
+html[dir=rtl] .v23-panel,html[dir=rtl] .v23-row,html[dir=rtl] .v23-card{text-align:right}html[dir=rtl] .v23-dock{direction:rtl}
