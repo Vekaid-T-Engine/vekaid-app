@@ -4,12 +4,17 @@ on:
     paths:
       - live-intelligence.js
       - tests/live-intelligence.test.cjs
+      - tests/test_live_bridge.py
+      - tools/live_bridge.py
+      - v23.css
       - index.html
       - service-worker.js
       - .github/workflows/live-intelligence.yml
   push:
     branches:
       - engineering/live-intelligence-v1
+      - engineering/live-mobile-hotfix
+      - main
 permissions:
   contents: read
 jobs:
@@ -20,6 +25,10 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m unittest discover -s tests -p test_live_bridge.py -v
       - run: node --check live-intelligence.js
       - run: node --test tests/live-intelligence.test.cjs
       - run: |
