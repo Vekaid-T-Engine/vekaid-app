@@ -1,2 +1,4 @@
 # Certification Center
 Catalog date 2026-11-25. Sources: accessible historical conversations and official provider pages; not an exhaustive archive. Categories separate free exam, practical qualification, course badge, free learning, unverified and paid exam. Priority 1 immediate, 2 next, 3 optional. No payment or enrollment performed. Completion status is local self-report, not verified credential. Review conditions before enrollment. Update catalog and tests when new sources are found. French labels; full localization pending.
+
+V23.33: catalog defaults to all resources, preserves previous IDs and local completion, adds targeted credentials, and labels known provider-catalog links separately. Scoped flex/grid card layout fixes legacy button overlap; physical iPhone validation pending. Not an exhaustive worldwide certification inventory.

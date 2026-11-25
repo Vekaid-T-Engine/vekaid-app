@@ -186,3 +186,6 @@ html{scroll-padding-top:calc(var(--vek-safe-top) + 72px);scroll-padding-bottom:c
 @supports(height:100dvh){.v23-layer{bottom:auto;height:100dvh}}
 @media(max-width:1024px){.v23-layer{padding-bottom:calc(var(--vek-safe-bottom) + 18px)!important;scroll-padding-bottom:24px}}
 @media(prefers-reduced-motion:reduce){.v23-icon,.v23-dock button{animation:none!important;transition:none!important}}
+
+/* Certification Center: isolate layout from legacy inline button rules. */
+#certlist{display:grid;grid-template-columns:minmax(0,1fr);gap:14px;min-width:0}#certlist>.v23-card,#certlist>.v23-group{display:flex;flex-direction:column;align-items:stretch;gap:10px;padding:16px;min-width:0;box-sizing:border-box}#certlist>.v23-group>.v23-row{padding:0!important;border:0}#certlist .v23-btn,#certlist select,#certlist input{display:flex;align-items:center;justify-content:center;position:static;float:none;box-sizing:border-box;width:100%;max-width:100%;min-height:48px;height:auto;margin:0!important;white-space:normal;overflow-wrap:anywhere;line-height:1.35;text-align:center}#certlist p,#certlist strong{margin:0;overflow-wrap:anywhere}#certlist select{display:block}#certq,#certfilter{box-sizing:border-box;width:100%;max-width:100%;margin:0 0 12px}#certback{margin-top:16px}
