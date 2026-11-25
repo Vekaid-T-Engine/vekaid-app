@@ -175,7 +175,7 @@ body:before,#intel:before{content:'';position:fixed;inset:0;pointer-events:none;
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="format-detection" content="telephone=no">
 <meta name="color-scheme" content="dark">
-<link rel="stylesheet" href="./v23.css?v=23.44.0-live3"><meta name="vekaid-version" content="23.44.0"><link rel="canonical" href="https://vekaid-t-engine.github.io/vekaid-app/"><meta property="og:title" content="VEKAID"><meta property="og:description" content="Personal Engineering Operating System"><meta property="og:type" content="website"><meta property="og:url" content="https://vekaid-t-engine.github.io/vekaid-app/"></head>
+<link rel="stylesheet" href="./v23.css?v=23.44.0-live4"><meta name="vekaid-version" content="23.44.0"><link rel="canonical" href="https://vekaid-t-engine.github.io/vekaid-app/"><meta property="og:title" content="VEKAID"><meta property="og:description" content="Personal Engineering Operating System"><meta property="og:type" content="website"><meta property="og:url" content="https://vekaid-t-engine.github.io/vekaid-app/"></head>
 <body class="vekaid-entering" style="background:#050505;color:#f5f5f5"><div id="vekaidLaunch" class="vekaid-launch" aria-hidden="true">
   <div class="vekaid-launch__stage">
     <div class="vekaid-launch__radar">
@@ -407,7 +407,7 @@ button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,te
  document.documentElement.dataset.appMode=standalone?'standalone':'browser';
  if('serviceWorker' in navigator){let reloading=false;const controlled=!!navigator.serviceWorker.controller;navigator.serviceWorker.addEventListener('controllerchange',()=>{if(!controlled||reloading)return;reloading=true;const refresh=()=>{if(document.querySelector('input:focus,textarea:focus,[contenteditable=true]:focus')){document.addEventListener('focusout',()=>setTimeout(refresh,300),{once:true});return}if(document.visibilityState==='hidden'){document.addEventListener('visibilitychange',refresh,{once:true});return}location.reload()};refresh()});addEventListener('load',async()=>{try{const r=await navigator.serviceWorker.register('./service-worker.js',{scope:'./',updateViaCache:'none'});await r.update();document.addEventListener('visibilitychange',()=>{if(document.visibilityState==='visible')r.update().catch(()=>{})});}catch(e){console.warn('VEKAID offline engine unavailable',e);}});}
 })();
-</script><script src="./locale-lessons.js?v=23.44.0" defer></script><script src="./playbook.js?v=23.44.0" defer></script><script src="./certifications.js?v=23.44.0" defer></script><script src="./locale-lab.js?v=23.44.0" defer></script><script src="./accessibility.js?v=23.44.0" defer></script><script src="./live-intelligence.js?v=4" defer></script><script src="./v23-core.js?v=23.44.0" defer></script><style id="vekaid-mobile-viewport-v2312">
+</script><script src="./locale-lessons.js?v=23.44.0" defer></script><script src="./playbook.js?v=23.44.0" defer></script><script src="./certifications.js?v=23.44.0" defer></script><script src="./locale-lab.js?v=23.44.0" defer></script><script src="./accessibility.js?v=23.44.0" defer></script><script src="./live-intelligence.js?v=5" defer></script><script src="./v23-core.js?v=23.44.0" defer></script><style id="vekaid-mobile-viewport-v2312">
 @media(max-width:1024px){
 :root{--shell-top:env(safe-area-inset-top,0px);--shell-bottom:env(safe-area-inset-bottom,0px);--shell-dock:76px}
 html[data-app-mode="standalone"]{--shell-top:max(48px,env(safe-area-inset-top,0px))}
