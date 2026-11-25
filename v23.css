@@ -222,3 +222,5 @@ html{scroll-padding-top:calc(var(--vek-safe-top) + 72px);scroll-padding-bottom:c
 @media(min-width:600px){.v23-layer .academy-home .academy-pathways{grid-template-columns:repeat(2,minmax(0,1fr))!important}}
 
 .refresh-card{display:grid;gap:12px;grid-column:1/-1}.refresh-card .v23-btn{display:block;width:100%;min-height:48px;white-space:normal;margin:0}.refresh-card #refresh-status{margin:0;overflow-wrap:anywhere}.refresh-card #refresh-status:empty{display:none}
+
+#refresh-home-status:empty{display:none}.v23-dock button{min-width:0;overflow-wrap:anywhere}
