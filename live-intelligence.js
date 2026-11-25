@@ -13,6 +13,7 @@ function acceptSnapshot(previous,input,now=Date.now()){const next=validate(input
 
 function bridgeURL(raw){const u=new URL(raw);if(u.protocol!=='https:'||u.username||u.password||u.port||!u.hostname.endsWith('.ts.net')||u.pathname!=='/'||u.search||u.hash)throw Error('Private HTTPS address required');return u.origin+'/v1/snapshot'}
 async function fetchSnapshot(endpoint,token,signal){const r=await fetch(endpoint,{headers:{Authorization:'Bearer '+token},cache:'no-store',credentials:'omit',redirect:'error',referrerPolicy:'no-referrer',signal});if(!r.ok)throw Error('Bridge unavailable');const reader=r.body?.getReader();if(!reader)throw Error('Missing body');let size=0;const chunks=[];try{for(;;){const x=await reader.read();if(x.done)break;size+=x.value.byteLength;if(size>65536)throw Error('Size');chunks.push(x.value)}}finally{await reader.cancel().catch(()=>{})}const bytes=new Uint8Array(size);let offset=0;for(const c of chunks){bytes.set(c,offset);offset+=c.length}return JSON.parse(new TextDecoder('utf-8',{fatal:true}).decode(bytes))}
+let sessionPairing=null;
 function liveIntelligence({locale,layer,$}){
  const t=(a,b)=>translate(a,b,locale);
  const body=layer('Live Intelligence',t('Supervision locale · aucune donnée inventée','Local monitoring · no invented data'),'<div id="live-monitor"></div>');
@@ -26,9 +27,9 @@ function liveIntelligence({locale,layer,$}){
  const addrLabel=make('label',t('Adresse HTTPS du PC','PC HTTPS address'),connection,'live-label');const address=make('input','',addrLabel);address.type='url';address.autocomplete='off';address.placeholder='https://pc.example.ts.net';
  const tokenLabel=make('label',t('Jeton de connexion','Connection token'),connection,'live-label');const secret=make('input','',tokenLabel);secret.type='password';secret.autocomplete='off';secret.spellcheck=false;
  const linkStatus=make('p','',connection,'live-feedback');linkStatus.setAttribute('role','status');
- const connect=button(t('Connecter','Connect'),connection,()=>{let endpoint;try{endpoint=bridgeURL(address.value.trim());if(!/^[A-Za-z0-9_-]{32,256}$/.test(secret.value))throw Error('token')}catch{linkStatus.textContent=t('Adresse ou jeton invalide','Invalid address or token');return}stopBridge();bridge={endpoint,token:secret.value,next:0};secret.value='';connect.disabled=true;disconnect.disabled=false;poll()});
+ const connect=button(t('Connecter','Connect'),connection,()=>{let endpoint;try{endpoint=bridgeURL(address.value.trim());if(!/^[A-Za-z0-9_-]{32,256}$/.test(secret.value))throw Error('token')}catch{linkStatus.textContent=t('Adresse ou jeton invalide','Invalid address or token');return}stopBridge();bridge={endpoint,token:secret.value,next:0};sessionPairing={endpoint,token:secret.value};secret.value='';connect.disabled=true;disconnect.disabled=false;poll()});
  const disconnect=button(t('Déconnecter','Disconnect'),connection,()=>{stopBridge();linkStatus.textContent=''});disconnect.disabled=true;
- function stopBridge(){bridge=null;requestController?.abort();requestController=null;connect.disabled=false;disconnect.disabled=true}
+ function stopBridge(forget=true){if(forget)sessionPairing=null;bridge=null;requestController?.abort();requestController=null;connect.disabled=false;disconnect.disabled=true}
  async function poll(){const current=bridge;if(!current||requestController||!root.isConnected)return;const controller=new AbortController();requestController=controller;current.next=Date.now()+15000;const timeout=setTimeout(()=>controller.abort(),8000);if(!snapshot)linkStatus.textContent=t('Connexion en cours…','Connecting…');try{const raw=await fetchSnapshot(current.endpoint,current.token,controller.signal);if(bridge!==current||!root.isConnected)return;const next=acceptSnapshot(snapshot,raw);localStorage.setItem(key,JSON.stringify(next));snapshot=next;source='private';render();linkStatus.textContent=t('Dernier relevé reçu','Last snapshot received')}catch{if(bridge===current)linkStatus.textContent=t('Connexion indisponible · dernier relevé conservé','Connection unavailable · last snapshot retained')}finally{clearTimeout(timeout);if(requestController===controller)requestController=null}}
  const agents=make('section','',root,'live-card');make('h3','AI / Agents',agents);
  const rows=make('div','',agents,'live-providers');
@@ -57,7 +58,7 @@ function liveIntelligence({locale,layer,$}){
  clear.disabled=!snapshot;
  }
  input.onchange=async()=>{const ticket=++revision;const file=input.files[0];if(!file)return;try{if(file.size>65536)throw Error('Size');const raw=await file.text();if(ticket!==revision||!root.isConnected)return;const next=acceptSnapshot(snapshot,JSON.parse(raw));localStorage.setItem(key,JSON.stringify(next));snapshot=next;source='local';feedback.textContent='';render()}catch{if(ticket===revision&&root.isConnected)feedback.textContent=t('Rapport refusé. Dernière observation conservée.','Report rejected. Previous observation retained.')}finally{if(ticket===revision)input.value=''}};
- render();const timer=setInterval(()=>{if(!root.isConnected){stopBridge();clearInterval(timer);return}if(isStale(snapshot)!==wasStale)render();if(bridge&&Date.now()>=bridge.next)poll()},1000);
+ render();if(sessionPairing){bridge={...sessionPairing,next:0};address.value=new URL(bridge.endpoint).origin;connect.disabled=true;disconnect.disabled=false;poll()}const timer=setInterval(()=>{if(!root.isConnected){stopBridge(false);clearInterval(timer);return}if(isStale(snapshot)!==wasStale)render();if(bridge&&Date.now()>=bridge.next)poll()},1000);
 }
 window.VEKAID_LIVE=Object.freeze({open:liveIntelligence,validate,isStale,acceptSnapshot,bridgeURL,fetchSnapshot,translate,languages:Object.freeze(languages.slice())});
 })();
