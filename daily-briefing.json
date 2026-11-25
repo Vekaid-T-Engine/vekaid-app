@@ -13,77 +13,467 @@
         "en": {
           "title": "Chrome: Security update for workstations",
           "summary": "A notice indicates a vulnerability in versions of Chrome Desktop before 158.0.8127.88/.89 on Windows and macOS, and .88 on Linux. Check the installed version and apply the appropriate update.",
-          "category": "IT Support / Cyber"
+          "category": "IT Support / Cyber",
+          "sections": [
+            {
+              "heading": "Context and operation",
+              "body": "Chrome is a browser: it interprets code from websites. An error in this interpretation may compromise the security of the position. The above notice indicates the versions to be updated, without establishing a successful attack alone."
+            },
+            {
+              "heading": "Technical terms explained",
+              "body": "Vulnerability: software weakness. Corrective (patch): modification that repairs a fault. Version: number to determine if the patch is installed."
+            },
+            {
+              "heading": "Global and corporate impact",
+              "body": "Chrome is a team of many workstations. A fault may expose companies to incidents depending on its operating conditions; a delay in updating increases the exposure window. The true extent of this flaw is not established here."
+            },
+            {
+              "heading": "Professional example",
+              "body": "In support of N1, a user asks if his browser is up to date. Opens About Chrome, raises the version, compares with the official notice, applies the company procedure and checks after restarting."
+            },
+            {
+              "heading": "Prevention and action",
+              "body": "Check versions, deploy patches via the approved procedure and monitor their installation. Climb positions that cannot be updated."
+            },
+            {
+              "heading": "To be retained",
+              "body": "An available patch does not protect a position until it is installed and verified."
+            }
+          ]
         },
         "de": {
           "title": "Chrome: Sicherheitsupdate für Workstations",
           "summary": "Ein Hinweis zeigt eine Sicherheitslücke in Versionen von Chrome Desktop vor 158.0.8127.88/.89 unter Windows und macOS und .88 unter Linux an. Überprüfen Sie die installierte Version und wenden Sie das entsprechende Update an.",
-          "category": "IT Support / Cyber"
+          "category": "IT Support / Cyber",
+          "sections": [
+            {
+              "heading": "Kontext und Funktionsweise",
+              "body": "Chrome ist ein Browser: Es interpretiert Code von Websites. Ein Fehler in dieser Interpretation kann die Sicherheit der Position gefährden. Der obige Hinweis zeigt die zu aktualisierenden Versionen an, ohne einen erfolgreichen Angriff allein zu etablieren."
+            },
+            {
+              "heading": "Technische Begriffe erklärt",
+              "body": "Vulnerabilität: Softwareschwäche. Korrektur (Patch): Änderung, die einen Fehler repariert. Version: Nummer, um festzustellen, ob der Patch installiert ist."
+            },
+            {
+              "heading": "Globale und Corporate Impact",
+              "body": "Chrome ist ein Team von vielen Workstations. Ein Fehler kann Unternehmen je nach Betriebsbedingungen Vorfällen aussetzen; eine Verzögerung bei der Aktualisierung erhöht das Expositionsfenster. Das wahre Ausmaß dieses Fehlers wird hier nicht festgestellt."
+            },
+            {
+              "heading": "Professionelle Beispiele",
+              "body": "Zur Unterstützung von N1 fragt ein Benutzer, ob sein Browser auf dem neuesten Stand ist. Öffnet Chrome, erhöht die Version, vergleicht mit dem offiziellen Hinweis, wendet das Unternehmensverfahren an und überprüft nach dem Neustart."
+            },
+            {
+              "heading": "Prävention und Maßnahmen",
+              "body": "Überprüfen Sie Versionen, stellen Sie Patches über das genehmigte Verfahren bereit und überwachen Sie deren Installation. Klettern Sie Positionen, die nicht aktualisiert werden können."
+            },
+            {
+              "heading": "Einbehalten",
+              "body": "Ein verfügbarer Patch schützt eine Position erst, wenn sie installiert und verifiziert ist."
+            }
+          ]
         },
         "zh-Hans": {
           "title": "Chrome:工作站安全最新情况",
           "summary": "一份通知显示,在Windows和macOS的158.08127.88/89和Linux的.88之前,Chrome桌面版本存在脆弱性。 检查已安装的版本并应用适当的更新.",
-          "category": "信息技术支助/网络"
+          "category": "信息技术支助/网络",
+          "sections": [
+            {
+              "heading": "A. 背景和运作",
+              "body": "Chrome是一个浏览器:它从网站解释代码. 这种解释中的错误可能损害立场的安全。 上述通知指明了需要更新的版本,而无需仅确定攻击成功。"
+            },
+            {
+              "heading": "技术术语说明",
+              "body": "脆弱性:软件弱点。 校正(patch):修改修复一个故障。 版本:编号以确定补丁是否安装."
+            },
+            {
+              "heading": "全球和公司影响",
+              "body": "Chrome是一个由许多工作站组成的团队. 过失可能使公司因经营条件不同而面临事故;延迟更新会增加暴露窗口。 这种缺陷的真正程度在这里没有确定。"
+            },
+            {
+              "heading": "专业实例",
+              "body": "为了支持N1,一个用户询问他的浏览器是否更新. Opens About Chrome),提升版本,与官方通知进行比较,重启后适用公司程序及检查."
+            },
+            {
+              "heading": "预防和行动",
+              "body": "检查版本,通过批准的程序部署补丁并监测其安装. 爬升无法更新的位置 。"
+            },
+            {
+              "heading": "待保留",
+              "body": "一个可用的补丁在安装和验证之前不会保护一个位置."
+            }
+          ]
         },
         "es": {
           "title": "Chrome: Actualización de seguridad para estaciones de trabajo",
           "summary": "Un aviso indica una vulnerabilidad en versiones de Chrome Desktop antes de 158.0.8127.88/.89 en Windows y macOS, y .88 en Linux. Compruebe la versión instalada y aplicar la actualización adecuada.",
-          "category": "IT Support / Cyber"
+          "category": "IT Support / Cyber",
+          "sections": [
+            {
+              "heading": "Contexto y operación",
+              "body": "Chrome es un navegador: interpreta código de los sitios web. Un error en esta interpretación puede comprometer la seguridad de la posición. El aviso anterior indica las versiones a actualizar, sin establecer un ataque exitoso solo."
+            },
+            {
+              "heading": "Condiciones técnicas explicadas",
+              "body": "Vulnerabilidad: debilidad del software. Correctivo (patch): modificación que repara una falla. Versión: número para determinar si el parche está instalado."
+            },
+            {
+              "heading": "Impacto mundial y empresarial",
+              "body": "Chrome es un equipo de muchas estaciones de trabajo. Una falla puede exponer a las empresas a incidentes dependiendo de sus condiciones de funcionamiento; un retraso en la actualización aumenta la ventana de exposición. La verdadera extensión de este defecto no se establece aquí."
+            },
+            {
+              "heading": "Ejemplo profesional",
+              "body": "En apoyo de N1, un usuario pregunta si su navegador está actualizado. Abre Acerca de Chrome, eleva la versión, se compara con el aviso oficial, aplica el procedimiento de la empresa y los cheques después de reiniciar."
+            },
+            {
+              "heading": "Prevención y acción",
+              "body": "Verifique las versiones, despliegue parches a través del procedimiento aprobado y vigile su instalación. Subir posiciones que no se pueden actualizar."
+            },
+            {
+              "heading": "Que se mantenga",
+              "body": "Un parche disponible no protege una posición hasta que se instala y verifica."
+            }
+          ]
         },
         "it": {
           "title": "Chrome: Aggiornamento di sicurezza per workstation",
           "summary": "Un avviso indica una vulnerabilità nelle versioni di Chrome Desktop prima 158.0.8127.88/.89 su Windows e macOS, e .88 su Linux. Controllare la versione installata e applicare l'aggiornamento appropriato.",
-          "category": "Supporto IT / Cyber"
+          "category": "Supporto IT / Cyber",
+          "sections": [
+            {
+              "heading": "Contesto e funzionamento",
+              "body": "Chrome è un browser: interpreta il codice da siti web. Un errore in questa interpretazione può compromettere la sicurezza della posizione. L'avviso citato indica le versioni da aggiornare, senza stabilire un attacco di successo da solo."
+            },
+            {
+              "heading": "Termini tecnici spiegati",
+              "body": "Vulnerabilità: debolezza del software. Correttivo (patch): modifica che ripara un difetto. Versione: numero per determinare se la patch è installata."
+            },
+            {
+              "heading": "Impatto globale e societario",
+              "body": "Chrome equipaggia molte workstation. Un difetto può esporre le aziende a incidenti a seconda delle sue condizioni operative; un ritardo di aggiornamento aumenta la finestra di esposizione. La vera misura di questo difetto non è stabilito qui."
+            },
+            {
+              "heading": "Esempio professionale",
+              "body": "A supporto di N1, un utente chiede se il suo browser è aggiornato. Apre su Chrome, alza la versione, confronta con l'avviso ufficiale, applica la procedura aziendale e controlla dopo il riavvio."
+            },
+            {
+              "heading": "Prevenzione e azione",
+              "body": "Controllare le versioni, distribuire patch tramite procedura approvata e monitorare la loro installazione. Posizioni di arrampicata che non possono essere aggiornate."
+            },
+            {
+              "heading": "Da conservare",
+              "body": "Una patch disponibile non protegge una posizione finché non è installato e verificato."
+            }
+          ]
         },
         "pt": {
           "title": "Chrome: Atualização de segurança para estações de trabalho",
           "summary": "Um aviso indica uma vulnerabilidade nas versões do Chrome Desktop antes de 158.0.8127.888/.89 no Windows e macOS, e .88 no Linux. Verifique a versão instalada e aplique a atualização apropriada.",
-          "category": "Suporte de TI / Cyber"
+          "category": "Suporte de TI / Cyber",
+          "sections": [
+            {
+              "heading": "Contexto e operação",
+              "body": "Chrome é um navegador: interpreta código de sites. Um erro nesta interpretação pode comprometer a segurança da posição. O aviso acima indica as versões a serem atualizadas, sem estabelecer um ataque bem sucedido sozinho."
+            },
+            {
+              "heading": "Termos técnicos explicados",
+              "body": "Vulnerabilidade: fraqueza do software. Correctivo (patch): modificação que repara uma falha. Versão: número para determinar se o patch está instalado."
+            },
+            {
+              "heading": "Impacto global e empresarial",
+              "body": "Chrome é uma equipe de muitas estações de trabalho. Uma falha pode expor as empresas a incidentes dependendo de suas condições operacionais; um atraso na atualização aumenta a janela de exposição. A verdadeira extensão desta falha não é estabelecida aqui."
+            },
+            {
+              "heading": "Exemplo profissional",
+              "body": "Em apoio ao N1, um usuário pergunta se seu navegador está atualizado. Abre Sobre o Chrome, eleva a versão, compara com o aviso oficial, aplica o procedimento da empresa e verifica após reiniciar."
+            },
+            {
+              "heading": "Prevenção e acção",
+              "body": "Verificar versões, implantar patches através do procedimento aprovado e monitorar sua instalação. Posições de escalada que não podem ser atualizadas."
+            },
+            {
+              "heading": "A manter",
+              "body": "Um patch disponível não protege uma posição até que seja instalado e verificado."
+            }
+          ]
         },
         "ja": {
           "title": "クロム:ワークステーションのための保証更新",
           "summary": "通知は、Windows および macOS の 158.0.8127.88/.89 以前の Chrome デスクトップのバージョンの脆弱性、Linux の .88 を示しています。 インストールしたバージョンを確認し、適切なアップデートを適用します。",
-          "category": "ITサポート・サイバー"
+          "category": "ITサポート・サイバー",
+          "sections": [
+            {
+              "heading": "コンテキストと操作",
+              "body": "Chrome はブラウザです。それはウェブサイトからコードを解釈します。 この解釈のエラーは、位置のセキュリティを侵害する可能性があります。 上記の通知は、成功した攻撃を単独で確立することなく、更新されるバージョンを示します。"
+            },
+            {
+              "heading": "技術的な用語解説",
+              "body": "脆弱性:ソフトウェアの弱さ。 修正(パッチ):障害を修復する修正。 バージョン:パッチがインストールされているかどうかを決定する番号。"
+            },
+            {
+              "heading": "グローバル・企業インパクト",
+              "body": "Chromeは多くのワークステーションのチームです。 障害は、運用条件に応じて企業を事故にさらすことがあり、更新の遅延が露出ウィンドウを増加させます。 この欠陥の真の程度はここに確立されていません。"
+            },
+            {
+              "heading": "専門例",
+              "body": "N1のサポートでは、ブラウザが最新の状態にあるかどうかをユーザーに尋ねます。 クロムについて開くと、バージョンを上げ、公式の通知と比較し、会社の手順を適用し、再起動後にチェックします。"
+            },
+            {
+              "heading": "予防と行動",
+              "body": "バージョンをチェックし、承認された手順でパッチを展開し、インストールを監視します。 更新できないクライムポジション。"
+            },
+            {
+              "heading": "保持されるため",
+              "body": "利用可能なパッチは、それがインストールされ、検証されるまで、位置を保護しません。"
+            }
+          ]
         },
         "ko": {
           "title": "Chrome: 워크스테이션을 위한 안전 갱신",
           "summary": "통지는 Windows 및 macOS에서 158.0.8127.88/.89 이전에 Chrome 데스크톱 버전의 취약점을 나타냅니다. Linux에서 .88. 설치된 버전을 확인하고 적절한 업데이트를 적용하십시오.",
-          "category": "IT 지원 / 사이버"
+          "category": "IT 지원 / 사이버",
+          "sections": [
+            {
+              "heading": "Context 및 작동",
+              "body": "Chrome은 브라우저입니다. 웹 사이트에서 코드를 해석합니다. 이 해석의 오류는 위치의 보안을 손상시킬 수 있습니다. Notice cited는 성공적인 공격을 혼자 설치하지 않고 업데이트되는 버전을 나타냅니다."
+            },
+            {
+              "heading": "기술 용어 설명",
+              "body": "취약점: 소프트웨어 약점. Corrective (patch) : 결함을 수리하는 수정. 버전: 패치가 설치되면 결정할 수 있습니다."
+            },
+            {
+              "heading": "글로벌 및 기업 영향",
+              "body": "Chrome은 많은 워크스테이션을 갖추고 있습니다. 결함은 운영 조건에 따라 사건에 노출될 수 있습니다; 갱신 지연은 노출 창을 증가합니다. 이 결함의 진실한 범위는 여기에서 설치되지 않습니다."
+            },
+            {
+              "heading": "전문 예",
+              "body": "N1의 지원에서 사용자는 자신의 브라우저가 날짜까지 있는지 묻습니다. Chrome에 관하여 여십시오, 버전을 올리십시오, 공식적인 고시와 비교해, 회사 절차 및 재시작 후에 검사를 적용합니다."
+            },
+            {
+              "heading": "예방 및 활동",
+              "body": "버전 확인, 승인 된 절차를 통해 패치를 배포하고 설치를 모니터링. 업데이트 할 수없는 위치 상승."
+            },
+            {
+              "heading": "계속하기",
+              "body": "사용 가능한 패치는 설치 및 확인 될 때까지 위치를 보호하지 않습니다."
+            }
+          ]
         },
         "ar": {
           "title": "الكروم: تحديث الأمن لمراكز العمل",
           "summary": "A notice indicates a vulnerability in versions of Chrome Desktop before 158.0.8127.88/.89 on Windows and macOS, and.88 on Linux. تحقق من النسخة المثبتة وتطبق التحديث المناسب",
-          "category": "دعم تكنولوجيا المعلومات/الرسائل الإلكترونية"
+          "category": "دعم تكنولوجيا المعلومات/الرسائل الإلكترونية",
+          "sections": [
+            {
+              "heading": "السياق والتشغيل",
+              "body": "(كروم) هو (برووزر) إنه يفسّر الرمز من المواقع وقد يؤدي الخطأ في هذا التفسير إلى المساس بأمن الموقف. ويشير الإشعار المذكور أعلاه إلى النسخ التي يتعين تحديثها، دون أن يُحدث هجوما ناجحا وحده."
+            },
+            {
+              "heading": "الشروط التقنية",
+              "body": "Vulnerability: software weakness. تعديل يصلح خطأ رقم لتحديد ما إذا تم تركيب الرقعة"
+            },
+            {
+              "heading": "التأثير العالمي والأثر المؤسسي",
+              "body": "الكروم هو فريق من العديد من محطات العمل وقد يؤدي الخطأ إلى تعريض الشركات للحوادث حسب ظروف عملها؛ ويزيد التأخير في تحديث نافذة التعرض. ولا يوجد هنا مدى حقيقي لهذا العيب."
+            },
+            {
+              "heading": "مثال مهني",
+              "body": "دعماً لـ (ناي 1)، يسأل المُستخدم إن كان مُنظفه مُستكملاً. يفتح حول الكروم، ويرفع النسخة، ويقارن مع الإشعار الرسمي، ويطبق إجراء الشركة ويتحقق بعد إعادة التشغيل."
+            },
+            {
+              "heading": "الوقاية والعمل",
+              "body": "تحقق من النسخ، ووزع رقائق عن طريق الإجراء المعتمد ورصد تركيبها. شغل مواقع لا يمكن تحديثها."
+            },
+            {
+              "heading": "يُحتفظ بها",
+              "body": "ولا تحمي رقعة متاحة أي موقع إلا بعد تركيبه والتحقق منه."
+            }
+          ]
         },
         "ru": {
           "title": "Chrome: обновление безопасности для рабочих станций",
           "summary": "Уведомление указывает на уязвимость в версиях Chrome Desktop до 158.0.8127.88/.89 в Windows и macOS и .88 в Linux. Проверьте установленную версию и примените соответствующее обновление.",
-          "category": "IT-поддержка / Cyber"
+          "category": "IT-поддержка / Cyber",
+          "sections": [
+            {
+              "heading": "Контекст и операция",
+              "body": "Chrome — это браузер, который интерпретирует код с веб-сайтов. Ошибка в этой интерпретации может поставить под угрозу безопасность позиции. В приведенном выше уведомлении указывается, что версии должны быть обновлены, без установления успешной атаки."
+            },
+            {
+              "heading": "Технические условия объяснены",
+              "body": "Уязвимость: слабость программного обеспечения. Корректирующая (патч): модификация, исправляющая неисправность. Версия: номер, чтобы определить, установлен ли патч."
+            },
+            {
+              "heading": "Глобальное и корпоративное воздействие",
+              "body": "Chrome — это команда из нескольких рабочих станций. Неисправность может привести к инцидентам в зависимости от условий эксплуатации; задержка в обновлении увеличивает окно воздействия. Истинная степень этого недостатка здесь не установлена."
+            },
+            {
+              "heading": "Профессиональный пример",
+              "body": "В поддержку N1 пользователь спрашивает, обновлен ли его браузер. Открывается О Chrome, поднимает версию, сравнивает с официальным уведомлением, применяет процедуру компании и проверяет после перезапуска."
+            },
+            {
+              "heading": "Предупреждение и действия",
+              "body": "Проверяйте версии, развертывайте патчи через утвержденную процедуру и следите за их установкой. Позиции, которые не могут быть обновлены."
+            },
+            {
+              "heading": "Чтобы сохранить",
+              "body": "Доступный патч не защищает положение, пока оно не будет установлено и проверено."
+            }
+          ]
         },
         "hi": {
           "title": "क्रोम: वर्कस्टेशन के लिए सुरक्षा अद्यतन",
           "summary": "एक नोटिस 158.0.8127.88/.89 Windows और MacOS पर क्रोम डेस्कटॉप के संस्करणों में एक vulnerability इंगित करता है, और लिनक्स पर .88। स्थापित संस्करण की जाँच करें और उचित अद्यतन लागू करें।",
-          "category": "आईटी समर्थन / साइबर"
+          "category": "आईटी समर्थन / साइबर",
+          "sections": [
+            {
+              "heading": "संदर्भ और संचालन",
+              "body": "क्रोम एक ब्राउज़र है: यह वेबसाइटों से कोड की व्याख्या करता है। इस व्याख्या में त्रुटि स्थिति की सुरक्षा से समझौता कर सकती है। नोटिस उद्धृत संस्करण को अद्यतन करने के लिए इंगित करता है, बिना किसी सफल हमले की स्थापना के।"
+            },
+            {
+              "heading": "तकनीकी शर्तें समझाया",
+              "body": "Vulnerability: सॉफ्टवेयर कमजोरी। सुधारात्मक (पैच): संशोधन जो गलती की मरम्मत करता है। संस्करण: संख्या यह निर्धारित करने के लिए कि क्या पैच स्थापित है।"
+            },
+            {
+              "heading": "वैश्विक और कॉर्पोरेट प्रभाव",
+              "body": "क्रोम कई कार्य केंद्र से लैस है। एक गलती कंपनियों को अपनी परिचालन स्थितियों के आधार पर घटनाओं को उजागर कर सकती है; एक अद्यतन देरी जोखिम विंडो को बढ़ाता है। इस दोष की सही हद यहां स्थापित नहीं है।"
+            },
+            {
+              "heading": "व्यावसायिक उदाहरण",
+              "body": "N1 के समर्थन में, एक उपयोगकर्ता पूछता है कि उसका ब्राउज़र तारीख तक है। क्रोम के बारे में खुलता है, संस्करण बढ़ाता है, आधिकारिक नोटिस के साथ तुलना करता है, फिर से शुरू होने के बाद कंपनी की प्रक्रिया को लागू करता है और चेक करता है।"
+            },
+            {
+              "heading": "रोकथाम और कार्रवाई",
+              "body": "संस्करणों की जाँच करें, अनुमोदित प्रक्रिया के माध्यम से पैच तैनात करें और उनकी स्थापना की निगरानी करें। उन पदों पर चढ़ाई जिन्हें अद्यतन नहीं किया जा सकता है।"
+            },
+            {
+              "heading": "बनाए रखने के लिए",
+              "body": "उपलब्ध पैच एक स्थिति की रक्षा नहीं करता है जब तक कि इसे स्थापित और सत्यापित नहीं किया जाता है।"
+            }
+          ]
         },
         "tr": {
           "title": "Chrome: İş istasyonları için Güvenlik güncelleştirme",
           "summary": "Bir fark, Chrome Desktop'ın 158.0.8127.88/.89'dan önce versiyonlarında bir kırılganlığı gösterir ve Linux'ta .88. Oluşturulan sürümü kontrol edin ve uygun güncellemeyi uygulayın.",
-          "category": "IT Support / Cyber"
+          "category": "IT Support / Cyber",
+          "sections": [
+            {
+              "heading": "Context and operation",
+              "body": "Chrome bir tarayıcıdır: web sitelerinden kod yorumlar. Bu yorumlamadaki bir hata, pozisyonun güvenliğini tehlikeye atabilir. Yukarıdaki fark, sürümlerin yalnızca başarılı bir saldırı kurmadan güncellendiğini gösteriyor."
+            },
+            {
+              "heading": "Teknik terimler açıklandı",
+              "body": "Vulnerability: yazılım zayıflığı. Doğrulayıcı (patch): Bir hatayı tamir eden değişiklikler. Versiyon: yama kurulu olup olmadığını belirlemek için numara."
+            },
+            {
+              "heading": "Global ve şirket etkisi",
+              "body": "Chrome birçok iş istasyonu ekibidir. Bir hata, şirketlerin işletme koşullarına bağlı olarak olaylarını ortaya çıkarabilir; güncellemede gecikme maruz kalan pencereyi artırır. Bu kusurun gerçek boyutu burada kurulmuş değildir."
+            },
+            {
+              "heading": "Profesyonel örnek örneği",
+              "body": "N1'in desteğiyle, bir kullanıcı tarayıcının tarihe kadar olup olmadığını sorar. Chrome Hakkında Açıklar, sürümü ortaya çıkarır, resmi farkla karşılaştırır, şirket prosedürünü uygular ve yeniden başlatmadan sonra kontrol eder."
+            },
+            {
+              "heading": "Önleme ve eylem",
+              "body": "Kontrol versiyonları, onaylanmış prosedür aracılığıyla yamaları dağıtın ve yüklemelerini izleyin. Güncellenmemiş olan basamak pozisyonları."
+            },
+            {
+              "heading": "muhafaza edilmek için",
+              "body": "Mevcut bir yama, kurulduğu ve doğrulanana kadar bir pozisyon korumaz."
+            }
+          ]
         },
         "vi": {
           "title": "Cập nhật bảo mật cho trạm làm việc",
           "summary": "Một thông báo cho thấy sự dễ bị tổn thương trong các phiên bản của màn hình máy tính Chrome trước 158.0.8127.88/.89 trên Windows và McOS, và .88 trên Linux. Hãy kiểm tra phiên bản đã cài đặt và áp dụng cách cập nhật thích hợp.",
-          "category": "IT hỗ trợ / Cyber"
+          "category": "IT hỗ trợ / Cyber",
+          "sections": [
+            {
+              "heading": "Văn cảnh và thao tác",
+              "body": "Chrome là một trình duyệt: nó giải mã mã từ các trang web. Một lỗi lầm trong cách giải thích này có thể làm tổn hại đến sự an toàn của địa vị. Thông báo trên cho thấy các bản dịch sẽ được cập nhật, không chỉ riêng việc tạo ra một cuộc tấn công thành công."
+            },
+            {
+              "heading": "Name",
+              "body": "Tính dễ bị tổn thương: yếu điểm phần mềm. Sửa đổi (patch): sửa chữa lỗi. Phiên bản: con số để xác định việc cài đặt hay không."
+            },
+            {
+              "heading": "Ảnh hưởng toàn cầu và tập đoàn",
+              "body": "Chrome là một đội gồm nhiều trạm làm việc. Một lỗi có thể khiến các công ty gặp sự cố tùy thuộc vào điều kiện hoạt động của nó; sự chậm trễ cập nhật làm tăng sự phơi nhiễm của cửa sổ. Độ sai sót này không được xác định ở đây."
+            },
+            {
+              "heading": "Ví dụ chuyên nghiệp",
+              "body": "Để hỗ trợ N1, một người dùng hỏi xem trình duyệt của mình đã sẵn sàng chưa. Mở sách About Chrome, nâng bản dịch lên, so sánh với thông báo chính thức, áp dụng thủ tục và kiểm tra sau khi khởi động lại."
+            },
+            {
+              "heading": "Phòng ngừa và hành động",
+              "body": "Kiểm tra phiên bản, triển khai các bản vá qua thủ tục được chấp thuận và theo dõi việc cài đặt chúng. Vị trí leo núi không thể cập nhật được."
+            },
+            {
+              "heading": "Được giữ lại",
+              "body": "Một miếng vá sẵn sàng không bảo vệ vị trí cho đến khi nó được cài đặt và kiểm tra."
+            }
+          ]
         },
         "nl": {
           "title": "Chrome: Veiligheidsupdate voor werkstations",
           "summary": "Een bericht duidt op een kwetsbaarheid in versies van Chrome Desktop vóór 158.0.8127.88/.89 op Windows en macOS, en .88 op Linux. Controleer de geïnstalleerde versie en pas de juiste update toe.",
-          "category": "IT-ondersteuning / Cyber"
+          "category": "IT-ondersteuning / Cyber",
+          "sections": [
+            {
+              "heading": "Context en werking",
+              "body": "Chrome is een browser: het interpreteert code van websites. Een fout in deze interpretatie kan de veiligheid van het standpunt in gevaar brengen. Bovenstaande mededeling geeft aan welke versies moeten worden bijgewerkt, zonder dat alleen een succesvolle aanval wordt vastgesteld."
+            },
+            {
+              "heading": "Technische termen",
+              "body": "Kwetsbaarheid: software zwakte. Correctie (patch): wijziging die een fout herstelt. Versie: nummer om te bepalen of de patch is geïnstalleerd."
+            },
+            {
+              "heading": "Wereldwijd en bedrijfseffect",
+              "body": "Chrome is een team van vele werkplekken. Een fout kan bedrijven blootstellen aan incidenten afhankelijk van de bedrijfsomstandigheden; een vertraging bij het bijwerken verhoogt het blootstellingsvenster. De werkelijke omvang van deze tekortkoming wordt hier niet vastgesteld."
+            },
+            {
+              "heading": "Beroepsvoorbeeld",
+              "body": "Ter ondersteuning van N1 vraagt een gebruiker of zijn browser up-to-date is. Opent Over Chrome, verhoogt de versie, vergelijkt met de officiële aankondiging, past de bedrijfsprocedure en controles na herstart."
+            },
+            {
+              "heading": "Preventie en actie",
+              "body": "Controleer versies, gebruik patches via de goedgekeurde procedure en volg hun installatie. Klimposities die niet kunnen worden bijgewerkt."
+            },
+            {
+              "heading": "Te behouden",
+              "body": "Een beschikbare patch beschermt geen positie totdat deze is geïnstalleerd en geverifieerd."
+            }
+          ]
         },
         "id": {
           "title": "Krom: Pemutakhiran keamanan untuk workstation",
           "summary": "Sebuah pemberitahuan menunjukkan kerentanan dalam versi Chrome Desktop sebelum 158.0.8127,88 / .89 pada Windows dan maCO, dan .88 pada Linux. Periksa versi yang terpasang dan menerapkan pemutakhiran yang sesuai.",
-          "category": "Dukungan IT / Cyber"
+          "category": "Dukungan IT / Cyber",
+          "sections": [
+            {
+              "heading": "Konteks dan operasi",
+              "body": "Krom adalah peramban: ia menafsirkan kode dari situs web. Kesalahan dalam penafsiran ini bisa membahayakan keamanan posisi. Pemberitahuan di atas menunjukkan versi untuk diperbarui, tanpa membangun serangan sukses sendiri."
+            },
+            {
+              "heading": "Istilah teknis dijelaskan",
+              "body": "Kelemahan: kelemahan perangkat lunak. Koreksi (patch): modifikasi yang memperbaiki kesalahan. Versi: nomor untuk menentukan apakah patch diinstal."
+            },
+            {
+              "heading": "Dampak global dan perusahaan",
+              "body": "Chrome adalah tim dari banyak tempat kerja. Sebuah kesalahan mungkin mengekspos perusahaan untuk insiden tergantung pada kondisi operasinya; penundaan dalam memperbarui meningkatkan jendela eksposur. Tingkat sebenarnya dari kelemahan ini tidak didirikan di sini."
+            },
+            {
+              "heading": "Contoh profesional",
+              "body": "Dalam dukungan N1, seorang pengguna bertanya apakah peramban nya up to date. Membuka Tentang Chrome, menimbulkan versi, dibandingkan dengan pemberitahuan resmi, menerapkan prosedur perusahaan dan pemeriksaan setelah memulai kembali."
+            },
+            {
+              "heading": "Pencegahan dan tindakan",
+              "body": "Periksa versi, sebarkan patch melalui prosedur yang disetujui dan monitor instalasi mereka. Posisi pendakian yang tak bisa diperbarui."
+            },
+            {
+              "heading": "Untuk dipertahankan",
+              "body": "Patch yang tersedia tidak melindungi posisi sampai dipasang dan diverifikasi."
+            }
+          ]
         }
       },
       "sections": [
@@ -124,77 +514,467 @@
         "en": {
           "title": "VMware: vCenter security advisory",
           "summary": "Several branches of vCenter are involved. Inventory versions, view editor fixes and schedule updates with backup and availability control.",
-          "category": "Infrastructure / Cloud"
+          "category": "Infrastructure / Cloud",
+          "sections": [
+            {
+              "heading": "Context and operation",
+              "body": "vCenter centralizes management of VMware hosts and virtual machines. Centralized administration allows many services to be managed from the same interface, making its protection important."
+            },
+            {
+              "heading": "Technical terms explained",
+              "body": "Virtual machine (VM): simulated computer. Hypervisor: software that executes VM. vCenter: centralized management. Patch: software patch."
+            },
+            {
+              "heading": "Global and corporate impact",
+              "body": "A compromise of the administration plan could affect several hosted services, depending on the conditions of the fault. Organizations must arbitrate between availability and timeliness of corrections. No global incident is established by this opinion alone."
+            },
+            {
+              "heading": "Professional example",
+              "body": "An N1 technician receives several unavailability tickets. It identifies the services concerned, collects symptoms and transmits to the infrastructure team, without changing vCenter itself without permission."
+            },
+            {
+              "heading": "Prevention and action",
+              "body": "Inventory versions, check editor's notices, limit administrative access, schedule fixes, and control backups and availability."
+            },
+            {
+              "heading": "To be retained",
+              "body": "Centralization facilitates administration but also focuses certain risks."
+            }
+          ]
         },
         "de": {
           "title": "VMware: vCenter Security Advisory",
           "summary": "Mehrere Zweige von vCenter sind beteiligt. Inventarversionen, Ansicht von Editorkorrekturen und Zeitplanaktualisierungen mit Backup- und Verfügbarkeitskontrolle.",
-          "category": "Infrastruktur / Cloud"
+          "category": "Infrastruktur / Cloud",
+          "sections": [
+            {
+              "heading": "Kontext und Funktionsweise",
+              "body": "vCenter zentralisiert die Verwaltung von VMware-Hosts und virtuellen Maschinen. Die zentrale Verwaltung ermöglicht es, viele Dienste von derselben Schnittstelle aus zu verwalten, was den Schutz wichtig macht."
+            },
+            {
+              "heading": "Technische Begriffe erklärt",
+              "body": "Virtuelle Maschine (VM): simulierter Computer. Hypervisor: Software, die VM ausführt. vCenter: Zentralisiertes Management. Patch: Software Patch."
+            },
+            {
+              "heading": "Globale und Corporate Impact",
+              "body": "Ein Kompromiss des Verwaltungsplans kann mehrere gehostete Dienste betreffen, abhängig von den Fehlerbedingungen. Unternehmen müssen zwischen Verfügbarkeit und Aktualität von Korrekturen entscheiden. Kein globaler Vorfall wird allein durch diese Meinung festgestellt."
+            },
+            {
+              "heading": "Professionelle Beispiele",
+              "body": "Ein N1-Techniker erhält mehrere Nichtverfügbarkeitstickets. Es identifiziert die betroffenen Dienste, sammelt Symptome und übermittelt sie an das Infrastrukturteam, ohne vCenter selbst ohne Erlaubnis zu ändern."
+            },
+            {
+              "heading": "Prävention und Maßnahmen",
+              "body": "Inventarversionen, überprüfen Sie die Hinweise des Editors, begrenzen Sie den administrativen Zugriff, planen Sie Korrekturen und steuern Sie Backups und Verfügbarkeit."
+            },
+            {
+              "heading": "Einbehalten",
+              "body": "Zentralisierung erleichtert die Verwaltung, konzentriert aber auch bestimmte Risiken."
+            }
+          ]
         },
         "zh-Hans": {
           "title": "VMware: vCenter 安全咨询",
           "summary": "涉及vCenter的几个分支. 库存版本,查看编辑器修正和有备份和可用性控制的时间安排更新.",
-          "category": "基础设施/云"
+          "category": "基础设施/云",
+          "sections": [
+            {
+              "heading": "A. 背景和运作",
+              "body": "vCenter集中管理VMware主机和虚拟机. 集中管理使得许多服务能够从同一个接口管理,使得其保护变得重要."
+            },
+            {
+              "heading": "技术术语说明",
+              "body": "虚拟机(VM):模拟计算机. Hypervisor:执行VM的软件. vCenter:集中管理. 补丁:软件补丁."
+            },
+            {
+              "heading": "全球和公司影响",
+              "body": "行政计划的妥协可能影响到若干托管服务,这取决于过失的条件。 各组织必须在提供和及时纠正之间进行仲裁。 仅此意见并未确立任何全球性事件。"
+            },
+            {
+              "heading": "专业实例",
+              "body": "一名N1技术员领取了几张无法使用的机票。 它确定相关服务,收集症状并传递给基础设施团队,而不擅自修改vCenter本身."
+            },
+            {
+              "heading": "预防和行动",
+              "body": "库存版本,检查编辑通知,限制行政访问,时间表修正,控制备份和可用性."
+            },
+            {
+              "heading": "待保留",
+              "body": "中央集权有利于行政管理,但也有助于集中某些风险。"
+            }
+          ]
         },
         "es": {
           "title": "VMware: vCenter security advisory",
           "summary": "Varias ramas de vCenter están involucradas. Versiones de inventario, ver editor corrige y programar actualizaciones con control de copia de seguridad y disponibilidad.",
-          "category": "Infraestructura / Cloud"
+          "category": "Infraestructura / Cloud",
+          "sections": [
+            {
+              "heading": "Contexto y operación",
+              "body": "vCenter centraliza la gestión de hosts VMware y máquinas virtuales. La administración centralizada permite gestionar muchos servicios desde la misma interfaz, haciendo importante su protección."
+            },
+            {
+              "heading": "Condiciones técnicas explicadas",
+              "body": "Máquina virtual (VM): ordenador simulado. Hypervisor: software que ejecuta VM. vCenter: gestión centralizada. Parche: parche de software."
+            },
+            {
+              "heading": "Impacto mundial y empresarial",
+              "body": "Un compromiso del plan de administración podría afectar a varios servicios alojados, dependiendo de las condiciones de la culpa. Las organizaciones deben arbitrar entre disponibilidad y puntualidad de las correcciones. No global incident is established by this opinion alone."
+            },
+            {
+              "heading": "Ejemplo profesional",
+              "body": "Un técnico N1 recibe varios boletos de falta de disponibilidad. Identifica los servicios correspondientes, recoge síntomas y transmite al equipo de infraestructura, sin cambiar vCenter sí mismo sin permiso."
+            },
+            {
+              "heading": "Prevención y acción",
+              "body": "Versiones de inventario, avisos de editor de cheques, acceso administrativo límite, correcciones de horarios y respaldos de control y disponibilidad."
+            },
+            {
+              "heading": "Que se mantenga",
+              "body": "La centralización facilita la administración, pero también centra ciertos riesgos."
+            }
+          ]
         },
         "it": {
           "title": "VMware: vCenter security advisory",
           "summary": "Sono coinvolti diversi rami di vCenter. Versioni dell'inventario, visualizza le correzioni dell'editor e aggiorna gli aggiornamenti con il backup e il controllo della disponibilità.",
-          "category": "Infrastrutture / Cloud"
+          "category": "Infrastrutture / Cloud",
+          "sections": [
+            {
+              "heading": "Contesto e funzionamento",
+              "body": "vCenter centralizza la gestione di host VMware e macchine virtuali. L'amministrazione centralizzata consente la gestione di molti servizi dalla stessa interfaccia, rendendo la sua protezione importante."
+            },
+            {
+              "heading": "Termini tecnici spiegati",
+              "body": "Macchina virtuale (VM): computer simulato. Hypervisor: software che esegue VM. vCenter: gestione centralizzata. Patch: patch software."
+            },
+            {
+              "heading": "Impatto globale e societario",
+              "body": "Un compromesso del piano di amministrazione potrebbe influenzare diversi servizi ospitati, a seconda delle condizioni del guasto. Le organizzazioni devono arbitrare tra disponibilità e tempestività delle correzioni. Nessun incidente globale è stabilito da questo parere da solo."
+            },
+            {
+              "heading": "Esempio professionale",
+              "body": "Un tecnico N1 riceve diversi biglietti non disponibili. Identifica i servizi interessati, raccoglie i sintomi e trasmette al team di infrastrutture, senza cambiare vCenter stesso senza autorizzazione."
+            },
+            {
+              "heading": "Prevenzione e azione",
+              "body": "Versioni dell'inventario, controlli gli avvisi dell'editor, limiti l'accesso amministrativo, correzioni di programma e controlli backup e disponibilità."
+            },
+            {
+              "heading": "Da conservare",
+              "body": "La centralizzazione facilita l'amministrazione, ma si concentra anche su alcuni rischi."
+            }
+          ]
         },
         "pt": {
           "title": "VMware: consultoria de segurança vCenter",
           "summary": "Vários ramos do vCenter estão envolvidos. Versões de inventário, ver correções do editor e agendar atualizações com backup e controle de disponibilidade.",
-          "category": "Infraestrutura / Nuvem"
+          "category": "Infraestrutura / Nuvem",
+          "sections": [
+            {
+              "heading": "Contexto e operação",
+              "body": "vCenter centraliza o gerenciamento de hosts VMware e máquinas virtuais. A administração centralizada permite que muitos serviços sejam gerenciados a partir da mesma interface, tornando sua proteção importante."
+            },
+            {
+              "heading": "Termos técnicos explicados",
+              "body": "Máquina virtual (VM): computador simulado. Hypervisor: software que executa VM. vCentro: gerenciamento centralizado. Patch: patch de software."
+            },
+            {
+              "heading": "Impacto global e empresarial",
+              "body": "Um compromisso do plano de administração poderia afetar vários serviços hospedados, dependendo das condições da falha. As organizações devem arbitrar entre disponibilidade e pontualidade das correções. Nenhum incidente global é estabelecido somente por este parecer."
+            },
+            {
+              "heading": "Exemplo profissional",
+              "body": "Um técnico da N1 recebe vários tickets de indisponibilidade. Identifica os serviços em causa, recolhe sintomas e transmite à equipa de infra-estrutura, sem alterar o próprio vCenter sem autorização."
+            },
+            {
+              "heading": "Prevenção e acção",
+              "body": "Versões de inventário, verificar avisos do editor, limitar o acesso administrativo, programar correções, e controlar backups e disponibilidade."
+            },
+            {
+              "heading": "A manter",
+              "body": "A centralização facilita a administração, mas também concentra certos riscos."
+            }
+          ]
         },
         "ja": {
           "title": "VMware: vCenter セキュリティアドバイザリー",
           "summary": "vCenter の複数の支店が関与しています。 在庫バージョン、ビューエディタは、バックアップと可用性コントロールで更新を修正し、スケジュールします。",
-          "category": "インフラ・クラウド"
+          "category": "インフラ・クラウド",
+          "sections": [
+            {
+              "heading": "コンテキストと操作",
+              "body": "vCenterはVMwareホストと仮想マシンの管理を一元化します。 集中管理により、多くのサービスは同じインターフェイスから管理され、その保護が重要になります。"
+            },
+            {
+              "heading": "技術的な用語解説",
+              "body": "仮想マシン(VM):シミュレートされたコンピュータ。 Hypervisor: VM を実行するソフトウェア。 vCenter:集中管理。 パッチ:ソフトウェアパッチ。"
+            },
+            {
+              "heading": "グローバル・企業インパクト",
+              "body": "管理計画の妥協は、障害の条件に応じて、いくつかのホストされたサービスに影響を与える可能性があります。 組織は、補正の可用性とタイムライン間で仲裁しなければなりません。 この意見だけでは、グローバルインシデントは成立しません。"
+            },
+            {
+              "heading": "専門例",
+              "body": "N1技術者は、いくつかの不燃性チケットを受け取ります。 関連するサービスを識別し、症状を収集し、権限なしでvCenter自体を変更することなく、インフラストラクチャチームに送信します。"
+            },
+            {
+              "heading": "予防と行動",
+              "body": "在庫バージョン、チェックエディタの通知、管理アクセス制限、スケジュール修正、バックアップと可用性の制御。"
+            },
+            {
+              "heading": "保持されるため",
+              "body": "集中化は管理を促進しますが、また特定の危険に焦点を合わせます。"
+            }
+          ]
         },
         "ko": {
           "title": "VMware: vCenter 보안 자문",
           "summary": "vCenter의 몇몇 분지는 관여됩니다. Inventory version, 에디터 수정 및 일정 업데이트 백업 및 가용성 제어.",
-          "category": "인프라 / 클라우드"
+          "category": "인프라 / 클라우드",
+          "sections": [
+            {
+              "heading": "Context 및 작동",
+              "body": "vCenter는 VMware 호스트 및 가상 머신의 관리를 중앙 집중화합니다. 중앙화 관리는 동일한 인터페이스에서 많은 서비스를 관리 할 수 있으며 보호가 중요합니다."
+            },
+            {
+              "heading": "기술 용어 설명",
+              "body": "가상 기계 (VM): 가장된 컴퓨터. Hypervisor: VM을 실행하는 소프트웨어. vCenter: 집중된 관리. 패치: 소프트웨어 패치."
+            },
+            {
+              "heading": "글로벌 및 기업 영향",
+              "body": "관리 계획의 타협은 잘못된 상태에 따라 여러 호스팅 서비스에 영향을 미칠 수 있습니다. 조직은 보정의 가용성과 시간 사이에 arbitrate해야합니다. 글로벌 사건은 혼자 이 의견에 의해 설치되지 않습니다."
+            },
+            {
+              "heading": "전문 예",
+              "body": "N1 기술자는 몇 가지 타당성표를받습니다. VCenter 자체를 변경하지 않고, 증상을 수집하고 인프라 팀에 전달하는 서비스를 식별합니다."
+            },
+            {
+              "heading": "예방 및 활동",
+              "body": "Inventory version, 체크 편집기의 통지, 제한 관리 액세스, 일정 수정, 및 제어 백업 및 가용성."
+            },
+            {
+              "heading": "계속하기",
+              "body": "중앙화는 관리뿐만 아니라 특정 위험에 중점을 둡니다."
+            }
+          ]
         },
         "ar": {
           "title": "VMware: vCenter security advisory",
           "summary": "وهناك عدة فروع في مركز فيينا الدولي. :: إصدارات الجرد، وتجهيزات المحررات، واستكمالات الجدول مع توفير الدعم ومراقبة التوافر.",
-          "category": "الهياكل الأساسية/الكلاود"
+          "category": "الهياكل الأساسية/الكلاود",
+          "sections": [
+            {
+              "heading": "السياق والتشغيل",
+              "body": "ويقوم المركز بإضفاء الطابع المركزي على إدارة مضيفي VMware والآلات الافتراضية. وتتيح الإدارة المركزية إدارة العديد من الخدمات من نفس الوصلة، مما يجعل حمايتها مهمة."
+            },
+            {
+              "heading": "الشروط التقنية",
+              "body": "آلة تصوير: حاسوب محاكاة. Hypervisor: software that executes VM. vCenter: centralized management. رقعة البرامج"
+            },
+            {
+              "heading": "التأثير العالمي والأثر المؤسسي",
+              "body": "ومن شأن التوصل إلى حل توفيقي في خطة الإدارة أن يؤثر على عدة خدمات مستضيفة، تبعاً لظروف الخطأ. ويجب على المنظمات أن تفصل بين توافر التصويبات وتوقيتها. ولا يثبت هذا الرأي وحده وقوع حادث عالمي."
+            },
+            {
+              "heading": "مثال مهني",
+              "body": "ويتلقى تقني من N1 عدة تذاكر غير متاحة. وهو يحدد الخدمات المعنية، ويجمع الأعراض وينقلها إلى فريق الهياكل الأساسية، دون تعديل المركز نفسه دون إذن."
+            },
+            {
+              "heading": "الوقاية والعمل",
+              "body": "نسخ مخزنية، فحص إشعارات المحرّر، الحدّ من الوصول الإداري، تحديد الجدول الزمني، مراقبة الدعم والتوافر."
+            },
+            {
+              "heading": "يُحتفظ بها",
+              "body": "فالمركزية تيسر الإدارة ولكنها تركز أيضا على بعض المخاطر."
+            }
+          ]
         },
         "ru": {
           "title": "VMware: vCenter Security Advisory",
           "summary": "Участвуют несколько отделений vCenter. Версии инвентаризации, исправления редактора просмотра и обновления расписания с резервным копированием и контролем доступности.",
-          "category": "Инфраструктура / Облако"
+          "category": "Инфраструктура / Облако",
+          "sections": [
+            {
+              "heading": "Контекст и операция",
+              "body": "vCenter централизует управление хостами VMware и виртуальными машинами. Централизованное администрирование позволяет управлять многими сервисами из одного интерфейса, что делает его защиту важной."
+            },
+            {
+              "heading": "Технические условия объяснены",
+              "body": "Виртуальная машина (VM): имитируемый компьютер. Hypervisor - программное обеспечение, которое выполняет VM. vCenter: централизованное управление. Патч: программный патч."
+            },
+            {
+              "heading": "Глобальное и корпоративное воздействие",
+              "body": "Компромисс плана администрации может затронуть несколько размещенных сервисов, в зависимости от условий неисправности. Организации должны проводить арбитраж между наличием и своевременностью исправлений. Ни один глобальный инцидент не устанавливается только этим мнением."
+            },
+            {
+              "heading": "Профессиональный пример",
+              "body": "Техник N1 получает несколько билетов. Он идентифицирует соответствующие службы, собирает симптомы и передает команде инфраструктуры без изменения самого vCenter без разрешения."
+            },
+            {
+              "heading": "Предупреждение и действия",
+              "body": "Версии инвентаризации, проверка уведомлений редактора, ограничение административного доступа, исправления расписания, а также контроль резервных копий и доступности."
+            },
+            {
+              "heading": "Чтобы сохранить",
+              "body": "Централизация облегчает администрирование, но также фокусирует определенные риски."
+            }
+          ]
         },
         "hi": {
           "title": "VCenter सुरक्षा सलाहकार",
           "summary": "VCenter की कई शाखाएं शामिल हैं। इन्वेंटरी संस्करण, बैकअप और उपलब्धता नियंत्रण के साथ संपादक फिक्स और शेड्यूल अपडेट देखें।",
-          "category": "इंफ्रास्ट्रक्चर / क्लाउड"
+          "category": "इंफ्रास्ट्रक्चर / क्लाउड",
+          "sections": [
+            {
+              "heading": "संदर्भ और संचालन",
+              "body": "VCenter VMware होस्ट और आभासी मशीनों के प्रबंधन को केंद्रीकृत करता है। केंद्रीकृत प्रशासन एक ही इंटरफेस से कई सेवाओं के प्रबंधन की अनुमति देता है, जिससे इसकी सुरक्षा महत्वपूर्ण हो जाती है।"
+            },
+            {
+              "heading": "तकनीकी शर्तें समझाया",
+              "body": "वर्चुअल मशीन (VM): नकली कंप्यूटर। हाइपरविजर: सॉफ्टवेयर जो वीएम चलाता है। VCenter: केंद्रीकृत प्रबंधन। पैच: सॉफ्टवेयर पैच।"
+            },
+            {
+              "heading": "वैश्विक और कॉर्पोरेट प्रभाव",
+              "body": "प्रशासन योजना का एक समझौता गलती की शर्तों के आधार पर कई होस्ट की गई सेवाओं को प्रभावित कर सकता है। संगठनों को सुधार की उपलब्धता और समयबद्धता के बीच मनमाना होना चाहिए। इस विचार से कोई वैश्विक घटना स्थापित नहीं है।"
+            },
+            {
+              "heading": "व्यावसायिक उदाहरण",
+              "body": "एक N1 तकनीशियन को कई अनुपलब्धता टिकट प्राप्त होते हैं। यह संबंधित सेवाओं की पहचान करता है, बिना अनुमति के VCenter को बदलने के बिना, अवसंरचना टीम में लक्षण एकत्र करता है और संचारित करता है।"
+            },
+            {
+              "heading": "रोकथाम और कार्रवाई",
+              "body": "इन्वेंटरी संस्करण, चेक एडिटर के नोटिस, प्रशासनिक पहुंच, शेड्यूल फिक्स को सीमित करते हैं और बैकअप और उपलब्धता को नियंत्रित करते हैं।"
+            },
+            {
+              "heading": "बनाए रखने के लिए",
+              "body": "केंद्रीयकरण प्रशासन को सुविधाजनक बनाता है लेकिन कुछ जोखिमों को भी केंद्रित करता है।"
+            }
+          ]
         },
         "tr": {
           "title": "VMware: vCenter güvenlik danışmanlığı",
           "summary": "Çeşitli vCenter şubeleri dahil edilmiştir. Teşvik versiyonları, görüntü editörü düzeltmeler ve yedekleme ve kullanılabilirlik kontrolü ile güncelleştirmeler.",
-          "category": "Altyapı / Bulut"
+          "category": "Altyapı / Bulut",
+          "sections": [
+            {
+              "heading": "Context and operation",
+              "body": "vCenter, VMware evlerinin ve sanal makinelerin yönetimini merkezileştiriyor. Merkezileştirilmiş yönetim, aynı arayüzden yönetilen birçok hizmeti sağlar, korumasını önemli hale getirir."
+            },
+            {
+              "heading": "Teknik terimler açıklandı",
+              "body": "Sanal makine (VM): bilgisayar simülatörü. Hypervisor: VM'yi uygulayan yazılım. vCenter: merkezileştirilmiş yönetim. Patch: software patch."
+            },
+            {
+              "heading": "Global ve şirket etkisi",
+              "body": "Yönetim planının bir uzlaşması, hataların koşullarına bağlı olarak çeşitli barındırma hizmetleri etkileyebilir. Organizasyonlar, düzeltmelerin kullanılabilirliği ve zaman çizelgesi arasında tahkim yapmalıdır. Bu görüşle yalnızca küresel bir olay oluşturulmuyor."
+            },
+            {
+              "heading": "Profesyonel örnek örneği",
+              "body": "Bir N1 teknisyeni birkaç uygulanabilir bilet alır. İlgilenen hizmetleri tanımlar, belirtileri toplar ve vCenter'yi izin almadan altyapı ekibine gönderir."
+            },
+            {
+              "heading": "Önleme ve eylem",
+              "body": "İnventory versiyonları, editörün farklarını kontrol edin, idari erişimi sınırlandırır, düzeltmeler yapar ve yedeklemeleri ve kullanılabilirliği kontrol edin."
+            },
+            {
+              "heading": "muhafaza edilmek için",
+              "body": "Merkezileştirme yönetimi kolaylaştırır, aynı zamanda bazı riskleri de ele alır."
+            }
+          ]
         },
         "vi": {
           "title": "Phần mềm VM: cố vấn an ninh vCenter",
           "summary": "Có một số chi nhánh liên quan. Phiên bản phát minh, trình soạn thảo xem sửa chữa và cập nhật thời gian biểu với khả năng điều khiển sao lưu và có sẵn.",
-          "category": "Cơ cấu / Đám mây"
+          "category": "Cơ cấu / Đám mây",
+          "sections": [
+            {
+              "heading": "Văn cảnh và thao tác",
+              "body": "vCenter tập trung quản lý máy VMware và máy ảo. Chính quyền tập trung cho phép nhiều dịch vụ được quản lý từ cùng một giao diện, làm cho sự bảo vệ của nó trở nên quan trọng."
+            },
+            {
+              "heading": "Name",
+              "body": "Máy ảo (VM): mô phỏng máy tính. Siêu giám sát: phần mềm thực hiện VM. vCenter: trung tâm quản lý. Đắp vá: đắp phần mềm."
+            },
+            {
+              "heading": "Ảnh hưởng toàn cầu và tập đoàn",
+              "body": "Sự thỏa hiệp về kế hoạch quản trị có thể ảnh hưởng đến nhiều dịch vụ, tùy theo tình trạng của lỗi lầm. Các tổ chức phải hạn chế giữa sự sẵn có và tính đúng giờ. Không có biến cố toàn cầu nào được chứng minh chỉ bởi ý kiến này."
+            },
+            {
+              "heading": "Ví dụ chuyên nghiệp",
+              "body": "Một kỹ thuật viên N1 nhận được một số vé không ổn định. Nó xác định các dịch vụ liên quan, thu thập các triệu chứng và gửi đến đội cơ sở hạ tầng, mà không cần thay đổi vCenter mà không có sự cho phép."
+            },
+            {
+              "heading": "Phòng ngừa và hành động",
+              "body": "Phiên bản phát minh, thông báo của biên tập viên, hạn chế quyền truy cập hành chính, thời gian biểu sửa chữa, và điều khiển dự phòng và sẵn có."
+            },
+            {
+              "heading": "Được giữ lại",
+              "body": "Sự tập trung tạo điều kiện cho việc quản lý nhưng cũng tập trung vào những rủi ro nhất định."
+            }
+          ]
         },
         "nl": {
           "title": "VMware: vCenter veiligheidsadvies",
           "summary": "Verschillende takken van vCenter zijn betrokken. Inventarisversies, editor fixes en schema updates met back-up en beschikbaarheidscontrole.",
-          "category": "Infrastructuur / Cloud"
+          "category": "Infrastructuur / Cloud",
+          "sections": [
+            {
+              "heading": "Context en werking",
+              "body": "vCenter centraliseert het beheer van VMware hosts en virtuele machines. Gecentraliseerde administratie maakt het mogelijk veel diensten te worden beheerd vanaf dezelfde interface, waardoor de bescherming belangrijk."
+            },
+            {
+              "heading": "Technische termen",
+              "body": "Virtuele machine (VM): gesimuleerde computer. Hypervisor: software die VM uitvoert. vCenter: gecentraliseerd beheer. Patch: softwarepatch."
+            },
+            {
+              "heading": "Wereldwijd en bedrijfseffect",
+              "body": "Een compromis van het bestuursplan kan gevolgen hebben voor verschillende gastdiensten, afhankelijk van de omstandigheden van de fout. Organisaties moeten een afweging maken tussen beschikbaarheid en tijdigheid van correcties. Alleen al in dit advies wordt geen enkel wereldwijd incident vastgesteld."
+            },
+            {
+              "heading": "Beroepsvoorbeeld",
+              "body": "Een N1 technicus ontvangt verschillende onbeschikbaarheidskaarten. Het identificeert de betrokken diensten, verzamelt symptomen en stuurt naar het infrastructuurteam, zonder vCenter zelf te wijzigen zonder toestemming."
+            },
+            {
+              "heading": "Preventie en actie",
+              "body": "Inventarisversies, check editor's notificaties, beperken administratieve toegang, schemafixes, en controle back-ups en beschikbaarheid."
+            },
+            {
+              "heading": "Te behouden",
+              "body": "Centralisering vergemakkelijkt de administratie, maar richt zich ook op bepaalde risico's."
+            }
+          ]
         },
         "id": {
           "title": "VMware: vCenter penasihat keamanan",
           "summary": "Beberapa cabang vCenter terlibat. Versi inventaris, melihat perbaikan penyunting dan pemutakhiran jadwal dengan kendali cadangan dan ketersediaan.",
-          "category": "Infrastruktur / Cloud"
+          "category": "Infrastruktur / Cloud",
+          "sections": [
+            {
+              "heading": "Konteks dan operasi",
+              "body": "Pusat pusat manajemen VMware host dan mesin virtual. Administrasi sentralisasi memungkinkan banyak layanan untuk dikelola dari antarmuka yang sama, membuat perlindungan penting."
+            },
+            {
+              "heading": "Istilah teknis dijelaskan",
+              "body": "Mesin virtual (VM): simulasi komputer. Hypervisor: perangkat lunak yang mengeksekusi VM. vCenter: manajemen terpusat. Patch: patch perangkat lunak."
+            },
+            {
+              "heading": "Dampak global dan perusahaan",
+              "body": "Sebuah kompromi dari rencana administrasi bisa mempengaruhi beberapa layanan yang diselenggarakan, tergantung pada kondisi kesalahan. Organisasi harus mengatur antara ketersediaan dan jadwal perbaikan. Tidak ada insiden global yang didirikan oleh pendapat ini saja."
+            },
+            {
+              "heading": "Contoh profesional",
+              "body": "Seorang teknisi N1 menerima beberapa tiket yang tidak tersedia. Ini mengidentifikasi layanan yang bersangkutan, mengumpulkan gejala dan mengirimkan ke tim infrastruktur, tanpa mengubah VCenter sendiri tanpa izin."
+            },
+            {
+              "heading": "Pencegahan dan tindakan",
+              "body": "Versi inventaris, cek pemberitahuan editor, batasi akses administratif, jadwal perbaikan, dan kontrol backup dan ketersediaan."
+            },
+            {
+              "heading": "Untuk dipertahankan",
+              "body": "Centralization memfasilitasi administrasi tetapi juga memfokuskan risiko tertentu."
+            }
+          ]
         }
       },
       "sections": [
@@ -235,77 +1015,467 @@
         "en": {
           "title": "n8n: check versions of automation instances",
           "summary": "One opinion concerns several branches of n8n. Compare the version of each instance to the corrected versions indicated in the notice, then test the workflows after updating.",
-          "category": "Automation / Cyber"
+          "category": "Automation / Cyber",
+          "sections": [
+            {
+              "heading": "Context and operation",
+              "body": "n8n allows to link applications and automatically trigger tasks. An instance may have identifiers to access other services. The opinion concerns certain versions; its exact conditions must be consulted."
+            },
+            {
+              "heading": "Technical terms explained",
+              "body": "Workflow: Automated suite of steps. API: interface allowing software to exchange. Secret identifier: information used to authenticate a service."
+            },
+            {
+              "heading": "Global and corporate impact",
+              "body": "A fault in an automation tool can affect connected systems if permissions are extended. This does not mean that all instances are compromised."
+            },
+            {
+              "heading": "Professional example",
+              "body": "A team finds that a workflow no longer works after an update. Check logs, versions and permissions; test on a recipe environment before returning to production."
+            },
+            {
+              "heading": "Prevention and action",
+              "body": "Compare versions to official fixes, limit permissions, save configurations and test workflows after updating."
+            },
+            {
+              "heading": "To be retained",
+              "body": "Automation must be maintained and secured like any other application."
+            }
+          ]
         },
         "de": {
           "title": "n8n: Überprüfen Sie Versionen von Automatisierungsinstanzen",
           "summary": "Eine Meinung betrifft mehrere Zweige von n8n. Vergleichen Sie die Version jeder Instanz mit den korrigierten Versionen, die in der Mitteilung angegeben sind, und testen Sie die Workflows nach der Aktualisierung.",
-          "category": "Automatisierung / Cyber"
+          "category": "Automatisierung / Cyber",
+          "sections": [
+            {
+              "heading": "Kontext und Funktionsweise",
+              "body": "n8n ermöglicht es, Anwendungen zu verknüpfen und automatisch Aufgaben auszulösen. Eine Instanz kann Identifikatoren haben, um auf andere Dienste zuzugreifen. Die Stellungnahme betrifft bestimmte Fassungen; ihre genauen Bedingungen müssen eingesehen werden."
+            },
+            {
+              "heading": "Technische Begriffe erklärt",
+              "body": "Workflow: Automatisierte Suite von Schritten. API: Schnittstelle, die den Austausch von Software ermöglicht. Geheime Kennung: Informationen zur Authentifizierung eines Dienstes."
+            },
+            {
+              "heading": "Globale und Corporate Impact",
+              "body": "Ein Fehler in einem Automatisierungstool kann sich auf verbundene Systeme auswirken, wenn Berechtigungen erweitert werden. Dies bedeutet nicht, dass alle Instanzen kompromittiert werden."
+            },
+            {
+              "heading": "Professionelle Beispiele",
+              "body": "Ein Team stellt fest, dass ein Workflow nach einem Update nicht mehr funktioniert. Überprüfen Sie Protokolle, Versionen und Berechtigungen; Testen Sie auf einer Rezeptumgebung, bevor Sie in die Produktion zurückkehren."
+            },
+            {
+              "heading": "Prävention und Maßnahmen",
+              "body": "Vergleichen Sie Versionen mit offiziellen Korrekturen, begrenzen Sie Berechtigungen, speichern Sie Konfigurationen und testen Sie Workflows nach der Aktualisierung."
+            },
+            {
+              "heading": "Einbehalten",
+              "body": "Die Automatisierung muss wie jede andere Anwendung aufrechterhalten und gesichert werden."
+            }
+          ]
         },
         "zh-Hans": {
           "title": "n8n: 检查自动化实例的版本",
           "summary": "一项意见涉及n8n的几个分支。 将每个实例的版本与通知中标明的更正版本进行比较,然后在更新后测试工作流程.",
-          "category": "自动化/ 网络"
+          "category": "自动化/ 网络",
+          "sections": [
+            {
+              "heading": "A. 背景和运作",
+              "body": "n8n允许链接应用程序并自动触发任务. 一个实例可能具有访问其他服务的识别码。 该意见涉及某些版本;必须参考其确切条件。"
+            },
+            {
+              "heading": "技术术语说明",
+              "body": "工作流程:自动步骤组合。 API:允许软件交换的接口. 秘密标识符:用于认证某项服务的信息."
+            },
+            {
+              "heading": "全球和公司影响",
+              "body": "如果权限被延长,自动化工具中的一个故障会影响连接的系统. 这并不意味着所有案件都受到影响。"
+            },
+            {
+              "heading": "专业实例",
+              "body": "一个团队发现一个工作流程在更新后不再有效. 检查日志、版本和权限;在返回生产前在食谱环境中进行测试。"
+            },
+            {
+              "heading": "预防和行动",
+              "body": "比较版本与官方修正,限制权限,更新后保存配置和测试工作流程."
+            },
+            {
+              "heading": "待保留",
+              "body": "自动化必须像任何其他应用程序一样得到维护和保障。"
+            }
+          ]
         },
         "es": {
           "title": "n8n: versiones de las instancias de automatización",
           "summary": "Una opinión se refiere a varias ramas de n8n. Compare la versión de cada instancia a las versiones corregidas indicadas en el aviso, luego pruebe los flujos de trabajo después de actualizar.",
-          "category": "Automatización / Ciber"
+          "category": "Automatización / Ciber",
+          "sections": [
+            {
+              "heading": "Contexto y operación",
+              "body": "n8n permite vincular aplicaciones y activar automáticamente tareas. Una instancia puede tener identificadores para acceder a otros servicios. La opinión se refiere a ciertas versiones; sus condiciones exactas deben consultarse."
+            },
+            {
+              "heading": "Condiciones técnicas explicadas",
+              "body": "Flujo de trabajo: Suite automatizada de pasos. API: interfaz que permite el intercambio de software. Identificador secreto: información utilizada para autenticar un servicio."
+            },
+            {
+              "heading": "Impacto mundial y empresarial",
+              "body": "Una falla en una herramienta de automatización puede afectar los sistemas conectados si se amplían los permisos. Esto no significa que todos los casos estén comprometidos."
+            },
+            {
+              "heading": "Ejemplo profesional",
+              "body": "Un equipo encuentra que un flujo de trabajo ya no funciona después de una actualización. Compruebe los registros, versiones y permisos; probar en un ambiente de receta antes de regresar a la producción."
+            },
+            {
+              "heading": "Prevención y acción",
+              "body": "Compare versiones a correcciones oficiales, limite permisos, guardar configuraciones y probar flujos de trabajo después de actualizar."
+            },
+            {
+              "heading": "Que se mantenga",
+              "body": "La automatización debe mantenerse y asegurarse como cualquier otra aplicación."
+            }
+          ]
         },
         "it": {
           "title": "n8n: controlla le versioni delle istanze di automazione",
           "summary": "Un parere riguarda diversi rami di n8n. Confrontare la versione di ogni istanza alle versioni corrette indicate nell'avviso, quindi testare i flussi di lavoro dopo l'aggiornamento.",
-          "category": "Automazione / Cyber"
+          "category": "Automazione / Cyber",
+          "sections": [
+            {
+              "heading": "Contesto e funzionamento",
+              "body": "n8n consente di collegare le applicazioni e attivare automaticamente le attività. Un'istanza può avere identificatori che permettono l'accesso ad altri servizi. Il parere riguarda alcune versioni; le sue condizioni esatte devono essere consultate."
+            },
+            {
+              "heading": "Termini tecnici spiegati",
+              "body": "Flusso di lavoro: suite automatizzata di passi. API: interfaccia che consente al software di scambiare. Identificatore segreto: informazioni utilizzate per autenticare un servizio."
+            },
+            {
+              "heading": "Impatto globale e societario",
+              "body": "Un difetto in uno strumento di automazione può influenzare i sistemi collegati se i permessi sono estesi. Ciò non significa che tutte le istanze siano compromesse."
+            },
+            {
+              "heading": "Esempio professionale",
+              "body": "Un team scopre che un flusso di lavoro non funziona più dopo un aggiornamento. Controlla i registri, le versioni e le autorizzazioni; prova su un ambiente di ricetta prima di tornare alla produzione."
+            },
+            {
+              "heading": "Prevenzione e azione",
+              "body": "Confronta le versioni a correzioni ufficiali, limita le autorizzazioni, salva le configurazioni e i flussi di lavoro di prova dopo l'aggiornamento."
+            },
+            {
+              "heading": "Da conservare",
+              "body": "L'automazione deve essere mantenuta e protetta come qualsiasi altra applicazione."
+            }
+          ]
         },
         "pt": {
           "title": "n8n: verificar versões de instâncias de automação",
           "summary": "Uma opinião diz respeito a vários ramos de n8n. Compare a versão de cada instância com as versões corrigidas indicadas no aviso e, em seguida, teste os fluxos de trabalho após atualização.",
-          "category": "Automação / Cyber"
+          "category": "Automação / Cyber",
+          "sections": [
+            {
+              "heading": "Contexto e operação",
+              "body": "n8n permite ligar aplicações e activar automaticamente tarefas. Uma instância pode ter identificadores para acessar outros serviços. O parecer diz respeito a certas versões; as suas condições exactas devem ser consultadas."
+            },
+            {
+              "heading": "Termos técnicos explicados",
+              "body": "Fluxo de trabalho: conjunto automatizado de passos. API: interface permitindo a troca de software. Identificador secreto: informação usada para autenticar um serviço."
+            },
+            {
+              "heading": "Impacto global e empresarial",
+              "body": "Uma falha em uma ferramenta de automação pode afetar sistemas conectados se as permissões forem estendidas. Isto não significa que todas as instâncias estejam comprometidas."
+            },
+            {
+              "heading": "Exemplo profissional",
+              "body": "Uma equipe descobre que um fluxo de trabalho não funciona mais após uma atualização. Verifique registros, versões e permissões; teste em um ambiente de receita antes de retornar à produção."
+            },
+            {
+              "heading": "Prevenção e acção",
+              "body": "Compare versões com correções oficiais, limite permissões, salve configurações e teste fluxos de trabalho após atualização."
+            },
+            {
+              "heading": "A manter",
+              "body": "A automação deve ser mantida e segura como qualquer outra aplicação."
+            }
+          ]
         },
         "ja": {
           "title": "n8n: オートメーションインスタンスのバージョンをチェックする",
           "summary": "n8nのいくつかの枝を1つの意見が懸念しています。 各インスタンスのバージョンを通知で示した正しいバージョンに比較し、更新後にワークフローをテストします。",
-          "category": "オートメーション/サイバー"
+          "category": "オートメーション/サイバー",
+          "sections": [
+            {
+              "heading": "コンテキストと操作",
+              "body": "n8nはアプリケーションをリンクし、自動的にタスクをトリガーすることができます。 他のサービスにアクセスするための識別子を持つ場合があります。 意見は、特定のバージョンを懸念しています。その正確な条件は相談しなければなりません。"
+            },
+            {
+              "heading": "技術的な用語解説",
+              "body": "ワークフロー:ステップの自動化されたスイート。 API:ソフトウェアが交換できるようにインターフェイス。 シークレット識別子: サービスの認証に使用される情報。"
+            },
+            {
+              "heading": "グローバル・企業インパクト",
+              "body": "自動化ツールの障害は、権限が拡張されている場合、接続されたシステムに影響を与えることができます。 これは、すべてのインスタンスが侵害されるという意味ではありません。"
+            },
+            {
+              "heading": "専門例",
+              "body": "チームでは、更新後にワークフローが機能しなくなったことがわかります。 ログ、バージョン、パーミッションの確認、生産に戻る前にレシピ環境のテスト"
+            },
+            {
+              "heading": "予防と行動",
+              "body": "正式な修正、制限権限、設定を保存し、更新後にワークフローをテストするバージョンを比較します。"
+            },
+            {
+              "heading": "保持されるため",
+              "body": "オートメーションは、他のアプリケーションと同様に維持され、保護する必要があります。"
+            }
+          ]
         },
         "ko": {
           "title": "n8n: 자동화 인스턴스의 버전 확인",
           "summary": "하나의 의견은 n8n의 몇 가지 지점에 대한 우려. 주의사항에 명시된 수정된 버전에 각 인스턴스의 버전을 비교한 후 작업 흐름을 테스트합니다.",
-          "category": "자동화 / 사이버"
+          "category": "자동화 / 사이버",
+          "sections": [
+            {
+              "heading": "Context 및 작동",
+              "body": "n8n은 응용 프로그램을 연결하고 자동으로 작업을 트리거 할 수 있습니다. 인스턴스는 식별자가 다른 서비스에 액세스 할 수 있습니다. 특정 버전에 대한 의견; 정확한 조건은 상담해야합니다."
+            },
+            {
+              "heading": "기술 용어 설명",
+              "body": "Workflow: 단계의 자동화된 스위트. API: 인터페이스는 소프트웨어를 교환할 수 있습니다. 비밀 식별자 : 서비스를 인증하는 데 사용되는 정보."
+            },
+            {
+              "heading": "글로벌 및 기업 영향",
+              "body": "자동화 도구의 결함은 권한이 확장되면 연결된 시스템에 영향을 미칠 수 있습니다. 이것은 모든 인스턴스가 손상된 것을 의미하지 않습니다."
+            },
+            {
+              "heading": "전문 예",
+              "body": "팀은 업데이트 후 작업 흐름이 더 이상 작동하지 않습니다. 로그, 버전 및 권한 확인; 생산에 반품하기 전에 레시피 환경에 테스트."
+            },
+            {
+              "heading": "예방 및 활동",
+              "body": "버전 비교 공식 수정, 제한 권한, 설정 저장 및 업데이트 후 작업 흐름 테스트."
+            },
+            {
+              "heading": "계속하기",
+              "body": "자동화는 다른 어떤 신청든지 같이 유지되고 확보되어야 합니다."
+            }
+          ]
         },
         "ar": {
           "title": "ن 8: نسخ تحقق من حالات التشغيل الآلي",
           "summary": "One opinion concerns several branches of n8n. Compare the version of each instance to the corrected versions indicated in the notice, then test the workflows after updating.",
-          "category": "التلقائية/السيبر"
+          "category": "التلقائية/السيبر",
+          "sections": [
+            {
+              "heading": "السياق والتشغيل",
+              "body": "N8n allows to link applications and automatically trigger tasks. وقد يكون لدى إحدى الحالات محددات هوية للوصول إلى خدمات أخرى. The opinion concerns certain versions; its exact conditions must be consulted."
+            },
+            {
+              "heading": "الشروط التقنية",
+              "body": "Workflow: Automated suite of steps. API: interface allowing software to exchange. معلومة سرية: المعلومات المستخدمة لتوثيق الخدمة."
+            },
+            {
+              "heading": "التأثير العالمي والأثر المؤسسي",
+              "body": "والخطأ في أداة التشغيل الآلي يمكن أن يؤثر على النظم المترابطة إذا تم تمديد التراخيص. وهذا لا يعني أن جميع الحالات تتعرض للخطر."
+            },
+            {
+              "heading": "مثال مهني",
+              "body": "ويرى الفريق أن تدفق العمل لم يعد يعمل بعد تحديث المعلومات. التحقق من السجلات والنسخ والأذون؛ اختبار بيئة وصفية قبل العودة إلى الإنتاج."
+            },
+            {
+              "heading": "الوقاية والعمل",
+              "body": "Compare versions to official fixes, limit permissions, save formations and test workflows after updating."
+            },
+            {
+              "heading": "يُحتفظ بها",
+              "body": "ويجب الحفاظ على التلقائية وتأمينها مثل أي طلب آخر."
+            }
+          ]
         },
         "ru": {
           "title": "n8n: проверка версий экземпляров автоматизации",
           "summary": "Одно мнение касается нескольких ветвей n8n. Сравните версию каждого экземпляра с исправленными версиями, указанными в уведомлении, а затем проверьте рабочие процессы после обновления.",
-          "category": "Автоматизация / Кибер"
+          "category": "Автоматизация / Кибер",
+          "sections": [
+            {
+              "heading": "Контекст и операция",
+              "body": "n8n позволяет связывать приложения и автоматически запускать задачи. Пример может иметь идентификаторы для доступа к другим службам. Мнение касается определенных версий; необходимо ознакомиться с его точными условиями."
+            },
+            {
+              "heading": "Технические условия объяснены",
+              "body": "Workflow: автоматизированный набор шагов. API: интерфейс, позволяющий программному обеспечению обмениваться данными. Секретный идентификатор: информация, используемая для аутентификации службы."
+            },
+            {
+              "heading": "Глобальное и корпоративное воздействие",
+              "body": "Неисправность в инструменте автоматизации может повлиять на подключенные системы, если разрешения будут расширены. Это не означает, что все случаи скомпрометированы."
+            },
+            {
+              "heading": "Профессиональный пример",
+              "body": "Команда обнаруживает, что рабочий процесс больше не работает после обновления. Проверяйте журналы, версии и разрешения; проверяйте среду рецептов перед возвращением в производство."
+            },
+            {
+              "heading": "Предупреждение и действия",
+              "body": "Сравните версии с официальными исправлениями, ограничьте разрешения, сохраните конфигурации и проверьте рабочие процессы после обновления."
+            },
+            {
+              "heading": "Чтобы сохранить",
+              "body": "Автоматизация должна поддерживаться и обеспечиваться, как и любое другое приложение."
+            }
+          ]
         },
         "hi": {
           "title": "n8n: स्वचालन उदाहरणों के चेक संस्करण",
           "summary": "एक राय n8n की कई शाखाओं से संबंधित है। प्रत्येक उदाहरण के संस्करण को नोटिस में उल्लिखित सही संस्करणों में तुलना करें, फिर अद्यतन करने के बाद वर्कफ़्लोज़ का परीक्षण करें।",
-          "category": "स्वचालन / साइबर"
+          "category": "स्वचालन / साइबर",
+          "sections": [
+            {
+              "heading": "संदर्भ और संचालन",
+              "body": "n8n अनुप्रयोगों को जोड़ने और स्वचालित रूप से कार्यों को ट्रिगर करने की अनुमति देता है। उदाहरण के लिए पहचानकर्ता अन्य सेवाओं तक पहुंच की अनुमति दे सकते हैं। राय कुछ संस्करणों से संबंधित है; इसकी सटीक स्थितियों का परामर्श करना चाहिए।"
+            },
+            {
+              "heading": "तकनीकी शर्तें समझाया",
+              "body": "वर्कफ़्लो: चरणों का स्वचालित सूट। एपीआई: इंटरफ़ेस सॉफ्टवेयर को विनिमय करने की अनुमति देता है। गुप्त पहचानकर्ता: किसी सेवा को प्रमाणित करने के लिए इस्तेमाल की जाने वाली जानकारी।"
+            },
+            {
+              "heading": "वैश्विक और कॉर्पोरेट प्रभाव",
+              "body": "एक स्वचालन उपकरण में एक दोष कनेक्टेड सिस्टम को प्रभावित कर सकता है यदि अनुमति दी जाती है। इसका मतलब यह नहीं है कि सभी उदाहरण समझौता किए गए हैं।"
+            },
+            {
+              "heading": "व्यावसायिक उदाहरण",
+              "body": "एक टीम को लगता है कि एक वर्कफ़्लो अब अपडेट के बाद काम नहीं करता है। लॉग, संस्करणों और अनुमतियों की जाँच करें; उत्पादन में लौटने से पहले एक नुस्खा वातावरण पर परीक्षण करें।"
+            },
+            {
+              "heading": "रोकथाम और कार्रवाई",
+              "body": "आधिकारिक फिक्स के लिए संस्करणों की तुलना करें, अनुमतियों को सीमित करें, अद्यतन के बाद विन्यास और परीक्षण कार्यप्रवाह बचाएं।"
+            },
+            {
+              "heading": "बनाए रखने के लिए",
+              "body": "स्वचालन को किसी अन्य अनुप्रयोग की तरह बनाए रखा जाना चाहिए।"
+            }
+          ]
         },
         "tr": {
           "title": "n8n: Otomasyon örneklerini kontrol edin",
           "summary": "Bir görüş, n8n'in birkaç şubesiyle ilgilidir. Her örnek sürümü, bildirimde belirtilen düzeltme versiyonlarına kıyasla, güncellemeden sonra akışları test edin.",
-          "category": "Otomasyon / Cyber"
+          "category": "Otomasyon / Cyber",
+          "sections": [
+            {
+              "heading": "Context and operation",
+              "body": "n8n, uygulamaları bağlantıya ve otomatik olarak görevleri tetikleyebilir. Bir örnek diğer hizmetlere erişmek için tanımlayıcılara sahip olabilir. Görüş belirli versiyonlarla ilgilidir; tam koşulları danışılmalıdır."
+            },
+            {
+              "heading": "Teknik terimler açıklandı",
+              "body": "Workflow: Otomatik adımlar paketi. API: arayüzü, yazılımın değiştirilmesine izin verir. Gizli tanımlayıcı: Bir hizmeti doğrulamak için kullanılan bilgiler."
+            },
+            {
+              "heading": "Global ve şirket etkisi",
+              "body": "Bir otomasyon aracında bir hata, izinler uzatılırsa bağlı sistemleri etkileyebilir. Bu, tüm örneklerin uzlaşma olduğu anlamına gelmez."
+            },
+            {
+              "heading": "Profesyonel örnek örneği",
+              "body": "Bir ekip, bir güncellemeden sonra artık işe yaramadığını bulur. Girişleri, versiyonları ve izinleri kontrol edin; üretime dönmeden önce bir tarif ortamında test edin."
+            },
+            {
+              "heading": "Önleme ve eylem",
+              "body": "Resmi düzeltmeler, limit izinleri, güncellemeden sonra konfigürasyonları ve test akışlarını kurtarmak."
+            },
+            {
+              "heading": "muhafaza edilmek için",
+              "body": "Otomasyon başka bir uygulama gibi muhafaza edilmeli ve güvence altına alınmalıdır."
+            }
+          ]
         },
         "vi": {
           "title": "n8n: kiểm tra phiên bản tự động hoá",
           "summary": "Một ý kiến liên quan đến một số chi nhánh của n8n. Hãy so sánh phiên bản của mỗi trường hợp với những bản dịch đã được chỉnh sửa được ghi trong thông báo, rồi thử nghiệm dòng chảy công việc sau khi cập nhật.",
-          "category": "Tự động hóa / Mạng"
+          "category": "Tự động hóa / Mạng",
+          "sections": [
+            {
+              "heading": "Văn cảnh và thao tác",
+              "body": "n8n cho phép liên kết ứng dụng và tự động kích hoạt tác vụ. Một thí dụ có thể có bộ nhận diện truy cập các dịch vụ khác. Ý kiến liên quan đến một số bản dịch nào đó; chúng ta phải xem xét tình trạng chính xác của nó."
+            },
+            {
+              "heading": "Name",
+              "body": "Dòng chảy công việc: Các dãy tự động bước. Giao diện cho phép phần mềm trao đổi. Bộ nhận diện bí mật: thông tin được dùng để xác thực một dịch vụ."
+            },
+            {
+              "heading": "Ảnh hưởng toàn cầu và tập đoàn",
+              "body": "Lỗi trong một công cụ tự động hoá có thể ảnh hưởng đến hệ thống kết nối nếu quyền hạn được mở rộng. Điều này không có nghĩa là mọi trường hợp đều bị ảnh hưởng."
+            },
+            {
+              "heading": "Ví dụ chuyên nghiệp",
+              "body": "Một nhóm phát hiện ra rằng dòng chảy công việc không hoạt động sau khi cập nhật. Kiểm tra nhật ký, phiên bản và giấy phép; kiểm tra môi trường công thức trước khi quay trở lại sản xuất."
+            },
+            {
+              "heading": "Phòng ngừa và hành động",
+              "body": "So sánh phiên bản với chính thức sửa chữa, hạn chế quyền hạn, lưu cấu hình và kiểm tra luồng sau khi cập nhật."
+            },
+            {
+              "heading": "Được giữ lại",
+              "body": "Việc tự động hóa phải được duy trì và bảo mật như các ứng dụng khác."
+            }
+          ]
         },
         "nl": {
           "title": "n8n: controleer de versies van automatiserings instanties",
           "summary": "Een advies heeft betrekking op verschillende takken van n8n. Vergelijk de versie van elke instantie met de gecorrigeerde versies in de aankondiging, test vervolgens de workflows na het bijwerken.",
-          "category": "Automatisering / Cyber"
+          "category": "Automatisering / Cyber",
+          "sections": [
+            {
+              "heading": "Context en werking",
+              "body": "n8n maakt het mogelijk applicaties te koppelen en taken automatisch in werking te stellen. Een instantie kan identificatienummers hebben voor toegang tot andere diensten. Het advies heeft betrekking op bepaalde versies; de precieze voorwaarden moeten worden geraadpleegd."
+            },
+            {
+              "heading": "Technische termen",
+              "body": "Werkstroom: Automatische suite van stappen. API: interface waardoor software kan uitwisselen. Geheime identificatie: informatie die wordt gebruikt om een dienst te authenticeren."
+            },
+            {
+              "heading": "Wereldwijd en bedrijfseffect",
+              "body": "Een fout in een automatiseringstool kan aangesloten systemen beïnvloeden als de machtigingen worden verlengd. Dit betekent niet dat alle gevallen worden gecompromitteerd."
+            },
+            {
+              "heading": "Beroepsvoorbeeld",
+              "body": "Een team vindt dat een workflow niet meer werkt na een update. Controleer logs, versies en machtigingen; test op een receptomgeving voordat u terugkeert naar de productie."
+            },
+            {
+              "heading": "Preventie en actie",
+              "body": "Vergelijk versies met officiële fixes, limiet rechten, opslaan configuraties en test workflows na het bijwerken."
+            },
+            {
+              "heading": "Te behouden",
+              "body": "Automatisering moet worden onderhouden en beveiligd zoals elke andere toepassing."
+            }
+          ]
         },
         "id": {
           "title": "n8n: periksa versi dari instansi otomatisasi",
           "summary": "Salah satu pendapat menyangkut beberapa cabang n8n. Bandingkan versi setiap instansi ke versi yang dikoreksi dalam pemberitahuan, kemudian uji arus kerja setelah memperbarui.",
-          "category": "Automatisasi / Cyber"
+          "category": "Automatisasi / Cyber",
+          "sections": [
+            {
+              "heading": "Konteks dan operasi",
+              "body": "n8n memungkinkan untuk menghubungkan aplikasi dan otomatis memicu tugas. Sebuah instansi mungkin memiliki identifier untuk mengakses layanan lain. Pendapat menyangkut versi tertentu, kondisi yang tepat harus berkonsultasi."
+            },
+            {
+              "heading": "Istilah teknis dijelaskan",
+              "body": "Aliran Kerja: Automated suite langkah. API: antar muka memungkinkan perangkat lunak untuk ditukar. Identifier rahasia: informasi yang digunakan untuk mengotorisasi layanan."
+            },
+            {
+              "heading": "Dampak global dan perusahaan",
+              "body": "Sebuah kesalahan dalam alat otomatisasi dapat mempengaruhi sistem terhubung jika izin diperpanjang. Ini tidak berarti bahwa semua kejadian terganggu."
+            },
+            {
+              "heading": "Contoh profesional",
+              "body": "Sebuah tim menemukan bahwa aliran kerja tidak lagi bekerja setelah update. Periksa log, versi, dan perizinan; uji pada lingkungan resep sebelum kembali ke produksi."
+            },
+            {
+              "heading": "Pencegahan dan tindakan",
+              "body": "Bandingkan versi ke perbaikan resmi, batasi ijin, simpan konfigurasi dan uji kerja setelah memperbaharui."
+            },
+            {
+              "heading": "Untuk dipertahankan",
+              "body": "Automasi harus dijaga dan diamankan seperti aplikasi lain."
+            }
+          ]
         }
       },
       "sections": [
@@ -346,77 +1516,467 @@
         "en": {
           "title": "Drupal: vulnerability added to the KEV catalogue",
           "summary": "The Canadian notice reports the addition of CVE-2026-132165 to CISA's Operational Vulnerabilities Catalogue on November 24. Prioritize the verification of Drupal sites and apply the appropriate patches.",
-          "category": "Web Cybersecurity"
+          "category": "Web Cybersecurity",
+          "sections": [
+            {
+              "heading": "Context and operation",
+              "body": "Drupal is a content management system for creating websites. According to the above opinion, the flaw was added to the CISA KEV catalogue. This signal indicates a known exploitation, not that each Drupal site is compromised."
+            },
+            {
+              "heading": "Technical terms explained",
+              "body": "CMS: content management system. CVE: Public identification of a vulnerability. CISA: US Cyber Security Agency. KEV: Catalogue of known vulnerabilities."
+            },
+            {
+              "heading": "Global and corporate impact",
+              "body": "Organizations operating relevant versions must prioritize their assessment. Depending on the fault, a site may be compromised or interrupted. Check the exact scope in the notices."
+            },
+            {
+              "heading": "Professional example",
+              "body": "In support, a ticket reports strange behavior on a site. Document the time and symptoms, warn the web team and security, check the versions via authorized procedures."
+            },
+            {
+              "heading": "Prevention and action",
+              "body": "Inventory sites, apply editor fixes, review newspapers and climb signs of compromise."
+            },
+            {
+              "heading": "To be retained",
+              "body": "The KEV catalogue helps to prioritize exploited vulnerabilities rather than treat all alerts in the same way."
+            }
+          ]
         },
         "de": {
           "title": "Drupal: Verwundbarkeit zum KEV-Katalog hinzugefügt",
           "summary": "Die kanadische Bekanntmachung meldet die Hinzufügung von CVE-2026-132165 zum CISA-Katalog für operationelle Schwachstellen am 24. November. Priorisieren Sie die Überprüfung von Drupal-Sites und wenden Sie die entsprechenden Patches an.",
-          "category": "Web Cybersecurity"
+          "category": "Web Cybersecurity",
+          "sections": [
+            {
+              "heading": "Kontext und Funktionsweise",
+              "body": "Drupal ist ein Content Management System zum Erstellen von Webseiten. Nach der obigen Stellungnahme wurde der Fehler in den CISA KEV-Katalog aufgenommen. Dieses Signal zeigt eine bekannte Ausnutzung an, nicht dass jede Drupal-Site kompromittiert ist."
+            },
+            {
+              "heading": "Technische Begriffe erklärt",
+              "body": "CMS: Content Management System. CVE: Öffentliche Identifizierung einer Schwachstelle. CISA: US Cyber Security Agency, KEV: Katalog bekannter Schwachstellen."
+            },
+            {
+              "heading": "Globale und Corporate Impact",
+              "body": "Organisationen, die relevante Versionen betreiben, müssen ihre Bewertung priorisieren. Je nach Fehler kann eine Website kompromittiert oder unterbrochen werden. Überprüfen Sie den genauen Umfang in den Mitteilungen."
+            },
+            {
+              "heading": "Professionelle Beispiele",
+              "body": "Zur Unterstützung meldet ein Ticket seltsames Verhalten auf einer Website. Dokumentieren Sie die Zeit und die Symptome, warnen Sie das Webteam und die Sicherheit, überprüfen Sie die Versionen über autorisierte Verfahren."
+            },
+            {
+              "heading": "Prävention und Maßnahmen",
+              "body": "Inventar-Websites, wenden Sie Editor-Fixes an, überprüfen Sie Zeitungen und klettern Sie auf Kompromisszeichen."
+            },
+            {
+              "heading": "Einbehalten",
+              "body": "Der KEV-Katalog hilft, ausgenutzte Schwachstellen zu priorisieren, anstatt alle Warnungen auf die gleiche Weise zu behandeln."
+            }
+          ]
         },
         "zh-Hans": {
           "title": "Drupal: KEV 目录中增加了脆弱性",
           "summary": "加拿大通知报告,CVE-2026-132165于11月24日加入CISA的\"操作脆弱性目录\". 优先核查Drupal场地,并应用适当的补丁。",
-          "category": "网络安全"
+          "category": "网络安全",
+          "sections": [
+            {
+              "heading": "A. 背景和运作",
+              "body": "Drupal是一个创建网站的内容管理系统. 根据上述意见,缺陷被加进了CISA KEV目录. 这一信号表明已知的开采情况,而不是每个Drupal地点都遭到破坏。"
+            },
+            {
+              "heading": "技术术语说明",
+              "body": "CMS:内容管理系统. CVE:公开识别脆弱性。 CISA: 美国网络安全局. KEV:已知弱点目录."
+            },
+            {
+              "heading": "全球和公司影响",
+              "body": "操作相关版本的组织必须优先进行评估。 视过失而定,一个场地可能会被破坏或中断。 请检查access中的确切范围。"
+            },
+            {
+              "heading": "专业实例",
+              "body": "作为支持,一张票上报道了一个网站的奇怪行为. 记录时间和症状,警告网络团队和安全,通过授权程序检查版本."
+            },
+            {
+              "heading": "预防和行动",
+              "body": "库存网站、应用编辑修正、审查报纸和攀登妥协迹象。"
+            },
+            {
+              "heading": "待保留",
+              "body": "KEV目录有助于优先考虑被利用的脆弱性,而不是以同样的方式对待所有警报。"
+            }
+          ]
         },
         "es": {
           "title": "Drupal: vulnerabilidad agregada al catálogo KEV",
           "summary": "El aviso canadiense reporta la adición de CVE-2026-132165 al catálogo operativo Vulnerabilidades del CISA el 24 de noviembre. Priorizar la verificación de los sitios de Drupal y aplicar los parches apropiados.",
-          "category": "Web Cybersecurity"
+          "category": "Web Cybersecurity",
+          "sections": [
+            {
+              "heading": "Contexto y operación",
+              "body": "Drupal es un sistema de gestión de contenidos para crear sitios web. Según la opinión anterior, el defecto se añadió al catálogo CISA KEV. Esta señal indica una explotación conocida, no que cada sitio Drupal esté comprometido."
+            },
+            {
+              "heading": "Condiciones técnicas explicadas",
+              "body": "CMS: sistema de gestión de contenidos. CVE: identificación pública de una vulnerabilidad. CISA: Agencia de Seguridad Cibernética de Estados Unidos. KEV: Catálogo de vulnerabilidades conocidas."
+            },
+            {
+              "heading": "Impacto mundial y empresarial",
+              "body": "Las organizaciones que operan las versiones pertinentes deben priorizar su evaluación. Dependiendo de la culpa, un sitio puede ser comprometido o interrumpido. Compruebe el alcance exacto en los avisos."
+            },
+            {
+              "heading": "Ejemplo profesional",
+              "body": "En apoyo, un ticket reporta comportamiento extraño en un sitio. Documente el tiempo y los síntomas, advierta al equipo web y la seguridad, compruebe las versiones mediante procedimientos autorizados."
+            },
+            {
+              "heading": "Prevención y acción",
+              "body": "Sitios de inventario, aplicar correcciones de editor, revisar periódicos y escalar signos de compromiso."
+            },
+            {
+              "heading": "Que se mantenga",
+              "body": "El catálogo KEV ayuda a priorizar vulnerabilidades explotadas en lugar de tratar todas las alertas de la misma manera."
+            }
+          ]
         },
         "it": {
           "title": "Drupal: vulnerabilità aggiunta al catalogo KEV",
           "summary": "L'avviso canadese riporta l'aggiunta di CVE-2026-132165 al CISA Operational Vulnerabilities Catalog il 24 novembre. Priorizzare la verifica dei siti Drupal e applicare le patch appropriate.",
-          "category": "Web Cybersecurity"
+          "category": "Web Cybersecurity",
+          "sections": [
+            {
+              "heading": "Contesto e funzionamento",
+              "body": "Drupal è un sistema di gestione dei contenuti per la creazione di siti web. Secondo quanto sopra, il difetto è stato aggiunto al catalogo CISA KEV. Questo segnale indica uno sfruttamento noto, non che ogni sito Drupal è compromesso."
+            },
+            {
+              "heading": "Termini tecnici spiegati",
+              "body": "CMS: Sistema di gestione dei contenuti. CVE: identificazione pubblica di una vulnerabilità. CISA: US Cyber Security Agency. KEV: Catalogo delle vulnerabilità note."
+            },
+            {
+              "heading": "Impatto globale e societario",
+              "body": "Le organizzazioni che operano le versioni pertinenti dovrebbero dare priorità alla loro valutazione. A seconda della colpa, un sito può essere compromesso o interrotto. Controllare l'esatta portata delle comunicazioni."
+            },
+            {
+              "heading": "Esempio professionale",
+              "body": "A sostegno, un biglietto riporta strani comportamenti su un sito. Documentare il tempo e i sintomi, avvertire il team web e la sicurezza, controllare le versioni tramite procedure autorizzate."
+            },
+            {
+              "heading": "Prevenzione e azione",
+              "body": "Siti di inventario, applicare patch editor, rivedere i giornali e salire segni di compromesso."
+            },
+            {
+              "heading": "Da conservare",
+              "body": "Il catalogo KEV aiuta a privilegiare le vulnerabilità sfruttate piuttosto che trattare tutti gli avvisi allo stesso modo."
+            }
+          ]
         },
         "pt": {
           "title": "Drupal: vulnerabilidade adicionada ao catálogo KEV",
           "summary": "O aviso canadense informa a adição da CVE-2026-132165 ao Catálogo de Vulnerabilidades Operacionais CISA em 24 de novembro. Priorize a verificação dos locais Drupal e aplique os patches apropriados.",
-          "category": "Cibersegurança Web"
+          "category": "Cibersegurança Web",
+          "sections": [
+            {
+              "heading": "Contexto e operação",
+              "body": "Drupal é um sistema de gerenciamento de conteúdo para criar sites. De acordo com o parecer acima referido, a falha foi adicionada ao catálogo CISA KEV. Este sinal indica uma exploração conhecida, não que cada local Drupal esteja comprometido."
+            },
+            {
+              "heading": "Termos técnicos explicados",
+              "body": "CMS: sistema de gestão de conteúdos. CVE: Identificação pública de uma vulnerabilidade. CISA: Agência de Segurança Cibernética dos EUA. KEV: Catálogo de vulnerabilidades conhecidas."
+            },
+            {
+              "heading": "Impacto global e empresarial",
+              "body": "As organizações que operam versões relevantes devem priorizar sua avaliação. Dependendo da falha, um site pode ser comprometido ou interrompido. Verifique o alcance exato nos avisos."
+            },
+            {
+              "heading": "Exemplo profissional",
+              "body": "Em apoio, um ticket relata comportamento estranho em um site. Documentar o tempo e sintomas, avisar a equipe da web e segurança, verificar as versões através de procedimentos autorizados."
+            },
+            {
+              "heading": "Prevenção e acção",
+              "body": "Sites de inventário, aplicar correções editor, rever jornais e escalar sinais de compromisso."
+            },
+            {
+              "heading": "A manter",
+              "body": "O catálogo KEV ajuda a priorizar vulnerabilidades exploradas em vez de tratar todos os alertas da mesma forma."
+            }
+          ]
         },
         "ja": {
           "title": "Drupal: KEVカタログに脆弱性を追加",
           "summary": "カナダの通知は、11月24日にCISAの運用脆弱性カタログにCVE-2026-132165の追加を報告しています。 Drupalサイトの検証を優先し、適切なパッチを適用します。",
-          "category": "Webサイバーセキュリティ"
+          "category": "Webサイバーセキュリティ",
+          "sections": [
+            {
+              "heading": "コンテキストと操作",
+              "body": "Drupalは、Webサイトの作成のためのコンテンツ管理システムです。 上記の意見によると、CISA KEVカタログに欠陥を追加しました。 この信号は、各Drupalサイトが侵害されていない既知の悪用を示しています。"
+            },
+            {
+              "heading": "技術的な用語解説",
+              "body": "CMS:コンテンツ管理システム CVE:脆弱性の公開識別。 CISA:米国サイバーセキュリティ機関。KEV:既知の脆弱性のカタログ。"
+            },
+            {
+              "heading": "グローバル・企業インパクト",
+              "body": "関連するバージョンを操作する組織は、評価を優先する必要があります。 障害により、サイトが侵害または中断されることがあります。 通知の正確な範囲を確認してください。"
+            },
+            {
+              "heading": "専門例",
+              "body": "サポートでは、チケットはサイトの奇妙な行動を報告します。 時間と症状を文書化し、Webチームとセキュリティを警告し、認証された手順でバージョンを確認してください。"
+            },
+            {
+              "heading": "予防と行動",
+              "body": "在庫サイト, エディタの修正を適用, 新聞を見直し、妥協の兆候を登る."
+            },
+            {
+              "heading": "保持されるため",
+              "body": "KEVカタログは、悪用された脆弱性を優先するのに役立ちます。"
+            }
+          ]
         },
         "ko": {
           "title": "Drupal : KEV 카탈로그에 취약점 추가",
           "summary": "캐나다 공지는 11월 24일 CISA의 운영 취약점 카탈로그에 CVE-2026-132165의 추가를 보고합니다. Drupal 사이트 검증 및 적절한 패치 적용.",
-          "category": "웹 사이버 보안"
+          "category": "웹 사이버 보안",
+          "sections": [
+            {
+              "heading": "Context 및 작동",
+              "body": "Drupal은 웹 사이트를 만드는 콘텐츠 관리 시스템입니다. 위의 의견에 따르면, 결함은 CISA KEV 카탈로그에 추가되었습니다. 이 신호는 알려진 악용을 나타내고, 각 Drupal 사이트가 손상되지 않습니다."
+            },
+            {
+              "heading": "기술 용어 설명",
+              "body": "CMS: 콘텐츠 관리 시스템. CVE: 취약점의 공공 식별. CISA: 미국 사이버 보안청. KEV: 알려진 취약점 카탈로그."
+            },
+            {
+              "heading": "글로벌 및 기업 영향",
+              "body": "관련 버전의 조직은 평가를 우선적으로 해야 합니다. 결함에 따라 사이트 손상되거나 중단 될 수 있습니다. 예고편에 정확한 범위를 확인합니다."
+            },
+            {
+              "heading": "전문 예",
+              "body": "지원, 티켓은 사이트에서 이상한 행동을보고. 시간 및 증상을 문서화, 웹 팀과 보안을 경고, 공인 된 절차를 통해 버전 확인."
+            },
+            {
+              "heading": "예방 및 활동",
+              "body": "Inventory 사이트, 편집기 패치, 검토 신문 및 타협 징후를 적용합니다."
+            },
+            {
+              "heading": "계속하기",
+              "body": "KEV 카탈로그는 같은 방식으로 모든 경고를 대우하기 보다는 오히려 악용된 취약점을 우선적으로 돕습니다."
+            }
+          ]
         },
         "ar": {
           "title": "Drupal: vulnerability added to the KEV catalogue",
           "summary": "تشير الإخطارات الكندية إلى إضافة CVE-2026-132165 إلى كتالوج المسؤوليات العملياتي لرابطة الدول المستقلة في 24 تشرين الثاني/نوفمبر. إعطاء الأولوية للتحقق من المواقع الدوائية وتطبيق الشقق المناسبة.",
-          "category": "أمن الفضاء الإلكتروني"
+          "category": "أمن الفضاء الإلكتروني",
+          "sections": [
+            {
+              "heading": "السياق والتشغيل",
+              "body": "Drupal is a content management system for creating websites. According to the above opinion, the flaw was added to the CISA KEV catalogue. وتشير هذه الإشارة إلى استغلال معروف، وليس إلى أن كل موقع درابولي يتعرض للخطر."
+            },
+            {
+              "heading": "الشروط التقنية",
+              "body": "CMS: نظام إدارة المحتوى. CVE: Public identification of a vulnerability. CISA: US Cyber Security Agency. KEV: Catalogue of known vulnerabilities."
+            },
+            {
+              "heading": "التأثير العالمي والأثر المؤسسي",
+              "body": "ويجب على المنظمات التي تقوم بتشغيل النسخ ذات الصلة أن تعطي الأولوية لتقييمها. وتبعاً للخطأ، قد يتعرض الموقع للخطر أو للمقاطعة. تحقق من النطاق الدقيق في الإشعارات"
+            },
+            {
+              "heading": "مثال مهني",
+              "body": "دعماً، تذكرة تُبلغ عن سلوك غريب في موقع ما توثيق الوقت والأعراض، وتحذير الفريق على شبكة الإنترنت والأمن، والتحقق من النسخ عن طريق الإجراءات المأذون بها."
+            },
+            {
+              "heading": "الوقاية والعمل",
+              "body": ":: مواقع الجرد، وتطبيق إصلاحات المحررين، ومراجعة الصحف، وتسلق علامات التسوية."
+            },
+            {
+              "heading": "يُحتفظ بها",
+              "body": "The KEV catalogue helps to prioritize exploited vulnerabilities rather than treat all alerts in the same way."
+            }
+          ]
         },
         "ru": {
           "title": "Drupal: уязвимость добавлена в каталог KEV",
           "summary": "Канадское уведомление сообщает о добавлении CVE-2026-132165 в каталог операционных уязвимостей CISA 24 ноября. Приоритетность проверки сайтов Drupal и применение соответствующих патчей.",
-          "category": "Веб Кибербезопасность"
+          "category": "Веб Кибербезопасность",
+          "sections": [
+            {
+              "heading": "Контекст и операция",
+              "body": "Drupal - это система управления контентом для создания веб-сайтов. По приведенному выше мнению, изъян был добавлен в каталог CISA KEV. Этот сигнал указывает на известную эксплуатацию, а не на то, что каждый сайт Drupal скомпрометирован."
+            },
+            {
+              "heading": "Технические условия объяснены",
+              "body": "CMS: Система управления контентом. CVE: Публичная идентификация уязвимости. CISA: Агентство кибербезопасности США. KEV: Каталог известных уязвимостей."
+            },
+            {
+              "heading": "Глобальное и корпоративное воздействие",
+              "body": "Организации, работающие с соответствующими версиями, должны уделять приоритетное внимание своей оценке. В зависимости от ошибки, сайт может быть скомпрометирован или прерван. Проверьте точный объем в уведомлениях."
+            },
+            {
+              "heading": "Профессиональный пример",
+              "body": "В поддержку билета сообщается о странном поведении на сайте. Документируйте время и симптомы, предупредите веб-команду и безопасность, проверьте версии с помощью авторизованных процедур."
+            },
+            {
+              "heading": "Предупреждение и действия",
+              "body": "Сайты инвентаризации, применять исправления редакторов, просматривать газеты и поднимать признаки компромисса."
+            },
+            {
+              "heading": "Чтобы сохранить",
+              "body": "Каталог KEV помогает расставить приоритеты по эксплуатируемым уязвимостям, а не относиться ко всем оповещениям одинаково."
+            }
+          ]
         },
         "hi": {
           "title": "Drupal: vulnerability KEV catalogue में जोड़ा गया",
           "summary": "कैनेडियन नोटिस ने 24 नवंबर को सीआईएसए के ऑपरेशनल वल्नरबिलिटी कैटलॉग में CVE-2026-132165 के अलावा रिपोर्ट की। Drupal साइटों के सत्यापन को प्राथमिकता दें और उपयुक्त पैच लागू करें।",
-          "category": "वेब साइबर सुरक्षा"
+          "category": "वेब साइबर सुरक्षा",
+          "sections": [
+            {
+              "heading": "संदर्भ और संचालन",
+              "body": "Drupal वेबसाइट बनाने के लिए एक सामग्री प्रबंधन प्रणाली है। उपर्युक्त राय के अनुसार, दोष को सीआईएसए केवी सूची में जोड़ा गया था। यह संकेत एक ज्ञात शोषण को इंगित करता है, नहीं कि प्रत्येक Drupal साइट समझौता है।"
+            },
+            {
+              "heading": "तकनीकी शर्तें समझाया",
+              "body": "सीएमएस: सामग्री प्रबंधन प्रणाली। CVE: एक vulnerability की सार्वजनिक पहचान। CISA: US साइबर सुरक्षा एजेंसी।"
+            },
+            {
+              "heading": "वैश्विक और कॉर्पोरेट प्रभाव",
+              "body": "प्रासंगिक संस्करणों का संचालन करने वाले संगठनों को उनके आकलन को प्राथमिकता देना चाहिए। दोष के आधार पर, किसी साइट को समझौता या बाधित किया जा सकता है। नोटिस में सटीक दायरे की जाँच करें।"
+            },
+            {
+              "heading": "व्यावसायिक उदाहरण",
+              "body": "समर्थन में, एक टिकट एक साइट पर अजीब व्यवहार की रिपोर्ट करता है। समय और लक्षणों को दस्तावेज करें, वेब टीम और सुरक्षा को चेतावनी दें, अधिकृत प्रक्रियाओं के माध्यम से संस्करणों की जांच करें।"
+            },
+            {
+              "heading": "रोकथाम और कार्रवाई",
+              "body": "इन्वेंटरी साइट्स, संपादक पैच लागू करें, समाचार पत्रों की समीक्षा करें और समझौता के संकेतों पर चढ़ाई करें।"
+            },
+            {
+              "heading": "बनाए रखने के लिए",
+              "body": "KEV catalogue एक ही तरह से सभी अलर्ट का इलाज करने के बजाय शोषण वाली कमजोरियों को प्राथमिकता देने में मदद करता है।"
+            }
+          ]
         },
         "tr": {
           "title": "Drupal: kırılganlık KEV kataloğuna eklendi",
           "summary": "Kanadalı fark, CVE-2026-132165'in CISA'nın Operasyonel Vulner yükümlülüklerini 24 Kasım'da bildiriyor. Drupal sitelerinin doğrulamasını ve uygun yamaları önce uygulayın.",
-          "category": "Web Cybersecurity"
+          "category": "Web Cybersecurity",
+          "sections": [
+            {
+              "heading": "Context and operation",
+              "body": "Drupal web siteleri oluşturmak için bir içerik yönetim sistemidir. Yukarıdaki görüşe göre, kusur CISA KEV kataloğuna eklendi. Bu sinyal bilinen bir sömürüyü gösterir, her Drupal sitesinin uzlaşmaz olduğunu gösterir."
+            },
+            {
+              "heading": "Teknik terimler açıklandı",
+              "body": "CMS: içerik yönetim sistemi. CVE: Bir kırılganlığın kamu tanımı. CISA: US Cyber Security Agency. KEV: Bilinen güvenliklerin katalogu."
+            },
+            {
+              "heading": "Global ve şirket etkisi",
+              "body": "Organizasyonlar ilgili versiyonlar değerlendirmelerini önceliklendirmelidir. Hataya bağlı olarak, bir site uzlaşmaya veya kesintiye uğrayabilir. Farklarda tam kapsamı kontrol edin."
+            },
+            {
+              "heading": "Profesyonel örnek örneği",
+              "body": "Destekte, bir bilet bir sitede garip davranışları bildiriyor. Zaman ve semptomları belgeleyin, web ekibini ve güvenliğini uyarır, sürümleri yetkili prosedürlerle kontrol edin."
+            },
+            {
+              "heading": "Önleme ve eylem",
+              "body": "İnventory siteleri, editör düzeltmeleri, gazeteleri uygulayın ve uzlaşma belirtileri."
+            },
+            {
+              "heading": "muhafaza edilmek için",
+              "body": "KEV kataloğu, aynı şekilde tüm uyarıları tedavi etmek yerine sömürücü açıklığa öncelik vermeye yardımcı olur."
+            }
+          ]
         },
         "vi": {
           "title": "Drupal: dễ bị tổn thương được thêm vào mục lục KV",
           "summary": "Thông báo của Canada cho biết sự bổ sung của CVE-26-132165 đến CISA's CISA Chiến dịch Vulnerafins ngày 24 tháng 11. Ưu tiên việc xác minh địa điểm Drupal và áp dụng các bản vá thích hợp.",
-          "category": "Bảo mật mạng"
+          "category": "Bảo mật mạng",
+          "sections": [
+            {
+              "heading": "Văn cảnh và thao tác",
+              "body": "Drupal là một hệ thống quản lý nội dung để tạo ra các trang web. Theo quan điểm trên, lỗi đó được thêm vào danh mục CISA KV. Tín hiệu này cho thấy có một vụ khai thác đã được biết đến, chứ không phải mỗi trang web Drupal bị xâm nhập."
+            },
+            {
+              "heading": "Name",
+              "body": "Hệ thống quản lý nội dung. Nhận diện một sự tổn thương nơi công cộng. CISA: Cục an ninh quốc gia."
+            },
+            {
+              "heading": "Ảnh hưởng toàn cầu và tập đoàn",
+              "body": "Các tổ chức điều hành các phiên bản liên quan phải ưu tiên sự đánh giá của họ. Tùy theo lỗi, một trang web có thể bị xâm nhập hoặc bị gián đoạn. Kiểm tra phạm vi chính xác trong thông báo."
+            },
+            {
+              "heading": "Ví dụ chuyên nghiệp",
+              "body": "Để hỗ trợ, một vé báo cáo hành vi lạ trên một trang web. Tài liệu thời gian và triệu chứng, cảnh báo đội web và bảo vệ, kiểm tra phiên bản thông qua các thủ tục có thẩm quyền."
+            },
+            {
+              "heading": "Phòng ngừa và hành động",
+              "body": "Các địa điểm phát minh, biên tập viên, xem lại báo chí và các dấu hiệu thỏa hiệp."
+            },
+            {
+              "heading": "Được giữ lại",
+              "body": "Bản liệt kê KV giúp ưu tiên việc khai thác các nhược điểm thay vì đối xử với mọi cảnh báo giống nhau."
+            }
+          ]
         },
         "nl": {
           "title": "Drupal: kwetsbaarheid toegevoegd aan de KEV catalogus",
           "summary": "De Canadese aankondiging meldt de toevoeging van CVE-2026-132165 aan de operationele kwetsbaarheden Catalogus van CISA op 24 november. Prioriteer de verificatie van Drupal sites en breng de juiste patches.",
-          "category": "Web Cybersecurity"
+          "category": "Web Cybersecurity",
+          "sections": [
+            {
+              "heading": "Context en werking",
+              "body": "Drupal is een content management systeem voor het maken van websites. Volgens het bovenstaande advies werd de fout toegevoegd aan de CISA KEV catalogus. Dit signaal wijst op een bekende exploitatie, niet dat elke Drupal site is aangetast."
+            },
+            {
+              "heading": "Technische termen",
+              "body": "CMS: Content management systeem. Publieke identificatie van een kwetsbaarheid. CISA: US Cyber Security Agency. KEV: Catalogus van bekende kwetsbaarheden."
+            },
+            {
+              "heading": "Wereldwijd en bedrijfseffect",
+              "body": "Organisaties die relevante versies exploiteren, moeten hun beoordeling prioriteren. Afhankelijk van de fout, kan een site worden aangetast of onderbroken. Controleer de precieze reikwijdte in de aankondigingen."
+            },
+            {
+              "heading": "Beroepsvoorbeeld",
+              "body": "Een ticket meldt vreemd gedrag op een site. Documenteer de tijd en symptomen, waarschuw het webteam en de beveiliging, controleer de versies via geautoriseerde procedures."
+            },
+            {
+              "heading": "Preventie en actie",
+              "body": "Inventaris sites, toepassing editor fixes, recensie kranten en klim tekenen van compromis."
+            },
+            {
+              "heading": "Te behouden",
+              "body": "De KEV-catalogus helpt om uitgebuite kwetsbaarheden voorrang te geven in plaats van alle waarschuwingen op dezelfde manier te behandelen."
+            }
+          ]
         },
         "id": {
           "title": "Drupal: kerentanan ditambahkan ke katalog KEV",
           "summary": "Orang Kanada melaporkan tambahan CVE-2026- 132165 kepada ClSA 's Vulnerabilities Catalog pada 24 November. Prioritas verifikasi situs Drupal dan menerapkan patch yang tepat.",
-          "category": "Keamanan Internet"
+          "category": "Keamanan Internet",
+          "sections": [
+            {
+              "heading": "Konteks dan operasi",
+              "body": "Drupal adalah sistem manajemen konten untuk membuat situs web. Menurut pendapat di atas, cacat ditambahkan ke katalog CISA KEV. Sinyal ini menunjukkan eksploitasi diketahui, bukan bahwa setiap situs Drupal dikompromikan."
+            },
+            {
+              "heading": "Istilah teknis dijelaskan",
+              "body": "CMS: sistem manajemen isi. CVE: identifikasi publik dari kerentanan. Agen Keamanan Cyber AS."
+            },
+            {
+              "heading": "Dampak global dan perusahaan",
+              "body": "Organisasi versi yang relevan harus memprioritaskan penilaian mereka. Tergantung pada kesalahan, situs mungkin dikompromikan atau terganggu. Periksa lingkup yang tepat dalam pemberitahuan."
+            },
+            {
+              "heading": "Contoh profesional",
+              "body": "Dalam dukungan, laporan tiket perilaku aneh di situs. Dokumen waktu dan gejala, memperingatkan tim web dan keamanan, memeriksa versi melalui prosedur resmi."
+            },
+            {
+              "heading": "Pencegahan dan tindakan",
+              "body": "Situs inventaris, perbaikan aplikasi editor, meninjau koran dan tanda-tanda mendaki kompromi."
+            },
+            {
+              "heading": "Untuk dipertahankan",
+              "body": "Katalog KEV membantu memprioritaskan kerentanan yang dieksploitasi daripada memperlakukan semua peringatan dengan cara yang sama."
+            }
+          ]
         }
       },
       "sections": [
@@ -457,77 +2017,467 @@
         "en": {
           "title": "GitHub: Evolution of notifications",
           "summary": "The reasons for notification now follow a consistent priority and team statements reflect current membership. Check the messaging filters or automations that depend on these patterns.",
-          "category": "Development / DevOps"
+          "category": "Development / DevOps",
+          "sections": [
+            {
+              "heading": "Context and operation",
+              "body": "GitHub allows collaboration on code. Notifications inform users of changes and discussions. The announcement relates to the priority of the reasons for notification and team statements."
+            },
+            {
+              "heading": "Technical terms explained",
+              "body": "Deposit: all the files and their history. Mention: notification to a person or team. Changelog: log changes of a product."
+            },
+            {
+              "heading": "Global and corporate impact",
+              "body": "This can help sort messages or change the behaviour of existing filters. It mainly concerns teams using GitHub; No safety incidents are reported."
+            },
+            {
+              "heading": "Professional example",
+              "body": "A DevOps team gets too many notifications. Check patterns and filters so that code review or incident alerts are not ignored."
+            },
+            {
+              "heading": "Prevention and action",
+              "body": "Reread the changelog, check the notification filters and test the automations that use these patterns."
+            },
+            {
+              "heading": "To be retained",
+              "body": "A minor change in a service may affect the tools that depend on it."
+            }
+          ]
         },
         "de": {
           "title": "GitHub: Evolution der Benachrichtigungen",
           "summary": "Die Gründe für die Benachrichtigung folgen nun einer konsistenten Priorität und die Teamaussagen spiegeln die aktuelle Mitgliedschaft wider. Überprüfen Sie die Messaging-Filter oder Automatisierungen, die von diesen Mustern abhängen.",
-          "category": "Entwicklung / DevOps"
+          "category": "Entwicklung / DevOps",
+          "sections": [
+            {
+              "heading": "Kontext und Funktionsweise",
+              "body": "GitHub ermöglicht die Zusammenarbeit am Code. Benachrichtigungen informieren die Nutzer über Änderungen und Diskussionen. Die Ankündigung bezieht sich auf die Priorität der Gründe für die Benachrichtigung und Team Statements."
+            },
+            {
+              "heading": "Technische Begriffe erklärt",
+              "body": "Hinterlegung: alle Dateien und ihre Geschichte. Erwähnen: Benachrichtigung an eine Person oder ein Team. Changelog: Log Änderungen eines Produkts."
+            },
+            {
+              "heading": "Globale und Corporate Impact",
+              "body": "Dies kann helfen, Nachrichten zu sortieren oder das Verhalten bestehender Filter zu ändern. Es betrifft hauptsächlich Teams, die GitHub verwenden; Es werden keine Sicherheitsvorfälle gemeldet."
+            },
+            {
+              "heading": "Professionelle Beispiele",
+              "body": "Ein DevOps-Team erhält zu viele Benachrichtigungen. Prüfen Sie Muster und Filter, damit Code-Review- oder Incident-Warnungen nicht ignoriert werden."
+            },
+            {
+              "heading": "Prävention und Maßnahmen",
+              "body": "Lesen Sie das Changelog erneut, überprüfen Sie die Benachrichtigungsfilter und testen Sie die Automatisierungen, die diese Muster verwenden."
+            },
+            {
+              "heading": "Einbehalten",
+              "body": "Eine geringfügige Änderung eines Dienstes kann sich auf die davon abhängigen Tools auswirken."
+            }
+          ]
         },
         "zh-Hans": {
           "title": "GitHub: 通知的演变",
           "summary": "通知的理由现在遵循一贯的优先次序,小组说明反映了目前的成员情况。 检查依赖于这些模式的信息过滤器或自动化器.",
-          "category": "开发/开发"
+          "category": "开发/开发",
+          "sections": [
+            {
+              "heading": "A. 背景和运作",
+              "body": "GitHub允许代码上的合作. 通知告知用户更改和讨论。 通知涉及通知和小组陈述理由的优先顺序。"
+            },
+            {
+              "heading": "技术术语说明",
+              "body": "交存:所有文件及其历史. 提及:通知个人或团队。 Changelog:产品变化日志."
+            },
+            {
+              "heading": "全球和公司影响",
+              "body": "这可以帮助排序消息或改变现有过滤器的行为. 它主要涉及使用GitHub的小组;没有报告安全事故。"
+            },
+            {
+              "heading": "专业实例",
+              "body": "DevOps团队收到太多通知. 检查模式和过滤器,以便代码审查或事件提示不被忽略."
+            },
+            {
+              "heading": "预防和行动",
+              "body": "重读更改日志,检查通知过滤器,测试使用这些模式的自动化."
+            },
+            {
+              "heading": "待保留",
+              "body": "服务稍有改变,可能影响依赖它的工具."
+            }
+          ]
         },
         "es": {
           "title": "GitHub: Evolución de notificaciones",
           "summary": "Las razones de la notificación siguen ahora una prioridad constante y las declaraciones de los equipos reflejan la composición actual. Revise los filtros de mensajería o automatizaciones que dependen de estos patrones.",
-          "category": "Desarrollo / DevOps"
+          "category": "Desarrollo / DevOps",
+          "sections": [
+            {
+              "heading": "Contexto y operación",
+              "body": "GitHub permite la colaboración en código. Las notificaciones informan a los usuarios de cambios y debates. El anuncio se refiere a la prioridad de las razones de notificación y declaraciones de equipo."
+            },
+            {
+              "heading": "Condiciones técnicas explicadas",
+              "body": "Depósito: todos los archivos y su historia. Mención: notificación a una persona o equipo. Changelog: cambios de registro de un producto."
+            },
+            {
+              "heading": "Impacto mundial y empresarial",
+              "body": "Esto puede ayudar a ordenar mensajes o cambiar el comportamiento de los filtros existentes. Se refiere principalmente a equipos que utilizan GitHub; no se reportan incidentes de seguridad."
+            },
+            {
+              "heading": "Ejemplo profesional",
+              "body": "Un equipo de DevOps recibe demasiadas notificaciones. Compruebe patrones y filtros para que no se ignoren las alertas de revisión de código o incidentes."
+            },
+            {
+              "heading": "Prevención y acción",
+              "body": "Reread the changelog, check the notification filters and test the automations that use these patterns."
+            },
+            {
+              "heading": "Que se mantenga",
+              "body": "Un cambio menor en un servicio puede afectar las herramientas que dependen de él."
+            }
+          ]
         },
         "it": {
           "title": "GitHub: Evoluzione delle notifiche",
           "summary": "Le ragioni della notifica seguono ora una priorità costante e le dichiarazioni del team riflettono l'appartenenza attuale. Controllare i filtri e-mail o le automazioni che dipendono da questi modelli.",
-          "category": "Sviluppo / DevOps"
+          "category": "Sviluppo / DevOps",
+          "sections": [
+            {
+              "heading": "Contesto e funzionamento",
+              "body": "GitHub consente la collaborazione sul codice. Le notifiche informano gli utenti delle modifiche e delle discussioni. L'annuncio si riferisce alla priorità dei motivi per la notifica e le dichiarazioni del team."
+            },
+            {
+              "heading": "Termini tecnici spiegati",
+              "body": "Deposito: tutti i file e la loro storia. Menzione: notifica a una persona o a una squadra. Changelog: cambia registro di un prodotto."
+            },
+            {
+              "heading": "Impatto globale e societario",
+              "body": "Questo può aiutare a ordinare messaggi o modificare il comportamento dei filtri esistenti. Riguarda principalmente le squadre che utilizzano GitHub; non vengono segnalati incidenti di sicurezza."
+            },
+            {
+              "heading": "Esempio professionale",
+              "body": "Una squadra DevOps riceve troppe notifiche. Controllare modelli e filtri in modo che la revisione del codice o avvisi incidenti non siano ignorati."
+            },
+            {
+              "heading": "Prevenzione e azione",
+              "body": "Rileggere il changelog, controllare i filtri di notifica e testare le automazioni che utilizzano questi modelli."
+            },
+            {
+              "heading": "Da conservare",
+              "body": "Un piccolo cambiamento in un servizio può influenzare gli strumenti che dipendono da esso."
+            }
+          ]
         },
         "pt": {
           "title": "GitHub: Evolução das notificações",
           "summary": "As razões da notificação agora seguem uma prioridade consistente e as declarações da equipe refletem a atual adesão. Verifique os filtros de e-mail ou automações que dependem desses padrões.",
-          "category": "Desenvolvimento / DevOps"
+          "category": "Desenvolvimento / DevOps",
+          "sections": [
+            {
+              "heading": "Contexto e operação",
+              "body": "O GitHub permite a colaboração em código. Notificações informam os usuários de mudanças e discussões. O anúncio diz respeito à prioridade dos motivos da notificação e das declarações da equipe."
+            },
+            {
+              "heading": "Termos técnicos explicados",
+              "body": "Depósito: todos os arquivos e seu histórico. Menção: notificação a uma pessoa ou equipa. Changelog: registro de alterações de um produto."
+            },
+            {
+              "heading": "Impacto global e empresarial",
+              "body": "Isto pode ajudar a ordenar mensagens ou alterar o comportamento dos filtros existentes. Trata-se principalmente de equipas que utilizam o GitHub; Não são notificados incidentes de segurança."
+            },
+            {
+              "heading": "Exemplo profissional",
+              "body": "Uma equipe DevOps recebe notificações demais. Verificar padrões e filtros para que a revisão de código ou alertas incidentes não sejam ignorados."
+            },
+            {
+              "heading": "Prevenção e acção",
+              "body": "Reler o changelog, verificar os filtros de notificação e testar as automações que usam esses padrões."
+            },
+            {
+              "heading": "A manter",
+              "body": "Uma pequena mudança em um serviço pode afetar as ferramentas que dependem dele."
+            }
+          ]
         },
         "ja": {
           "title": "GitHub:通知の進化",
           "summary": "通知の理由は、一貫した優先順位とチームステートメントが現在のメンバーシップを反映しています。 これらのパターンに依存するメッセージングフィルタや自動化を確認してください。",
-          "category": "開発 / DevOps"
+          "category": "開発 / DevOps",
+          "sections": [
+            {
+              "heading": "コンテキストと操作",
+              "body": "GitHub はコードのコラボレーションを可能にします。 変更やディスカッションのユーザーに通知する通知。 通知およびチームステートメントの理由の優先順位に関する発表"
+            },
+            {
+              "heading": "技術的な用語解説",
+              "body": "デポジット:すべてのファイルとその歴史。 メンション: 人やチームへの通知。 Changelog:製品変更のログ。"
+            },
+            {
+              "heading": "グローバル・企業インパクト",
+              "body": "これにより、メッセージをソートしたり、既存のフィルタの動作を変更したりすることができます。 GitHub を使ったチームを中心に、安全インシデントが報告されていない。"
+            },
+            {
+              "heading": "専門例",
+              "body": "DevOps チームはあまりにも多くの通知を取得します。 コードレビューやインシデントアラートが無視されていないため、パターンとフィルタをチェックします。"
+            },
+            {
+              "heading": "予防と行動",
+              "body": "変更ログを再読み込み、通知フィルタを確認し、これらのパターンを使用する自動化をテストします。"
+            },
+            {
+              "heading": "保持されるため",
+              "body": "サービスのマイナーな変更は、それに応じてツールに影響を与える可能性があります。"
+            }
+          ]
         },
         "ko": {
           "title": "GitHub: 알림의 진화",
           "summary": "알림의 이유가 이제 일관된 우선 순위와 팀 성명은 현재 회원을 반영합니다. 이 패턴에 따라 메시징 필터 또는 자동화를 확인합니다.",
-          "category": "개발 / DevOps"
+          "category": "개발 / DevOps",
+          "sections": [
+            {
+              "heading": "Context 및 작동",
+              "body": "GitHub는 코드에서 협업할 수 있습니다. 알림은 변경 및 토론의 사용자를 알려줍니다. 발표는 알림 및 팀 성명에 대한 이유의 우선 순위에 의존합니다."
+            },
+            {
+              "heading": "기술 용어 설명",
+              "body": "입금 : 모든 파일과 역사. 언급 : 사람이나 팀에 대한 알림. Changelog: 제품의 로그 변경."
+            },
+            {
+              "heading": "글로벌 및 기업 영향",
+              "body": "이 메시지를 정렬하거나 기존 필터의 동작을 변경할 수 있습니다. GitHub를 사용하여 주로 문제 팀; 안전 사건이보고되지 않습니다."
+            },
+            {
+              "heading": "전문 예",
+              "body": "DevOps 팀은 너무 많은 알림을받습니다. 코드 검토 또는 사건 경고가 무시되지 않도록 패턴 및 필터를 확인하십시오."
+            },
+            {
+              "heading": "예방 및 활동",
+              "body": "변경 로그를 읽고, 알림 필터를 확인하고 이러한 패턴을 사용하는 자동화를 테스트하십시오."
+            },
+            {
+              "heading": "계속하기",
+              "body": "서비스의 작은 변화는 그것에 따라 달라지는 도구에 영향을 미칠 수 있습니다."
+            }
+          ]
         },
         "ar": {
           "title": "GitHub: Evolution of notifications",
           "summary": "وتأتي أسباب الإخطار الآن ضمن أولويات ثابتة وتعكس بيانات الفريق العضوية الحالية. تحقق من تصفية الرسائل أو التشغيل الآلي التي تعتمد على هذه الأنماط",
-          "category": "التنمية/الأجهزة"
+          "category": "التنمية/الأجهزة",
+          "sections": [
+            {
+              "heading": "السياق والتشغيل",
+              "body": "(جيت هوب) يسمح بالتعاون على الشفرة وتبلغ الإخطارات المستعملين بالتغييرات والمناقشات. ويتصل الإعلان بأولوية أسباب الإخطار وبيانات الفريق."
+            },
+            {
+              "heading": "الشروط التقنية",
+              "body": "الوديع: جميع الملفات وتاريخها. الإشارة: إخطار شخص أو فريق. Changelog: log of product changes."
+            },
+            {
+              "heading": "التأثير العالمي والأثر المؤسسي",
+              "body": "وهذا يمكن أن يساعد على فرز الرسائل أو تغيير سلوك مرشحين موجودين. وهي تتعلق أساسا بفرق تستخدم جيت هوب؛ ولم يبلغ عن وقوع حوادث أمان."
+            },
+            {
+              "heading": "مثال مهني",
+              "body": "فريق (ديفوبس) يحصل على الكثير من الإخطارات فحص الأنماط والمرشحات بحيث لا يتم تجاهل استعراض الشفرة أو تنبيه الحوادث."
+            },
+            {
+              "heading": "الوقاية والعمل",
+              "body": "اعادة قراءة المتغيرات، والتحقق من مرشحات الاخطار واختبار التشغيل الآلي التي تستخدم هذه الأنماط."
+            },
+            {
+              "heading": "يُحتفظ بها",
+              "body": "وقد يؤثر أي تغيير طفيف في الخدمة على الأدوات التي تعتمد عليها."
+            }
+          ]
         },
         "ru": {
           "title": "GitHub: эволюция уведомлений",
           "summary": "Причины уведомления в настоящее время следуют последовательному приоритету, и заявления группы отражают нынешнее членство. Проверьте фильтры электронной почты или автоматизацию, которые зависят от этих шаблонов.",
-          "category": "Разработчик: DevOps"
+          "category": "Разработчик: DevOps",
+          "sections": [
+            {
+              "heading": "Контекст и операция",
+              "body": "GitHub позволяет работать с кодом. Уведомления информируют пользователей об изменениях и обсуждениях. Объявление касается приоритета оснований для уведомления и командных заявлений."
+            },
+            {
+              "heading": "Технические условия объяснены",
+              "body": "Депозит: все файлы и их история. Упоминание: уведомление человека или команды. Changelog: журнал изменений продукта."
+            },
+            {
+              "heading": "Глобальное и корпоративное воздействие",
+              "body": "Это может помочь сортировать сообщения или изменить поведение существующих фильтров. В основном это касается команд, использующих GitHub; никаких инцидентов безопасности не сообщается."
+            },
+            {
+              "heading": "Профессиональный пример",
+              "body": "Команда DevOps получает слишком много уведомлений. Проверяйте шаблоны и фильтры, чтобы не игнорировать обзор кода или оповещения об инцидентах."
+            },
+            {
+              "heading": "Предупреждение и действия",
+              "body": "Перечитайте журнал изменений, проверьте фильтры уведомлений и протестируйте автоматизацию, которая использует эти шаблоны."
+            },
+            {
+              "heading": "Чтобы сохранить",
+              "body": "Незначительные изменения в сервисе могут повлиять на инструменты, которые от него зависят."
+            }
+          ]
         },
         "hi": {
           "title": "गिटहब: अधिसूचनाओं का विकास",
           "summary": "अधिसूचना के कारण अब एक सुसंगत प्राथमिकता का अनुसरण करते हैं और टीम के बयान वर्तमान सदस्यता को दर्शाते हैं। इन पैटर्नों पर निर्भर होने वाले मैसेजिंग फिल्टर या स्वचालन की जांच करें।",
-          "category": "विकास / DevOps"
+          "category": "विकास / DevOps",
+          "sections": [
+            {
+              "heading": "संदर्भ और संचालन",
+              "body": "गिटहब कोड पर सहयोग की अनुमति देता है। अधिसूचना उपयोगकर्ताओं को परिवर्तन और चर्चा के बारे में सूचित करती है। घोषणा अधिसूचना और टीम के बयान के कारणों की प्राथमिकता से संबंधित है।"
+            },
+            {
+              "heading": "तकनीकी शर्तें समझाया",
+              "body": "जमा: सभी फ़ाइलें और उनके इतिहास। मेंशन: किसी व्यक्ति या टीम को अधिसूचना। Changelog: एक उत्पाद के लॉग परिवर्तन।"
+            },
+            {
+              "heading": "वैश्विक और कॉर्पोरेट प्रभाव",
+              "body": "यह संदेशों को सॉर्ट करने या मौजूदा फिल्टर के व्यवहार को बदलने में मदद कर सकता है। यह मुख्य रूप से गिटहब का उपयोग करने वाली टीमों से संबंधित है; कोई सुरक्षा घटना रिपोर्ट नहीं की जाती है।"
+            },
+            {
+              "heading": "व्यावसायिक उदाहरण",
+              "body": "डेवोप्स टीम को कई सूचनाएं मिलीं। पैटर्न और फिल्टर की जाँच करें ताकि कोड समीक्षा या घटना अलर्ट को अनदेखा नहीं किया जा सके।"
+            },
+            {
+              "heading": "रोकथाम और कार्रवाई",
+              "body": "चेंजलॉग को फिर से पढ़ें, अधिसूचना फिल्टर की जांच करें और इन पैटर्नों का उपयोग करने वाले स्वचालनों का परीक्षण करें।"
+            },
+            {
+              "heading": "बनाए रखने के लिए",
+              "body": "एक सेवा में मामूली बदलाव उस उपकरण को प्रभावित कर सकता है जो उस पर निर्भर करता है।"
+            }
+          ]
         },
         "tr": {
           "title": "GitHub: bildirimlerin Evrimi",
           "summary": "Bildirim nedenleri artık tutarlı bir öncelik takip ediyor ve takım ifadeleri mevcut üyeliği yansıtıyor. Bu desenlere bağlı olan mesajlaşma filtreleri veya otomasyonları kontrol edin.",
-          "category": "Geliştirme / DevOps"
+          "category": "Geliştirme / DevOps",
+          "sections": [
+            {
+              "heading": "Context and operation",
+              "body": "GitHub kod üzerinde işbirliği sağlar. Bildirimler, kullanıcıların değişiklikleri ve tartışmaları bilgilendirir. Duyuru bildirim ve takım ifadeleri için nedenlerin önceliği ile ilgilidir."
+            },
+            {
+              "heading": "Teknik terimler açıklandı",
+              "body": "Deposit: tüm dosyalar ve onların tarihi. Mention: Bir kişiye veya ekibine bildirim. Changelog: Bir ürünün günlük değişiklikleri."
+            },
+            {
+              "heading": "Global ve şirket etkisi",
+              "body": "Bu, mevcut filtrelerin davranışının değiştirilmesine veya değiştirilmesine yardımcı olabilir. Özellikle GitHub'ı kullanan ekipler endişe eder; Güvenlik olayları rapor edilmez."
+            },
+            {
+              "heading": "Profesyonel örnek örneği",
+              "body": "DevOps ekibi çok fazla bildirim alır. Kontrol kalıpları ve filtreler, böylece bu kod incelemesi veya olay uyarıları göz ardı edilmez."
+            },
+            {
+              "heading": "Önleme ve eylem",
+              "body": "Değişimlogunu yeniden hazırlayın, bildirim filtreleri kontrol edin ve bu kalıpları kullanan otomasyonları test edin."
+            },
+            {
+              "heading": "muhafaza edilmek için",
+              "body": "Bir hizmetteki küçük bir değişiklik, ona bağlı olan araçları etkileyebilir."
+            }
+          ]
         },
         "vi": {
           "title": "GitHub: Sự tiến hóa của thông báo",
           "summary": "Các lý do để thông báo bây giờ làm theo một ưu tiên nhất định và các tuyên bố của đội phản ánh hiện tại thành viên. Kiểm tra các bộ lọc tin nhắn hoặc tự động hoá phụ thuộc vào các mẫu này.",
-          "category": "Phát triển / DevOps"
+          "category": "Phát triển / DevOps",
+          "sections": [
+            {
+              "heading": "Văn cảnh và thao tác",
+              "body": "GitHub cho phép hợp tác về mật mã. Thông báo người dùng về các thay đổi và thảo luận. Thông báo có liên quan đến ưu tiên của lý do thông báo và tuyên bố của đội."
+            },
+            {
+              "heading": "Name",
+              "body": "Xóa các tập tin và lịch sử. Đề cập: Thông báo cho một cá nhân hay một nhóm. Bản ghi thay đổi:"
+            },
+            {
+              "heading": "Ảnh hưởng toàn cầu và tập đoàn",
+              "body": "Điều này có thể giúp sắp xếp thông điệp hoặc thay đổi ứng xử của bộ lọc tồn tại. Nó chủ yếu liên quan đến các đội sử dụng GitHub; không có sự cố an toàn nào được báo cáo."
+            },
+            {
+              "heading": "Ví dụ chuyên nghiệp",
+              "body": "Một đội DevOps nhận được quá nhiều thông báo. Kiểm tra các mẫu và bộ lọc để xem lại mật mã hay cảnh báo sự cố không bị bỏ qua."
+            },
+            {
+              "heading": "Phòng ngừa và hành động",
+              "body": "Đọc lại bản ghi thay đổi, kiểm tra lại bộ lọc thông báo và thử ra tự động các mẫu này."
+            },
+            {
+              "heading": "Được giữ lại",
+              "body": "Một sự thay đổi nhỏ trong thánh chức có thể ảnh hưởng đến các công cụ phụ thuộc vào nó."
+            }
+          ]
         },
         "nl": {
           "title": "GitHub: Evolution van meldingen",
           "summary": "De redenen voor de kennisgeving volgen nu een consistente prioriteit en teamverklaringen weerspiegelen het huidige lidmaatschap. Controleer de messaging filters of automatiseringen die afhankelijk zijn van deze patronen.",
-          "category": "Ontwikkeling / DevOps"
+          "category": "Ontwikkeling / DevOps",
+          "sections": [
+            {
+              "heading": "Context en werking",
+              "body": "GitHub staat samenwerking op code toe. Kennisgevingen informeren gebruikers over wijzigingen en discussies. De aankondiging heeft betrekking op de prioriteit van de redenen voor aanmelding en teamverklaringen."
+            },
+            {
+              "heading": "Technische termen",
+              "body": "Storting: alle bestanden en hun geschiedenis. Vermeld: kennisgeving aan een persoon of team. Changelog: log van productwijzigingen."
+            },
+            {
+              "heading": "Wereldwijd en bedrijfseffect",
+              "body": "Dit kan helpen berichten te sorteren of het gedrag van bestaande filters te veranderen. Het gaat voornamelijk om teams die GitHub gebruiken; er worden geen veiligheidsincidenten gemeld."
+            },
+            {
+              "heading": "Beroepsvoorbeeld",
+              "body": "Een DevOps team krijgt te veel meldingen. Controleer patronen en filters zodat code review of incident waarschuwingen niet worden genegeerd."
+            },
+            {
+              "heading": "Preventie en actie",
+              "body": "Lees de changelog opnieuw, controleer de meldingsfilters en test de automatiseringen die deze patronen gebruiken."
+            },
+            {
+              "heading": "Te behouden",
+              "body": "Een kleine verandering in een dienst kan invloed hebben op het gereedschap dat ervan afhankelijk is."
+            }
+          ]
         },
         "id": {
           "title": "GitHub: Evolution dari pemberitahuan",
           "summary": "Alasan untuk pemberitahuan sekarang mengikuti prioritas yang konsisten dan pernyataan tim mencerminkan keanggotaan saat ini. Periksa filter pesan atau otomatisasi yang tergantung pada pola-pola ini.",
-          "category": "Pengembangan / DevOps"
+          "category": "Pengembangan / DevOps",
+          "sections": [
+            {
+              "heading": "Konteks dan operasi",
+              "body": "GitHub mengijinkan kolaborasi pada kode. Pemberitahuan menginformasikan pengguna perubahan dan diskusi. Pengumuman berkaitan dengan prioritas dari alasan untuk pemberitahuan dan laporan tim."
+            },
+            {
+              "heading": "Istilah teknis dijelaskan",
+              "body": "Deposit: semua file dan sejarah mereka. Sebutkan: pemberitahuan kepada orang atau tim. Changelog: perubahan log dari suatu produk."
+            },
+            {
+              "heading": "Dampak global dan perusahaan",
+              "body": "Ini dapat membantu memilah pesan atau mengubah perilaku penyaring yang ada. Hal ini terutama menyangkut tim menggunakan GitHub; Tidak ada insiden keselamatan yang dilaporkan."
+            },
+            {
+              "heading": "Contoh profesional",
+              "body": "Tim DevOps terlalu banyak mendapat pemberitahuan. Periksa pola dan filter sehingga ulasan kode atau peringatan insiden tidak diabaikan."
+            },
+            {
+              "heading": "Pencegahan dan tindakan",
+              "body": "Membaca ulang changelog, memeriksa penyaring pemberitahuan dan menguji otomatisasi yang menggunakan pola-pola ini."
+            },
+            {
+              "heading": "Untuk dipertahankan",
+              "body": "Perubahan kecil dalam layanan dapat mempengaruhi alat-alat yang tergantung padanya."
+            }
+          ]
         }
       },
       "sections": [
@@ -568,77 +2518,467 @@
         "en": {
           "title": "Securities related to pressurised AI on the stock exchange",
           "summary": "Reuters reports a decline in Nasdaq futures contracts and flea manufacturers prior to the US opening. Concerns concern the profitability of AI investments and the economic outlook; This is not a closing price.",
-          "category": "IA / Enterprises"
+          "category": "IA / Enterprises",
+          "sections": [
+            {
+              "heading": "Context and operation",
+              "body": "In particular, AI investments require chips, data centres and electricity. The article cited describes a movement of futures contracts before market opening, not a closing result or a certain forecast."
+            },
+            {
+              "heading": "Technical terms explained",
+              "body": "Nasdaq: American market and associated index names. Futures contract: financial contract for a future transaction. Profitability: the ability of an investment to generate a gain."
+            },
+            {
+              "heading": "Global and corporate impact",
+              "body": "Concerns about profitability can influence AI and infrastructure investment decisions. The effect on employment, cloud prices or projects remains uncertain."
+            },
+            {
+              "heading": "Professional example",
+              "body": "In an IT team, an AI project must justify its cost: compare material needs, recurring costs, expected benefits and alternatives."
+            },
+            {
+              "heading": "Prevention and action",
+              "body": "Follow financial and technical announcements, distinguish forecasts and results, evaluate costs and avoid conclusions based on a single session."
+            },
+            {
+              "heading": "To be retained",
+              "body": "Technical performance and economic viability are two different issues."
+            }
+          ]
         },
         "de": {
           "title": "Wertpapiere im Zusammenhang mit KI unter Druck an der Börse",
           "summary": "Reuters berichtet von einem Rückgang der Nasdaq-Futures-Kontrakte und Flohhersteller vor der Eröffnung in den USA. Bedenken betreffen die Rentabilität von KI-Investitionen und die wirtschaftlichen Aussichten; Dies ist kein Schlusspreis.",
-          "category": "IA/Unternehmen"
+          "category": "IA/Unternehmen",
+          "sections": [
+            {
+              "heading": "Kontext und Funktionsweise",
+              "body": "Insbesondere KI-Investitionen erfordern Chips, Rechenzentren und Strom. Der zitierte Artikel beschreibt eine Bewegung von Futures-Kontrakten vor der Marktöffnung, nicht ein Abschlussergebnis oder eine bestimmte Prognose."
+            },
+            {
+              "heading": "Technische Begriffe erklärt",
+              "body": "Nasdaq: Amerikanischer Markt und zugehörige Indexnamen. Futures-Kontrakt: Finanzvertrag für eine zukünftige Transaktion. Rentabilität: die Fähigkeit einer Investition, einen Gewinn zu generieren."
+            },
+            {
+              "heading": "Globale und Corporate Impact",
+              "body": "Bedenken hinsichtlich der Rentabilität können KI- und Infrastrukturinvestitionsentscheidungen beeinflussen. Die Auswirkungen auf Beschäftigung, Cloud-Preise oder Projekte bleiben ungewiss."
+            },
+            {
+              "heading": "Professionelle Beispiele",
+              "body": "In einem IT-Team muss ein KI-Projekt seine Kosten rechtfertigen: Materialbedarf, wiederkehrende Kosten, erwartete Vorteile und Alternativen vergleichen."
+            },
+            {
+              "heading": "Prävention und Maßnahmen",
+              "body": "Folgen Sie finanziellen und technischen Ankündigungen, unterscheiden Sie Prognosen und Ergebnisse, bewerten Sie die Kosten und vermeiden Sie Schlussfolgerungen auf der Grundlage einer einzigen Sitzung."
+            },
+            {
+              "heading": "Einbehalten",
+              "body": "Technische Leistungsfähigkeit und Wirtschaftlichkeit sind zwei verschiedene Themen."
+            }
+          ]
         },
         "zh-Hans": {
           "title": "与证券交易所加压AI有关的证券",
           "summary": "路透社报道,在美国开业前,纳斯达克期货合约和跳蚤制造商出现下滑. 关切AI投资的利润和经济前景; 这不是一个收尾价格。",
-          "category": "IA/企业"
+          "category": "IA/企业",
+          "sections": [
+            {
+              "heading": "A. 背景和运作",
+              "body": "特别是AI投资需要芯片,数据中心和电力. 所引用的文章描述了期货合同在市场开放之前的变动,而不是收盘结果或某种预测."
+            },
+            {
+              "heading": "技术术语说明",
+              "body": "Nasdaq:美国市场和相关指数名称. 期货合同:未来交易的财务合同. 利润:投资产生收益的能力."
+            },
+            {
+              "heading": "全球和公司影响",
+              "body": "对盈利能力的关切可影响大赦国际和基础设施投资决定。 对就业、云价格或项目的影响仍然不确定。"
+            },
+            {
+              "heading": "专业实例",
+              "body": "在信息技术小组中,AI项目必须证明其成本:比较材料需要、经常性费用、预期效益和替代办法。"
+            },
+            {
+              "heading": "预防和行动",
+              "body": "遵循财务和技术公告,区分预测和结果,评价费用,避免根据单一会议作出结论。"
+            },
+            {
+              "heading": "待保留",
+              "body": "技术业绩和经济可行性是两个不同的问题。"
+            }
+          ]
         },
         "es": {
           "title": "Valores relacionados con la IA presurizada en la bolsa de valores",
           "summary": "Reuters reporta una disminución en los contratos futuros de Nasdaq y fabricantes de pulgas antes de la apertura de Estados Unidos. Concerns concern the profitability of AI investments and the economic perspective; Esto no es un precio de cierre.",
-          "category": "IA / Empresas"
+          "category": "IA / Empresas",
+          "sections": [
+            {
+              "heading": "Contexto y operación",
+              "body": "En particular, las inversiones de inteligencia artificial requieren chips, centros de datos y electricidad. El artículo citado describe un movimiento de futuros contratos antes de la apertura del mercado, no un resultado final o una cierta previsión."
+            },
+            {
+              "heading": "Condiciones técnicas explicadas",
+              "body": "Nasdaq: American market and associated index names. Contrato de futuros: contrato financiero para una transacción futura. Profitability: la capacidad de una inversión para generar un beneficio."
+            },
+            {
+              "heading": "Impacto mundial y empresarial",
+              "body": "La preocupación por la rentabilidad puede influir en las decisiones de inversión de IA e infraestructura. El efecto en el empleo, los precios o proyectos en la nube sigue siendo incierto."
+            },
+            {
+              "heading": "Ejemplo profesional",
+              "body": "En un equipo de TI, un proyecto de IA debe justificar su costo: comparar las necesidades materiales, costos recurrentes, beneficios esperados y alternativas."
+            },
+            {
+              "heading": "Prevención y acción",
+              "body": "Seguir anuncios financieros y técnicos, distinguir pronósticos y resultados, evaluar costos y evitar conclusiones basadas en un solo período de sesiones."
+            },
+            {
+              "heading": "Que se mantenga",
+              "body": "El rendimiento técnico y la viabilidad económica son dos cuestiones diferentes."
+            }
+          ]
         },
         "it": {
           "title": "Securità relative all'IA sotto pressione sulla borsa",
           "summary": "Reuters riferisce un calo dei contratti futuri per i produttori di pulci e Nasdaq prima dell'apertura degli Stati Uniti. Le preoccupazioni riguardano la redditività degli investimenti AI e le prospettive economiche; Questo non è un prezzo di chiusura.",
-          "category": "IA / Imprese"
+          "category": "IA / Imprese",
+          "sections": [
+            {
+              "heading": "Contesto e funzionamento",
+              "body": "Gli investimenti in AI includono chip, data center e elettricità. L'articolo citato descrive un movimento dei contratti futures prima dell'apertura del mercato, non un risultato di chiusura o una certa previsione."
+            },
+            {
+              "heading": "Termini tecnici spiegati",
+              "body": "Nasdaq: mercato americano e nomi indici associati. Contratto Futures: contratto finanziario per una futura transazione. Profitability: la capacità di un investimento di generare un guadagno."
+            },
+            {
+              "heading": "Impatto globale e societario",
+              "body": "Le preoccupazioni sulla redditività possono influenzare le decisioni di investimento dell'AI e delle infrastrutture. L'effetto sull'occupazione, sui prezzi cloud o sui progetti rimane incerto."
+            },
+            {
+              "heading": "Esempio professionale",
+              "body": "In un team IT, un progetto AI deve giustificare il suo costo: confrontare i requisiti materiali, i costi ricorrenti, i benefici attesi e le alternative."
+            },
+            {
+              "heading": "Prevenzione e azione",
+              "body": "Seguire annunci finanziari e tecnici, distinguere previsioni e risultati, valutare i costi ed evitare conclusioni basate su una singola sessione."
+            },
+            {
+              "heading": "Da conservare",
+              "body": "Le prestazioni tecniche e la redditività economica sono due questioni diverse."
+            }
+          ]
         },
         "pt": {
           "title": "Títulos relacionados com IA sob pressão sobre a bolsa de valores",
           "summary": "A Reuters relata um declínio nos contratos futuros para Nasdaq e fabricantes de pulgas antes da abertura dos EUA. As preocupações dizem respeito à rendibilidade dos investimentos em IA e às perspectivas económicas; Isto não é um preço final.",
-          "category": "IA / Empresas"
+          "category": "IA / Empresas",
+          "sections": [
+            {
+              "heading": "Contexto e operação",
+              "body": "Em especial, os investimentos em IA exigem chips, centros de dados e electricidade. O artigo citado descreve um movimento de contratos futuros antes da abertura do mercado, não um resultado final ou uma certa previsão."
+            },
+            {
+              "heading": "Termos técnicos explicados",
+              "body": "Nasdaq: mercado americano e nomes de índice associados. Contrato futuro: contrato financeiro para uma transação futura. Rendibilidade: a capacidade de um investimento gerar um ganho."
+            },
+            {
+              "heading": "Impacto global e empresarial",
+              "body": "As preocupações com a rendibilidade podem influenciar as decisões de investimento em IA e em infraestruturas. O efeito sobre o emprego, os preços das nuvens ou os projectos permanece incerto."
+            },
+            {
+              "heading": "Exemplo profissional",
+              "body": "Em uma equipe de TI, um projeto de IA deve justificar seu custo: comparar necessidades materiais, custos recorrentes, benefícios esperados e alternativas."
+            },
+            {
+              "heading": "Prevenção e acção",
+              "body": "Seguir anúncios financeiros e técnicos, distinguir previsões e resultados, avaliar custos e evitar conclusões com base em uma única sessão."
+            },
+            {
+              "heading": "A manter",
+              "body": "O desempenho técnico e a viabilidade económica são duas questões diferentes."
+            }
+          ]
         },
         "ja": {
           "title": "株式交換における加圧AIに関する有価証券",
           "summary": "ロイターは、米国進出前にナスダックの先物契約とフリーメーカーの低下を報告しています。 AI投資と経済見通しの収益性を懸念しています。 クローズ価格ではありません。",
-          "category": "IA/企業"
+          "category": "IA/企業",
+          "sections": [
+            {
+              "heading": "コンテキストと操作",
+              "body": "特にAI投資では、チップ、データセンター、電力を必要とします。 引用された記事は、市場の開口部、クローズ結果または特定の予測ではなく、将来の契約の動きを説明しています。"
+            },
+            {
+              "heading": "技術的な用語解説",
+              "body": "Nasdaq: アメリカ市場と関連するインデックス名。 先物契約:将来の取引のための金融契約。 収益性:利益を発生させる投資の能力。"
+            },
+            {
+              "heading": "グローバル・企業インパクト",
+              "body": "収益性に関する懸念は、AIやインフラ投資の決定に影響を及ぼす可能性があります。 雇用、クラウド価格、プロジェクトへの影響は不確実です。"
+            },
+            {
+              "heading": "専門例",
+              "body": "IT チームでは、AI プロジェクトは、そのコストを正当化しなければなりません。材料ニーズを比較し、コストを削減し、期待される利点と代替手段を比較します。"
+            },
+            {
+              "heading": "予防と行動",
+              "body": "財務および技術的な発表に従い、予測と結果を区別し、コストを評価し、単一のセッションに基づいて結論を回避します。"
+            },
+            {
+              "heading": "保持されるため",
+              "body": "技術的性能と経済性は2つの課題です。"
+            }
+          ]
         },
         "ko": {
           "title": "증권 거래소의 Pressurised AI와 관련된 증권",
           "summary": "Reuters는 미국 오픈 이전에 Nasdaq 선물 계약 및 Flea 제조업체의 감소를보고 있습니다. AI 투자와 경제 전망의 수익성에 대한 우려; 이것은 닫히지 않습니다.",
-          "category": "IA / 기업"
+          "category": "IA / 기업",
+          "sections": [
+            {
+              "heading": "Context 및 작동",
+              "body": "AI의 투자는 칩, 데이터 센터 및 전기를 포함합니다. 인용된 기사는 시장 오프닝의 앞에 미래 계약의 운동을, 닫히지 않는 결과 또는 특정 예측 설명합니다."
+            },
+            {
+              "heading": "기술 용어 설명",
+              "body": "Nasdaq: 미국 시장 및 관련 색인 이름. 선물 계약 : 미래 거래를위한 금융 계약. Profitability: 투자의 능력은 이익을 창출합니다."
+            },
+            {
+              "heading": "글로벌 및 기업 영향",
+              "body": "수익성에 대한 우려는 AI 및 인프라 투자 결정에 영향을 미칠 수 있습니다. 고용, 클라우드 가격 또는 프로젝트의 효과는 불확실합니다."
+            },
+            {
+              "heading": "전문 예",
+              "body": "IT 팀에서 AI 프로젝트는 비용을 단화해야합니다. 재료 요구 사항, 반복 비용, 예상 이익 및 대안을 비교하십시오."
+            },
+            {
+              "heading": "예방 및 활동",
+              "body": "금융 및 기술 발표를 따르고, 예측 및 결과, 평가 비용 및 단일 세션에 따라 결론을 피합니다."
+            },
+            {
+              "heading": "계속하기",
+              "body": "기술적인 성과 및 경제 viability는 2개의 다른 문제점입니다."
+            }
+          ]
         },
         "ar": {
           "title": "Securities related to pressurised AI on the stock exchange",
           "summary": "Reuters reports a decline in Nasdaq futures contracts and flea manufacturers prior to the US opening. (ب) الشواغل المتعلقة بربحية استثمارات الاستثمار الأجنبي المباشر والتوقعات الاقتصادية؛ هذا ليس الثمن النهائي",
-          "category": "IA / Enterprises"
+          "category": "IA / Enterprises",
+          "sections": [
+            {
+              "heading": "السياق والتشغيل",
+              "body": "In particular, AI investments requireرقs, data centres and electricity. وتصف المادة المذكورة حركة العقود الآجلة قبل فتح الأسواق، وليس نتيجة ختامية أو توقعات معينة."
+            },
+            {
+              "heading": "الشروط التقنية",
+              "body": "Nasdaq: American market and associated index names. العقود المقبلة: العقد المالي لمعاملة مقبلة. Profitability: the ability of an investment to generate a gain."
+            },
+            {
+              "heading": "التأثير العالمي والأثر المؤسسي",
+              "body": "ويمكن أن تؤثر الشواغل المتعلقة بالربحية في قرارات الاستثمار الأجنبي المباشر والبنى التحتية. ولا يزال الأثر على العمالة أو الأسعار السحابية أو المشاريع غير مؤكد."
+            },
+            {
+              "heading": "مثال مهني",
+              "body": "In an IT team, an AI project must justify its cost: comparison material needs, recurring costs, expected benefits and alternatives."
+            },
+            {
+              "heading": "الوقاية والعمل",
+              "body": "متابعة الإعلانات المالية والتقنية، والتمييز بين التوقعات والنتائج، وتقييم التكاليف، وتجنب الاستنتاجات المستندة إلى دورة واحدة."
+            },
+            {
+              "heading": "يُحتفظ بها",
+              "body": "والأداء التقني والقابلية للاستمرار الاقتصادي هما مسألتين مختلفتين."
+            }
+          ]
         },
         "ru": {
           "title": "Ценные бумаги, связанные с ИИ под давлением на фондовую биржу",
           "summary": "Reuters сообщает о снижении фьючерсных контрактов для Nasdaq и производителей блох перед открытием в США. Обеспокоенность касается рентабельности инвестиций в ИИ и экономических перспектив; Это не цена закрытия.",
-          "category": "IA / Предприятия"
+          "category": "IA / Предприятия",
+          "sections": [
+            {
+              "heading": "Контекст и операция",
+              "body": "В частности, для инвестиций в ИИ требуются чипы, центры обработки данных и электричество. В статье описывается движение фьючерсных контрактов до открытия рынка, а не результат закрытия или определенный прогноз."
+            },
+            {
+              "heading": "Технические условия объяснены",
+              "body": "Nasdaq: Американский рынок и связанные индексные названия. Фьючерсный контракт: финансовый контракт для будущей сделки. Рентабельность: способность инвестиций генерировать прибыль."
+            },
+            {
+              "heading": "Глобальное и корпоративное воздействие",
+              "body": "Опасения по поводу прибыльности могут повлиять на решения по инвестициям в ИИ и инфраструктуру. Влияние на занятость, облачные цены или проекты остается неопределенным."
+            },
+            {
+              "heading": "Профессиональный пример",
+              "body": "В ИТ-команде проект ИИ должен оправдывать свою стоимость: сравнивать материальные потребности, повторяющиеся затраты, ожидаемые выгоды и альтернативы."
+            },
+            {
+              "heading": "Предупреждение и действия",
+              "body": "Следите за финансовыми и техническими объявлениями, различайте прогнозы и результаты, оценивайте затраты и избегайте выводов на основе одной сессии."
+            },
+            {
+              "heading": "Чтобы сохранить",
+              "body": "Техническая эффективность и экономическая жизнеспособность — это два разных вопроса."
+            }
+          ]
         },
         "hi": {
           "title": "स्टॉक एक्सचेंज पर दबावित एआई से संबंधित प्रतिभूति",
           "summary": "रॉयटर्स ने अमेरिका के उद्घाटन से पहले नास्डैक फ्यूचर्स कॉन्ट्रैक्ट्स और फ्ला निर्माताओं में गिरावट की रिपोर्ट की। चिंता की बात एआई निवेश और आर्थिक दृष्टिकोण की लाभप्रदता; यह एक बंद कीमत नहीं है।",
-          "category": "IA / Enterprises"
+          "category": "IA / Enterprises",
+          "sections": [
+            {
+              "heading": "संदर्भ और संचालन",
+              "body": "एआई में निवेश में चिप्स, डेटा सेंटर और बिजली शामिल है। उद्धृत आलेख बाजार खोलने से पहले भविष्य के अनुबंधों के आंदोलन का वर्णन करता है, एक समापन परिणाम या एक निश्चित पूर्वानुमान नहीं है।"
+            },
+            {
+              "heading": "तकनीकी शर्तें समझाया",
+              "body": "Nasdaq: अमेरिकी बाजार और संबद्ध सूचकांक नाम। फ्यूचर्स अनुबंध: भविष्य में लेनदेन के लिए वित्तीय अनुबंध। लाभप्रदता: लाभ उत्पन्न करने के लिए निवेश की क्षमता।"
+            },
+            {
+              "heading": "वैश्विक और कॉर्पोरेट प्रभाव",
+              "body": "लाभप्रदता के बारे में चिंता एआई और बुनियादी ढांचा निवेश निर्णयों को प्रभावित कर सकती है। रोजगार, क्लाउड कीमतों या परियोजनाओं पर प्रभाव अनिश्चित रहता है।"
+            },
+            {
+              "heading": "व्यावसायिक उदाहरण",
+              "body": "एक आईटी टीम में, एक एआई परियोजना को अपनी लागत को सही ठहराना चाहिए: सामग्री आवश्यकताओं, आवर्ती लागत, अपेक्षित लाभ और विकल्प की तुलना करें।"
+            },
+            {
+              "heading": "रोकथाम और कार्रवाई",
+              "body": "वित्तीय और तकनीकी घोषणाओं का पालन करें, पूर्वानुमान और परिणाम को अलग करें, लागत का मूल्यांकन करें और एक सत्र के आधार पर निष्कर्षों से बचें।"
+            },
+            {
+              "heading": "बनाए रखने के लिए",
+              "body": "तकनीकी प्रदर्शन और आर्थिक व्यवहार्यता दो अलग-अलग मुद्दे हैं।"
+            }
+          ]
         },
         "tr": {
           "title": "Borsada Baskılanan AI ile ilgili eşitsizlikler",
           "summary": "Reuters, ABD açılışından önce Nasdaq gelecekteki sözleşmeler ve flea üreticilerinde bir düşüş bildiriyor. AI yatırımlarının ve ekonomik görünümün kârlılığını endişelendirir; Bu bir kapanış fiyatı değil.",
-          "category": "IA / Enterprises"
+          "category": "IA / Enterprises",
+          "sections": [
+            {
+              "heading": "Context and operation",
+              "body": "Özellikle, AI yatırımları cips, veri merkezleri ve elektrik gerektirir. Makale, piyasa açılmadan önce gelecekteki sözleşmelerin bir hareketini, kapanış sonucu veya belirli bir tahmin değil."
+            },
+            {
+              "heading": "Teknik terimler açıklandı",
+              "body": "Nasdaq: Amerikan pazarı ve ilişkili indeks isimleri. Futures sözleşmesi: gelecekteki bir işlem için finansal sözleşme. Karability: Bir kazanç elde etmek için bir yatırım yeteneği."
+            },
+            {
+              "heading": "Global ve şirket etkisi",
+              "body": "kârlılığa ilişkin endişeler AI ve altyapı yatırım kararlarını etkileyebilir. İş, bulut fiyatları veya projeler üzerindeki etkisi belirsizdir."
+            },
+            {
+              "heading": "Profesyonel örnek örneği",
+              "body": "Bir IT ekibinde, bir AI projesi maliyetini haklı çıkarmalı: malzeme ihtiyaçlarını, tekrarlanan maliyetleri, beklenen faydaları ve alternatifleri karşılaştırmalıdır."
+            },
+            {
+              "heading": "Önleme ve eylem",
+              "body": "Finansal ve teknik duyuruları takip edin, tahminleri ve sonuçları ayırt edin, maliyetleri değerlendirin ve tek bir oturuma dayalı sonuçlardan kaçının."
+            },
+            {
+              "heading": "muhafaza edilmek için",
+              "body": "Teknik performans ve ekonomik viability iki farklı konudur."
+            }
+          ]
         },
         "vi": {
           "title": "Cơ quan an ninh liên quan đến việc gây áp lực lên AI trong việc trao đổi chứng khoán",
           "summary": "Có một sự suy giảm trong các hợp đồng trong tương lai của Nasdaq và các nhà sản xuất bọ chét trước khi Mỹ mở cửa. Những mối quan tâm về lợi nhuận của các khoản đầu tư AI và quan điểm kinh tế; Đây không phải là giá chót.",
-          "category": "IA / Enterprises"
+          "category": "IA / Enterprises",
+          "sections": [
+            {
+              "heading": "Văn cảnh và thao tác",
+              "body": "Đặc biệt, đầu tư AI cần chip, trung tâm dữ liệu và điện. Bài báo nêu ra miêu tả một phong trào trong tương lai hợp đồng trước khi mở chợ, chứ không phải kết quả cuối cùng hoặc một dự báo nào đó."
+            },
+            {
+              "heading": "Name",
+              "body": "Nasdaq: Thị trường Mỹ và tên chỉ số liên quan. Hợp đồng tương lai: hợp đồng tài chính cho một giao dịch trong tương lai. Lợi nhuận: khả năng đầu tư để tạo ra lợi nhuận."
+            },
+            {
+              "heading": "Ảnh hưởng toàn cầu và tập đoàn",
+              "body": "Quan tâm đến lợi nhuận có thể ảnh hưởng đến AI và các quyết định đầu tư cơ sở hạ tầng. Hậu quả của việc làm, giá mây hoặc dự án vẫn chưa rõ ràng."
+            },
+            {
+              "heading": "Ví dụ chuyên nghiệp",
+              "body": "Trong một đội IT, một dự án AI phải thanh minh cho chi phí của nó: so sánh nhu cầu vật chất, chi phí tái diễn, mong đợi những lợi ích và sự thay thế."
+            },
+            {
+              "heading": "Phòng ngừa và hành động",
+              "body": "Hãy theo dõi thông báo tài chính và kỹ thuật, phân biệt dự báo và kết quả, đánh giá chi phí và tránh kết luận dựa trên một phiên họp."
+            },
+            {
+              "heading": "Được giữ lại",
+              "body": "Hiệu suất kỹ thuật và khả năng phát triển kinh tế là hai vấn đề khác nhau."
+            }
+          ]
         },
         "nl": {
           "title": "Effecten in verband met AI-druk op de beurs",
           "summary": "Reuters meldt een daling in Nasdaq futures contracten en vlooien fabrikanten voorafgaand aan de Amerikaanse opening. bezorgdheid over de winstgevendheid van AI-investeringen en de economische vooruitzichten; Dit is geen slotprijs.",
-          "category": "IA / Ondernemingen"
+          "category": "IA / Ondernemingen",
+          "sections": [
+            {
+              "heading": "Context en werking",
+              "body": "AI-investeringen vereisen met name chips, datacenters en elektriciteit. Het genoemde artikel beschrijft een verschuiving van futurescontracten vóór de openstelling van de markt, geen slotresultaat of een bepaalde prognose."
+            },
+            {
+              "heading": "Technische termen",
+              "body": "Nasdaq: Amerikaanse markt en bijbehorende indexnamen. Futures contract: financieel contract voor een toekomstige transactie. Winstgevendheid: het vermogen van een investering om winst te genereren."
+            },
+            {
+              "heading": "Wereldwijd en bedrijfseffect",
+              "body": "Bezorgdheid over winstgevendheid kan invloed hebben op AI- en infrastructuurinvesteringen. Het effect op werkgelegenheid, cloudprijzen of projecten blijft onzeker."
+            },
+            {
+              "heading": "Beroepsvoorbeeld",
+              "body": "In een IT-team moet een AI-project zijn kosten rechtvaardigen: materiaalbehoeften, terugkerende kosten, verwachte voordelen en alternatieven vergelijken."
+            },
+            {
+              "heading": "Preventie en actie",
+              "body": "Volg financiële en technische aankondigingen, maak onderscheid tussen prognoses en resultaten, beoordeel de kosten en vermijd conclusies op basis van één sessie."
+            },
+            {
+              "heading": "Te behouden",
+              "body": "Technische prestaties en economische levensvatbaarheid zijn twee verschillende kwesties."
+            }
+          ]
         },
         "id": {
           "title": "Sekuritas terkait dengan AI pressurised pada bursa saham",
           "summary": "Reuters melaporkan penurunan kontrak dan pabrik loak di Nasdaq sebelum pembukaan AS. Mengenai keuntungan investasi AI dan pandangan ekonomi; Ini bukan harga tutup.",
-          "category": "IA / Enterprises"
+          "category": "IA / Enterprises",
+          "sections": [
+            {
+              "heading": "Konteks dan operasi",
+              "body": "Secara khusus, investasi AI membutuhkan chip, pusat data dan listrik. Artikel menyebutkan gerakan kontrak masa depan sebelum pembukaan pasar, bukan hasil penutupan atau perkiraan tertentu."
+            },
+            {
+              "heading": "Istilah teknis dijelaskan",
+              "body": "Nasdaq: Pasar Amerika dan nama indeks terkait. Kontraknya: kontrak keuangan untuk transaksi masa depan. Keuntungan: kemampuan investasi untuk menghasilkan keuntungan."
+            },
+            {
+              "heading": "Dampak global dan perusahaan",
+              "body": "Kekhawatiran tentang keuntungan dapat mempengaruhi AI dan keputusan investasi infrastruktur. Efek pada pekerjaan, harga awan atau proyek tetap tidak pasti."
+            },
+            {
+              "heading": "Contoh profesional",
+              "body": "Dalam sebuah tim IT, sebuah proyek AI harus membenarkan biayanya: kebutuhan bahan perbandingan, biaya berulang, keuntungan yang diharapkan dan alternatif."
+            },
+            {
+              "heading": "Pencegahan dan tindakan",
+              "body": "Ikuti pengumuman keuangan dan teknis, membedakan ramalan dan hasil, biaya evaluasi dan menghindari kesimpulan berdasarkan satu sesi."
+            },
+            {
+              "heading": "Untuk dipertahankan",
+              "body": "Teknik kinerja dan kemampuan ekonomi adalah dua masalah yang berbeda."
+            }
+          ]
         }
       },
       "sections": [
