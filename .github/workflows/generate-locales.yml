@@ -7,18 +7,31 @@ permissions:
   contents: read
 jobs:
   translate:
+    name: Translate ${{ matrix.locale }}
     runs-on: ubuntu-latest
-    timeout-minutes: 25
+    timeout-minutes: 45
+    strategy:
+      fail-fast: false
+      max-parallel: 5
+      matrix:
+        locale: [es, en, de, zh-Hans, it, pt, ja, ko, ar, ru, hi, tr, vi, nl, id]
     steps:
       - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with:
+          ref: f59aa12e5889faf38134ddef0b77e4031a00b9c7
+          path: source
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
       - run: python -m py_compile scripts/generate-locales.py
       - run: pip install torch --index-url https://download.pytorch.org/whl/cpu
       - run: pip install argostranslate==1.11.0 beautifulsoup4
-      - run: python scripts/generate-locales.py es
+      - name: Generate pack
+        working-directory: source
+        run: python ../scripts/generate-locales.py "${{ matrix.locale }}"
       - uses: actions/upload-artifact@v4
         with:
-          name: offline-es-pilot
-          path: locales/es.json
+          name: offline-${{ matrix.locale }}
+          path: source/locales/${{ matrix.locale }}.json
+          if-no-files-found: error
