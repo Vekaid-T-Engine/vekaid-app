@@ -45,3 +45,6 @@ Source: user-supplied video, “10 Niche Design Hacks”. Review concentric radi
 
 ## Anti-generic design review (19-point video checklist)
 Review gradient blobs, circle icons, default purple, floating 3D, identical feature cards, stock team photos, rainbow accents, fake product photos, buzzwords, generic testimonials, three-word headlines, repetitive FAQs, bento grids, cookie-cutter flows, decorative emojis, vague CTAs, dead links, excessive soft corners, and missing personality. These are review prompts, not blanket bans. Keep functional cards, existing VEKAID radar and motion, authentic imagery, accessible geometry and clear navigation. Require meaningful copy, real evidence and tested destinations. Never invent testimonials. Review screenshots before approving visual changes.
+
+## Internationalization
+Offline interface localization: French, English, German, Simplified Chinese. Preserve original user data and lesson IDs; explicitly disclose untranslated learning/news/legacy content. Test locale persistence, overflow, fallback, offline reload and all language switches before claiming full localization. No external translation API.
