@@ -1,1 +1,54 @@
-{"version":1,"generatedAt":null,"items":[]}
+{
+  "version": 1,
+  "generatedAt": "2026-11-25T11:46:49.677Z",
+  "items": [
+    {
+      "title": "Chrome : mise à jour de sécurité pour les postes de travail",
+      "category": "Support IT / Cyber",
+      "source": "Centre canadien pour la cybersécurité",
+      "date": "2026-11-24",
+      "summary": "Un avis signale une vulnérabilité dans les versions de Chrome Desktop antérieures à 158.0.8127.88/.89 sous Windows et macOS, et .88 sous Linux. Vérifier la version installée et appliquer la mise à jour appropriée.",
+      "url": "https://www.cyber.gc.ca/en/alerts-advisories/google-security-advisory-av26-1201"
+    },
+    {
+      "title": "VMware : avis de sécurité vCenter",
+      "category": "Infrastructure / Cloud",
+      "source": "Centre canadien pour la cybersécurité",
+      "date": "2026-11-24",
+      "summary": "Plusieurs branches de vCenter sont concernées. Inventorier les versions, consulter les correctifs de l’éditeur et planifier les mises à jour avec sauvegarde et contrôle de disponibilité.",
+      "url": "https://www.cyber.gc.ca/en/alerts-advisories/vmware-security-advisory-av26-1203"
+    },
+    {
+      "title": "n8n : vérifier les versions des instances d’automatisation",
+      "category": "Automatisation / Cyber",
+      "source": "Centre canadien pour la cybersécurité",
+      "date": "2026-11-24",
+      "summary": "Un avis concerne plusieurs branches de n8n. Comparer la version de chaque instance aux versions corrigées indiquées dans l’avis, puis tester les workflows après mise à jour.",
+      "url": "https://www.cyber.gc.ca/en/alerts-advisories/n8n-security-advisory-av26-1200"
+    },
+    {
+      "title": "Drupal : vulnérabilité ajoutée au catalogue KEV",
+      "category": "Cybersécurité web",
+      "source": "Centre canadien pour la cybersécurité",
+      "date": "2026-11-24",
+      "summary": "L’avis canadien rapporte l’ajout de CVE-2026-132165 au catalogue des vulnérabilités exploitées de la CISA le 24 novembre. Prioriser la vérification des sites Drupal et appliquer les correctifs adaptés.",
+      "url": "https://www.cyber.gc.ca/en/alerts-advisories/drupal-security-advisory-av26-1186"
+    },
+    {
+      "title": "GitHub : évolution des notifications",
+      "category": "Développement / DevOps",
+      "source": "GitHub Changelog",
+      "date": "2026-11-24",
+      "summary": "Les motifs de notification suivent désormais une priorité cohérente et les mentions d’équipe reflètent l’appartenance actuelle. Vérifier les filtres de messagerie ou automatisations qui dépendent de ces motifs.",
+      "url": "https://github.blog/changelog/2026-11-24-more-predictable-notifications-on-github-com/"
+    },
+    {
+      "title": "Les valeurs liées à l’IA sous pression en Bourse",
+      "category": "IA / Entreprises",
+      "source": "Reuters",
+      "date": "2026-11-25",
+      "summary": "Reuters rapporte un recul des contrats à terme du Nasdaq et des fabricants de puces avant l’ouverture américaine. Les inquiétudes portent sur la rentabilité des investissements IA et les perspectives économiques ; il ne s’agit pas de cours de clôture.",
+      "url": "https://www.reuters.com/business/nasdaq-futures-slide-over-2-fresh-us-tariff-concerns-inflation-data-focus-2026-11-25/"
+    }
+  ]
+}
