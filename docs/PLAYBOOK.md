@@ -1,0 +1,2 @@
+# Playbook maintenance
+Public operational synthesis, not the full private PDF. Update chapter data and Markdown export together; run tests/playbook.cjs; preserve stable IDs; bump app and cache versions on release. Never publish personal configurations, private source videos or credentials. Keep source provenance and distinguish observations from verified facts. Future localization must include public playbook content; current edition French only. Browser/device tests and PDF export remain pending.

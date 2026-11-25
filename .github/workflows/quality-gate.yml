@@ -134,6 +134,8 @@ jobs:
           set -euo pipefail
           node --check v23-core.js
           node --check locale-lessons.js
+          node --check playbook.js
+          node tests/playbook.cjs
           node --check service-worker.js
           test -s QUALITY_GATE.md
           test -s SECURITY.md
