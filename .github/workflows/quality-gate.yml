@@ -140,6 +140,9 @@ jobs:
       - name: Data engineering regression checks
         run: node tests/data-engineering.cjs
 
+      - name: Localization regression checks
+        run: node tests/localization.cjs
+
       - name: Quality gate summary
         run: |
           echo "VEKAID QUALITY GATE: PASS"

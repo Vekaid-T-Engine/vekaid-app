@@ -51,3 +51,6 @@ Offline interface localization: French, English, German, Simplified Chinese. Pre
 
 ## Locale coverage follow-up
 V23.24 expands the four offline language packs to cover the observed legacy home dashboard, project descriptions and common availability states. Dynamic counters are translated without changing underlying data. Full legacy, Academy and news localization is not yet complete. Do not advertise a language as fully supported until coverage and real-device tests pass. A language-name library alone does not translate text; additional packs must contain reviewed translations.
+
+## V23.25 localization gate
+16 selectable locales, with explicit partial coverage; additional packs contain 32 core labels each. Test fallback, switching and dynamic counters; Academy/news translation and RTL layout require their own review. No external translation API or model is installed. Never claim full coverage without an inventory and device tests.
