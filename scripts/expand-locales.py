@@ -46,10 +46,18 @@ target=targets[selected]
 if not install('fr',target):
     if not (install('fr','en') and install('en',target)): raise RuntimeError('No translation route for '+selected)
 engine=translator('fr',target)
+# Legacy Chinese literals remain lookup aliases, not French source text.
+legacy_aliases={
+    '尚无电脑报告、GitHub 快照或可用性记录。请选择第一项检查。':'Aucun rapport PC, instantané GitHub ou relevé de disponibilité. Sélectionnez la première vérification.',
+    '本地 · 无 API':'Local · sans API',
+    '浏览智能体及其职责、查看 PR 和分支、复制简报、跟踪本地任务并查看证明。运行 Unreal、Ollama 或 Windows 客户端需要联网的执行环境，本应用不提供该环境。':'Parcourez les agents et leurs responsabilités, consultez les PR et les branches, copiez les briefings, suivez les tâches locales et consultez les preuves. Exécuter Unreal, Ollama ou le client Windows nécessite un environnement d’exécution connecté, que cette application ne fournit pas.'
+}
 unresolved=[]
 def translate(s):
+    if s in legacy_aliases and selected=='zh-Hans': return s
+    canonical=legacy_aliases.get(s,s)
     try:
-        out=engine.translate(s).strip()
+        out=engine.translate(canonical).strip()
         if out: return out
         reason='empty'
     except Exception as e:
