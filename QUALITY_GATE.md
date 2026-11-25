@@ -48,3 +48,6 @@ Review gradient blobs, circle icons, default purple, floating 3D, identical feat
 
 ## Internationalization
 Offline interface localization: French, English, German, Simplified Chinese. Preserve original user data and lesson IDs; explicitly disclose untranslated learning/news/legacy content. Test locale persistence, overflow, fallback, offline reload and all language switches before claiming full localization. No external translation API.
+
+## Locale coverage follow-up
+V23.24 expands the four offline language packs to cover the observed legacy home dashboard, project descriptions and common availability states. Dynamic counters are translated without changing underlying data. Full legacy, Academy and news localization is not yet complete. Do not advertise a language as fully supported until coverage and real-device tests pass. A language-name library alone does not translate text; additional packs must contain reviewed translations.
