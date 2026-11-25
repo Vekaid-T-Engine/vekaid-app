@@ -76,5 +76,13 @@ class BridgeTests(unittest.TestCase):
         self.path.write_text(json.dumps(self.report))
         self.assertEqual(json.loads(self.request(headers=self.auth())[2])["hardware"]["cpu_percent"],73)
 
+    def test_canonical_raw_metrics(self):
+        self.report["hardware"] = {"vram_used_mib":1536,"vram_total_mib":6144,"storage_free_bytes":250,"storage_total_bytes":1000}
+        self.path.write_text(json.dumps(self.report))
+        data=json.loads(self.request(headers=self.auth())[2])
+        self.assertEqual(data["hardware"]["vram_percent"],25)
+        self.assertEqual(data["hardware"]["storage_percent"],75)
+        self.assertNotIn("storage_total_bytes",data["hardware"])
+
 if __name__=="__main__":
     unittest.main()
