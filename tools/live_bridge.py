@@ -67,9 +67,17 @@ def snapshot(path):
         output.append(dict(id=row["id"], state=row["state"], used_percent=q, reset_at=reset))
     hardware = data.get("hardware")
     hardware = hardware if isinstance(hardware, dict) else {}
+    normalized = {k: hardware[k] for k, limit in METRICS.items()
+                  if k in hardware and number(hardware[k], limit)}
+    for key, part, total, invert in (
+        ("vram_percent", "vram_used_mib", "vram_total_mib", False),
+        ("storage_percent", "storage_free_bytes", "storage_total_bytes", True),
+    ):
+        a, b = hardware.get(part), hardware.get(total)
+        if number(b, 2**53-1) and b > 0 and number(a, b):
+            normalized[key] = round(100 * (1 - a/b if invert else a/b), 1)
     return dict(format="vekaid.live.v1", observed_at=observed.isoformat(),
-                providers=output, hardware={k: hardware[k] for k, limit in METRICS.items()
-                if k in hardware and number(hardware[k], limit)})
+                providers=output, hardware=normalized)
 
 def make_handler(path, token):
     class Handler(BaseHTTPRequestHandler):
