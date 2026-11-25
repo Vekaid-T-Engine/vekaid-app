@@ -1,0 +1,2 @@
+# Argos translation pilot
+Generate offline translation packs in CI, never on the phone. Pilot Spanish only. Machine translations require review, especially technical quiz answers. Extract only repository-authored text; no user data. The extraction is heuristic, not a completeness guarantee. Review generated JSON, model licenses and coverage; then wire into runtime and precache approved packs. Do not merge or deploy automatically. Existing production remains unchanged.
