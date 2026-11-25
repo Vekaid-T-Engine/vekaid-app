@@ -1,5 +1,5 @@
-const CACHE='vekaid-shell-v23-34';
-const SHELL=['./','./index.html','./manifest.webmanifest','./v23.css?v=23.26.0','./v23-core.js?v=23.26.0','./locale-lessons.js?v=23.26.0','./apple-touch-icon.png','./icon-192.png','./icon-512.png','./icon-maskable-512.png'];
+const CACHE='vekaid-shell-v23-35';
+const SHELL=['./','./index.html','./manifest.webmanifest','./v23.css?v=23.27.0','./v23-core.js?v=23.27.0','./locale-lessons.js?v=23.27.0','./apple-touch-icon.png','./icon-192.png','./icon-512.png','./icon-maskable-512.png'];
 self.addEventListener('install',e=>e.waitUntil(caches.open(CACHE).then(c=>c.addAll(SHELL)).then(()=>self.skipWaiting())));
 self.addEventListener('activate',e=>e.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k.startsWith('vekaid-shell-')&&k!==CACHE).map(k=>caches.delete(k)))).then(()=>self.clients.claim())));
 self.addEventListener('fetch',e=>{
