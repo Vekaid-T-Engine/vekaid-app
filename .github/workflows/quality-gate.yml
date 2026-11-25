@@ -134,6 +134,8 @@ jobs:
           set -euo pipefail
           node --check v23-core.js
           node --check locale-lessons.js
+          node --check certifications.js
+          node tests/certifications.cjs
           node --check playbook.js
           node tests/playbook.cjs
           node --check service-worker.js
