@@ -46,13 +46,23 @@ target=targets[selected]
 if not install('fr',target):
     if not (install('fr','en') and install('en',target)): raise RuntimeError('No translation route for '+selected)
 engine=translator('fr',target)
+unresolved=[]
 def translate(s):
-    out=engine.translate(s).strip()
-    if not out: raise RuntimeError('Empty translation')
-    return out
+    try:
+        out=engine.translate(s).strip()
+        if out: return out
+        reason='empty'
+    except Exception as e:
+        reason=type(e).__name__
+    unresolved.append({'key':s,'reason':reason})
+    return None
 dest=root/'locales';dest.mkdir(exist_ok=True)
 data={'locale':selected,'machineTranslated':True,'ui':dict(previous['ui']),'lessons':previous['lessons']}
 for s in sorted(source):
-    if s not in data['ui'] or data['ui'][s]==s: data['ui'][s]=translate(s)
+    if s not in data['ui'] or data['ui'][s]==s:
+        out=translate(s)
+        if out: data['ui'][s]=out
+        else: data['ui'].pop(s,None)
+data['unresolved']=unresolved
 (dest/(selected+'.json')).write_text(json.dumps(data,ensure_ascii=False),encoding='utf8')
-print(selected,len(data['ui']),len(data['lessons']))
+print(selected,len(data['ui']),len(data['lessons']),'unresolved',len(unresolved))

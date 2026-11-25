@@ -45,10 +45,15 @@ jobs:
           merge-multiple: true
           path: locales
       - run: node tests/generated-locales.cjs && node tests/legacy-lab.cjs && node tests/coverage-required.cjs
+      - uses: actions/upload-artifact@v4
+        with:
+          name: coverage-report
+          path: coverage-report.json
+          if-no-files-found: error
       - run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add locales
+          git add locales coverage-report.json
           git diff --cached --quiet && exit 0
           git commit -m 'Expand 15 locale packs with regression inventory'
           git push origin HEAD:${{ github.ref_name }}
