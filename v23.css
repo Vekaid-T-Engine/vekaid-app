@@ -189,3 +189,21 @@ html{scroll-padding-top:calc(var(--vek-safe-top) + 72px);scroll-padding-bottom:c
 
 /* Certification Center: isolate layout from legacy inline button rules. */
 #certlist{display:grid;grid-template-columns:minmax(0,1fr);gap:14px;min-width:0}#certlist>.v23-card,#certlist>.v23-group{display:flex;flex-direction:column;align-items:stretch;gap:10px;padding:16px;min-width:0;box-sizing:border-box}#certlist>.v23-group>.v23-row{padding:0!important;border:0}#certlist .v23-btn,#certlist select,#certlist input{display:flex;align-items:center;justify-content:center;position:static;float:none;box-sizing:border-box;width:100%;max-width:100%;min-height:48px;height:auto;margin:0!important;white-space:normal;overflow-wrap:anywhere;line-height:1.35;text-align:center}#certlist p,#certlist strong{margin:0;overflow-wrap:anywhere}#certlist select{display:block}#certq,#certfilter{box-sizing:border-box;width:100%;max-width:100%;margin:0 0 12px}#certback{margin-top:16px}
+
+/* Academy: explicit spacing groups, independent from historical button styles. */
+.v23-body.academy-home{display:flex;flex-direction:column;align-items:stretch;gap:20px;min-width:0;padding-top:8px}
+.academy-home>.v23-section{display:grid;gap:14px;margin:0!important}
+.academy-home .v23-section-title{margin:0!important}
+.academy-home .v23-group{margin:0!important}
+.academy-home .academy-pathways{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.academy-home .v23-btn,.academy-detail .v23-btn{display:flex;align-items:center;justify-content:center;box-sizing:border-box;width:100%;min-width:0;min-height:48px;height:auto;margin:0!important;white-space:normal;overflow-wrap:anywhere;text-align:center;line-height:1.35;padding:12px 14px}
+.academy-home #acdaily{min-height:52px;font-weight:700}
+.academy-home #acq{margin:4px 0 0!important;min-height:50px}
+.academy-home #aclist{margin:0!important;gap:14px}
+.academy-home #aclist>.v23-row{margin:0!important;padding:18px;min-width:0;overflow-wrap:anywhere}
+.academy-home #acback{margin-top:4px!important}
+.v23-body.academy-detail{display:flex;flex-direction:column;gap:20px;min-width:0}
+.academy-detail>.v23-section{display:grid;gap:12px;margin:0!important}
+.academy-detail .v23-section>p{margin:0}
+.academy-detail #acanswers{gap:12px;margin:0}
+@media(max-width:420px){.academy-home .academy-pathways{grid-template-columns:minmax(0,1fr)}}
