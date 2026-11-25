@@ -1,9 +1,9 @@
-# Live Intelligence v1 — candidate
+# Live Intelligence v1 — local monitoring
 
-Intel → Live Intelligence accepts a local JSON report (maximum 64 KiB). French and English UI only; other locales currently fall back to English. No network transport or account access. Data is localStorage only, not a public GitHub artifact. After 120 seconds the current state is unknown. Never commit real reports.
+Intel → Live Intelligence accepts a local JSON report (maximum 64 KiB). UI labels are available in 16 locales; native visual and linguistic review remains incomplete. No network transport or account access. Data is localStorage only, not a public GitHub artifact. After 120 seconds the current state is unknown. Never commit real reports.
 
 Windows: review tools/Export-LiveSnapshot.ps1, run it in PowerShell without administrator elevation; optionally use -Watch for 15-second collection (Ctrl+C stops). Default output is %LOCALAPPDATA%/VEKAID/live-snapshot.json. Transfer a report privately to iPhone and import it. Exact process names are weak observations, not proof of availability; wrapped CLI processes may not be detected. No quota counters are collected by this script. No auto-start or installation.
 
 Integration: reuse existing Windows diagnostics and coordinator PR #64 duplicate-key rejection; do not alter coordinator availability format or equate provider quota with role readiness. Future adapters: verify installed Claude Statusline schema and Codex App Server account/rateLimits/read; normalize each usage window with source and timestamp, without transmitting auth tokens or prompting models. ChatGPT Images exact consumer quota remains unknown absent supported source. WanGP progress requires existing job events. Private authenticated HTTPS transport and native Safari tests required before claiming live sync. Do not publish telemetry to GitHub Pages or expose a local server to the internet. No paid services.
 
-Release gate: test imports, malformed inputs, stale state, all locales, offline cache, data export/privacy, existing workflows and native mobile navigation. Candidate is not a new production version.
+Release gate: test imports, malformed inputs, stale state, all locales, offline cache, data export/privacy, existing workflows and native mobile navigation. Command Deck prepares a local request only; it sends no command. The mobile layout separates status, providers, hardware, import and request preparation. Native Safari validation remains required.
