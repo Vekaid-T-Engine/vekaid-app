@@ -145,7 +145,7 @@ jobs:
           test -s SECURITY.md
 
       - name: Data engineering regression checks
-        run: node tests/data-engineering.cjs
+        run: node tests/data-engineering.cjs && node tests/news-localization.cjs
 
       - name: Localization regression checks
         run: |

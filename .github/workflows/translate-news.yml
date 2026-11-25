@@ -1,0 +1,62 @@
+name: Translate daily briefing
+on:
+  push:
+    branches: [main]
+    paths: [daily-briefing.json, scripts/translate-news.py, scripts/merge-news.cjs]
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: daily-news-translation
+  cancel-in-progress: true
+jobs:
+  check:
+    runs-on: ubuntu-24.04
+    outputs:
+      needed: ${{ steps.check.outputs.needed }}
+    steps:
+      - uses: actions/checkout@v4
+      - id: check
+        run: node -e 'const d=require("./daily-briefing.json");const codes=["en","de","zh-Hans","es","it","pt","ja","ko","ar","ru","hi","tr","vi","nl","id"];console.log("needed="+(d.items.length>0&&d.items.some(x=>codes.some(c=>!["title","summary","category"].every(k=>typeof x.translations?.[c]?.[k]==="string"&&x.translations[c][k].trim())))))' >> "$GITHUB_OUTPUT"
+  translate:
+    needs: check
+    if: needs.check.outputs.needed == 'true'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    strategy:
+      fail-fast: false
+      max-parallel: 5
+      matrix:
+        locale: [en, de, zh-Hans, es, it, pt, ja, ko, ar, ru, hi, tr, vi, nl, id]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install torch --index-url https://download.pytorch.org/whl/cpu
+      - run: pip install argostranslate==1.11.0
+      - run: python scripts/translate-news.py "${{ matrix.locale }}"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: news-${{ matrix.locale }}
+          path: news-${{ matrix.locale }}.json
+          if-no-files-found: error
+  publish:
+    needs: translate
+    runs-on: ubuntu-24.04
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: news-*
+          merge-multiple: true
+      - run: node scripts/merge-news.cjs
+      - run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add daily-briefing.json
+          git diff --cached --quiet && exit 0
+          git commit -m 'Translate daily briefing into all 15 target languages'
+          git push origin HEAD:main
