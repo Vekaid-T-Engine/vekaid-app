@@ -20,7 +20,7 @@ for markup in [page,*re.findall(r'<(?:button|p|small|strong|label|h[1-6]|span|di
             s=el.get(a)
             if isinstance(s,str) and s.strip() and not re.search(r'[{}$<>]',s): source.add(' '.join(s.split()))
 # Explicit literal messages from runtime templates, with reviewed overrides retained by client.
-for s in re.findall(r"(?<=['\"])[A-Za-zÀ-ÿ][^'\\"<>$\\n{}]{3,350}(?=['\"])",js+page):
+for s in re.findall(r"""(?<=['"])[A-Za-zÀ-ÿ][^'"\\<>$\n{}]{3,350}(?=['"])""",js+page):
     if re.search(r'[àâäéèêëîïôöùûüçœ]|\b(?:une|des|les|dans|pour|avec|aucun|sur|est|pas|ton|tes|vos)\b',s,re.I) and not re.search(r'[=;{}]|https?://',s): source.add(' '.join(s.split()))
 pkg.update_package_index()
 available=pkg.get_available_packages()
