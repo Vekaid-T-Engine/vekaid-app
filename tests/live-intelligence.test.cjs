@@ -11,9 +11,9 @@ test('mobile controls persist across stale transition and import',async()=>{
  vm.runInNewContext(fs.readFileSync(path.join(__dirname,'../live-intelligence.js'),'utf8'),ctx);
  ctx.window.VEKAID_LIVE.open({locale:'fr',layer:()=>root,$:()=>root});
  const find=t=>root.descendants().find(e=>e.textContent===t);
- const input=root.descendants().find(e=>e.tagName==='input'),clear=find('Effacer le rapport local'),prepare=find('Préparer un diagnostic');
+ const input=root.descendants().find(e=>e.tagName==='input'&&e.type==='file'),clear=find('Effacer le rapport local'),prepare=find('Préparer un diagnostic');
  assert.equal(clear.disabled,true);prepare.onclick();const draft=root.descendants().find(e=>e.id==='live-draft');assert.equal(draft.hidden,false);
- input.files=[{size:20,text:async()=>JSON.stringify(sample())}];await input.onchange();assert.equal(clear.disabled,false);clock+=120000;tick();assert.equal(draft.hidden,false);assert.equal(root.descendants().find(e=>e.tagName==='input'),input);assert.ok(find('État actuel inconnu'));clear.onclick();assert.equal(clear.disabled,true);
+ input.files=[{size:20,text:async()=>JSON.stringify(sample())}];await input.onchange();assert.equal(clear.disabled,false);clock+=120000;tick();assert.equal(draft.hidden,false);assert.equal(root.descendants().find(e=>e.tagName==='input'&&e.type==='file'),input);assert.ok(find('État actuel inconnu'));clear.onclick();assert.equal(clear.disabled,true);
 });
 
 test('bridge URL is private HTTPS only',()=>{const ctx={window:{},URL};vm.runInNewContext(fs.readFileSync(path.join(__dirname,'../live-intelligence.js'),'utf8'),ctx);const fn=ctx.window.VEKAID_LIVE.bridgeURL;assert.equal(fn('https://pc.example.ts.net'),'https://pc.example.ts.net/v1/snapshot');for(const u of ['http://pc.example.ts.net','https://example.com','https://pc.example.ts.net.evil.com','https://user@pc.example.ts.net','https://pc.example.ts.net/path','https://pc.example.ts.net?token=x'])assert.throws(()=>fn(u))});
