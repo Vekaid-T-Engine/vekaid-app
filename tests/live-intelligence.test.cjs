@@ -3,3 +3,15 @@ const test=require('node:test');const assert=require('node:assert/strict');const
 test('all sixteen locales have localized status and import labels',()=>{const {languages,translate}=context.window.VEKAID_LIVE;assert.equal(languages.length,16);for(const lang of languages){for(const [fr,en] of [['Inconnu','Unknown'],['Importer un rapport JSON local','Import local JSON report'],['État actuel inconnu','Current state unknown']]){const value=translate(fr,en,lang);assert.ok(value);if(lang!=='en')assert.notEqual(value,en);if(lang!=='fr')assert.notEqual(value,fr)}}});
 
 test('older observation cannot replace newer snapshot',()=>{const {acceptSnapshot}=context.window.VEKAID_LIVE;const old=sample();old.observed_at=new Date(now-1000).toISOString();assert.throws(()=>acceptSnapshot(sample(),old,now));assert.equal(acceptSnapshot(old,sample(),now).observed_at,sample().observed_at)});
+
+test('mobile controls persist across stale transition and import',async()=>{
+ class El{constructor(tag){this.tagName=tag;this.children=[];this.attrs={};this.isConnected=true;this.hidden=false;this.value='';this.files=[];}append(n){this.children.push(n)}replaceChildren(){this.children=[]}setAttribute(k,v){this.attrs[k]=v}focus(){}select(){}querySelector(q){return this.children.flatMap(c=>[c,...c.descendants()]).find(c=>c.tagName===q)||null}descendants(){return this.children.flatMap(c=>[c,...c.descendants()])}}
+ const root=new El('div'),memory=new Map();let tick;let clock=now;const FakeDate=class extends Date{static now(){return clock}};
+ const ctx={window:{},document:{createElement:t=>new El(t)},localStorage:{getItem:k=>memory.get(k)||null,setItem:(k,v)=>memory.set(k,v),removeItem:k=>memory.delete(k)},Date:FakeDate,setInterval:f=>{tick=f;return 1},clearInterval:()=>{}};
+ vm.runInNewContext(fs.readFileSync(path.join(__dirname,'../live-intelligence.js'),'utf8'),ctx);
+ ctx.window.VEKAID_LIVE.open({locale:'fr',layer:()=>root,$:()=>root});
+ const find=t=>root.descendants().find(e=>e.textContent===t);
+ const input=root.descendants().find(e=>e.tagName==='input'),clear=find('Effacer le rapport local'),prepare=find('Préparer un diagnostic');
+ assert.equal(clear.disabled,true);prepare.onclick();const draft=root.descendants().find(e=>e.id==='live-draft');assert.equal(draft.hidden,false);
+ input.files=[{size:20,text:async()=>JSON.stringify(sample())}];await input.onchange();assert.equal(clear.disabled,false);clock+=120000;tick();assert.equal(draft.hidden,false);assert.equal(root.descendants().find(e=>e.tagName==='input'),input);assert.ok(find('État actuel inconnu'));clear.onclick();assert.equal(clear.disabled,true);
+});
