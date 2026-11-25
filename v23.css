@@ -227,3 +227,6 @@ html{scroll-padding-top:calc(var(--vek-safe-top) + 72px);scroll-padding-bottom:c
 
 /* Preserve responsive wrapping and RTL navigation for generated locales. */
 html[dir=rtl] .v23-panel,html[dir=rtl] .v23-row,html[dir=rtl] .v23-card{text-align:right}html[dir=rtl] .v23-dock{direction:rtl}
+
+/* Accessibility baseline: keyboard focus and tap targets, no forced motion. */
+button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,summary:focus-visible{outline:2px solid #eee!important;outline-offset:3px}#intel .entry button{min-height:44px;white-space:normal;overflow-wrap:anywhere}#intel .entry strong{overflow-wrap:anywhere}

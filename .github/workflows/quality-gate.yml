@@ -151,6 +151,7 @@ jobs:
         run: |
           node tests/localization.cjs
           node tests/generated-locales.cjs
+          node tests/legacy-lab.cjs
 
       - name: Quality gate summary
         run: |
