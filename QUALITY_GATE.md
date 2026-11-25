@@ -39,3 +39,6 @@ Coordinator, research, engineering, design, security and QA roles receive bounde
 
 ## Data engineering gate
 Apply [Data Engineering & System Design](docs/data-engineering-quality-gate.md) to every architecture. The CI regression suite must preserve Academy lesson positions, verify feed validation, coherent snapshot exports and cache version alignment. Restore and actual device tests remain separate release requirements.
+
+## Advanced UI Finishing & Visual Precision
+Source: user-supplied video, “10 Niche Design Hacks”. Review concentric radii, alpha borders, OKLCH palettes and gradients, matched icon weights, masked edges, blurred icon swaps, dark-mode depth, dynamic viewport, multiply blending. Apply selectively: preserve each product's identity, contrast and keyboard focus; use dynamic viewport with fallback; respect reduced motion. Never mask actionable content, animate icons without a meaningful state change, or multiply-blend actual food photography. Test narrow screens, safe areas, keyboard, reduced motion and real Safari before claiming device validation. VEKAID applies subtle alpha borders, depth, consistent icons, dock geometry and dynamic viewport; other techniques conditional.
