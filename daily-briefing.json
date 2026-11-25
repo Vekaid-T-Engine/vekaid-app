@@ -8,7 +8,84 @@
       "source": "Centre canadien pour la cybersécurité",
       "date": "2026-11-24",
       "summary": "Un avis signale une vulnérabilité dans les versions de Chrome Desktop antérieures à 158.0.8127.88/.89 sous Windows et macOS, et .88 sous Linux. Vérifier la version installée et appliquer la mise à jour appropriée.",
-      "url": "https://www.cyber.gc.ca/en/alerts-advisories/google-security-advisory-av26-1201"
+      "url": "https://www.cyber.gc.ca/en/alerts-advisories/google-security-advisory-av26-1201",
+      "translations": {
+        "en": {
+          "title": "Chrome: Security update for workstations",
+          "summary": "A notice indicates a vulnerability in versions of Chrome Desktop before 158.0.8127.88/.89 on Windows and macOS, and .88 on Linux. Check the installed version and apply the appropriate update.",
+          "category": "IT Support / Cyber"
+        },
+        "de": {
+          "title": "Chrome: Sicherheitsupdate für Workstations",
+          "summary": "Ein Hinweis zeigt eine Sicherheitslücke in Versionen von Chrome Desktop vor 158.0.8127.88/.89 unter Windows und macOS und .88 unter Linux an. Überprüfen Sie die installierte Version und wenden Sie das entsprechende Update an.",
+          "category": "IT Support / Cyber"
+        },
+        "zh-Hans": {
+          "title": "Chrome:工作站安全最新情况",
+          "summary": "一份通知显示,在Windows和macOS的158.08127.88/89和Linux的.88之前,Chrome桌面版本存在脆弱性。 检查已安装的版本并应用适当的更新.",
+          "category": "信息技术支助/网络"
+        },
+        "es": {
+          "title": "Chrome: Actualización de seguridad para estaciones de trabajo",
+          "summary": "Un aviso indica una vulnerabilidad en versiones de Chrome Desktop antes de 158.0.8127.88/.89 en Windows y macOS, y .88 en Linux. Compruebe la versión instalada y aplicar la actualización adecuada.",
+          "category": "IT Support / Cyber"
+        },
+        "it": {
+          "title": "Chrome: Aggiornamento di sicurezza per workstation",
+          "summary": "Un avviso indica una vulnerabilità nelle versioni di Chrome Desktop prima 158.0.8127.88/.89 su Windows e macOS, e .88 su Linux. Controllare la versione installata e applicare l'aggiornamento appropriato.",
+          "category": "Supporto IT / Cyber"
+        },
+        "pt": {
+          "title": "Chrome: Atualização de segurança para estações de trabalho",
+          "summary": "Um aviso indica uma vulnerabilidade nas versões do Chrome Desktop antes de 158.0.8127.888/.89 no Windows e macOS, e .88 no Linux. Verifique a versão instalada e aplique a atualização apropriada.",
+          "category": "Suporte de TI / Cyber"
+        },
+        "ja": {
+          "title": "クロム:ワークステーションのための保証更新",
+          "summary": "通知は、Windows および macOS の 158.0.8127.88/.89 以前の Chrome デスクトップのバージョンの脆弱性、Linux の .88 を示しています。 インストールしたバージョンを確認し、適切なアップデートを適用します。",
+          "category": "ITサポート・サイバー"
+        },
+        "ko": {
+          "title": "Chrome: 워크스테이션을 위한 안전 갱신",
+          "summary": "통지는 Windows 및 macOS에서 158.0.8127.88/.89 이전에 Chrome 데스크톱 버전의 취약점을 나타냅니다. Linux에서 .88. 설치된 버전을 확인하고 적절한 업데이트를 적용하십시오.",
+          "category": "IT 지원 / 사이버"
+        },
+        "ar": {
+          "title": "الكروم: تحديث الأمن لمراكز العمل",
+          "summary": "A notice indicates a vulnerability in versions of Chrome Desktop before 158.0.8127.88/.89 on Windows and macOS, and.88 on Linux. تحقق من النسخة المثبتة وتطبق التحديث المناسب",
+          "category": "دعم تكنولوجيا المعلومات/الرسائل الإلكترونية"
+        },
+        "ru": {
+          "title": "Chrome: обновление безопасности для рабочих станций",
+          "summary": "Уведомление указывает на уязвимость в версиях Chrome Desktop до 158.0.8127.88/.89 в Windows и macOS и .88 в Linux. Проверьте установленную версию и примените соответствующее обновление.",
+          "category": "IT-поддержка / Cyber"
+        },
+        "hi": {
+          "title": "क्रोम: वर्कस्टेशन के लिए सुरक्षा अद्यतन",
+          "summary": "एक नोटिस 158.0.8127.88/.89 Windows और MacOS पर क्रोम डेस्कटॉप के संस्करणों में एक vulnerability इंगित करता है, और लिनक्स पर .88। स्थापित संस्करण की जाँच करें और उचित अद्यतन लागू करें।",
+          "category": "आईटी समर्थन / साइबर"
+        },
+        "tr": {
+          "title": "Chrome: İş istasyonları için Güvenlik güncelleştirme",
+          "summary": "Bir fark, Chrome Desktop'ın 158.0.8127.88/.89'dan önce versiyonlarında bir kırılganlığı gösterir ve Linux'ta .88. Oluşturulan sürümü kontrol edin ve uygun güncellemeyi uygulayın.",
+          "category": "IT Support / Cyber"
+        },
+        "vi": {
+          "title": "Cập nhật bảo mật cho trạm làm việc",
+          "summary": "Một thông báo cho thấy sự dễ bị tổn thương trong các phiên bản của màn hình máy tính Chrome trước 158.0.8127.88/.89 trên Windows và McOS, và .88 trên Linux. Hãy kiểm tra phiên bản đã cài đặt và áp dụng cách cập nhật thích hợp.",
+          "category": "IT hỗ trợ / Cyber"
+        },
+        "nl": {
+          "title": "Chrome: Veiligheidsupdate voor werkstations",
+          "summary": "Een bericht duidt op een kwetsbaarheid in versies van Chrome Desktop vóór 158.0.8127.88/.89 op Windows en macOS, en .88 op Linux. Controleer de geïnstalleerde versie en pas de juiste update toe.",
+          "category": "IT-ondersteuning / Cyber"
+        },
+        "id": {
+          "title": "Krom: Pemutakhiran keamanan untuk workstation",
+          "summary": "Sebuah pemberitahuan menunjukkan kerentanan dalam versi Chrome Desktop sebelum 158.0.8127,88 / .89 pada Windows dan maCO, dan .88 pada Linux. Periksa versi yang terpasang dan menerapkan pemutakhiran yang sesuai.",
+          "category": "Dukungan IT / Cyber"
+        }
+      }
     },
     {
       "title": "VMware : avis de sécurité vCenter",
@@ -16,7 +93,84 @@
       "source": "Centre canadien pour la cybersécurité",
       "date": "2026-11-24",
       "summary": "Plusieurs branches de vCenter sont concernées. Inventorier les versions, consulter les correctifs de l’éditeur et planifier les mises à jour avec sauvegarde et contrôle de disponibilité.",
-      "url": "https://www.cyber.gc.ca/en/alerts-advisories/vmware-security-advisory-av26-1203"
+      "url": "https://www.cyber.gc.ca/en/alerts-advisories/vmware-security-advisory-av26-1203",
+      "translations": {
+        "en": {
+          "title": "VMware: vCenter security advisory",
+          "summary": "Several branches of vCenter are involved. Inventory versions, view editor fixes and schedule updates with backup and availability control.",
+          "category": "Infrastructure / Cloud"
+        },
+        "de": {
+          "title": "VMware: vCenter Security Advisory",
+          "summary": "Mehrere Zweige von vCenter sind beteiligt. Inventarversionen, Ansicht von Editorkorrekturen und Zeitplanaktualisierungen mit Backup- und Verfügbarkeitskontrolle.",
+          "category": "Infrastruktur / Cloud"
+        },
+        "zh-Hans": {
+          "title": "VMware: vCenter 安全咨询",
+          "summary": "涉及vCenter的几个分支. 库存版本,查看编辑器修正和有备份和可用性控制的时间安排更新.",
+          "category": "基础设施/云"
+        },
+        "es": {
+          "title": "VMware: vCenter security advisory",
+          "summary": "Varias ramas de vCenter están involucradas. Versiones de inventario, ver editor corrige y programar actualizaciones con control de copia de seguridad y disponibilidad.",
+          "category": "Infraestructura / Cloud"
+        },
+        "it": {
+          "title": "VMware: vCenter security advisory",
+          "summary": "Sono coinvolti diversi rami di vCenter. Versioni dell'inventario, visualizza le correzioni dell'editor e aggiorna gli aggiornamenti con il backup e il controllo della disponibilità.",
+          "category": "Infrastrutture / Cloud"
+        },
+        "pt": {
+          "title": "VMware: consultoria de segurança vCenter",
+          "summary": "Vários ramos do vCenter estão envolvidos. Versões de inventário, ver correções do editor e agendar atualizações com backup e controle de disponibilidade.",
+          "category": "Infraestrutura / Nuvem"
+        },
+        "ja": {
+          "title": "VMware: vCenter セキュリティアドバイザリー",
+          "summary": "vCenter の複数の支店が関与しています。 在庫バージョン、ビューエディタは、バックアップと可用性コントロールで更新を修正し、スケジュールします。",
+          "category": "インフラ・クラウド"
+        },
+        "ko": {
+          "title": "VMware: vCenter 보안 자문",
+          "summary": "vCenter의 몇몇 분지는 관여됩니다. Inventory version, 에디터 수정 및 일정 업데이트 백업 및 가용성 제어.",
+          "category": "인프라 / 클라우드"
+        },
+        "ar": {
+          "title": "VMware: vCenter security advisory",
+          "summary": "وهناك عدة فروع في مركز فيينا الدولي. :: إصدارات الجرد، وتجهيزات المحررات، واستكمالات الجدول مع توفير الدعم ومراقبة التوافر.",
+          "category": "الهياكل الأساسية/الكلاود"
+        },
+        "ru": {
+          "title": "VMware: vCenter Security Advisory",
+          "summary": "Участвуют несколько отделений vCenter. Версии инвентаризации, исправления редактора просмотра и обновления расписания с резервным копированием и контролем доступности.",
+          "category": "Инфраструктура / Облако"
+        },
+        "hi": {
+          "title": "VCenter सुरक्षा सलाहकार",
+          "summary": "VCenter की कई शाखाएं शामिल हैं। इन्वेंटरी संस्करण, बैकअप और उपलब्धता नियंत्रण के साथ संपादक फिक्स और शेड्यूल अपडेट देखें।",
+          "category": "इंफ्रास्ट्रक्चर / क्लाउड"
+        },
+        "tr": {
+          "title": "VMware: vCenter güvenlik danışmanlığı",
+          "summary": "Çeşitli vCenter şubeleri dahil edilmiştir. Teşvik versiyonları, görüntü editörü düzeltmeler ve yedekleme ve kullanılabilirlik kontrolü ile güncelleştirmeler.",
+          "category": "Altyapı / Bulut"
+        },
+        "vi": {
+          "title": "Phần mềm VM: cố vấn an ninh vCenter",
+          "summary": "Có một số chi nhánh liên quan. Phiên bản phát minh, trình soạn thảo xem sửa chữa và cập nhật thời gian biểu với khả năng điều khiển sao lưu và có sẵn.",
+          "category": "Cơ cấu / Đám mây"
+        },
+        "nl": {
+          "title": "VMware: vCenter veiligheidsadvies",
+          "summary": "Verschillende takken van vCenter zijn betrokken. Inventarisversies, editor fixes en schema updates met back-up en beschikbaarheidscontrole.",
+          "category": "Infrastructuur / Cloud"
+        },
+        "id": {
+          "title": "VMware: vCenter penasihat keamanan",
+          "summary": "Beberapa cabang vCenter terlibat. Versi inventaris, melihat perbaikan penyunting dan pemutakhiran jadwal dengan kendali cadangan dan ketersediaan.",
+          "category": "Infrastruktur / Cloud"
+        }
+      }
     },
     {
       "title": "n8n : vérifier les versions des instances d’automatisation",
@@ -24,7 +178,84 @@
       "source": "Centre canadien pour la cybersécurité",
       "date": "2026-11-24",
       "summary": "Un avis concerne plusieurs branches de n8n. Comparer la version de chaque instance aux versions corrigées indiquées dans l’avis, puis tester les workflows après mise à jour.",
-      "url": "https://www.cyber.gc.ca/en/alerts-advisories/n8n-security-advisory-av26-1200"
+      "url": "https://www.cyber.gc.ca/en/alerts-advisories/n8n-security-advisory-av26-1200",
+      "translations": {
+        "en": {
+          "title": "n8n: check versions of automation instances",
+          "summary": "One opinion concerns several branches of n8n. Compare the version of each instance to the corrected versions indicated in the notice, then test the workflows after updating.",
+          "category": "Automation / Cyber"
+        },
+        "de": {
+          "title": "n8n: Überprüfen Sie Versionen von Automatisierungsinstanzen",
+          "summary": "Eine Meinung betrifft mehrere Zweige von n8n. Vergleichen Sie die Version jeder Instanz mit den korrigierten Versionen, die in der Mitteilung angegeben sind, und testen Sie die Workflows nach der Aktualisierung.",
+          "category": "Automatisierung / Cyber"
+        },
+        "zh-Hans": {
+          "title": "n8n: 检查自动化实例的版本",
+          "summary": "一项意见涉及n8n的几个分支。 将每个实例的版本与通知中标明的更正版本进行比较,然后在更新后测试工作流程.",
+          "category": "自动化/ 网络"
+        },
+        "es": {
+          "title": "n8n: versiones de las instancias de automatización",
+          "summary": "Una opinión se refiere a varias ramas de n8n. Compare la versión de cada instancia a las versiones corregidas indicadas en el aviso, luego pruebe los flujos de trabajo después de actualizar.",
+          "category": "Automatización / Ciber"
+        },
+        "it": {
+          "title": "n8n: controlla le versioni delle istanze di automazione",
+          "summary": "Un parere riguarda diversi rami di n8n. Confrontare la versione di ogni istanza alle versioni corrette indicate nell'avviso, quindi testare i flussi di lavoro dopo l'aggiornamento.",
+          "category": "Automazione / Cyber"
+        },
+        "pt": {
+          "title": "n8n: verificar versões de instâncias de automação",
+          "summary": "Uma opinião diz respeito a vários ramos de n8n. Compare a versão de cada instância com as versões corrigidas indicadas no aviso e, em seguida, teste os fluxos de trabalho após atualização.",
+          "category": "Automação / Cyber"
+        },
+        "ja": {
+          "title": "n8n: オートメーションインスタンスのバージョンをチェックする",
+          "summary": "n8nのいくつかの枝を1つの意見が懸念しています。 各インスタンスのバージョンを通知で示した正しいバージョンに比較し、更新後にワークフローをテストします。",
+          "category": "オートメーション/サイバー"
+        },
+        "ko": {
+          "title": "n8n: 자동화 인스턴스의 버전 확인",
+          "summary": "하나의 의견은 n8n의 몇 가지 지점에 대한 우려. 주의사항에 명시된 수정된 버전에 각 인스턴스의 버전을 비교한 후 작업 흐름을 테스트합니다.",
+          "category": "자동화 / 사이버"
+        },
+        "ar": {
+          "title": "ن 8: نسخ تحقق من حالات التشغيل الآلي",
+          "summary": "One opinion concerns several branches of n8n. Compare the version of each instance to the corrected versions indicated in the notice, then test the workflows after updating.",
+          "category": "التلقائية/السيبر"
+        },
+        "ru": {
+          "title": "n8n: проверка версий экземпляров автоматизации",
+          "summary": "Одно мнение касается нескольких ветвей n8n. Сравните версию каждого экземпляра с исправленными версиями, указанными в уведомлении, а затем проверьте рабочие процессы после обновления.",
+          "category": "Автоматизация / Кибер"
+        },
+        "hi": {
+          "title": "n8n: स्वचालन उदाहरणों के चेक संस्करण",
+          "summary": "एक राय n8n की कई शाखाओं से संबंधित है। प्रत्येक उदाहरण के संस्करण को नोटिस में उल्लिखित सही संस्करणों में तुलना करें, फिर अद्यतन करने के बाद वर्कफ़्लोज़ का परीक्षण करें।",
+          "category": "स्वचालन / साइबर"
+        },
+        "tr": {
+          "title": "n8n: Otomasyon örneklerini kontrol edin",
+          "summary": "Bir görüş, n8n'in birkaç şubesiyle ilgilidir. Her örnek sürümü, bildirimde belirtilen düzeltme versiyonlarına kıyasla, güncellemeden sonra akışları test edin.",
+          "category": "Otomasyon / Cyber"
+        },
+        "vi": {
+          "title": "n8n: kiểm tra phiên bản tự động hoá",
+          "summary": "Một ý kiến liên quan đến một số chi nhánh của n8n. Hãy so sánh phiên bản của mỗi trường hợp với những bản dịch đã được chỉnh sửa được ghi trong thông báo, rồi thử nghiệm dòng chảy công việc sau khi cập nhật.",
+          "category": "Tự động hóa / Mạng"
+        },
+        "nl": {
+          "title": "n8n: controleer de versies van automatiserings instanties",
+          "summary": "Een advies heeft betrekking op verschillende takken van n8n. Vergelijk de versie van elke instantie met de gecorrigeerde versies in de aankondiging, test vervolgens de workflows na het bijwerken.",
+          "category": "Automatisering / Cyber"
+        },
+        "id": {
+          "title": "n8n: periksa versi dari instansi otomatisasi",
+          "summary": "Salah satu pendapat menyangkut beberapa cabang n8n. Bandingkan versi setiap instansi ke versi yang dikoreksi dalam pemberitahuan, kemudian uji arus kerja setelah memperbarui.",
+          "category": "Automatisasi / Cyber"
+        }
+      }
     },
     {
       "title": "Drupal : vulnérabilité ajoutée au catalogue KEV",
@@ -32,7 +263,84 @@
       "source": "Centre canadien pour la cybersécurité",
       "date": "2026-11-24",
       "summary": "L’avis canadien rapporte l’ajout de CVE-2026-132165 au catalogue des vulnérabilités exploitées de la CISA le 24 novembre. Prioriser la vérification des sites Drupal et appliquer les correctifs adaptés.",
-      "url": "https://www.cyber.gc.ca/en/alerts-advisories/drupal-security-advisory-av26-1186"
+      "url": "https://www.cyber.gc.ca/en/alerts-advisories/drupal-security-advisory-av26-1186",
+      "translations": {
+        "en": {
+          "title": "Drupal: vulnerability added to the KEV catalogue",
+          "summary": "The Canadian notice reports the addition of CVE-2026-132165 to CISA's Operational Vulnerabilities Catalogue on November 24. Prioritize the verification of Drupal sites and apply the appropriate patches.",
+          "category": "Web Cybersecurity"
+        },
+        "de": {
+          "title": "Drupal: Verwundbarkeit zum KEV-Katalog hinzugefügt",
+          "summary": "Die kanadische Bekanntmachung meldet die Hinzufügung von CVE-2026-132165 zum CISA-Katalog für operationelle Schwachstellen am 24. November. Priorisieren Sie die Überprüfung von Drupal-Sites und wenden Sie die entsprechenden Patches an.",
+          "category": "Web Cybersecurity"
+        },
+        "zh-Hans": {
+          "title": "Drupal: KEV 目录中增加了脆弱性",
+          "summary": "加拿大通知报告,CVE-2026-132165于11月24日加入CISA的\"操作脆弱性目录\". 优先核查Drupal场地,并应用适当的补丁。",
+          "category": "网络安全"
+        },
+        "es": {
+          "title": "Drupal: vulnerabilidad agregada al catálogo KEV",
+          "summary": "El aviso canadiense reporta la adición de CVE-2026-132165 al catálogo operativo Vulnerabilidades del CISA el 24 de noviembre. Priorizar la verificación de los sitios de Drupal y aplicar los parches apropiados.",
+          "category": "Web Cybersecurity"
+        },
+        "it": {
+          "title": "Drupal: vulnerabilità aggiunta al catalogo KEV",
+          "summary": "L'avviso canadese riporta l'aggiunta di CVE-2026-132165 al CISA Operational Vulnerabilities Catalog il 24 novembre. Priorizzare la verifica dei siti Drupal e applicare le patch appropriate.",
+          "category": "Web Cybersecurity"
+        },
+        "pt": {
+          "title": "Drupal: vulnerabilidade adicionada ao catálogo KEV",
+          "summary": "O aviso canadense informa a adição da CVE-2026-132165 ao Catálogo de Vulnerabilidades Operacionais CISA em 24 de novembro. Priorize a verificação dos locais Drupal e aplique os patches apropriados.",
+          "category": "Cibersegurança Web"
+        },
+        "ja": {
+          "title": "Drupal: KEVカタログに脆弱性を追加",
+          "summary": "カナダの通知は、11月24日にCISAの運用脆弱性カタログにCVE-2026-132165の追加を報告しています。 Drupalサイトの検証を優先し、適切なパッチを適用します。",
+          "category": "Webサイバーセキュリティ"
+        },
+        "ko": {
+          "title": "Drupal : KEV 카탈로그에 취약점 추가",
+          "summary": "캐나다 공지는 11월 24일 CISA의 운영 취약점 카탈로그에 CVE-2026-132165의 추가를 보고합니다. Drupal 사이트 검증 및 적절한 패치 적용.",
+          "category": "웹 사이버 보안"
+        },
+        "ar": {
+          "title": "Drupal: vulnerability added to the KEV catalogue",
+          "summary": "تشير الإخطارات الكندية إلى إضافة CVE-2026-132165 إلى كتالوج المسؤوليات العملياتي لرابطة الدول المستقلة في 24 تشرين الثاني/نوفمبر. إعطاء الأولوية للتحقق من المواقع الدوائية وتطبيق الشقق المناسبة.",
+          "category": "أمن الفضاء الإلكتروني"
+        },
+        "ru": {
+          "title": "Drupal: уязвимость добавлена в каталог KEV",
+          "summary": "Канадское уведомление сообщает о добавлении CVE-2026-132165 в каталог операционных уязвимостей CISA 24 ноября. Приоритетность проверки сайтов Drupal и применение соответствующих патчей.",
+          "category": "Веб Кибербезопасность"
+        },
+        "hi": {
+          "title": "Drupal: vulnerability KEV catalogue में जोड़ा गया",
+          "summary": "कैनेडियन नोटिस ने 24 नवंबर को सीआईएसए के ऑपरेशनल वल्नरबिलिटी कैटलॉग में CVE-2026-132165 के अलावा रिपोर्ट की। Drupal साइटों के सत्यापन को प्राथमिकता दें और उपयुक्त पैच लागू करें।",
+          "category": "वेब साइबर सुरक्षा"
+        },
+        "tr": {
+          "title": "Drupal: kırılganlık KEV kataloğuna eklendi",
+          "summary": "Kanadalı fark, CVE-2026-132165'in CISA'nın Operasyonel Vulner yükümlülüklerini 24 Kasım'da bildiriyor. Drupal sitelerinin doğrulamasını ve uygun yamaları önce uygulayın.",
+          "category": "Web Cybersecurity"
+        },
+        "vi": {
+          "title": "Drupal: dễ bị tổn thương được thêm vào mục lục KV",
+          "summary": "Thông báo của Canada cho biết sự bổ sung của CVE-26-132165 đến CISA's CISA Chiến dịch Vulnerafins ngày 24 tháng 11. Ưu tiên việc xác minh địa điểm Drupal và áp dụng các bản vá thích hợp.",
+          "category": "Bảo mật mạng"
+        },
+        "nl": {
+          "title": "Drupal: kwetsbaarheid toegevoegd aan de KEV catalogus",
+          "summary": "De Canadese aankondiging meldt de toevoeging van CVE-2026-132165 aan de operationele kwetsbaarheden Catalogus van CISA op 24 november. Prioriteer de verificatie van Drupal sites en breng de juiste patches.",
+          "category": "Web Cybersecurity"
+        },
+        "id": {
+          "title": "Drupal: kerentanan ditambahkan ke katalog KEV",
+          "summary": "Orang Kanada melaporkan tambahan CVE-2026- 132165 kepada ClSA 's Vulnerabilities Catalog pada 24 November. Prioritas verifikasi situs Drupal dan menerapkan patch yang tepat.",
+          "category": "Keamanan Internet"
+        }
+      }
     },
     {
       "title": "GitHub : évolution des notifications",
@@ -40,7 +348,84 @@
       "source": "GitHub Changelog",
       "date": "2026-11-24",
       "summary": "Les motifs de notification suivent désormais une priorité cohérente et les mentions d’équipe reflètent l’appartenance actuelle. Vérifier les filtres de messagerie ou automatisations qui dépendent de ces motifs.",
-      "url": "https://github.blog/changelog/2026-11-24-more-predictable-notifications-on-github-com/"
+      "url": "https://github.blog/changelog/2026-11-24-more-predictable-notifications-on-github-com/",
+      "translations": {
+        "en": {
+          "title": "GitHub: Evolution of notifications",
+          "summary": "The reasons for notification now follow a consistent priority and team statements reflect current membership. Check the messaging filters or automations that depend on these patterns.",
+          "category": "Development / DevOps"
+        },
+        "de": {
+          "title": "GitHub: Evolution der Benachrichtigungen",
+          "summary": "Die Gründe für die Benachrichtigung folgen nun einer konsistenten Priorität und die Teamaussagen spiegeln die aktuelle Mitgliedschaft wider. Überprüfen Sie die Messaging-Filter oder Automatisierungen, die von diesen Mustern abhängen.",
+          "category": "Entwicklung / DevOps"
+        },
+        "zh-Hans": {
+          "title": "GitHub: 通知的演变",
+          "summary": "通知的理由现在遵循一贯的优先次序,小组说明反映了目前的成员情况。 检查依赖于这些模式的信息过滤器或自动化器.",
+          "category": "开发/开发"
+        },
+        "es": {
+          "title": "GitHub: Evolución de notificaciones",
+          "summary": "Las razones de la notificación siguen ahora una prioridad constante y las declaraciones de los equipos reflejan la composición actual. Revise los filtros de mensajería o automatizaciones que dependen de estos patrones.",
+          "category": "Desarrollo / DevOps"
+        },
+        "it": {
+          "title": "GitHub: Evoluzione delle notifiche",
+          "summary": "Le ragioni della notifica seguono ora una priorità costante e le dichiarazioni del team riflettono l'appartenenza attuale. Controllare i filtri e-mail o le automazioni che dipendono da questi modelli.",
+          "category": "Sviluppo / DevOps"
+        },
+        "pt": {
+          "title": "GitHub: Evolução das notificações",
+          "summary": "As razões da notificação agora seguem uma prioridade consistente e as declarações da equipe refletem a atual adesão. Verifique os filtros de e-mail ou automações que dependem desses padrões.",
+          "category": "Desenvolvimento / DevOps"
+        },
+        "ja": {
+          "title": "GitHub:通知の進化",
+          "summary": "通知の理由は、一貫した優先順位とチームステートメントが現在のメンバーシップを反映しています。 これらのパターンに依存するメッセージングフィルタや自動化を確認してください。",
+          "category": "開発 / DevOps"
+        },
+        "ko": {
+          "title": "GitHub: 알림의 진화",
+          "summary": "알림의 이유가 이제 일관된 우선 순위와 팀 성명은 현재 회원을 반영합니다. 이 패턴에 따라 메시징 필터 또는 자동화를 확인합니다.",
+          "category": "개발 / DevOps"
+        },
+        "ar": {
+          "title": "GitHub: Evolution of notifications",
+          "summary": "وتأتي أسباب الإخطار الآن ضمن أولويات ثابتة وتعكس بيانات الفريق العضوية الحالية. تحقق من تصفية الرسائل أو التشغيل الآلي التي تعتمد على هذه الأنماط",
+          "category": "التنمية/الأجهزة"
+        },
+        "ru": {
+          "title": "GitHub: эволюция уведомлений",
+          "summary": "Причины уведомления в настоящее время следуют последовательному приоритету, и заявления группы отражают нынешнее членство. Проверьте фильтры электронной почты или автоматизацию, которые зависят от этих шаблонов.",
+          "category": "Разработчик: DevOps"
+        },
+        "hi": {
+          "title": "गिटहब: अधिसूचनाओं का विकास",
+          "summary": "अधिसूचना के कारण अब एक सुसंगत प्राथमिकता का अनुसरण करते हैं और टीम के बयान वर्तमान सदस्यता को दर्शाते हैं। इन पैटर्नों पर निर्भर होने वाले मैसेजिंग फिल्टर या स्वचालन की जांच करें।",
+          "category": "विकास / DevOps"
+        },
+        "tr": {
+          "title": "GitHub: bildirimlerin Evrimi",
+          "summary": "Bildirim nedenleri artık tutarlı bir öncelik takip ediyor ve takım ifadeleri mevcut üyeliği yansıtıyor. Bu desenlere bağlı olan mesajlaşma filtreleri veya otomasyonları kontrol edin.",
+          "category": "Geliştirme / DevOps"
+        },
+        "vi": {
+          "title": "GitHub: Sự tiến hóa của thông báo",
+          "summary": "Các lý do để thông báo bây giờ làm theo một ưu tiên nhất định và các tuyên bố của đội phản ánh hiện tại thành viên. Kiểm tra các bộ lọc tin nhắn hoặc tự động hoá phụ thuộc vào các mẫu này.",
+          "category": "Phát triển / DevOps"
+        },
+        "nl": {
+          "title": "GitHub: Evolution van meldingen",
+          "summary": "De redenen voor de kennisgeving volgen nu een consistente prioriteit en teamverklaringen weerspiegelen het huidige lidmaatschap. Controleer de messaging filters of automatiseringen die afhankelijk zijn van deze patronen.",
+          "category": "Ontwikkeling / DevOps"
+        },
+        "id": {
+          "title": "GitHub: Evolution dari pemberitahuan",
+          "summary": "Alasan untuk pemberitahuan sekarang mengikuti prioritas yang konsisten dan pernyataan tim mencerminkan keanggotaan saat ini. Periksa filter pesan atau otomatisasi yang tergantung pada pola-pola ini.",
+          "category": "Pengembangan / DevOps"
+        }
+      }
     },
     {
       "title": "Les valeurs liées à l’IA sous pression en Bourse",
@@ -48,7 +433,84 @@
       "source": "Reuters",
       "date": "2026-11-25",
       "summary": "Reuters rapporte un recul des contrats à terme du Nasdaq et des fabricants de puces avant l’ouverture américaine. Les inquiétudes portent sur la rentabilité des investissements IA et les perspectives économiques ; il ne s’agit pas de cours de clôture.",
-      "url": "https://www.reuters.com/business/nasdaq-futures-slide-over-2-fresh-us-tariff-concerns-inflation-data-focus-2026-11-25/"
+      "url": "https://www.reuters.com/business/nasdaq-futures-slide-over-2-fresh-us-tariff-concerns-inflation-data-focus-2026-11-25/",
+      "translations": {
+        "en": {
+          "title": "Securities related to pressurised AI on the stock exchange",
+          "summary": "Reuters reports a decline in Nasdaq futures contracts and flea manufacturers prior to the US opening. Concerns concern the profitability of AI investments and the economic outlook; This is not a closing price.",
+          "category": "IA / Enterprises"
+        },
+        "de": {
+          "title": "Wertpapiere im Zusammenhang mit KI unter Druck an der Börse",
+          "summary": "Reuters berichtet von einem Rückgang der Nasdaq-Futures-Kontrakte und Flohhersteller vor der Eröffnung in den USA. Bedenken betreffen die Rentabilität von KI-Investitionen und die wirtschaftlichen Aussichten; Dies ist kein Schlusspreis.",
+          "category": "IA/Unternehmen"
+        },
+        "zh-Hans": {
+          "title": "与证券交易所加压AI有关的证券",
+          "summary": "路透社报道,在美国开业前,纳斯达克期货合约和跳蚤制造商出现下滑. 关切AI投资的利润和经济前景; 这不是一个收尾价格。",
+          "category": "IA/企业"
+        },
+        "es": {
+          "title": "Valores relacionados con la IA presurizada en la bolsa de valores",
+          "summary": "Reuters reporta una disminución en los contratos futuros de Nasdaq y fabricantes de pulgas antes de la apertura de Estados Unidos. Concerns concern the profitability of AI investments and the economic perspective; Esto no es un precio de cierre.",
+          "category": "IA / Empresas"
+        },
+        "it": {
+          "title": "Securità relative all'IA sotto pressione sulla borsa",
+          "summary": "Reuters riferisce un calo dei contratti futuri per i produttori di pulci e Nasdaq prima dell'apertura degli Stati Uniti. Le preoccupazioni riguardano la redditività degli investimenti AI e le prospettive economiche; Questo non è un prezzo di chiusura.",
+          "category": "IA / Imprese"
+        },
+        "pt": {
+          "title": "Títulos relacionados com IA sob pressão sobre a bolsa de valores",
+          "summary": "A Reuters relata um declínio nos contratos futuros para Nasdaq e fabricantes de pulgas antes da abertura dos EUA. As preocupações dizem respeito à rendibilidade dos investimentos em IA e às perspectivas económicas; Isto não é um preço final.",
+          "category": "IA / Empresas"
+        },
+        "ja": {
+          "title": "株式交換における加圧AIに関する有価証券",
+          "summary": "ロイターは、米国進出前にナスダックの先物契約とフリーメーカーの低下を報告しています。 AI投資と経済見通しの収益性を懸念しています。 クローズ価格ではありません。",
+          "category": "IA/企業"
+        },
+        "ko": {
+          "title": "증권 거래소의 Pressurised AI와 관련된 증권",
+          "summary": "Reuters는 미국 오픈 이전에 Nasdaq 선물 계약 및 Flea 제조업체의 감소를보고 있습니다. AI 투자와 경제 전망의 수익성에 대한 우려; 이것은 닫히지 않습니다.",
+          "category": "IA / 기업"
+        },
+        "ar": {
+          "title": "Securities related to pressurised AI on the stock exchange",
+          "summary": "Reuters reports a decline in Nasdaq futures contracts and flea manufacturers prior to the US opening. (ب) الشواغل المتعلقة بربحية استثمارات الاستثمار الأجنبي المباشر والتوقعات الاقتصادية؛ هذا ليس الثمن النهائي",
+          "category": "IA / Enterprises"
+        },
+        "ru": {
+          "title": "Ценные бумаги, связанные с ИИ под давлением на фондовую биржу",
+          "summary": "Reuters сообщает о снижении фьючерсных контрактов для Nasdaq и производителей блох перед открытием в США. Обеспокоенность касается рентабельности инвестиций в ИИ и экономических перспектив; Это не цена закрытия.",
+          "category": "IA / Предприятия"
+        },
+        "hi": {
+          "title": "स्टॉक एक्सचेंज पर दबावित एआई से संबंधित प्रतिभूति",
+          "summary": "रॉयटर्स ने अमेरिका के उद्घाटन से पहले नास्डैक फ्यूचर्स कॉन्ट्रैक्ट्स और फ्ला निर्माताओं में गिरावट की रिपोर्ट की। चिंता की बात एआई निवेश और आर्थिक दृष्टिकोण की लाभप्रदता; यह एक बंद कीमत नहीं है।",
+          "category": "IA / Enterprises"
+        },
+        "tr": {
+          "title": "Borsada Baskılanan AI ile ilgili eşitsizlikler",
+          "summary": "Reuters, ABD açılışından önce Nasdaq gelecekteki sözleşmeler ve flea üreticilerinde bir düşüş bildiriyor. AI yatırımlarının ve ekonomik görünümün kârlılığını endişelendirir; Bu bir kapanış fiyatı değil.",
+          "category": "IA / Enterprises"
+        },
+        "vi": {
+          "title": "Cơ quan an ninh liên quan đến việc gây áp lực lên AI trong việc trao đổi chứng khoán",
+          "summary": "Có một sự suy giảm trong các hợp đồng trong tương lai của Nasdaq và các nhà sản xuất bọ chét trước khi Mỹ mở cửa. Những mối quan tâm về lợi nhuận của các khoản đầu tư AI và quan điểm kinh tế; Đây không phải là giá chót.",
+          "category": "IA / Enterprises"
+        },
+        "nl": {
+          "title": "Effecten in verband met AI-druk op de beurs",
+          "summary": "Reuters meldt een daling in Nasdaq futures contracten en vlooien fabrikanten voorafgaand aan de Amerikaanse opening. bezorgdheid over de winstgevendheid van AI-investeringen en de economische vooruitzichten; Dit is geen slotprijs.",
+          "category": "IA / Ondernemingen"
+        },
+        "id": {
+          "title": "Sekuritas terkait dengan AI pressurised pada bursa saham",
+          "summary": "Reuters melaporkan penurunan kontrak dan pabrik loak di Nasdaq sebelum pembukaan AS. Mengenai keuntungan investasi AI dan pandangan ekonomi; Ini bukan harga tutup.",
+          "category": "IA / Enterprises"
+        }
+      }
     }
   ]
 }
