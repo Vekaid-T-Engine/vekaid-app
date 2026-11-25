@@ -259,3 +259,7 @@ html body #intel #inav > button[type="button"].on{color:#111!important;backgroun
 
 /* Explicit high contrast for the legacy navigation, including inherited child text. */
 html body #intel #inav>button[type=button]:not(.on),html body #intel #inav>button[type=button]:not(.on) *{color:#fff!important;background-color:#171717!important;opacity:1!important;text-shadow:none!important}html body #intel #inav>button[type=button].on,html body #intel #inav>button[type=button].on *{color:#111!important;background-color:#eee!important;opacity:1!important;text-shadow:none!important}
+
+/* Keep actual content legible throughout the launch transition, including reduced motion. */
+@media(prefers-reduced-motion:reduce){html body.vekaid-entering :is(.app,#intel),html body.vekaid-ready :is(.app,#intel){opacity:1!important;filter:none!important;transform:none!important;transition:none!important}html body #intel #iview{opacity:1!important;transform:none!important;transition:none!important}}
+html body.a11y-motion :is(.app,#intel),html.a11y-motion body :is(.app,#intel){opacity:1!important;filter:none!important;transform:none!important;transition:none!important}
