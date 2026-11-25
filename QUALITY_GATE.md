@@ -30,3 +30,9 @@ Target 45/50; never invent a score or claim independent model comparison without
 
 ## Release record
 Change / rationale / evidence / rubric / blockers / deployment / rollback.
+
+## Permanent video-to-workflow procedure
+Extract source, date, observable claim, applicability, verification, decision and regression test. Research -> Art Direction -> Creative Exploration -> Engineering -> Motion Design -> Red Team -> Taste Review -> Quality Gate. Preserve brand-specific visual language; avoid generic repeated cards, decorative icons and gratuitous motion. Review actual screenshots at mobile and desktop sizes. Track time, cost and tokens only when measured.
+
+## Role-based local routing (experimental)
+Coordinator, research, engineering, design, security and QA roles receive bounded tickets and evidence requirements. Local Ollama output is a draft, verified against source before use. Benchmark small models in isolation before adoption; no paid API, no exposed local endpoint, no installation without approval. No claimed savings without measurements.
