@@ -54,3 +54,10 @@ V23.24 expands the four offline language packs to cover the observed legacy home
 
 ## V23.25 localization gate
 16 selectable locales, with explicit partial coverage; additional packs contain 32 core labels each. Test fallback, switching and dynamic counters; Academy/news translation and RTL layout require their own review. No external translation API or model is installed. Never claim full coverage without an inventory and device tests.
+
+## Product and anti-generic review (V23.29)
+- Identify the actual audience, problem, core action and measurable success before adding features. Reject features that duplicate an existing module or add maintenance without a user benefit.
+- Verify loading, empty, error and success states; use skeletons only for genuine asynchronous waits.
+- Check real content, favicon, clear CTA, spacing, typography, keyboard and touch; no invented testimonials, usage metrics, salary claims or pricing.
+- Review distribution: meaningful title/description, public entry point, mobile journey, privacy-preserving feedback. Do not install analytics by default.
+- Career guidance must distinguish practice, evidence, certification and employment eligibility. No salary or hiring guarantees. Keep learning progress intact.
