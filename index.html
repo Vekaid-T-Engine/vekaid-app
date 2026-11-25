@@ -175,7 +175,7 @@ body:before,#intel:before{content:'';position:fixed;inset:0;pointer-events:none;
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="format-detection" content="telephone=no">
 <meta name="color-scheme" content="dark">
-<link rel="stylesheet" href="./v23.css?v=23.39.0"><meta name="vekaid-version" content="23.39.0"><link rel="canonical" href="https://vekaid-t-engine.github.io/vekaid-app/"><meta property="og:title" content="VEKAID"><meta property="og:description" content="Personal Engineering Operating System"><meta property="og:type" content="website"><meta property="og:url" content="https://vekaid-t-engine.github.io/vekaid-app/"></head>
+<link rel="stylesheet" href="./v23.css?v=23.40.0"><meta name="vekaid-version" content="23.40.0"><link rel="canonical" href="https://vekaid-t-engine.github.io/vekaid-app/"><meta property="og:title" content="VEKAID"><meta property="og:description" content="Personal Engineering Operating System"><meta property="og:type" content="website"><meta property="og:url" content="https://vekaid-t-engine.github.io/vekaid-app/"></head>
 <body class="vekaid-entering" style="background:#050505;color:#f5f5f5"><div id="vekaidLaunch" class="vekaid-launch" aria-hidden="true">
   <div class="vekaid-launch__stage">
     <div class="vekaid-launch__radar">
@@ -238,7 +238,7 @@ body:before,#intel:before{content:'';position:fixed;inset:0;pointer-events:none;
 <nav class="mobile-nav" aria-label="Navigation mobile"><button class="active" data-tab="home"><span>▦</span>Accueil</button><button data-tab="projects"><span>▧</span>Projets</button><button data-tab="claude"><span>◎</span>Claude</button><button data-tab="agents"><span>◇</span>Agents</button><button data-tab="missions"><span>≡</span>Missions</button><button data-tab="quotas"><span>◷</span>Quotas</button><button data-tab="security"><span>⬡</span>Sécurité</button><button data-tab="github"><span>⑂</span>GitHub</button></nav>
 <script>
 'use strict';
-const $=id=>document.getElementById(id); const make=(tag,cls,txt)=>{const n=document.createElement(tag);if(cls)n.className=cls;if(txt!==undefined)n.textContent=String(txt);return n};
+const $=id=>document.getElementById(id); const make=(tag,cls,txt)=>{const n=document.createElement(tag);if(cls)n.className=cls;if(txt!==undefined){const value=String(txt);const m=value.match(/^(Pour toi :|Ce que nous savons :|Prochaine étape :)\s*(.*)$/s);if(m){for(const part of [m[1],m[2]]){const span=document.createElement('span');span.textContent=part;n.append(span,document.createTextNode(' '))}}else n.textContent=value}return n};
 const STORAGE='vekaid.atlas.v5.offline'; const OLD='vekaid.commanddeck.v4.offline';
 const SERVICES=[['codex','OpenAI Codex','Codex CLI et usage séparé de ChatGPT','⌘'],['chatgpt','ChatGPT','Application de conversation OpenAI','C'],['claude-code','Claude Code','Client de développement Claude','C'],['claude-chat','Claude Chat','Application de conversation Claude','C'],['deepseek-chat','DeepSeek Chat','Service de conversation DeepSeek','D'],['deepseek-api','DeepSeek API','Crédits API distincts du chat','D'],['ollama','DeepSeek via Ollama','Modèle local, nécessite ton PC','◎']];
 const DEFAULT={version:5,tasks:[],cooldowns:{}};let state={tasks:[],cooldowns:{},diagnostic:null,gh:null,filter:'all',notice:''};
@@ -407,7 +407,7 @@ button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,te
  document.documentElement.dataset.appMode=standalone?'standalone':'browser';
  if('serviceWorker' in navigator){let reloading=false;const controlled=!!navigator.serviceWorker.controller;navigator.serviceWorker.addEventListener('controllerchange',()=>{if(!controlled||reloading)return;reloading=true;const refresh=()=>{if(document.querySelector('input:focus,textarea:focus,[contenteditable=true]:focus')){document.addEventListener('focusout',()=>setTimeout(refresh,300),{once:true});return}if(document.visibilityState==='hidden'){document.addEventListener('visibilitychange',refresh,{once:true});return}location.reload()};refresh()});addEventListener('load',async()=>{try{const r=await navigator.serviceWorker.register('./service-worker.js',{scope:'./',updateViaCache:'none'});await r.update();document.addEventListener('visibilitychange',()=>{if(document.visibilityState==='visible')r.update().catch(()=>{})});}catch(e){console.warn('VEKAID offline engine unavailable',e);}});}
 })();
-</script><script src="./locale-lessons.js?v=23.39.0" defer></script><script src="./playbook.js?v=23.39.0" defer></script><script src="./certifications.js?v=23.39.0" defer></script><script src="./locale-lab.js?v=23.39.0" defer></script><script src="./v23-core.js?v=23.39.0" defer></script><style id="vekaid-mobile-viewport-v2312">
+</script><script src="./locale-lessons.js?v=23.40.0" defer></script><script src="./playbook.js?v=23.40.0" defer></script><script src="./certifications.js?v=23.40.0" defer></script><script src="./locale-lab.js?v=23.40.0" defer></script><script src="./v23-core.js?v=23.40.0" defer></script><style id="vekaid-mobile-viewport-v2312">
 @media(max-width:1024px){
 :root{--shell-top:env(safe-area-inset-top,0px);--shell-bottom:env(safe-area-inset-bottom,0px);--shell-dock:76px}
 html[data-app-mode="standalone"]{--shell-top:max(48px,env(safe-area-inset-top,0px))}
