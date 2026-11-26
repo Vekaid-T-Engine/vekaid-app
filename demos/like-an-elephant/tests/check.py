@@ -33,13 +33,14 @@ print('16 photo references and safe initial booking state verified')
 
 # Carousel regression: dedicated caption/control row, full-width image sizing, decoded-image guard.
 home=(root/'index.html').read_text()
-css=(root/'assets/restaurant-40.css').read_text()
-js=(root/'assets/restaurant-40.js').read_text()
+css=(root/'assets/restaurant-41.css').read_text()
+js=(root/'assets/restaurant-41.js').read_text()
 assert 'id="hero-caption"' in home
-assert home.index('class="hero-caption"') < home.index('class="hero-controls"')
+assert home.index('class="hero-copy"') < home.index('class="hero-caption"') < home.index('class="hero-controls"')
+assert 'floating-booking' not in home and 'runtime-status' not in home
 assert '.hero-photos{position:absolute;inset:0;width:100%;height:100%' in css
 assert 'id="booking-dialog"' in home
-assert 'restaurant-40.js' in home
+assert 'restaurant-41.js' in home
 assert 'await im.decode()' in js and 'request!==generation' in js
 assert "caption.textContent=q('figcaption',slides[index]).textContent" in js
 print('Carousel structure and synchronization guards verified')

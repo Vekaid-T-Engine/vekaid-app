@@ -17,12 +17,12 @@ jobs:
           node-version: '22'
       - run: node --check demos/like-an-elephant/assets/site.js && node --check demos/like-an-elephant/assets/content.js
       - run: python demos/like-an-elephant/tests/check.py
-      - run: node --check demos/like-an-elephant/assets/restaurant-40.js
+      - run: node --check demos/like-an-elephant/assets/restaurant-41.js
       - run: npm install --no-save playwright@1.51.1
       - run: npx playwright install --with-deps chromium webkit
       - run: NODE_PATH=$PWD/node_modules node demos/like-an-elephant/tests/browser.cjs
       - uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: restaurant-v4-browser-captures
+          name: restaurant-v41-browser-captures
           path: restaurant-*.png
