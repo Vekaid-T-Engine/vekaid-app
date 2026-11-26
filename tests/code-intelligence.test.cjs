@@ -1,0 +1,10 @@
+const test=require('node:test');
+const assert=require('node:assert/strict');
+const {analyze}=require('../code-intelligence.js');
+test('Python directory enumeration',()=>{const x=analyze("import os\n\nfor file in os.listdir('.'):\n    print(file)");assert.equal(x.language,'Python');assert.equal(x.lines.length,3);assert.equal(x.recognized,3);assert.match(x.lines[1].explanation,/répertoire/);});
+test('JavaScript output',()=>{const x=analyze('const x = 1;\nconsole.log(x)');assert.equal(x.language,'JavaScript');assert.equal(x.recognized,2)});
+test('flags destructive and network patterns without execution',()=>{const x=analyze("os.remove('file')\nrequests.get('https://example.org')");assert.ok(x.warnings.length>=2)});
+test('unknown syntax and manual language',()=>{assert.equal(analyze('???').recognized,0);assert.equal(analyze('???','Bash').language,'Bash')});
+test('untrusted HTML is retained as text and never executed',()=>{const x=analyze('<script>throw Error("not executed")</script>');assert.equal(x.lines[0].text,'<script>throw Error("not executed")</script>')});
+test('rejects empty and oversized input',()=>{assert.throws(()=>analyze(' '));assert.throws(()=>analyze('a'.repeat(20001)))});
+test('English output',()=>{assert.match(analyze('print(1)','Python','en').lines[0].explanation,/Displays/)});
