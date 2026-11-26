@@ -3,6 +3,7 @@ on:
   pull_request:
     paths:
       - live-intelligence.js
+      - live-locales.js
       - tests/live-intelligence.test.cjs
       - tests/test_live_bridge.py
       - tools/live_bridge.py
@@ -29,6 +30,7 @@ jobs:
         with:
           python-version: '3.11'
       - run: python -m unittest discover -s tests -p test_live_bridge.py -v
+      - run: node --check live-locales.js
       - run: node --check live-intelligence.js
       - run: node --test tests/live-intelligence.test.cjs
       - run: |
@@ -36,6 +38,9 @@ jobs:
           from pathlib import Path
           p = Path("live-intelligence.js")
           assert p.stat().st_size <= 32000, "Monitor size budget exceeded"
+          assert Path("live-locales.js").stat().st_size <= 32000, "Live locale size budget exceeded"
+          assert "live-locales.js" in Path("index.html").read_text()
+          assert "live-locales.js" in Path("service-worker.js").read_text()
           assert Path("v23-core.js").stat().st_size <= 100000, "Core size budget exceeded"
           assert "live-intelligence.js" in Path("index.html").read_text()
           assert "live-intelligence.js" in Path("service-worker.js").read_text()
