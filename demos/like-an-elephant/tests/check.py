@@ -23,3 +23,10 @@ for name in ['index','carte','maison','galerie','contact','cadeaux','reservation
     p=Check(); p.feed(html); assert p.h1==1,name
     assert '<style>' not in html and '<template' not in html
 print('7 pages: headings, IDs, links, alt, CSP and external scripts verified')
+
+import json,re
+photos=json.loads(re.search(r'const PHOTO_DATA=(\[.*?\]);',(root/'assets/content.js').read_text()).group(1))
+assert len(photos)==16
+assert set(map(int,re.findall(r'data-enlarge="(\d+)"',(root/'galerie.html').read_text())))==set(range(16))
+assert 'name="time" required disabled' in (root/'reservation.html').read_text()
+print('16 photo references and safe initial booking state verified')
