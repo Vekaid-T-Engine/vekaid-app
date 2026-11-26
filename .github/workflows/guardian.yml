@@ -10,6 +10,9 @@ on:
       - index.html
       - live-intelligence.js
       - live-locales.js
+      - code-intelligence.js
+      - code-locales.js
+      - tests/code-intelligence.test.cjs
       - tests/accessibility-browser.cjs
       - .github/workflows/guardian.yml
 permissions:
@@ -31,5 +34,7 @@ jobs:
         with:
           name: guardian-mobile-report
           path: accessibility-report.json
-      - run: node --test tests/live-intelligence.test.cjs
+      - run: node --check code-locales.js
+      - run: node --check code-intelligence.js
+      - run: node --test tests/code-intelligence.test.cjs tests/live-intelligence.test.cjs
       - run: python -m unittest discover -s tests -p test_live_bridge.py -v
