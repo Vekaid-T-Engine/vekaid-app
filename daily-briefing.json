@@ -34,7 +34,474 @@
           "heading": "À retenir",
           "body": "Prioriser les services exposés et conserver la preuve du correctif."
         }
-      ]
+      ],
+      "translations": {
+        "en": {
+          "title": "GeoServer: reported vulnerabilities",
+          "summary": "The Canadian Centre recommends that GeoServer be corrected and reports public indications of exploitation of two vulnerabilities, CVE-2026-120705 and CVE-2026-129243.",
+          "category": "Cloud / Cyber",
+          "sections": [
+            {
+              "heading": "Context and operation",
+              "body": "GeoServer makes it possible to publish geographic data on the network. The notice concerns the branches prior to versions 2.27.7, 2.28.6 and 3.0.2 respectively. It does not prove that every installation is compromised."
+            },
+            {
+              "heading": "Technical terms explained",
+              "body": "CVE means Common Vulnerabilities and Exposures: a standard fault identifier. Exploitation in nature means that attacks have been reported outside the laboratory."
+            },
+            {
+              "heading": "Global and corporate impact",
+              "body": "A company using a map portal could expose a vulnerable service. The exact impact depends on its configuration and the fault involved."
+            },
+            {
+              "heading": "Professional example",
+              "body": "In computer support, identify GeoServer servers in the inventory and record their versions without performing offensive testing on production. Forward the result to the administrator."
+            },
+            {
+              "heading": "Prevention and action",
+              "body": "View the editor newsletter, save configurations, test the patch in preproduction and check the service and its logs after updating."
+            },
+            {
+              "heading": "To be retained",
+              "body": "Prioritize exposed services and maintain proof of corrective action."
+            }
+          ]
+        },
+        "de": {
+          "title": "GeoServer: gemeldete Schwachstellen",
+          "summary": "Das kanadische Zentrum empfiehlt, GeoServer zu korrigieren und meldet öffentliche Hinweise auf die Ausnutzung von zwei Schwachstellen, CVE-2026-120705 und CVE-2026-129243.",
+          "category": "Cloud / Cyber",
+          "sections": [
+            {
+              "heading": "Kontext und Funktionsweise",
+              "body": "GeoServer ermöglicht die Veröffentlichung geografischer Daten im Netzwerk. Die Mitteilung bezieht sich auf Zweigniederlassungen vor den Versionen 2.27.7, 2.28.6 und 3.0.2. Es beweist nicht, dass jede Installation kompromittiert ist."
+            },
+            {
+              "heading": "Technische Begriffe erklärt",
+              "body": "CVE steht für Common Vulnerabilities and Exposures: a standard fault identifier. Ausbeutung in der Natur bedeutet, dass Angriffe außerhalb des Labors gemeldet wurden."
+            },
+            {
+              "heading": "Globale und Corporate Impact",
+              "body": "Ein Unternehmen, das ein Kartenportal verwendet, könnte einen anfälligen Dienst aufdecken. Die genaue Auswirkung hängt von der Konfiguration und dem Fehler ab."
+            },
+            {
+              "heading": "Berufsbeispiel",
+              "body": "Identifizieren Sie GeoServer-Server im Inventar und notieren Sie ihre Versionen, ohne anstößige Tests in der Produktion durchzuführen. Geben Sie das Ergebnis an den Administrator weiter."
+            },
+            {
+              "heading": "Prävention und Maßnahmen",
+              "body": "Sehen Sie sich den Editor-Newsletter an, speichern Sie Konfigurationen, testen Sie den Patch in der Vorproduktion und überprüfen Sie den Dienst und seine Protokolle nach der Aktualisierung."
+            },
+            {
+              "heading": "Einbehalten",
+              "body": "Priorisieren Sie exponierte Dienste und pflegen Sie den Nachweis von Korrekturmaßnahmen."
+            }
+          ]
+        },
+        "zh-Hans": {
+          "title": "GeoServer:报告的脆弱性",
+          "summary": "加拿大中心建议纠正GeoServer,并公开报告开发CVE-2026-120705和CVE-2026-129243这两种脆弱性的迹象。",
+          "category": "云/网络",
+          "sections": [
+            {
+              "heading": "二. 背景和运作",
+              "body": "GeoServer使得在网络上发布地理数据成为可能. 该通知分别涉及2.27.7、2.28.6和3.02版本之前的分支机构。 它不能证明每个装置都受损。"
+            },
+            {
+              "heading": "技术术语说明",
+              "body": "CVE意指常见的脆弱和暴露:一种标准断层识别符. 自然开采意味着在实验室之外有攻击的报告。"
+            },
+            {
+              "heading": "全球和公司影响",
+              "body": "一个使用地图门户的公司可能暴露出一种脆弱的服务。 确切的影响取决于它的配置和所涉及的断层."
+            },
+            {
+              "heading": "专业实例",
+              "body": "在计算机支持中,识别库存中的GeoServer服务器,并记录其版本,而不对生产进行攻击性测试. 将结果转发给管理员 。"
+            },
+            {
+              "heading": "预防和行动",
+              "body": "查看编辑器通讯,保存配置,在预制作中测试补丁,并在更新后检查服务及其日志."
+            },
+            {
+              "heading": "待保留",
+              "body": "优先提供暴露的服务,并保持纠正行动的证据。"
+            }
+          ]
+        },
+        "es": {
+          "title": "GeoServer: vulnerabilidades reportadas",
+          "summary": "The Canadian centre recommends that GeoServer be corrected and reports public signs of exploitation of two vulnerabilities, CVE-2026-120705 and CVE-2026-129243.",
+          "category": "Cloud / Cyber",
+          "sections": [
+            {
+              "heading": "Contexto y operación",
+              "body": "GeoServer permite publicar datos geográficos en la red. El aviso se refiere a las sucursales antes de las versiones 2.27.7, 2.28.6 y 3.0.2 respectivamente. No prueba que cada instalación esté comprometida."
+            },
+            {
+              "heading": "Condiciones técnicas explicadas",
+              "body": "CVE significa vulnerabilidades comunes y exposiciones: un identificador de falla estándar. La explotación en la naturaleza significa que se han reportado ataques fuera del laboratorio."
+            },
+            {
+              "heading": "Impacto mundial y empresarial",
+              "body": "Una empresa que utiliza un portal de mapa podría exponer un servicio vulnerable. El impacto exacto depende de su configuración y de la falla involucrada."
+            },
+            {
+              "heading": "Ejemplo profesional",
+              "body": "En soporte informático, identificar servidores GeoServer en inventario y grabar sus versiones sin realizar pruebas ofensivas en producción. Adelante el resultado al administrador."
+            },
+            {
+              "heading": "Prevención y acción",
+              "body": "Ver el boletín del editor, guardar configuraciones, probar el parche en preproducción y comprobar el servicio y sus registros después de actualizar."
+            },
+            {
+              "heading": "Que se mantenga",
+              "body": "Priorizar los servicios expuestos y mantener pruebas de la acción correctiva."
+            }
+          ]
+        },
+        "it": {
+          "title": "GeoServer: vulnerabilità segnalate",
+          "summary": "Il Centro canadese raccomanda che GeoServer sia corretto e segnala le indicazioni pubbliche di sfruttamento di due vulnerabilità, CVE-2026-120705 e CVE-2026-129243.",
+          "category": "Cloud / Cyber",
+          "sections": [
+            {
+              "heading": "Contesto e funzionamento",
+              "body": "GeoServer consente di pubblicare dati geografici sulla rete. L'avviso riguarda i rami prima delle versioni 2.27.7, 2.28.6 e 3.0.2 rispettivamente. Non dimostra che ogni installazione è compromessa."
+            },
+            {
+              "heading": "Termini tecnici spiegati",
+              "body": "CVE significa vulnerabilità e esposizioni comuni: un identificatore di errore standard. L'esplorazione in natura significa che gli attacchi sono stati segnalati al di fuori del laboratorio."
+            },
+            {
+              "heading": "Impatto globale e societario",
+              "body": "Una società che utilizza un portale di mappe potrebbe esporre un servizio vulnerabile. L'impatto esatto dipende dalla sua configurazione e dall'errore coinvolto."
+            },
+            {
+              "heading": "Esempio professionale",
+              "body": "Nel supporto informatico, identificare i server GeoServer nell'inventario e registrare le loro versioni senza eseguire test offensivi sulla produzione. Inviare il risultato all'amministratore."
+            },
+            {
+              "heading": "Prevenzione e azione",
+              "body": "Visualizza la newsletter dell'editor, salva le configurazioni, testa la patch in preproduzione e controlla il servizio e i suoi registri dopo l'aggiornamento."
+            },
+            {
+              "heading": "Da conservare",
+              "body": "Priorizzare i servizi esposti e mantenere la prova di azione correttiva."
+            }
+          ]
+        },
+        "pt": {
+          "title": "GeoServer: vulnerabilidades relatadas",
+          "summary": "O Centro Canadense recomenda que o GeoServer seja corrigido e relata indicações públicas de exploração de duas vulnerabilidades, CVE-2026-120705 e CVE-2026-129243.",
+          "category": "Nuvem / Cyber",
+          "sections": [
+            {
+              "heading": "Contexto e operação",
+              "body": "GeoServer permite publicar dados geográficos na rede. O anúncio diz respeito às sucursais anteriores às versões 2.27.7, 2.28.6 e 3.0.2, respectivamente. Não prova que cada instalação esteja comprometida."
+            },
+            {
+              "heading": "Termos técnicos explicados",
+              "body": "CVE significa Vulnerabilidades e exposições comuns: um identificador de falhas padrão. Exploração na natureza significa que foram notificados ataques fora do laboratório."
+            },
+            {
+              "heading": "Impacto global e empresarial",
+              "body": "Uma empresa que usa um portal de mapas pode expor um serviço vulnerável. O impacto exato depende de sua configuração e da falha envolvida."
+            },
+            {
+              "heading": "Exemplo profissional",
+              "body": "No suporte ao computador, identifique os servidores GeoServer no inventário e grave suas versões sem realizar testes ofensivos na produção. Encaminhar o resultado para o administrador."
+            },
+            {
+              "heading": "Prevenção e acção",
+              "body": "Veja a newsletter do editor, salve configurações, teste o patch na pré-produção e verifique o serviço e seus registros após atualização."
+            },
+            {
+              "heading": "A manter",
+              "body": "Priorizar os serviços expostos e manter a prova de ação corretiva."
+            }
+          ]
+        },
+        "ja": {
+          "title": "GeoServer: 報告された脆弱性",
+          "summary": "カナダセンターは、GeoServerが修正され、2つの脆弱性、CVE-2026-120705、CVE-2026-129243の悪用の公開表示を報告することを推奨しています。",
+          "category": "クラウド/サイバー",
+          "sections": [
+            {
+              "heading": "コンテキストと操作",
+              "body": "GeoServer は、ネットワーク上で地理的なデータを公開することができます。 それぞれのバージョン2.27.7、2.28.6、および3.0.2の前のブランチに注意してください。 すべてのインストールが妥協されていないことを証明しません。"
+            },
+            {
+              "heading": "技術的な用語解説",
+              "body": "CVEは、一般的な脆弱性と露光を意味します:標準の欠陥識別子。 自然の中での搾取は、攻撃が研究室外に報告されていることを意味します。"
+            },
+            {
+              "heading": "グローバル・企業インパクト",
+              "body": "地図ポータルを利用している企業は、脆弱なサービスを公開することができます。 正確な影響は、その構成と関与する欠陥に依存します。"
+            },
+            {
+              "heading": "専門例",
+              "body": "コンピューターのサポートでは、GeoServer サーバをインベントリで特定し、プロダクションで攻撃的なテストを実行せずにバージョンを記録します。 結果を管理者に転送します。"
+            },
+            {
+              "heading": "予防と行動",
+              "body": "エディタニュースレターを表示し、設定を保存し、プリプロダクションでパッチをテストし、更新後にサービスとそのログをチェックします。"
+            },
+            {
+              "heading": "保持されるため",
+              "body": "露出したサービスを優先し、是正措置の証明を維持します。"
+            }
+          ]
+        },
+        "ko": {
+          "title": "GeoServer: 취약점 보고",
+          "summary": "캐나다 센터는 GeoServer가 정확하고보고 두 취약점, CVE-2026-120705 및 CVE-2026-129243의 악용의 공공 표시를보고 권장합니다.",
+          "category": "클라우드 / 사이버",
+          "sections": [
+            {
+              "heading": "Context 및 작동",
+              "body": "GeoServer는 네트워크의 지리적 데이터를 게시 할 수 있습니다. 공지 사항 버전 2.27.7, 2.28.6 및 3.0.2 이전에 지점에 대한 우려. 모든 설치가 손상된다는 것을 증명하지 않습니다."
+            },
+            {
+              "heading": "기술 용어 설명",
+              "body": "CVE는 일반적인 취약점 및 노출을 의미합니다. 표준 결함 식별자. 자연의 폭발은 공격이 실험실 밖에보고 된 것을 의미합니다."
+            },
+            {
+              "heading": "글로벌 및 기업 영향",
+              "body": "맵 포털을 사용하여 회사는 취약한 서비스를 노출 할 수 있습니다. 정확한 충격은 그것의 윤곽과 관련된 결함에 달려 있습니다."
+            },
+            {
+              "heading": "전문 예",
+              "body": "컴퓨터 지원에서 GeoServer 서버를 재고에 식별하고 생산에 대한 공격 테스트를 수행하지 않고 버전을 기록합니다. 관리자에게 결과를 전달합니다."
+            },
+            {
+              "heading": "예방 및 활동",
+              "body": "편집기 뉴스 레터보기, 구성을 저장, 사전 제작에 패치를 테스트하고 업데이트 후 서비스 및 로그를 확인합니다."
+            },
+            {
+              "heading": "계속하기",
+              "body": "노출된 서비스 및 정확한 행동의 증거를 유지."
+            }
+          ]
+        },
+        "ar": {
+          "title": "GeoServer: reported vulnerabilities",
+          "summary": "The Canadian Centre recommends that GeoServer be corrected and reports public indications of exploitation of two vulnerabilities, CVE-2026-120705 and CVE-2026-129243.",
+          "category": "كلود/سيبر",
+          "sections": [
+            {
+              "heading": "السياق والتشغيل",
+              "body": "ويتيح نظام GeoServer نشر بيانات جغرافية عن الشبكة. ويتعلق الإشعار بالفروع قبل الصيغ 2-27-7 و2-28-6 و3-2 على التوالي. ولا يثبت أن كل تركيبة تتعرض للخطر."
+            },
+            {
+              "heading": "الشروط التقنية",
+              "body": "CVE means Common Vulnerabilities and Exposures: a standard fault ident identifier. فالاستغلال في الطبيعة يعني أن الهجمات قد أُبلغ عنها خارج المختبر."
+            },
+            {
+              "heading": "التأثير العالمي والأثر المؤسسي",
+              "body": "يمكن لشركة تستخدم بوابة خريطة أن تعرض خدمة ضعيفة. ويتوقف الأثر الدقيق على تشكيله والخطأ الذي ينطوي عليه."
+            },
+            {
+              "heading": "مثال مهني",
+              "body": "In computer support, identify GeoServer servers in the inventory and record their versions without performing offensive testing on production. تقدم النتيجة إلى المدير"
+            },
+            {
+              "heading": "الوقاية والعمل",
+              "body": "مشاهدة النشرة الإخبارية التحريرية، وإنقاذ التشكيلات، واختبار رقعة الإنتاج المسبق، والتحقق من الخدمة وسجلاتها بعد التحديث."
+            },
+            {
+              "heading": "يُحتفظ بها",
+              "body": "إعطاء الأولوية للخدمات المعرّضة والحفاظ على دليل على اتخاذ إجراءات تصحيحية."
+            }
+          ]
+        },
+        "ru": {
+          "title": "GeoServer: обнаруженные уязвимости",
+          "summary": "Канадский центр рекомендует исправить GeoServer и сообщает о публичных показаниях эксплуатации двух уязвимостей, CVE-2026-120705 и CVE-2026-129243.",
+          "category": "Облако / Кибер",
+          "sections": [
+            {
+              "heading": "Контекст и операция",
+              "body": "GeoServer позволяет публиковать географические данные в сети. Уведомление относится к филиалам до версий 2.27.7, 2.28.6 и 3.0.2 соответственно. Это не доказывает, что каждая установка скомпрометирована."
+            },
+            {
+              "heading": "Технические условия объяснены",
+              "body": "CVE означает общие уязвимости и воздействия: стандартный идентификатор неисправности. Эксплуатация в природе означает, что нападения были зарегистрированы за пределами лаборатории."
+            },
+            {
+              "heading": "Глобальное и корпоративное воздействие",
+              "body": "Компания, использующая картографический портал, может раскрыть уязвимую услугу. Точное воздействие зависит от его конфигурации и вовлеченной неисправности."
+            },
+            {
+              "heading": "Профессиональный пример",
+              "body": "В компьютерной поддержке идентифицируйте серверы GeoServer в инвентаре и записывайте их версии без проведения наступательных испытаний на производстве. Передайте результат администратору."
+            },
+            {
+              "heading": "Предупреждение и действия",
+              "body": "Просмотрите информационный бюллетень редактора, сохраните конфигурации, протестируйте патч в предварительном производстве и проверьте сервис и его журналы после обновления."
+            },
+            {
+              "heading": "Чтобы сохранить",
+              "body": "Приоритетность предоставляемых услуг и поддержание доказательств корректирующих действий."
+            }
+          ]
+        },
+        "hi": {
+          "title": "जियोसर्वर: vulnerability की सूचना दी",
+          "summary": "कनाडाई केंद्र ने सिफारिश की कि जियोसर्वर को दो भेद्यताओं, CVE-2026-120705 और CVE-2026-129243 के शोषण के सार्वजनिक संकेतों की रिपोर्ट और रिपोर्ट की गई है।",
+          "category": "क्लाउड / साइबर",
+          "sections": [
+            {
+              "heading": "संदर्भ और संचालन",
+              "body": "जियोसर्वर नेटवर्क पर भौगोलिक डेटा प्रकाशित करना संभव बनाता है। नोटिस क्रमशः 2.27.7, 2.28.6 और 3.0.2 संस्करणों से पहले शाखाओं से संबंधित है। यह साबित नहीं होता कि प्रत्येक स्थापना समझौता है।"
+            },
+            {
+              "heading": "तकनीकी शर्तें समझाया",
+              "body": "CVE का मतलब कॉमन वलनेबिलिटी और एक्सपोजर: एक मानक गलती पहचानकर्ता। प्रकृति में शोषण का मतलब है कि प्रयोगशाला के बाहर हमले की सूचना दी गई है।"
+            },
+            {
+              "heading": "वैश्विक और कॉर्पोरेट प्रभाव",
+              "body": "एक मानचित्र पोर्टल का उपयोग करने वाली कंपनी एक कमजोर सेवा को उजागर कर सकती है। सटीक प्रभाव इसके विन्यास और दोष पर निर्भर करता है।"
+            },
+            {
+              "heading": "व्यावसायिक उदाहरण",
+              "body": "कंप्यूटर समर्थन में, सूची में जियोसर्वर सर्वर की पहचान करें और उत्पादन पर आक्रामक परीक्षण किए बिना अपने संस्करणों को रिकॉर्ड करें। इसके आगे प्रशासक का परिणाम।"
+            },
+            {
+              "heading": "रोकथाम और कार्रवाई",
+              "body": "संपादक न्यूज़लेटर देखें, कॉन्फ़िगरेशन सहेजें, प्रीप्रोडक्शन में पैच का परीक्षण करें और अद्यतन करने के बाद सेवा और उसके लॉग की जांच करें।"
+            },
+            {
+              "heading": "बनाए रखा जाना",
+              "body": "उजागर सेवाओं को प्राथमिकता दें और सुधारात्मक कार्रवाई के सबूत बनाए रखें।"
+            }
+          ]
+        },
+        "tr": {
+          "title": "GeoServer: bildirilen kırılganlıklar",
+          "summary": "Kanada Merkezi, GeoServer'ın iki kırılganlık, CVE-2026-120705 ve CVE-2026-129243 sömürülmesini önerir.",
+          "category": "Bulut / Cyber / Cyber",
+          "sections": [
+            {
+              "heading": "Context and operation",
+              "body": "GeoServer, ağdaki coğrafi verileri yayınlamayı mümkün kılar. Fark, sırasıyla 2.27.7, 2.28.6 ve 3.0.2 sürümden önce şubeleri endişelendiriyor. Her yüklemenin uzlaşma olduğunu kanıtlamıyor."
+            },
+            {
+              "heading": "Teknik terimler açıklandı",
+              "body": "CVE, Ortak Vulner yükümlülükleri ve Exposures anlamına gelir: standart bir hata tanımlayıcısı. Doğadaki hava kirliliği, saldırıların laboratuvar dışında rapor edildiği anlamına gelir."
+            },
+            {
+              "heading": "Global ve şirket etkisi",
+              "body": "Bir harita portalı kullanan bir şirket kırılgan bir hizmeti ortaya çıkarabilir. Kesin etki yapılandırmasına ve karışan hataya bağlıdır."
+            },
+            {
+              "heading": "Profesyonel örnek örneği",
+              "body": "Bilgisayar desteğinde, GeoServer sunucularını envanterde tanımlayın ve üretimde saldırgan test yapmadan sürümlerini kaydedin. Bunun sonucu yöneticiye gönderin."
+            },
+            {
+              "heading": "Önleme ve eylem",
+              "body": "Editör bültenini görüntüle, konfigürasyonları kurtar, önceki üretimdeki yamaı test edin ve güncellemeden sonra hizmeti ve loglarını kontrol edin."
+            },
+            {
+              "heading": "muhafaza edilmek için",
+              "body": "Ortaya çıkan hizmetlere öncelik verin ve doğrulayıcı eylemin kanıtını korur."
+            }
+          ]
+        },
+        "vi": {
+          "title": "@ info: status",
+          "summary": "Trung tâm Canada cho rằng GeoServer được điều chỉnh và báo cáo những dấu hiệu công khai của việc khai thác hai điểm yếu, CVE-26-120705 và CVE-26-129243.",
+          "category": "Mây / Mạng",
+          "sections": [
+            {
+              "heading": "Văn cảnh và thao tác",
+              "body": "GeoServer cho phép xuất bản dữ liệu địa lý trên mạng. Thông báo này liên quan đến các chi nhánh trước phiên bản 2.27.7, 2.28.6 và 3.0.2. Nó không chứng minh rằng mọi thiết bị đều bị xâm nhập."
+            },
+            {
+              "heading": "Từ ngữ kỹ thuật giải thích",
+              "body": "CVE có nghĩa là điểm yếu chung và phơi nắng: một bộ nhận diện lỗi tiêu chuẩn. Thám hiểm trong tự nhiên có nghĩa là các cuộc tấn công đã được báo cáo bên ngoài phòng thí nghiệm."
+            },
+            {
+              "heading": "Ảnh hưởng toàn cầu và tập đoàn",
+              "body": "Một công ty sử dụng cổng bản đồ có thể vạch trần một dịch vụ dễ bị tổn thương. Tác động chính xác tùy thuộc vào cấu hình và lỗi của nó."
+            },
+            {
+              "heading": "Ví dụ chuyên nghiệp",
+              "body": "Để hỗ trợ máy tính, hãy xác định máy chủ GeoServer trong kho hàng và ghi lại phiên bản của họ mà không thực hiện thử nghiệm tấn công khi sản xuất. Chuyển kết quả tới nhà quản trị."
+            },
+            {
+              "heading": "Phòng ngừa và hành động",
+              "body": "Xem tin tức trình soạn thảo, lưu cấu hình, kiểm tra phần mềm có sẵn và kiểm tra dịch vụ và bản ghi sau khi cập nhật."
+            },
+            {
+              "heading": "Được giữ lại",
+              "body": "Ưu tiên các dịch vụ phơi bày và duy trì bằng chứng về hành động sửa chữa."
+            }
+          ]
+        },
+        "nl": {
+          "title": "GeoServer: gemelde kwetsbaarheden",
+          "summary": "Het Canadese Centrum beveelt aan dat GeoServer gecorrigeerd wordt en meldt openbare aanwijzingen van exploitatie van twee kwetsbaarheden, CVE-2026-120705 en CVE-2026-129243.",
+          "category": "Wolk / Cyber",
+          "sections": [
+            {
+              "heading": "Context en werking",
+              "body": "GeoServer maakt het mogelijk om geografische gegevens op het netwerk te publiceren. De mededeling heeft betrekking op de bijkantoren voorafgaand aan de versies 2.27.7, 2.28.6 en 3.0.2. Het bewijst niet dat elke installatie in gevaar is."
+            },
+            {
+              "heading": "Technische termen",
+              "body": "CVE: Gemeenschappelijke kwetsbaarheden en blootstellingen: een standaardfoutidentificatiecode. Uitbuiting in de natuur betekent dat aanvallen buiten het laboratorium zijn gemeld."
+            },
+            {
+              "heading": "Wereldwijd en bedrijfseffect",
+              "body": "Een bedrijf dat een kaartportaal gebruikt, kan een kwetsbare dienst ontmaskeren. De exacte impact hangt af van de configuratie en de fout."
+            },
+            {
+              "heading": "Beroepsvoorbeeld",
+              "body": "In computerondersteuning, identificeren GeoServer servers in de inventaris en registreren van hun versies zonder het uitvoeren van offensieve testen op de productie. Stuur het resultaat door naar de beheerder."
+            },
+            {
+              "heading": "Preventie en actie",
+              "body": "Bekijk de editornieuwsbrief, sla configuraties op, test de patch in preproductie en controleer de service en de logs na het bijwerken."
+            },
+            {
+              "heading": "Te behouden",
+              "body": "Prioriteer blootgestelde diensten en behoud bewijs van corrigerende maatregelen."
+            }
+          ]
+        },
+        "id": {
+          "title": "GeoServer: dilaporkan kerentanan",
+          "summary": "Pusat Kanada merekomendasikan agar GeoServer dikoreksi dan melaporkan indikasi eksploitasi terhadap dua kerentanan, CVE-2026-120705 dan CVE- 2026243.",
+          "category": "Awan / Cyber",
+          "sections": [
+            {
+              "heading": "Konteks dan operasi",
+              "body": "GeoServer memungkinkan mempublikasikan data geografis pada jaringan. Pemberitahuan mengenai percabangan sebelum versi 2.27.7, 2.28.6 dan 3.0.2 secara terhormat. Ini tidak membuktikan bahwa setiap instalasi terganggu."
+            },
+            {
+              "heading": "Istilah teknis dijelaskan",
+              "body": "CVE berarti Common Vulnerbilities dan Expostures: sebuah identifier kesalahan standar. Eksplotasi di alam berarti bahwa serangan telah dilaporkan di luar laboratorium."
+            },
+            {
+              "heading": "Dampak global dan perusahaan",
+              "body": "Sebuah perusahaan menggunakan portal peta bisa mengekspos layanan rentan. Dampak yang tepat tergantung pada konfigurasi dan kesalahan yang terlibat."
+            },
+            {
+              "heading": "Contoh profesional",
+              "body": "Dalam dukungan komputer, mengidentifikasi server GeoServer dalam inventaris dan merekam versi mereka tanpa melakukan pengujian terhadap produksi. Teruskan hasilnya ke administrator."
+            },
+            {
+              "heading": "Pencegahan dan tindakan",
+              "body": "Lihat newletter penyunting, simpan konfigurasi, uji patch dalam preproduksi dan periksa layanan dan log setelah memperbarui."
+            },
+            {
+              "heading": "Untuk dipertahankan",
+              "body": "Prioritas layanan terekspos dan menjaga bukti tindakan koreksi."
+            }
+          ]
+        }
+      }
     },
     {
       "title": "Palo Alto Networks : alerte PAN-OS",
@@ -68,7 +535,474 @@
           "heading": "À retenir",
           "body": "Un équipement de sécurité doit lui aussi recevoir des correctifs."
         }
-      ]
+      ],
+      "translations": {
+        "en": {
+          "title": "Palo Alto Networks : PAN-OS alert",
+          "summary": "The CERT-FR relays a vulnerability allowing an increase of privileges in PAN-OS. The publisher indicates an active operation of CVE-2026-43600.",
+          "category": "Networks / Cyber",
+          "sections": [
+            {
+              "heading": "Context and operation",
+              "body": "PAN-OS is the Palo Alto Networks firewall software system. Consult the official notice to identify the relevant versions and conditions."
+            },
+            {
+              "heading": "Technical terms explained",
+              "body": "An increase in privileges enables rights to be obtained higher than those originally granted. A firewall controls communications between networks."
+            },
+            {
+              "heading": "Global and corporate impact",
+              "body": "A compromised network equipment could affect the trust given to filtering rules. The notice does not demonstrate an intrusion into a particular company."
+            },
+            {
+              "heading": "Professional example",
+              "body": "A technician raises the firewall version in the authorized inventory, opens a priority ticket and forwards the bulletin to the network team."
+            },
+            {
+              "heading": "Prevention and action",
+              "body": "Apply the editor's recommendations after validation, limit administrative access and review the logs according to internal procedures."
+            },
+            {
+              "heading": "To be retained",
+              "body": "Security equipment must also receive corrective measures."
+            }
+          ]
+        },
+        "de": {
+          "title": "Palo Alto Networks: PAN-OS Alarm",
+          "summary": "Die CERT-FR leitet eine Schwachstelle weiter, die eine Erhöhung der Rechte in PAN-OS ermöglicht. Der Herausgeber gibt einen aktiven Betrieb von CVE-2026-43600 an.",
+          "category": "Netzwerke / Cyber",
+          "sections": [
+            {
+              "heading": "Kontext und Funktionsweise",
+              "body": "PAN-OS ist das Firewall-Softwaresystem von Palo Alto Networks. Konsultieren Sie den offiziellen Hinweis, um die relevanten Versionen und Bedingungen zu identifizieren."
+            },
+            {
+              "heading": "Technische Begriffe erklärt",
+              "body": "Eine Erhöhung der Privilegien ermöglicht es, höhere Rechte zu erlangen als die ursprünglich gewährten. Eine Firewall kontrolliert die Kommunikation zwischen Netzwerken."
+            },
+            {
+              "heading": "Globale und Corporate Impact",
+              "body": "Eine kompromittierte Netzwerkausrüstung könnte das Vertrauen in Filterregeln beeinträchtigen. Die Bekanntmachung zeigt keine Einmischung in ein bestimmtes Unternehmen."
+            },
+            {
+              "heading": "Berufsbeispiel",
+              "body": "Ein Techniker hebt die Firewall-Version im autorisierten Inventar an, öffnet ein Prioritätsticket und leitet das Bulletin an das Netzwerkteam weiter."
+            },
+            {
+              "heading": "Prävention und Maßnahmen",
+              "body": "Wenden Sie die Empfehlungen des Editors nach der Validierung an, begrenzen Sie den Verwaltungszugriff und überprüfen Sie die Protokolle gemäß internen Verfahren."
+            },
+            {
+              "heading": "Einbehalten",
+              "body": "Sicherheitsausrüstung muss auch Korrekturmaßnahmen erhalten."
+            }
+          ]
+        },
+        "zh-Hans": {
+          "title": "Palo Alto 网络: PAN-OS 警报",
+          "summary": "CERT-FR中继器具有脆弱性,使得PAN-OS的特权得以增加. 出版商表示CVE-2026-4360的主动运营.",
+          "category": "网络/网络",
+          "sections": [
+            {
+              "heading": "二. 背景和运作",
+              "body": "PAN-OS是帕洛阿尔托网络防火墙软件系统. 查阅官方通知,以查明相关版本和条件。"
+            },
+            {
+              "heading": "技术术语说明",
+              "body": "特权的增加使获得的权利高于原先赋予的权利。 一个防火墙控制网络之间的通信."
+            },
+            {
+              "heading": "全球和公司影响",
+              "body": "受损的网络设备可能影响对过滤规则的信任。 通知没有表明对某一特定公司的入侵。"
+            },
+            {
+              "heading": "专业实例",
+              "body": "一名技术人员在授权库存中提升防火墙版本,打开优先罚单,并将公告转发给网络团队."
+            },
+            {
+              "heading": "预防和行动",
+              "body": "审定后应用编辑的建议,限制行政访问,并按照内部程序审查日志."
+            },
+            {
+              "heading": "待保留",
+              "body": "安全设备也必须得到纠正措施。"
+            }
+          ]
+        },
+        "es": {
+          "title": "Palo Alto Networks : Alerta PAN-OS",
+          "summary": "The CERT-FR relays a vulnerability allowing an increase in privileges in PAN-OS. El editor indica una operación activa de CVE-2026-43600.",
+          "category": "Redes / Ciber",
+          "sections": [
+            {
+              "heading": "Contexto y operación",
+              "body": "PAN-OS es el sistema de software de firewall de Palo Alto Networks. Consulte el aviso oficial para identificar las versiones y condiciones pertinentes."
+            },
+            {
+              "heading": "Condiciones técnicas explicadas",
+              "body": "Un aumento de las prerrogativas permite obtener derechos superiores a los otorgados originalmente. Un cortafuegos controla las comunicaciones entre las redes."
+            },
+            {
+              "heading": "Impacto mundial y empresarial",
+              "body": "Un equipo de red comprometido podría afectar la confianza dada a las reglas de filtrado. El aviso no demuestra una intrusión en una empresa en particular."
+            },
+            {
+              "heading": "Ejemplo profesional",
+              "body": "Un técnico eleva la versión de firewall en el inventario autorizado, abre un ticket prioritario y envía el boletín al equipo de red."
+            },
+            {
+              "heading": "Prevención y acción",
+              "body": "Aplicar las recomendaciones del editor después de la validación, limitar el acceso a la administración y revisar los registros según procedimientos internos."
+            },
+            {
+              "heading": "Que se mantenga",
+              "body": "El equipo de seguridad también debe recibir medidas correctivas."
+            }
+          ]
+        },
+        "it": {
+          "title": "Palo Alto Networks: avviso PAN-OS",
+          "summary": "Il CERT-FR relè una vulnerabilità che consente un aumento dei privilegi in PAN-OS. L'editore indica un funzionamento attivo di CVE-2026-43600.",
+          "category": "Reti / Cyber",
+          "sections": [
+            {
+              "heading": "Contesto e funzionamento",
+              "body": "PAN-OS è il sistema software del firewall Palo Alto Networks. Consultare la comunicazione ufficiale per identificare le relative versioni e condizioni."
+            },
+            {
+              "heading": "Termini tecnici spiegati",
+              "body": "Un aumento dei privilegi consente di ottenere diritti superiori a quelli originariamente concessi. Un firewall controlla le comunicazioni tra le reti."
+            },
+            {
+              "heading": "Impatto globale e societario",
+              "body": "Un'apparecchiatura di rete compromessa potrebbe influenzare la fiducia data alle regole di filtraggio. L'avviso non dimostra un'intrusione in una particolare azienda."
+            },
+            {
+              "heading": "Esempio professionale",
+              "body": "Un tecnico solleva la versione firewall nell'inventario autorizzato, apre un biglietto prioritario e inoltra il bollettino al team di rete."
+            },
+            {
+              "heading": "Prevenzione e azione",
+              "body": "Applicare le raccomandazioni dell'editor dopo la convalida, limitare l'accesso amministrativo e rivedere i registri in base alle procedure interne."
+            },
+            {
+              "heading": "Da conservare",
+              "body": "Le apparecchiature di sicurezza devono anche ricevere misure correttive."
+            }
+          ]
+        },
+        "pt": {
+          "title": "Redes Palo Alto : Alerta PAN-OS",
+          "summary": "O CERT-FR retransmite uma vulnerabilidade que permite aumentar os privilégios no PAN-OS. A editora indica uma operação ativa da CVE-2026-43600.",
+          "category": "Redes / Cibernética",
+          "sections": [
+            {
+              "heading": "Contexto e operação",
+              "body": "O PAN-OS é o sistema de firewall Palo Alto Networks. Consulte o aviso oficial para identificar as versões e condições relevantes."
+            },
+            {
+              "heading": "Termos técnicos explicados",
+              "body": "Um aumento dos privilégios permite obter direitos superiores aos inicialmente concedidos. Um firewall controla as comunicações entre redes."
+            },
+            {
+              "heading": "Impacto global e empresarial",
+              "body": "Um equipamento de rede comprometido poderia afetar a confiança dada às regras de filtragem. O aviso não demonstra uma intrusão numa determinada empresa."
+            },
+            {
+              "heading": "Exemplo profissional",
+              "body": "Um técnico levanta a versão do firewall no inventário autorizado, abre um ticket prioritário e encaminha o boletim para a equipe de rede."
+            },
+            {
+              "heading": "Prevenção e acção",
+              "body": "Aplicar as recomendações do editor após validação, limitar o acesso administrativo e rever os logs de acordo com procedimentos internos."
+            },
+            {
+              "heading": "A manter",
+              "body": "Os equipamentos de segurança também devem receber medidas corretivas."
+            }
+          ]
+        },
+        "ja": {
+          "title": "Palo Altoネットワーク:PAN-OSアラート",
+          "summary": "CERT-FR は、PAN-OS の特権の増加を可能にする脆弱性を中継します。 出版社は、CVE-2026-43600のアクティブ動作を示します。",
+          "category": "ネットワーク/サイバー",
+          "sections": [
+            {
+              "heading": "コンテキストと操作",
+              "body": "PAN-OSはPalo Alto Networksファイアウォールソフトウェアシステムです。 関連するバージョンや条件を識別するために公式の通知を参照してください。"
+            },
+            {
+              "heading": "技術的な用語解説",
+              "body": "特権の増加により、元々付与されたものよりも高い権利を得ることができます。 ファイアウォールはネットワーク間の通信を制御します。"
+            },
+            {
+              "heading": "グローバル・企業インパクト",
+              "body": "妥協されたネットワーク機器は、規則をフィルタリングするために与えられた信頼に影響を与えることができます。 通知は、特定の会社に侵入を示すものではありません。"
+            },
+            {
+              "heading": "専門例",
+              "body": "技術者がファイアウォールバージョンを認定在庫で上げ、優先チケットを開き、掲示板をネットワークチームに転送します。"
+            },
+            {
+              "heading": "予防と行動",
+              "body": "検証後にエディタの推奨事項を適用します。, 管理アクセスを制限し、内部手順に従ってログを見直します."
+            },
+            {
+              "heading": "保持されるため",
+              "body": "セキュリティ機器は、是正措置を受ける必要があります。"
+            }
+          ]
+        },
+        "ko": {
+          "title": "Palo Alto Networks : PAN-OS 알림",
+          "summary": "CERT-FR 릴레이는 PAN-OS의 특권의 증가를 허용한다. 간행자는 CVE-2026-43600의 활성 작동을 나타냅니다.",
+          "category": "네트워크 / 사이버",
+          "sections": [
+            {
+              "heading": "Context 및 작동",
+              "body": "PAN-OS는 Palo Alto Networks 방화벽 소프트웨어 시스템입니다. 관련 버전 및 조건을 식별하는 공식 통지를 상담하십시오."
+            },
+            {
+              "heading": "기술 용어 설명",
+              "body": "특권의 증가는 원래 부여보다 더 높은 권한을 얻을 수 있습니다. 방화벽은 네트워크 간의 통신을 제어합니다."
+            },
+            {
+              "heading": "글로벌 및 기업 영향",
+              "body": "손상된 네트워크 장비는 규칙을 필터링하기 위해 주어진 신뢰에 영향을 미칠 수 있습니다. 이 통지는 특정 회사에 침입을하지 않습니다."
+            },
+            {
+              "heading": "전문 예",
+              "body": "기술자는 공인 된 재고로 방화벽 버전을 인상하고 우선권을 열고 네트워크 팀에 Bulletin을 전달합니다."
+            },
+            {
+              "heading": "예방 및 활동",
+              "body": "검증, 제한 관리 액세스 및 내부 절차에 따라 로그를 검토 한 후 편집자의 권고를 적용합니다."
+            },
+            {
+              "heading": "계속하기",
+              "body": "안전 장비는 또한 정확한 측정을 받습니다."
+            }
+          ]
+        },
+        "ar": {
+          "title": "Palo Alto Networks : PAN-OS alert",
+          "summary": "The CERT-FR relays a vulnerability allowing an increase of privileges in PAN-OS. ويشير الناشر إلى التشغيل النشط ل CVE-2026-43600.",
+          "category": "الشبكات/السايبر",
+          "sections": [
+            {
+              "heading": "السياق والتشغيل",
+              "body": "PAN-OS هو نظام برنامج Palo Alto Networks firewall. (ج) أن ترفق الإشعار الرسمي بتحديد النسخ والشروط ذات الصلة."
+            },
+            {
+              "heading": "الشروط التقنية",
+              "body": "وتسمح الزيادة في الامتيازات بالحصول على حقوق أعلى من الحقوق الممنوحة أصلاً. حائط النار يتحكم في الاتصالات بين الشبكات"
+            },
+            {
+              "heading": "التأثير العالمي والأثر المؤسسي",
+              "body": "ويمكن لمعدات الشبكة المهينة أن تؤثر على الثقة الممنوحة لقواعد التصفية. لا يدل الإشعار على تدخل في شركة معينة."
+            },
+            {
+              "heading": "مثال مهني",
+              "body": "ويرفع فني نسخة الجدار الناري في المخزون المأذون به، ويفتح تذكرة ذات أولوية ويرسل النشرة إلى فريق الشبكة."
+            },
+            {
+              "heading": "الوقاية والعمل",
+              "body": "تطبيق توصيات المحرّر بعد التحقّق، الحدّ من الوصول الإداري واستعراض السجلات وفقاً للإجراءات الداخلية."
+            },
+            {
+              "heading": "يُحتفظ بها",
+              "body": "كما يجب أن تتلقى المعدات الأمنية تدابير تصحيحية."
+            }
+          ]
+        },
+        "ru": {
+          "title": "Palo Alto Networks: предупреждение PAN-OS",
+          "summary": "CERT-FR передает уязвимость, позволяющую увеличить привилегии в PAN-OS. Издатель указывает на активную работу CVE-2026-43600.",
+          "category": "Сети / Кибер",
+          "sections": [
+            {
+              "heading": "Контекст и операция",
+              "body": "PAN-OS - это система брандмауэра Palo Alto Networks. Обратитесь к официальному уведомлению, чтобы определить соответствующие версии и условия."
+            },
+            {
+              "heading": "Технические условия объяснены",
+              "body": "Увеличение привилегий позволяет получить права выше, чем те, которые были предоставлены первоначально. Брандмауэр контролирует связь между сетями."
+            },
+            {
+              "heading": "Глобальное и корпоративное воздействие",
+              "body": "Компрометированное сетевое оборудование может повлиять на доверие к правилам фильтрации. Уведомление не демонстрирует вторжения в конкретную компанию."
+            },
+            {
+              "heading": "Профессиональный пример",
+              "body": "Техник поднимает версию брандмауэра в авторизованном инвентаре, открывает приоритетный билет и пересылает бюллетень сетевой команде."
+            },
+            {
+              "heading": "Предупреждение и действия",
+              "body": "Применяйте рекомендации редактора после проверки, ограничивайте доступ к администрированию и просматривайте журналы в соответствии с внутренними процедурами."
+            },
+            {
+              "heading": "Чтобы сохранить",
+              "body": "Оборудование безопасности также должно принимать корректирующие меры."
+            }
+          ]
+        },
+        "hi": {
+          "title": "पालो अल्टो नेटवर्क: पैन-ओएस अलर्ट",
+          "summary": "CERT-FR एक vulnerability को रिले करता है जो पैन-ओएस में विशेषाधिकारों की वृद्धि की अनुमति देता है। प्रकाशक CVE-2026-43600 का सक्रिय संचालन इंगित करता है।",
+          "category": "नेटवर्क / साइबर",
+          "sections": [
+            {
+              "heading": "संदर्भ और संचालन",
+              "body": "पैन-ओएस पलो अल्टो नेटवर्क फ़ायरवॉल सॉफ्टवेयर सिस्टम है। प्रासंगिक संस्करणों और शर्तों की पहचान करने के लिए आधिकारिक नोटिस का परामर्श करें।"
+            },
+            {
+              "heading": "तकनीकी शर्तें समझाया",
+              "body": "विशेषाधिकार में वृद्धि मूल रूप से प्रदान की गई तुलना में अधिकार प्राप्त करने में सक्षम बनाती है। एक फायरवॉल नेटवर्क के बीच संचार को नियंत्रित करता है।"
+            },
+            {
+              "heading": "वैश्विक और कॉर्पोरेट प्रभाव",
+              "body": "एक समझौता नेटवर्क उपकरण नियमों को फ़िल्टर करने के लिए दिए गए विश्वास को प्रभावित कर सकता है। सूचना किसी विशेष कंपनी में घुसपैठ का प्रदर्शन नहीं करती है।"
+            },
+            {
+              "heading": "व्यावसायिक उदाहरण",
+              "body": "एक तकनीशियन अधिकृत सूची में फायरवॉल संस्करण को बढ़ाता है, एक प्राथमिकता टिकट खोलता है और बुलेटिन को नेटवर्क टीम में आगे बढ़ाता है।"
+            },
+            {
+              "heading": "रोकथाम और कार्रवाई",
+              "body": "सत्यापन के बाद संपादक की सिफारिशें लागू करें, प्रशासनिक पहुंच को सीमित करें और आंतरिक प्रक्रियाओं के अनुसार लॉग की समीक्षा करें।"
+            },
+            {
+              "heading": "बनाए रखा जाना",
+              "body": "सुरक्षा उपकरण को भी सुधारात्मक उपाय प्राप्त होना चाहिए।"
+            }
+          ]
+        },
+        "tr": {
+          "title": "Palo Alto Networks: PAN-OS Uyarı",
+          "summary": "CERT-FR, Pan-OS'ta ayrıcalıkların artırılmasına izin veriyor. Yayıncı, CVE-2026-43600'ün aktif bir operasyonu gösterir.",
+          "category": "Ağlar / Cyber",
+          "sections": [
+            {
+              "heading": "Context and operation",
+              "body": "Pano Alto Networks güvenlik sistemi. İlgili versiyonları ve koşulları tanımlamak için resmi bildirime izin verin."
+            },
+            {
+              "heading": "Teknik terimler açıklandı",
+              "body": "ayrıcalıklarda bir artış, hakların başlangıçta verilenlerden daha yüksek elde edilmesini sağlar. Ağlar arasındaki bir güvenlik duvarı kontrolleri."
+            },
+            {
+              "heading": "Global ve şirket etkisi",
+              "body": "Bir uzlaşma ağı ekipmanları, filtreleme kurallarına verilen güveni etkileyebilir. Fark belirli bir şirkete saldırı göstermez."
+            },
+            {
+              "heading": "Profesyonel örnek örneği",
+              "body": "Bir teknisyen yetkili envanterdeki duvar versiyonunu yükseltir, öncelikli bir bilet açar ve mermiyi ağ ekibine ilerletir."
+            },
+            {
+              "heading": "Önleme ve eylem",
+              "body": "Yayınlanmadan sonra editörün tavsiyelerini uygulayın, Limit yönetim erişimi ve girişleri iç prosedürlere göre gözden geçirin."
+            },
+            {
+              "heading": "muhafaza edilmek için",
+              "body": "Güvenlik ekipmanı da düzeltici önlemler almalıdır."
+            }
+          ]
+        },
+        "vi": {
+          "title": "Palo Alto Networks: PN-OS cảnh báo",
+          "summary": "CERT-FR chuyển tiếp một sự dễ bị tổn thương cho phép sự gia tăng các đặc quyền ở PN-OS. Người công bố cho thấy có hoạt động của CVE-26-43600.",
+          "category": "Mạng / Mạng",
+          "sections": [
+            {
+              "heading": "Văn cảnh và thao tác",
+              "body": "PAN-OS là hệ thống phần mềm tường lửa Palo Alto Networks. Xem xét thông báo chính thức để nhận diện các bản dịch và điều kiện liên quan."
+            },
+            {
+              "heading": "Từ ngữ kỹ thuật giải thích",
+              "body": "Một sự gia tăng đặc quyền giúp quyền được lên cao hơn những đặc quyền ban đầu. Một bức tường lửa điều khiển sự liên lạc giữa các mạng lưới."
+            },
+            {
+              "heading": "Ảnh hưởng toàn cầu và tập đoàn",
+              "body": "Thiết bị mạng bị thỏa hiệp có thể ảnh hưởng đến sự tin cậy vào luật lọc. Thông báo không cho thấy việc xâm nhập vào một công ty nào đó."
+            },
+            {
+              "heading": "Ví dụ chuyên nghiệp",
+              "body": "Một kỹ thuật viên đã nâng phiên bản tường lửa trong kho hàng có thẩm quyền, mở một vé ưu tiên và chuyển thông báo cho đội mạng."
+            },
+            {
+              "heading": "Phòng ngừa và hành động",
+              "body": "Áp dụng các đề nghị của biên tập sau khi hợp lệ hóa, hạn chế truy cập hành chính và xem xét các bản ghi theo các thủ tục nội bộ."
+            },
+            {
+              "heading": "Được giữ lại",
+              "body": "Thiết bị an ninh cũng phải có biện pháp sửa chữa."
+            }
+          ]
+        },
+        "nl": {
+          "title": "Palo Alto Netwerken: PAN-OS alarm",
+          "summary": "De CERT-FR relais een kwetsbaarheid waardoor een toename van privileges in PAN-OS. De uitgever wijst op een actieve werking van CVE-2026-43600.",
+          "category": "Netwerken / Cyber",
+          "sections": [
+            {
+              "heading": "Context en werking",
+              "body": "PAN-OS is het Palo Alto Networks firewall software systeem. Raadpleeg de officiële kennisgeving om de relevante versies en voorwaarden te identificeren."
+            },
+            {
+              "heading": "Technische termen",
+              "body": "Een verhoging van de privileges maakt het mogelijk om rechten te verkrijgen die hoger zijn dan de oorspronkelijk toegekende rechten. Een firewall regelt de communicatie tussen netwerken."
+            },
+            {
+              "heading": "Wereldwijd en bedrijfseffect",
+              "body": "Een gecompromitteerde netwerkapparatuur kan het vertrouwen in filterregels beïnvloeden. De mededeling toont geen inbreuk op een bepaalde onderneming aan."
+            },
+            {
+              "heading": "Beroepsvoorbeeld",
+              "body": "Een technicus verhoogt de firewall versie in de toegestane inventaris, opent een prioriteit ticket en stuurt het bulletin naar het netwerkteam."
+            },
+            {
+              "heading": "Preventie en actie",
+              "body": "Na validatie de aanbevelingen van de redacteur toepassen, administratieve toegang beperken en de logs volgens interne procedures bekijken."
+            },
+            {
+              "heading": "Te behouden",
+              "body": "De veiligheidsuitrusting moet ook worden gecorrigeerd."
+            }
+          ]
+        },
+        "id": {
+          "title": "Polo Alto Networks: peringatan PAN-OS",
+          "summary": "CERT-FR menyampaikan kerentanan yang memungkinkan peningkatan hak istimewa dalam PAN- OS. Penerbit mengindikasikan operasi aktif CVE-2026- 43600.",
+          "category": "Jaringan / Cyber",
+          "sections": [
+            {
+              "heading": "Konteks dan operasi",
+              "body": "Pando-OS adalah sistem perangkat lunak firewall Palo Alto Networks. Konsultasikan pemberitahuan resmi untuk mengidentifikasi versi dan kondisi yang relevan."
+            },
+            {
+              "heading": "Istilah teknis dijelaskan",
+              "body": "Peningkatan hak istimewa memungkinkan hak untuk diperoleh lebih tinggi daripada yang awalnya diberikan. Firewall mengendalikan komunikasi antar jaringan."
+            },
+            {
+              "heading": "Dampak global dan perusahaan",
+              "body": "Peralatan jaringan yang dikompromikan dapat mempengaruhi kepercayaan yang diberikan pada aturan penyaringan. Pemberitahuan tidak menunjukkan gangguan ke dalam perusahaan tertentu."
+            },
+            {
+              "heading": "Contoh profesional",
+              "body": "Seorang teknisi meningkatkan versi firewall dalam inventaris resmi, membuka tiket prioritas dan meneruskan buletin ke tim jaringan."
+            },
+            {
+              "heading": "Pencegahan dan tindakan",
+              "body": "Terapkan rekomendasi editor setelah pengesahan, batasi akses administratif dan tinjau log sesuai dengan prosedur internal."
+            },
+            {
+              "heading": "Untuk dipertahankan",
+              "body": "Peralatan keamanan juga harus menerima langkah-langkah perbaikan."
+            }
+          ]
+        }
+      }
     },
     {
       "title": "FinCEN : mise hors ligne de certains systèmes",
@@ -102,7 +1036,474 @@
           "heading": "À retenir",
           "body": "Distinguer interruption constatée, suspicion et compromission confirmée."
         }
-      ]
+      ],
+      "translations": {
+        "en": {
+          "title": "FinCEN: offline certain systems",
+          "summary": "According to Reuters, U.S. financial crime service systems were shut down after a cybersecurity incident. An investigation seeks to determine its scope.",
+          "category": "Incident / Cyber",
+          "sections": [
+            {
+              "heading": "Context and operation",
+              "body": "FinCEN is the Financial Crimes Enforcement Network. Offline systems may be a containment measure during an investigation. The precise cause and consequences remain to be confirmed."
+            },
+            {
+              "heading": "Technical terms explained",
+              "body": "Containment is to limit the spread or effects of an incident. The digital investigation examines technical traces to understand events."
+            },
+            {
+              "heading": "Global and corporate impact",
+              "body": "Interruption can disrupt processes dependent on the systems concerned. A data leak or the identity of an attacker must not be inferred without proof."
+            },
+            {
+              "heading": "Professional example",
+              "body": "At the desk service, record interruptions, inform users with confirmed facts and follow the instructions of the incident response team."
+            },
+            {
+              "heading": "Prevention and action",
+              "body": "Preserving newspapers, avoiding unauthorized restarts and respecting the continuity plan. Restore services only after validation."
+            },
+            {
+              "heading": "To be retained",
+              "body": "Distinguishing observed interruption, suspicion and confirmed compromise."
+            }
+          ]
+        },
+        "de": {
+          "title": "FinCEN: Offline-Systeme",
+          "summary": "Laut Reuters wurden Systeme des US-Finanzkriminalitätsdienstes nach einem Cybersicherheitsvorfall heruntergefahren. Eine Untersuchung versucht, ihren Umfang zu bestimmen.",
+          "category": "Vorfall/Cyber",
+          "sections": [
+            {
+              "heading": "Kontext und Funktionsweise",
+              "body": "FinCEN ist das Financial Crimes Enforcement Network. Offline-Systeme können eine Eindämmungsmaßnahme während einer Untersuchung sein. Die genaue Ursache und die Folgen müssen noch bestätigt werden."
+            },
+            {
+              "heading": "Technische Begriffe erklärt",
+              "body": "Containment besteht darin, die Ausbreitung oder die Auswirkungen eines Vorfalls zu begrenzen. Die digitale Untersuchung untersucht technische Spuren, um Ereignisse zu verstehen."
+            },
+            {
+              "heading": "Globale und Corporate Impact",
+              "body": "Unterbrechungen können Prozesse stören, die von den betreffenden Systemen abhängen. Ein Datenleck oder die Identität eines Angreifers darf nicht ohne Beweise abgeleitet werden."
+            },
+            {
+              "heading": "Berufsbeispiel",
+              "body": "Notieren Sie am Schreibtisch Unterbrechungen, informieren Sie die Benutzer mit bestätigten Fakten und befolgen Sie die Anweisungen des Incident Response Teams."
+            },
+            {
+              "heading": "Prävention und Maßnahmen",
+              "body": "Zeitungen erhalten, unautorisierte Neustarts vermeiden und den Kontinuitätsplan befolgen. Wiederherstellung von Diensten erst nach Validierung."
+            },
+            {
+              "heading": "Einbehalten",
+              "body": "Unterscheiden Unterbrechung, Verdacht und Kompromiss bestätigt."
+            }
+          ]
+        },
+        "zh-Hans": {
+          "title": "FinCEN: 某些系统下线",
+          "summary": "据路透社报道,美国金融犯罪服务系统在网络安全事件后被关闭. 调查的目的是确定其范围。",
+          "category": "事件/网络",
+          "sections": [
+            {
+              "heading": "二. 背景和运作",
+              "body": "FinCEN是金融犯罪执法网络。 离线系统可能是调查期间的一种遏制措施。 确切的原因和后果尚待确认。"
+            },
+            {
+              "heading": "技术术语说明",
+              "body": "限制是限制事件的传播或影响。 数字调查审查技术痕迹以了解事件。"
+            },
+            {
+              "heading": "全球和公司影响",
+              "body": "中断会干扰取决于有关系统的进程。 数据泄露或攻击者的身份不得在没有证据的情况下推断."
+            },
+            {
+              "heading": "专业实例",
+              "body": "在案头服务中,记录中断,告知用户确认事实,并遵循事件应对小组的指示."
+            },
+            {
+              "heading": "预防和行动",
+              "body": "保存报纸,避免擅自重启,尊重连续性计划. 仅在验证后恢复服务 。"
+            },
+            {
+              "heading": "待保留",
+              "body": "区分观察到的中断、怀疑和确认的妥协。"
+            }
+          ]
+        },
+        "es": {
+          "title": "FinCEN: sistemas sin conexión",
+          "summary": "Según Reuters, los sistemas del servicio de criminalidad financiera de EE.UU. fueron cerrados después de un incidente de ciberseguridad. Una investigación busca determinar su alcance.",
+          "category": "Incident / Cyber",
+          "sections": [
+            {
+              "heading": "Contexto y operación",
+              "body": "FinCEN es la Red de Control de Delitos Financieros. Los sistemas sin conexión pueden ser una medida de contención durante una investigación. La causa y las consecuencias precisas siguen siendo confirmadas."
+            },
+            {
+              "heading": "Condiciones técnicas explicadas",
+              "body": "La contención consiste en limitar la propagación o los efectos de un incidente. La investigación digital examina las huellas técnicas para entender los acontecimientos."
+            },
+            {
+              "heading": "Impacto mundial y empresarial",
+              "body": "La interrupción puede interrumpir procesos dependientes de los sistemas de que se trate. No se debe inferir una fuga de datos ni la identidad de un atacante sin pruebas."
+            },
+            {
+              "heading": "Ejemplo profesional",
+              "body": "En el servicio de escritorio, interrumpe el registro, informe a los usuarios con hechos confirmados y siga las instrucciones del equipo de respuesta al incidente."
+            },
+            {
+              "heading": "Prevención y acción",
+              "body": "Conservación de periódicos, evitando reiniciamientos no autorizados y siguiendo el plan de continuidad. Restaurar los servicios sólo después de la validación."
+            },
+            {
+              "heading": "Que se mantenga",
+              "body": "Interrupción distinguida, sospecha y compromiso confirmados."
+            }
+          ]
+        },
+        "it": {
+          "title": "FinCEN: sistemi offline",
+          "summary": "Secondo Reuters, i sistemi di servizio del crimine finanziario degli Stati Uniti sono stati chiusi dopo un incidente sulla sicurezza informatica. Un'indagine mira a determinare la sua portata.",
+          "category": "Incidente / Cyber",
+          "sections": [
+            {
+              "heading": "Contesto e funzionamento",
+              "body": "FinCEN è il Financial Crimes Enforcement Network. I sistemi off-line possono essere una misura di contenimento durante un'indagine. Resta da confermare la causa e le conseguenze precise."
+            },
+            {
+              "heading": "Termini tecnici spiegati",
+              "body": "Il contenimento è quello di limitare la diffusione o gli effetti di un incidente. L'indagine digitale esamina le tracce tecniche per comprendere gli eventi."
+            },
+            {
+              "heading": "Impatto globale e societario",
+              "body": "L'interruzione può interrompere i processi dipendenti dai sistemi interessati. Una perdita di dati o l'identità di un aggressore non deve essere deferita senza prova."
+            },
+            {
+              "heading": "Esempio professionale",
+              "body": "Al servizio della scrivania, interruzioni di registro, informare gli utenti con fatti confermati e seguire le istruzioni del team di risposta incidente."
+            },
+            {
+              "heading": "Prevenzione e azione",
+              "body": "Conservare i giornali, evitare riavviamenti non autorizzati e rispettare il piano di continuità. Ripristinare i servizi solo dopo la convalida."
+            },
+            {
+              "heading": "Da conservare",
+              "body": "Distinguono l'interruzione osservata, il sospetto e il compromesso confermato."
+            }
+          ]
+        },
+        "pt": {
+          "title": "FinCEN: off-line de certos sistemas",
+          "summary": "De acordo com a Reuters, os sistemas de criminalidade financeira dos EUA foram desligados após um incidente de segurança cibernética. Uma investigação procura determinar o seu alcance.",
+          "category": "Incidente / Cyber",
+          "sections": [
+            {
+              "heading": "Contexto e operação",
+              "body": "FinCEN é a Rede de Execução de Crimes Financeiros. Os sistemas desligados podem ser uma medida de contenção durante uma investigação. A causa e as consequências exactas permanecem por confirmar."
+            },
+            {
+              "heading": "Termos técnicos explicados",
+              "body": "O confinamento deve limitar a propagação ou os efeitos de um incidente. A investigação digital examina vestígios técnicos para compreender os acontecimentos."
+            },
+            {
+              "heading": "Impacto global e empresarial",
+              "body": "A interrupção pode interromper processos dependentes dos sistemas em causa. Uma fuga de dados ou a identidade de um atacante não devem ser inferidas sem prova."
+            },
+            {
+              "heading": "Exemplo profissional",
+              "body": "No serviço de recepção, registrar interrupções, informar os usuários com fatos confirmados e seguir as instruções da equipe de resposta ao incidente."
+            },
+            {
+              "heading": "Prevenção e acção",
+              "body": "Preservar jornais, evitar reinícios não autorizados e respeitar o plano de continuidade. Restaure serviços somente após a validação."
+            },
+            {
+              "heading": "A manter",
+              "body": "Distinguindo interrupção observada, suspeita e comprometimento confirmado."
+            }
+          ]
+        },
+        "ja": {
+          "title": "FinCEN: オフラインの特定のシステム",
+          "summary": "ロイターによると、米国金融犯罪サービスシステムがサイバーセキュリティ事故後にシャットダウンしました。 調査は、そのスコープを決定することを求めています。",
+          "category": "インシデント/サイバー",
+          "sections": [
+            {
+              "heading": "コンテキストと操作",
+              "body": "FinCENは金融犯罪執行ネットワークです。 オフラインシステムは、調査中に封入措置がかかる場合があります。 正確な原因と結果が確認されるままです。"
+            },
+            {
+              "heading": "技術的な用語解説",
+              "body": "条件は、インシデントのスプレッドまたは効果を制限することです。 デジタル調査は、イベントを理解するために技術的な痕跡を調べます。"
+            },
+            {
+              "heading": "グローバル・企業インパクト",
+              "body": "中断は、関連するシステムに依存するプロセスを中断することができます。 データの漏洩や攻撃者の身元が、証拠なしでは侵入してはならない。"
+            },
+            {
+              "heading": "専門例",
+              "body": "デスクサービスでは、録画中断、確認済みの事実をユーザーに通知し、インシデント対応チームの指示に従ってください。"
+            },
+            {
+              "heading": "予防と行動",
+              "body": "新聞の保存、不正な再起動を避け、継続計画を尊重します。 検証後にのみサービスを復元する。"
+            },
+            {
+              "heading": "保持されるため",
+              "body": "観察された中断、疑惑および確認された妥協を区別して下さい。"
+            }
+          ]
+        },
+        "ko": {
+          "title": "FinCEN: 오프라인 특정 시스템",
+          "summary": "Reuters에 따르면, 미국 금융 범죄 서비스 시스템은 사이버 보안 사건 후 폐쇄되었습니다. 조사는 그것의 범위를 결정하는 것을 추구합니다.",
+          "category": "기업 / 사이버",
+          "sections": [
+            {
+              "heading": "Context 및 작동",
+              "body": "FinCEN는 금융 범죄 집행 네트워크입니다. Offline 시스템은 조사 중의 보조 측정이 될 수 있습니다. 정확한 원인과 결과는 확인되어야합니다."
+            },
+            {
+              "heading": "기술 용어 설명",
+              "body": "결론은 사건의 퍼짐 또는 효력을 제한하는 것입니다. 디지털 조사는 사건을 이해하는 기술적인 흔적을 검사합니다."
+            },
+            {
+              "heading": "글로벌 및 기업 영향",
+              "body": "Interruption는 시스템에 따라 프로세스를 혼란시킬 수 있습니다. 공격자의 데이터 누출 또는 정체성은 증거없이 인화되지 않아야합니다."
+            },
+            {
+              "heading": "전문 예",
+              "body": "책상 서비스에서, 기록 중단, 확인된 사실을 가진 사용자에게 알리고 사건 응답 팀의 지시를 따르십시오."
+            },
+            {
+              "heading": "예방 및 활동",
+              "body": "보존 신문, 무단 재시작을 피하고 연속성 계획을 존중. 유효성 검사 후 서비스 복원."
+            },
+            {
+              "heading": "계속하기",
+              "body": "관측된 중단, suspicion 및 확인된 타협을 진화하십시오."
+            }
+          ]
+        },
+        "ar": {
+          "title": "FinCEN: offline certain systems",
+          "summary": "According to Reuters, U.S. financial crime service systems were shut down after a cybersecurity incident. ويسعى التحقيق إلى تحديد نطاقه.",
+          "category": "الحادث/السايبر",
+          "sections": [
+            {
+              "heading": "السياق والتشغيل",
+              "body": "FinCEN is the Financial Crimes Enforcement Network. وقد تكون النظم الخارجية تدبير احتواء أثناء التحقيق. ولا تزال هناك حاجة إلى تأكيد الأسباب والنتائج المحددة."
+            },
+            {
+              "heading": "الشروط التقنية",
+              "body": "الاحتواء هو الحد من انتشار أو آثار الحادث. The digital investigation examines technical traces to understand events."
+            },
+            {
+              "heading": "التأثير العالمي والأثر المؤسسي",
+              "body": "ويمكن للتداخل أن يعطل العمليات التي تعتمد على النظم المعنية. ويجب عدم الاستدلال على تسريب البيانات أو هوية المهاجم دون دليل."
+            },
+            {
+              "heading": "مثال مهني",
+              "body": "At the office service, record interruptions, inform users with confirmed facts and follow the instructions of the incident response team."
+            },
+            {
+              "heading": "الوقاية والعمل",
+              "body": "الحفاظ على الصحف، وتفادي الاعادة غير المأذون بها واحترام خطة الاستمرارية. إعادة الخدمات فقط بعد التصديق."
+            },
+            {
+              "heading": "يُحتفظ بها",
+              "body": "وقد لاحظ تفكك وشبهة وتسوية مؤكدة."
+            }
+          ]
+        },
+        "ru": {
+          "title": "FinCEN: автономные системы",
+          "summary": "По данным Reuters, системы Службы финансовых преступлений США были отключены после инцидента с кибербезопасностью. Расследование стремится определить его масштаб.",
+          "category": "Киберинцидент / Cyber",
+          "sections": [
+            {
+              "heading": "Контекст и операция",
+              "body": "FinCEN является сетью по борьбе с финансовыми преступлениями. Офлайн-системы могут быть мерой сдерживания во время расследования. Точные причины и последствия еще предстоит подтвердить."
+            },
+            {
+              "heading": "Технические условия объяснены",
+              "body": "Сдерживание состоит в ограничении распространения или последствий инцидента. Цифровое исследование исследует технические следы, чтобы понять события."
+            },
+            {
+              "heading": "Глобальное и корпоративное воздействие",
+              "body": "Прерывание может нарушить процессы, зависящие от соответствующих систем. Утечка данных или личность злоумышленника не должны быть выведены без доказательств."
+            },
+            {
+              "heading": "Профессиональный пример",
+              "body": "На стойке службы фиксируют перебои, сообщают пользователям подтвержденные факты и следуют инструкциям команды реагирования на инциденты."
+            },
+            {
+              "heading": "Предупреждение и действия",
+              "body": "Сохранение газет, предотвращение несанкционированных перезагрузок и следование плану преемственности. Восстановление услуг только после проверки."
+            },
+            {
+              "heading": "Чтобы сохранить",
+              "body": "Отличительные прерывания, подозрения и компромисс подтверждены."
+            }
+          ]
+        },
+        "hi": {
+          "title": "फिनकेन: ऑफ़लाइन कुछ सिस्टम",
+          "summary": "रॉयटर्स के अनुसार, साइबर सुरक्षा घटना के बाद अमेरिकी वित्तीय अपराध सेवा प्रणाली बंद हो गई थी। एक जांच अपने दायरे को निर्धारित करना चाहता है।",
+          "category": "घटना / साइबर",
+          "sections": [
+            {
+              "heading": "संदर्भ और संचालन",
+              "body": "फिनसीएन वित्तीय अपराध प्रवर्तन नेटवर्क है। एक जांच के दौरान ऑफलाइन सिस्टम एक रोकथाम उपाय हो सकता है। सटीक कारण और परिणाम की पुष्टि की जा रही है।"
+            },
+            {
+              "heading": "तकनीकी शर्तें समझाया",
+              "body": "एक घटना के प्रसार या प्रभावों को सीमित करना है। डिजिटल जांच घटनाओं को समझने के लिए तकनीकी निशान की जांच करता है।"
+            },
+            {
+              "heading": "वैश्विक और कॉर्पोरेट प्रभाव",
+              "body": "अवरोधन प्रक्रियाओं को संबंधित प्रणालियों पर निर्भर करता है। डेटा लीक या हमलावर की पहचान को सबूत के बिना जांच नहीं करनी चाहिए।"
+            },
+            {
+              "heading": "व्यावसायिक उदाहरण",
+              "body": "डेस्क सेवा में, रिकॉर्ड रुकावट, उपयोगकर्ताओं को पुष्टिकृत तथ्यों के साथ सूचित करें और घटना प्रतिक्रिया टीम के निर्देशों का पालन करें।"
+            },
+            {
+              "heading": "रोकथाम और कार्रवाई",
+              "body": "समाचार पत्रों को संरक्षित करना, अनधिकृत पुनरारंभ से बचना और निरंतरता योजना का सम्मान करना। सत्यापन के बाद ही सेवाओं को पुनर्स्थापित करें।"
+            },
+            {
+              "heading": "बनाए रखा जाना",
+              "body": "विघटन, संदेह और पुष्टि समझौता।"
+            }
+          ]
+        },
+        "tr": {
+          "title": "FinCEN: çevrimdışı bazı sistemler",
+          "summary": "Reuters'e göre, ABD finansal suç hizmeti sistemleri bir siber güvenlik olayından sonra kapatıldı. Bir soruşturma kapsamını belirlemek istiyor.",
+          "category": "Olay / Cyber",
+          "sections": [
+            {
+              "heading": "Context and operation",
+              "body": "FinCEN Finansal Suçlar Uygulama Ağı. Offline sistemleri bir soruşturma sırasında yer alan bir ölçü olabilir. Kesin sebep ve sonuçlar doğrulanır."
+            },
+            {
+              "heading": "Teknik terimler açıklandı",
+              "body": "Containment bir olayın yayılmasını veya etkilerini sınırlamaktır. Dijital soruşturma, olayları anlamak için teknik izlerini inceler."
+            },
+            {
+              "heading": "Global ve şirket etkisi",
+              "body": "Interruption, ilgili sistemlere bağlı olarak süreçleri bozabilir. Bir saldırganın veya saldırganın kimliği kanıt olmadan ertelenmemelidir."
+            },
+            {
+              "heading": "Profesyonel örnek örneği",
+              "body": "Masa hizmetinde, rekor kesintiler, kullanıcıları doğrulanan gerçeklerle bilgilendirin ve olay yanıt ekibinin talimatlarını takip edin."
+            },
+            {
+              "heading": "Önleme ve eylem",
+              "body": "Gazeteleri korumak, yetkisiz yeniden başlamak ve süreklilik planına saygı göstermek. Sadece doğrulamadan sonra hizmetleri geri yükleyin."
+            },
+            {
+              "heading": "muhafaza edilmek için",
+              "body": "Gözlemlenen kesinti, şüphe ve doğrulanan uzlaşmayı bozmak."
+            }
+          ]
+        },
+        "vi": {
+          "title": "FinCEN: tắt hệ thống nhất định",
+          "summary": "Theo sự kiện an ninh mạng, hệ thống tội phạm tài chính Hoa Kỳ đã bị đóng cửa. Một cuộc điều tra tìm cách xác định phạm vi của nó.",
+          "category": "Comment",
+          "sections": [
+            {
+              "heading": "Văn cảnh và thao tác",
+              "body": "FinCEN là mạng lưới tội phạm tài chính. Hệ thống ngoại tuyến có thể là biện pháp ngăn chặn trong quá trình điều tra. Nguyên nhân và hậu quả chính xác vẫn cần được xác nhận."
+            },
+            {
+              "heading": "Từ ngữ kỹ thuật giải thích",
+              "body": "Ngăn chặn là hạn chế sự lây lan hoặc ảnh hưởng của một vụ việc. Cuộc điều tra kỹ thuật số xem xét các dấu vết kỹ thuật để hiểu các sự kiện."
+            },
+            {
+              "heading": "Ảnh hưởng toàn cầu và tập đoàn",
+              "body": "Sự gián đoạn có thể phá vỡ quá trình phụ thuộc vào hệ thống liên quan. Một thông tin rò rỉ hoặc danh tính của một kẻ tấn công không được đưa ra nếu không có bằng chứng."
+            },
+            {
+              "heading": "Ví dụ chuyên nghiệp",
+              "body": "Tại bàn làm việc, ghi âm bị gián đoạn, cho người dùng biết những sự kiện đã được xác nhận và làm theo hướng dẫn của đội phản ứng sự việc."
+            },
+            {
+              "heading": "Phòng ngừa và hành động",
+              "body": "Báo tốt nhất, tránh khởi động trái phép và tôn trọng kế hoạch liên tục. Phục hồi dịch vụ chỉ sau khi hợp lệ hoá."
+            },
+            {
+              "heading": "Được giữ lại",
+              "body": "Sự phân biệt quan sát thấy gián đoạn, nghi ngờ và xác nhận thỏa hiệp."
+            }
+          ]
+        },
+        "nl": {
+          "title": "FinCEN: offline bepaalde systemen",
+          "summary": "Volgens Reuters, werden de Amerikaanse financiële misdaad service systemen uitgeschakeld na een cybersecurity incident. Een onderzoek heeft tot doel de draagwijdte ervan vast te stellen.",
+          "category": "Incident / Cyber",
+          "sections": [
+            {
+              "heading": "Context en werking",
+              "body": "FinCEN is het Financial Crimes Enforcement Network. Offlinesystemen kunnen tijdens een onderzoek een inperkingsmaatregel zijn. De precieze oorzaak en gevolgen moeten nog worden bevestigd."
+            },
+            {
+              "heading": "Technische termen",
+              "body": "Inperking is om de verspreiding of effecten van een incident te beperken. Het digitale onderzoek onderzoekt technische sporen om gebeurtenissen te begrijpen."
+            },
+            {
+              "heading": "Wereldwijd en bedrijfseffect",
+              "body": "Onderbreking kan processen verstoren afhankelijk van de betrokken systemen. Een datalek of de identiteit van een aanvaller mag niet worden afgeleid zonder bewijs."
+            },
+            {
+              "heading": "Beroepsvoorbeeld",
+              "body": "Bij de receptie, record onderbrekingen, informeren gebruikers met bevestigde feiten en volg de instructies van het incident response team."
+            },
+            {
+              "heading": "Preventie en actie",
+              "body": "Het bewaren van kranten, het vermijden van ongeoorloofde herstarten en het respecteren van het continuïteitsplan. Diensten alleen herstellen na validatie."
+            },
+            {
+              "heading": "Te behouden",
+              "body": "Het onderscheiden van waargenomen onderbreking, verdenking en bevestigd compromis."
+            }
+          ]
+        },
+        "id": {
+          "title": "Fincen: luring sistem tertentu",
+          "summary": "Menurut Reuters, sistem layanan kejahatan keuangan AS ditutup setelah insiden keamanan cyber. Sebuah penyelidikan berusaha untuk menentukan ruang lingkup.",
+          "category": "Insiden / Cyber",
+          "sections": [
+            {
+              "heading": "Konteks dan operasi",
+              "body": "Fincen adalah jaringan kejahatan keuangan. Sistem offline mungkin ukuran penahanan selama penyelidikan. Penyebab yang tepat dan konsekuensi tetap harus dikonfirmasi."
+            },
+            {
+              "heading": "Istilah teknis dijelaskan",
+              "body": "Penahan adalah untuk membatasi penyebaran atau efek dari insiden. Penyelidikan digital memeriksa jejak teknis untuk memahami kejadian."
+            },
+            {
+              "heading": "Dampak global dan perusahaan",
+              "body": "Interupsi dapat mengganggu proses tergantung pada sistem yang bersangkutan. Kebocoran data atau identitas penyerang tak boleh diberikan tanpa bukti."
+            },
+            {
+              "heading": "Contoh profesional",
+              "body": "Pada layanan meja, merekam gangguan, menginformasikan pengguna dengan fakta yang dikonfirmasi dan mengikuti instruksi dari tim respon insiden."
+            },
+            {
+              "heading": "Pencegahan dan tindakan",
+              "body": "Menjaga surat kabar, menghindari pengulangan yang tidak sah dan menghormati rencana kontinuitas. Kembalikan layanan hanya setelah validasi."
+            },
+            {
+              "heading": "Untuk dipertahankan",
+              "body": "Mengabaikan mengamati gangguan, kecurigaan dan dikonfirmasi kompromi."
+            }
+          ]
+        }
+      }
     }
   ]
 }
