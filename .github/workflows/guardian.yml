@@ -12,6 +12,8 @@ on:
       - live-locales.js
       - code-intelligence.js
       - code-locales.js
+      - guardian-dashboard.js
+      - tests/guardian-dashboard.test.cjs
       - tests/code-intelligence.test.cjs
       - tests/accessibility-browser.cjs
       - .github/workflows/guardian.yml
@@ -34,6 +36,8 @@ jobs:
         with:
           name: guardian-mobile-report
           path: accessibility-report.json
+      - run: node --check guardian-dashboard.js
+      - run: node --test tests/guardian-dashboard.test.cjs
       - run: node --check code-locales.js
       - run: node --check code-intelligence.js
       - run: node --test tests/code-intelligence.test.cjs tests/live-intelligence.test.cjs
