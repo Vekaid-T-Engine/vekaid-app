@@ -1,0 +1,19 @@
+name: Restaurant demo quality
+on:
+  pull_request:
+    paths: ['demos/like-an-elephant/**', '.github/workflows/restaurant-demo.yml']
+  push:
+    branches: [main]
+    paths: ['demos/like-an-elephant/**', '.github/workflows/restaurant-demo.yml']
+permissions:
+  contents: read
+jobs:
+  check:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node --check demos/like-an-elephant/assets/site.js && node --check demos/like-an-elephant/assets/content.js
+      - run: python demos/like-an-elephant/tests/check.py
