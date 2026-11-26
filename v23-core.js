@@ -109,7 +109,7 @@ async function you(){const t=await tickets(),s=await all('skills'),reg=await nav
 function snapshot(){return new Promise((resolve,reject)=>{const names=['meta','tickets','skills','releases'],tx=db.transaction(names,'readonly'),data={};for(const name of names){const request=tx.objectStore(name).getAll();request.onsuccess=()=>{data[name]=request.result}}tx.oncomplete=()=>resolve(data);tx.onabort=()=>reject(tx.error||new Error('Lecture annulée'));tx.onerror=()=>reject(tx.error||new Error('Lecture impossible'))})}
 async function backup(){try{const data=await snapshot();const legacy={};for(const key of ['vekaid.atlas.v5.offline','vekaid.commanddeck.v4.offline','vekaid.intel.v1']){legacy[key]=localStorage.getItem(key)}const payload={format:'vekaid.backup.v23',version:V,schemaVersion:2,at:new Date().toISOString(),tickets:data.tickets,skills:data.skills,releases:data.releases,academy:data.meta.filter(x=>typeof x.id==='string'&&x.id.startsWith('academy:')),meta:data.meta,legacy:{atlas:legacy['vekaid.atlas.v5.offline'],intel:legacy['vekaid.intel.v1'],commanddeck:legacy['vekaid.commanddeck.v4.offline']}};const a=document.createElement('a'),u=URL.createObjectURL(new Blob([JSON.stringify(payload,null,2)],{type:'application/json'}));a.href=u;a.download='vekaid-backup-'+new Date().toISOString().slice(0,10)+'.json';a.click();setTimeout(()=>URL.revokeObjectURL(u),30000)}catch(e){alert('Sauvegarde impossible. Tes données n’ont pas été modifiées. Réessaie.')}}
 function palette(){const b=layer('Search VEKAID','Recherche et commandes locales','<input class="v23-search" id="q23" placeholder="Mission, skill, projet…"><div class="v23-list" id="r23"></div>'),q=$('#q23',b),r=$('#r23',b),cmd=[['Aujourd’hui','today',today],['Nouvelle mission','work',work],['Academy · bibliothèque','learn',academy],['Certification Center','learn',certificationCatalog],['Engineering Playbook','workflow',playbook],['Skills & preuves','learn',learn],['Studio image & média','work',studio],['Release & Discover','work',releaseCenter],['Agents','intel',()=>{resetLayers();window.tab?.('agents')}],['Projets','work',()=>{resetLayers();window.tab?.('projects')}],['Sécurité','intel',()=>{resetLayers();window.tab?.('security')}]];const draw=()=>{const v=q.value.toLowerCase();r.innerHTML='';cmd.filter(x=>x[0].toLowerCase().includes(v)||x[1].includes(v)).forEach(x=>{const z=document.createElement('button');z.className='v23-row';z.innerHTML='<strong>'+x[0]+'</strong><small>'+x[1]+'</small>';z.onclick=x[2];r.append(z)})};q.oninput=draw;draw();q.focus()}
-let vekaidLaunchLast=0,vekaidHiddenAt=0;
+let vekaidLaunchLast=0,vekaidHiddenAt=0,vekaidLaunchRunning=false;
 function buildLaunchIdent(){
   document.getElementById('vekaidLaunch')?.remove();
   const el=document.createElement('div');
@@ -120,13 +120,14 @@ function buildLaunchIdent(){
 }
 function playLaunchIdent(force=false,reuseExisting=false){
   const now=Date.now();
-  if(!force && now-vekaidLaunchLast<900)return;
+  if(vekaidLaunchRunning||(!force && now-vekaidLaunchLast<900))return;
+  vekaidLaunchRunning=true;
   vekaidLaunchLast=now;
   const reduce=document.documentElement.classList.contains('a11y-motion')||window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
   let el=reuseExisting?document.getElementById('vekaidLaunch'):null;
   if(!el){document.body.classList.remove('vekaid-ready');document.body.classList.add('vekaid-entering');el=buildLaunchIdent();}
   requestAnimationFrame(()=>requestAnimationFrame(()=>{
-    setTimeout(()=>{document.body.classList.remove('vekaid-entering');document.body.classList.add('vekaid-ready');requestAnimationFrame(()=>el.classList.add('is-done'));setTimeout(()=>el.remove(),reduce?180:820)},reduce?120:1260);
+    setTimeout(()=>{document.body.classList.remove('vekaid-entering');document.body.classList.add('vekaid-ready');requestAnimationFrame(()=>el.classList.add('is-done'));setTimeout(()=>{el.remove();vekaidLaunchRunning=false},reduce?220:820)},reduce?120:1260);
   }));
 }
 function installLaunchLifecycle(){playLaunchIdent(true,true)}
