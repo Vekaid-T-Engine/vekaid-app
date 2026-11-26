@@ -279,3 +279,6 @@ html body.a11y-motion :is(.app,#intel),html.a11y-motion body :is(.app,#intel){op
 #daily-feed .news-lesson:first-of-type{border-top:1px solid var(--line,#383838);padding-block-start:10px}
 #daily-feed .news-lesson summary{min-height:48px;padding-block:12px}
 #daily-feed .news-lesson[open]{padding-block-end:8px}
+
+/* Direct Intel shortcuts, no new navigation layer. */
+.intel-shortcuts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin-block:0 16px}.intel-shortcuts .v23-btn{min-height:48px;min-width:0;white-space:normal;overflow-wrap:anywhere;line-height:1.35}.v23-editorial-heading[tabindex]{scroll-margin-block-start:12px}.v23-editorial-heading:focus-visible{outline:2px solid currentColor;outline-offset:4px}html[data-a11y-size=xl] .intel-shortcuts{grid-template-columns:1fr}
