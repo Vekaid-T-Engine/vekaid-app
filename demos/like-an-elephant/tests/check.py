@@ -30,3 +30,14 @@ assert len(photos)==16
 assert set(map(int,re.findall(r'data-enlarge="(\d+)"',(root/'galerie.html').read_text())))==set(range(16))
 assert 'name="time" required disabled' in (root/'reservation.html').read_text()
 print('16 photo references and safe initial booking state verified')
+
+# Carousel regression: dedicated caption/control row, full-width image sizing, decoded-image guard.
+home=(root/'index.html').read_text()
+css=(root/'assets/site.css').read_text()
+js=(root/'assets/site.js').read_text()
+assert 'id="hero-caption"' in home
+assert home.index('class="hero-caption"') < home.index('class="hero-controls"')
+assert 'grid-template-columns:minmax(0,1fr);grid-template-rows:auto auto auto' in css
+assert 'await im.decode()' in js and 'request!==generation' in js
+assert "caption.textContent=q('figcaption',slides[index]).textContent" in js
+print('Carousel structure and synchronization guards verified')
