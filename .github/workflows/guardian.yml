@@ -9,13 +9,14 @@ on:
       - v23.css
       - index.html
       - live-intelligence.js
+      - live-locales.js
       - tests/accessibility-browser.cjs
       - .github/workflows/guardian.yml
 permissions:
   contents: read
 jobs:
   mobile:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     timeout-minutes: 15
     steps:
       - uses: actions/checkout@v4
