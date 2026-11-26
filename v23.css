@@ -38,11 +38,11 @@
 .vekaid-launch__sweep{position:absolute;inset:11%;border-radius:50%;overflow:hidden;opacity:0;animation:vekSweepIn .32s .34s ease-out forwards}
 .vekaid-launch__sweep:before{content:"";position:absolute;left:50%;top:50%;width:50%;height:1px;transform-origin:0 50%;background:linear-gradient(90deg,#ffffff72,transparent);animation:vekSweep 1.05s .34s cubic-bezier(.3,.7,.2,1) both}
 .vekaid-launch__halo{position:absolute;inset:24%;border-radius:50%;box-shadow:0 0 28px #ffffff14,0 0 70px #ffffff0b;opacity:0;animation:vekHalo .95s .36s ease-out forwards}
-.vekaid-launch__v{width:70%;height:70%;overflow:visible;transform-origin:50% 50%;animation:vekVIntro .95s .08s cubic-bezier(.16,.84,.2,1) both}
-.vekaid-launch__v path{fill:none;stroke:#f4f4f4;stroke-width:15;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:190;stroke-dashoffset:190;animation:vekDraw .72s .16s cubic-bezier(.16,.84,.2,1) forwards}
+.vekaid-launch__v{width:70%;height:70%;overflow:visible;transform-origin:50% 50%;position:relative;z-index:2;opacity:1;animation:vekVIntro .95s .08s cubic-bezier(.16,.84,.2,1) both}
+.vekaid-launch__v path{fill:none;stroke:#f4f4f4;stroke-width:15;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;animation:none}
 .vekaid-launch__brand{position:absolute;top:calc(50% + min(30vw,124px));left:50%;transform:translate3d(-50%,12px,0);font:700 10px/1 -apple-system,BlinkMacSystemFont,"SF Pro Text",system-ui,sans-serif;letter-spacing:.34em;color:#929292;white-space:nowrap;opacity:0;animation:vekBrand .42s .68s ease-out forwards}
 @keyframes vekDraw{to{stroke-dashoffset:0}}
-@keyframes vekVIntro{0%{opacity:0;transform:scale(.78)}22%{opacity:1}72%{transform:scale(1.04)}100%{opacity:1;transform:scale(1)}}
+@keyframes vekVIntro{0%{opacity:1;transform:scale(.94)}72%{opacity:1;transform:scale(1.02)}100%{opacity:1;transform:scale(1)}}
 @keyframes vekRing{0%{opacity:0;transform:scale(.7)}36%{opacity:.48}100%{opacity:0;transform:scale(1.38)}}
 @keyframes vekSweepIn{to{opacity:.6}}
 @keyframes vekSweep{0%{transform:rotate(-35deg)}100%{transform:rotate(325deg)}}
