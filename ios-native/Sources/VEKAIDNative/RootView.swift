@@ -11,6 +11,8 @@ public struct RootView: View {
     @State private var title = ""
     @State private var failed = false
     @State private var loaded = false
+    @Environment(\.accessibilityReduceMotion) private var reduceMotion
+    @State private var showIdent = true
     public init() {}
     public var body: some View {
         TabView {
@@ -41,6 +43,13 @@ public struct RootView: View {
             NavigationStack { Text("Veille — intégration à venir").navigationTitle("Intel") }.tabItem { Label("Intel", systemImage: "antenna.radiowaves.left.and.right") }
             NavigationStack { Text("Prototype natif · stockage indépendant").navigationTitle("You") }.tabItem { Label("You", systemImage: "gearshape") }
         }.tint(.primary).preferredColorScheme(.dark)
+        .overlay { if showIdent && !reduceMotion { LaunchIdent().transition(.opacity).allowsHitTesting(false) } }
+        .task(id: reduceMotion) {
+            guard showIdent else { return }
+            if !reduceMotion { try? await Task.sleep(nanoseconds: 850_000_000) }
+            guard !Task.isCancelled else { return }
+            withAnimation(reduceMotion ? nil : .easeOut(duration: 0.25)) { showIdent = false }
+        }
         .task {
             guard !loaded else { return }
             defer { loaded = true }
