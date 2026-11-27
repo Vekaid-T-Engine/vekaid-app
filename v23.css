@@ -283,3 +283,7 @@ html body.a11y-motion :is(.app,#intel),html.a11y-motion body :is(.app,#intel){op
 /* Direct Intel shortcuts, no new navigation layer. */
 .intel-shortcuts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin-block:0 16px}.intel-shortcuts .v23-btn{min-height:48px;min-width:0;white-space:normal;overflow-wrap:anywhere;line-height:1.35}.v23-editorial-heading[tabindex]{scroll-margin-block-start:12px}.v23-editorial-heading:focus-visible{outline:2px solid currentColor;outline-offset:4px}html[data-a11y-size=xl] .intel-shortcuts{grid-template-columns:1fr}
 
+
+/* V23.48: shared mobile surface hierarchy */
+:root{--v23m:#b5b5b5;--v23l:#404040;--v23s:#171717}
+.v23-panel{font-size:16px;line-height:1.55}.v23-panel .v23-note,.v23-panel small,.v23-panel .v23-muted{font-size:13px;line-height:1.5;color:var(--v23m)}.v23-section-title,.v23-k{font-size:12px;color:#b5b5b5;letter-spacing:.08em}.v23-card:not(.wide),.v23-group{border-radius:18px}.v23-dock button{font-size:11px;color:#b5b5b5}.v23-dock button.active{color:#090909}.v23-dock button:focus-visible,.v23-btn:focus-visible,.v23-row:focus-visible{outline:2px solid #fff;outline-offset:-3px}
