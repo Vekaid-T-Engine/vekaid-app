@@ -28,3 +28,19 @@
 
 /* Upright editorial emphasis, retaining the restaurant's serif identity. */
 h1 em,h2 em,h3 em{font-style:normal;font-family:inherit;font-weight:inherit;letter-spacing:inherit}
+
+/* Progressive motion, with no dependency and no hidden content on failure. */
+@media(prefers-reduced-motion:no-preference){
+.hero .slide{transition:opacity 1.4s cubic-bezier(.4,0,.2,1),visibility 0s linear 1.4s}
+.hero .slide.active{transition:opacity 1.4s cubic-bezier(.4,0,.2,1),visibility 0s}
+.hero .slide img{transform:scale(1.04)}
+.hero .slide.active img{animation:elephant-drift 9s linear both}
+@keyframes elephant-drift{from{transform:scale(1.04)}to{transform:scale(1.09)}}
+.motion-arrive{animation:elephant-arrive .85s cubic-bezier(.2,.7,.2,1) both}
+@keyframes elephant-arrive{from{opacity:.35;transform:translateY(16px)}to{opacity:1;transform:none}}
+dialog[open]{animation:elephant-arrive .32s ease-out both}
+dialog[open]::backdrop{animation:elephant-backdrop .32s ease-out both}
+@keyframes elephant-backdrop{from{opacity:0}to{opacity:1}}
+.button:active{transform:scale(.97)}
+@media(max-width:850px){.navlinks.open{animation:elephant-arrive .28s ease-out both}}
+}
