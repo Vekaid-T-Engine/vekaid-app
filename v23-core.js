@@ -123,14 +123,21 @@ function playLaunchIdent(force=false,reuseExisting=false){
   if(vekaidLaunchRunning||(!force && now-vekaidLaunchLast<900))return;
   vekaidLaunchRunning=true;
   vekaidLaunchLast=now;
-  const reduce=document.documentElement.classList.contains('a11y-motion')||window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
+  const reduce=document.documentElement.classList.contains('a11y-motion')||document.documentElement.classList.contains('motion-off')||window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
   let el=reuseExisting?document.getElementById('vekaidLaunch'):null;
   if(!el){document.body.classList.remove('vekaid-ready');document.body.classList.add('vekaid-entering');el=buildLaunchIdent();}
   requestAnimationFrame(()=>requestAnimationFrame(()=>{
     setTimeout(()=>{document.body.classList.remove('vekaid-entering');document.body.classList.add('vekaid-ready');requestAnimationFrame(()=>el.classList.add('is-done'));setTimeout(()=>{el.remove();vekaidLaunchRunning=false},reduce?220:820)},reduce?120:1260);
   }));
 }
-function installLaunchLifecycle(){playLaunchIdent(true,true)}
+function installLaunchLifecycle(){
+  playLaunchIdent(true,true);
+  document.addEventListener('visibilitychange',()=>{
+    if(document.hidden){vekaidHiddenAt=Date.now();return;}
+    if(vekaidHiddenAt&&Date.now()-vekaidHiddenAt>1500){vekaidHiddenAt=0;playLaunchIdent(true,false);}
+  });
+  window.addEventListener('pageshow',event=>{if(event.persisted&&!vekaidLaunchRunning)playLaunchIdent(true,false);});
+}
 function mount(){if($('.v23-dock'))return;const icons={
 today:'<svg class="v23-icon" viewBox="0 0 24 24"><path d="M4 10.5 12 4l8 6.5V20H4z"/><path d="M9 20v-6h6v6"/></svg>',
 work:'<svg class="v23-icon" viewBox="0 0 24 24"><rect x="4" y="6" width="16" height="14" rx="2"/><path d="M9 6V4h6v2M4 11h16"/></svg>',
