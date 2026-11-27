@@ -61,3 +61,21 @@ V23.24 expands the four offline language packs to cover the observed legacy home
 - Check real content, favicon, clear CTA, spacing, typography, keyboard and touch; no invented testimonials, usage metrics, salary claims or pricing.
 - Review distribution: meaningful title/description, public entry point, mobile journey, privacy-preserving feedback. Do not install analytics by default.
 - Career guidance must distinguish practice, evidence, certification and employment eligibility. No salary or hiring guarantees. Keep learning progress intact.
+
+## Whole-site acceptance — V2 operational reinforcement (27 November 2026)
+Derived from existing universal workflow V2 sections 3, 32–37, not an audio transcription. Applies to VEKAID, restaurant demos, Cosy Corner and future sites.
+- Inventory every route and variant; test header, footer, CTA, back/forward and direct entry from each page. A variant must not silently navigate into another variant.
+- Verify shared design tokens, typography, imagery and interactive states across every route. Capture actual screenshots at 320, 390, 430, 768 and 1440 CSS pixels; review clipping, whitespace, contrast and sticky overlays. Check keyboard, zoom, reduced motion and safe areas.
+- Exercise real JavaScript interactions, image failures, forms, menu, carousel, navigation and recovery; distinguish simulated submissions from real services.
+- Measure performance on representative pages; record method and results rather than inventing scores. Review image sizes, layout shifts, unnecessary scripts and cache behavior.
+- Check SEO metadata and semantic structure; preserve noindex for unofficial demos. Verify security and privacy according to project profile.
+- CI success alone is insufficient: record route-level evidence, screenshots, deployed URL and real Safari status separately. Unverified device or deployment status remains unverified. Block final acceptance on broken essential paths or visual regressions. Preserve rollback and existing working features.
+
+## France — legal publication gate (27 November 2026)
+Source: https://entreprendre.service-public.gouv.fr/vosdroits/F37351 and https://www.cnil.fr/fr/passer-laction/rgpd-les-premieres-etapes ; video visual sample raises legal notices, audio not transcribed.
+- Classify publisher, jurisdiction, professional/nonprofessional demo and commercial functions. Verify applicable LCEN disclosures: actual publisher identity, legal form, capital where applicable, registered address, registration, VAT where applicable, contact, hosting details and publication director where required. Never fabricate identity or expose private information without authorization.
+- Provide accessible legal/privacy links on every route. Inventory actual processing including hosting logs, external assets and local storage; document purpose, legal basis, retention, recipients and rights when applicable. Obtain prior consent for non-exempt trackers; do not install a hollow consent banner.
+- Check photo and trademark rights, applicable consumer disclosures, CGV, mediation and accessibility obligations before commercial launch. Unofficial demos must remain clearly labeled, noindex, no real orders/payments or falsely attributed publisher. Missing verified legal details or asset permission blocks commercial release; a demo label alone does not establish legal compliance.
+
+## Twenty-point consumer and privacy review — video 27 November
+Visual checklist from user video “20 choses à faire faire à Claude pour éviter un procès”; audio not transcribed. Apply conditionally, not as legal certification. Record applicable/pass/fail/unverified/N/A with rationale for each: legal notices; GDPR privacy; terms; withdrawal and exceptions; cookie policy; consent banner only where needed; lawful basis and form notices (consent only where appropriate); minimization; third-party audit; no dark patterns; no hidden fees; no fake reviews; no unsupported claims; meaningful image alt; contrast; keyboard; parental authorization where required; unsubscribe for applicable marketing; font/image licenses; deletion and rights handling. No commercial launch while required identity, rights or processing details are unverified.
