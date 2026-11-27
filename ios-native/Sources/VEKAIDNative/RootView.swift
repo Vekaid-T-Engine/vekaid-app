@@ -37,7 +37,7 @@ public struct RootView: View {
                     if failed { Text("Erreur de stockage : données conservées, modifications bloquées.").foregroundStyle(.secondary) }
                 }.navigationTitle("Work")
             }.tabItem { Label("Work", systemImage: "briefcase") }
-            NavigationStack { Text("Academy — intégration à venir").navigationTitle("Learn") }.tabItem { Label("Learn", systemImage: "graduationcap") }
+            NavigationStack { AcademyView() }.tabItem { Label("Learn", systemImage: "graduationcap") }
             NavigationStack { Text("Veille — intégration à venir").navigationTitle("Intel") }.tabItem { Label("Intel", systemImage: "antenna.radiowaves.left.and.right") }
             NavigationStack { Text("Prototype natif · stockage indépendant").navigationTitle("You") }.tabItem { Label("You", systemImage: "gearshape") }
         }.tint(.primary).preferredColorScheme(.dark)
