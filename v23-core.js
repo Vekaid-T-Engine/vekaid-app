@@ -17,31 +17,31 @@ function initLocale(){document.documentElement.lang=locale;localize(document.bod
 function openDB(){return new Promise((ok,no)=>{const r=indexedDB.open(DB,2);r.onupgradeneeded=()=>{for(const n of ['meta','tickets','skills','releases'])if(!r.result.objectStoreNames.contains(n))r.result.createObjectStore(n,{keyPath:'id'})};r.onsuccess=()=>{db=r.result;db.onversionchange=()=>db.close();ok()};r.onerror=()=>no(r.error)})}
 function all(s){return new Promise((ok,no)=>{const r=db.transaction(s).objectStore(s).getAll();r.onsuccess=()=>ok(r.result);r.onerror=()=>no(r.error)})}function put(s,v){return new Promise((ok,no)=>{const r=db.transaction(s,'readwrite').objectStore(s).put(v);r.transaction.oncomplete=()=>ok(v);r.transaction.onabort=()=>no(r.transaction.error||new Error('Transaction annulée'));r.onerror=()=>no(r.error)})}
 function enhanceVekForm(form,{requiredName,readyText='Prêt',errorText='Champ requis'}={}){
-  if(!form)return;
-  const field=requiredName?form.elements[requiredName]:null;
-  if(field){
-    const wrap=field.closest('.v23-field');
-    let feedback=document.createElement('small');
-    feedback.className='v23-inline-feedback';
-    wrap?.append(feedback);
-    const assess=(showError=false)=>{
-      const ok=String(field.value||'').trim().length>0;
-      wrap?.classList.toggle('is-valid',ok);
-      wrap?.classList.toggle('is-invalid',!ok&&showError);
-      feedback.textContent=ok?readyText:(showError?errorText:'');
-      return ok;
-    };
-    field.addEventListener('input',()=>assess(false));
-    field.addEventListener('blur',()=>assess(true));
-    form.__vekValidate=()=>assess(true);
-  }
+if(!form)return;
+const field=requiredName?form.elements[requiredName]:null;
+if(field){
+const wrap=field.closest('.v23-field');
+let feedback=document.createElement('small');
+feedback.className='v23-inline-feedback';
+wrap?.append(feedback);
+const assess=(showError=false)=>{
+const ok=String(field.value||'').trim().length>0;
+wrap?.classList.toggle('is-valid',ok);
+wrap?.classList.toggle('is-invalid',!ok&&showError);
+feedback.textContent=ok?readyText:(showError?errorText:'');
+return ok;
+};
+field.addEventListener('input',()=>assess(false));
+field.addEventListener('blur',()=>assess(true));
+form.__vekValidate=()=>assess(true);
+}
 }
 function submitState(form,label){
-  const btn=form?.querySelector('button[type="submit"],button:not([type])');
-  if(!btn)return()=>{};
-  const original=btn.textContent;
-  btn.disabled=true;btn.setAttribute('aria-busy','true');btn.classList.add('is-busy');btn.textContent=label;
-  return(success=true)=>{btn.disabled=false;btn.removeAttribute('aria-busy');btn.classList.remove('is-busy');btn.classList.toggle('is-success',success);btn.textContent=success?'Enregistré ✓':original;};
+const btn=form?.querySelector('button[type="submit"],button:not([type])');
+if(!btn)return()=>{};
+const original=btn.textContent;
+btn.disabled=true;btn.setAttribute('aria-busy','true');btn.classList.add('is-busy');btn.textContent=label;
+return(success=true)=>{btn.disabled=false;btn.removeAttribute('aria-busy');btn.classList.remove('is-busy');btn.classList.toggle('is-success',success);btn.textContent=success?'Enregistré ✓':original;};
 }
 const layerStack=[];let rootOpening=false;
 function resetLayers(){for(const p of layerStack)p.remove();layerStack.length=0;document.querySelectorAll('.v23-layer').forEach(p=>p.remove());window.VEKAID_ACCESSIBILITY?.stop()}
@@ -111,33 +111,26 @@ async function backup(){try{const data=await snapshot();const legacy={};for(cons
 function palette(){const b=layer('Search VEKAID','Recherche et commandes locales','<input class="v23-search" id="q23" placeholder="Mission, skill, projet…"><div class="v23-list" id="r23"></div>'),q=$('#q23',b),r=$('#r23',b),cmd=[['Aujourd’hui','today',today],['Nouvelle mission','work',work],['Academy · bibliothèque','learn',academy],['Certification Center','learn',certificationCatalog],['Engineering Playbook','workflow',playbook],['Skills & preuves','learn',learn],['Studio image & média','work',studio],['Release & Discover','work',releaseCenter],['Agents','intel',()=>{resetLayers();window.tab?.('agents')}],['Projets','work',()=>{resetLayers();window.tab?.('projects')}],['Sécurité','intel',()=>{resetLayers();window.tab?.('security')}]];const draw=()=>{const v=q.value.toLowerCase();r.innerHTML='';cmd.filter(x=>x[0].toLowerCase().includes(v)||x[1].includes(v)).forEach(x=>{const z=document.createElement('button');z.className='v23-row';z.innerHTML='<strong>'+x[0]+'</strong><small>'+x[1]+'</small>';z.onclick=x[2];r.append(z)})};q.oninput=draw;draw();q.focus()}
 let vekaidLaunchLast=0,vekaidHiddenAt=0,vekaidLaunchRunning=false;
 function buildLaunchIdent(){
-  document.getElementById('vekaidLaunch')?.remove();
-  const el=document.createElement('div');
-  el.id='vekaidLaunch';el.className='vekaid-launch';el.setAttribute('aria-hidden','true');
-  el.innerHTML='<div class="vekaid-launch__stage"><div class="vekaid-launch__radar"><div class="vekaid-launch__ring"></div><div class="vekaid-launch__ring r2"></div><div class="vekaid-launch__sweep"></div></div><div class="vekaid-launch__halo"></div><svg class="vekaid-launch__v" viewBox="0 0 160 160" aria-hidden="true"><path class="left" d="M34 34 L80 128"></path><path class="right" d="M126 34 L80 128"></path></svg><div class="vekaid-launch__brand">VEKAID</div></div>';
-  document.body.append(el);
-  return el;
+document.getElementById('vekaidLaunch')?.remove();
+const el=document.createElement('div');
+el.id='vekaidLaunch';el.className='vekaid-launch';el.setAttribute('aria-hidden','true');
+el.innerHTML='<div class="vekaid-launch__stage"><div class="vekaid-launch__radar"><div class="vekaid-launch__ring"></div><div class="vekaid-launch__ring r2"></div><div class="vekaid-launch__sweep"></div></div><div class="vekaid-launch__halo"></div><svg class="vekaid-launch__v" viewBox="0 0 160 160" aria-hidden="true"><path class="left" d="M34 34 L80 128"></path><path class="right" d="M126 34 L80 128"></path></svg><div class="vekaid-launch__brand">VEKAID</div></div>';
+document.body.append(el);
+return el;
 }
 function playLaunchIdent(force=false,reuseExisting=false){
-  const now=Date.now();
-  if(vekaidLaunchRunning||(!force && now-vekaidLaunchLast<900))return;
-  vekaidLaunchRunning=true;
-  vekaidLaunchLast=now;
-  const reduce=document.documentElement.classList.contains('a11y-motion')||document.documentElement.classList.contains('motion-off')||window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
-  let el=reuseExisting?document.getElementById('vekaidLaunch'):null;
-  if(!el){document.body.classList.remove('vekaid-ready');document.body.classList.add('vekaid-entering');el=buildLaunchIdent();}
-  requestAnimationFrame(()=>requestAnimationFrame(()=>{
-    setTimeout(()=>{document.body.classList.remove('vekaid-entering');document.body.classList.add('vekaid-ready');requestAnimationFrame(()=>el.classList.add('is-done'));setTimeout(()=>{el.remove();vekaidLaunchRunning=false},reduce?220:820)},reduce?120:1260);
-  }));
+const now=Date.now();
+if(vekaidLaunchRunning||(!force && now-vekaidLaunchLast<900))return;
+vekaidLaunchRunning=true;
+vekaidLaunchLast=now;
+const reduce=document.documentElement.classList.contains('a11y-motion')||document.documentElement.classList.contains('motion-off')||window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
+let el=reuseExisting?document.getElementById('vekaidLaunch'):null;
+if(!el){document.body.classList.remove('vekaid-ready');document.body.classList.add('vekaid-entering');el=buildLaunchIdent();}
+requestAnimationFrame(()=>requestAnimationFrame(()=>{
+setTimeout(()=>{document.body.classList.remove('vekaid-entering');document.body.classList.add('vekaid-ready');requestAnimationFrame(()=>el.classList.add('is-done'));setTimeout(()=>{el.remove();vekaidLaunchRunning=false},reduce?220:820)},reduce?120:1260);
+}));
 }
-function installLaunchLifecycle(){
-  playLaunchIdent(true,true);
-  document.addEventListener('visibilitychange',()=>{
-    if(document.hidden){vekaidHiddenAt=Date.now();return;}
-    if(vekaidHiddenAt&&Date.now()-vekaidHiddenAt>1500){vekaidHiddenAt=0;playLaunchIdent(true,false);}
-  });
-  window.addEventListener('pageshow',event=>{if(event.persisted&&!vekaidLaunchRunning)playLaunchIdent(true,false);});
-}
+function installLaunchLifecycle(){playLaunchIdent(true,true);document.addEventListener('visibilitychange',()=>{if(document.hidden)vekaidHiddenAt=Date.now();else if(Date.now()-vekaidHiddenAt>1500)playLaunchIdent(true)});}
 function mount(){if($('.v23-dock'))return;const icons={
 today:'<svg class="v23-icon" viewBox="0 0 24 24"><path d="M4 10.5 12 4l8 6.5V20H4z"/><path d="M9 20v-6h6v6"/></svg>',
 work:'<svg class="v23-icon" viewBox="0 0 24 24"><rect x="4" y="6" width="16" height="14" rx="2"/><path d="M9 6V4h6v2M4 11h16"/></svg>',
