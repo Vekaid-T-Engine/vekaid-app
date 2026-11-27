@@ -119,19 +119,24 @@ function buildLaunchIdent(){
   return el;
 }
 function playLaunchIdent(force=false,reuseExisting=false){
-  if(vekaidLaunchRunning)return;
-  vekaidLaunchRunning=true;
-  const reduce=document.documentElement.classList.contains('a11y-motion')||document.documentElement.classList.contains('motion-off')||window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
-  const el=(reuseExisting&&document.getElementById('vekaidLaunch'))||buildLaunchIdent();
-  let finished=false;
-  const finish=()=>{if(finished)return;finished=true;document.body.classList.remove('vekaid-entering');document.body.classList.add('vekaid-ready');el.classList.add('is-done');setTimeout(()=>{el.remove();vekaidLaunchRunning=false},reduce?0:280);};
-  setTimeout(finish,reduce?0:1050);
+if(vekaidLaunchRunning)return;
+vekaidLaunchRunning=true;
+const reduce=document.documentElement.matches('.a11y-motion,.motion-off')||matchMedia('(prefers-reduced-motion: reduce)').matches;
+const el=(reuseExisting&&document.getElementById('vekaidLaunch'))||buildLaunchIdent();
+setTimeout(()=>{
+document.body.classList.remove('vekaid-entering');
+document.body.classList.add('vekaid-ready');
+el.classList.add('is-done');
+setTimeout(()=>{el.remove();vekaidLaunchRunning=false},reduce?0:280);
+},reduce?0:1050);
 }
 function installLaunchLifecycle(){
-  let seen=false;
-  try{seen=sessionStorage.getItem('vekaid.launch.seen')==='1';sessionStorage.setItem('vekaid.launch.seen','1')}catch{}
-  if(seen){document.getElementById('vekaidLaunch')?.remove();document.body.classList.remove('vekaid-entering');document.body.classList.add('vekaid-ready');return}
-  playLaunchIdent(true,true);
+try{if(sessionStorage.getItem('vekaid.launch.seen')){
+document.getElementById('vekaidLaunch')?.remove();
+document.body.classList.remove('vekaid-entering');
+document.body.classList.add('vekaid-ready');return}
+sessionStorage.setItem('vekaid.launch.seen','1')}catch{}
+playLaunchIdent(true,true)
 }
 function mount(){if($('.v23-dock'))return;const icons={
 today:'<svg class="v23-icon" viewBox="0 0 24 24"><path d="M4 10.5 12 4l8 6.5V20H4z"/><path d="M9 20v-6h6v6"/></svg>',
