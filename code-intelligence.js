@@ -1,6 +1,19 @@
 (function(root){'use strict';
 const locales=typeof module!=='undefined'&&module.exports?require('./code-locales.js'):root.VEKAID_CODE_LOCALES;
 const rules=[
+[/^\s*import json\b/,"Le module json convertit les objets Python en JSON et inversement ; dumps produit une chaîne, loads la relit.","The json module converts Python objects to and from JSON."],
+[/from datetime import/,"datetime représente une date et une heure ; timezone.utc permet un horodatage UTC explicite.","datetime represents a timestamp; timezone.utc provides explicit UTC."],
+[/^\s*["'][^"']+["']\s*:/,"Entrée de dictionnaire : la clé identifie un élément et la valeur contient ses données. Dans une table de permissions, un ensemble représente les droits distincts.","Dictionary entry: a key maps to a value; a permission set contains distinct rights."],
+[/\bbool\s*\(/,"Convertit une valeur en booléen. Une collection vide est fausse ; avec and, la suite est ignorée si la première condition est fausse.","Converts a value to boolean; empty collections are false and and short-circuits."],
+[/\ball\s*\(/,"all vérifie que tous les éléments sont vrais. Attention : all sur une collection vide renvoie True.","all checks every element; an empty iterable returns True."],
+[/\.get\s*\(/,"Recherche une clé dans un dictionnaire et utilise la valeur par défaut si elle manque. Un ensemble vide peut matérialiser le refus par défaut.","Looks up a dictionary key with a fallback; an empty set can implement default denial."],
+[/\b\w+\s+in\s+\w+/,"in teste l’appartenance à une collection ; dans un générateur, for parcourt les éléments sans construire une liste complète.","in tests membership; a generator iterates without building a full list."],
+[/datetime\.now|timezone\.utc|\.isoformat\s*\(/,"Construit ou formate un horodatage ; UTC évite les ambiguïtés de fuseau horaire.","Builds or formats a timestamp; UTC avoids timezone ambiguity."],
+[/\bif\b.*\belse\b/,"Expression conditionnelle : choisit une valeur selon une condition.","Conditional expression selects a value based on a condition."],
+[/^\s*with\s+open\s*\(/,"Gestionnaire de contexte : ouvre un fichier et garantit sa fermeture. Le mode a ajoute à la fin ; vérifier les permissions et les erreurs d’écriture.","Context manager closes the file; append mode adds records. Check permissions and write errors."],
+[/\.write\s*\(|json\.dumps\s*\(/,"Écrit des données ; json.dumps sérialise un objet. Un saut de ligne entre objets forme un journal JSONL.","Writes data; json.dumps serializes an object. Newline-separated objects form JSONL."],
+[/^\s*assert\b/,"Assertion de test : échoue si la condition est fausse. Python peut désactiver les assertions en mode optimisé ; préférer unittest ou pytest pour les tests professionnels.","Assertion fails when false; optimized Python can disable assertions. Prefer unittest or pytest."],
+[/^\s*[}\])]+[,)]*\s*$/,"Ferme une structure ou un appel multiligne ; interpréter avec les lignes précédentes.","Closes a multiline structure or call; interpret with preceding lines."],
 [/^\s*(?:import\s+\w+|from\s+\S+\s+import\s+)/,'Importe des modules pour réutiliser leurs fonctionnalités.','Imports modules to reuse their functionality.'],
 [/^\s*(?:const|let|var)\s+\w+/,'Déclare une variable ou une constante.','Declares a variable or constant.'],
 [/^\s*(?:def|function)\s+\w+/,'Définit une fonction réutilisable ; son corps ne s’exécute que lorsqu’elle est appelée.','Defines a reusable function; its body runs when called.'],
