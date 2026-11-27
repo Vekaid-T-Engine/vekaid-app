@@ -12,10 +12,11 @@ body.vekaid-ready .app,body.vekaid-ready #intel,body.vekaid-ready .v20-field{opa
 #vekaidLaunch .vekaid-launch__sweep{position:absolute;inset:11%;border-radius:50%;overflow:hidden;opacity:0;animation:vekSweepIn .32s .34s ease-out forwards}
 #vekaidLaunch .vekaid-launch__sweep:before{content:"";position:absolute;left:50%;top:50%;width:50%;height:1px;transform-origin:0 50%;background:linear-gradient(90deg,#ffffff72,transparent);animation:vekSweep 1.05s .34s cubic-bezier(.3,.7,.2,1) both}
 #vekaidLaunch .vekaid-launch__v{width:70%;height:70%;overflow:visible;transform-origin:50% 50%;position:relative;z-index:2;opacity:1;animation:vekVIntro .95s .08s cubic-bezier(.16,.84,.2,1) both}
-#vekaidLaunch .vekaid-launch__v path{fill:none;stroke:#f4f4f4;stroke-width:15;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:110;stroke-dashoffset:110;animation:vekDraw .65s .08s ease-out both}
+#vekaidLaunch .vekaid-launch__v path{fill:none;stroke:#f4f4f4;stroke-width:15;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;animation:vekSilver .85s ease-out both}
 #vekaidLaunch .vekaid-launch__halo{position:absolute;inset:24%;border-radius:50%;box-shadow:0 0 28px #ffffff14,0 0 70px #ffffff0b;opacity:0;animation:vekHalo .95s .36s ease-out forwards}
 #vekaidLaunch .vekaid-launch__brand{position:absolute;top:calc(50% + min(30vw,124px));left:50%;transform:translate3d(-50%,12px,0);font:700 10px/1 -apple-system,BlinkMacSystemFont,"SF Pro Text",system-ui,sans-serif;letter-spacing:.34em;color:#ddd;white-space:nowrap;opacity:0;animation:vekBrand .42s .68s ease-out forwards}
 #vekaidLaunch.is-done{pointer-events:none;animation:vekLaunchOut .25s ease-out forwards}
+@keyframes vekSilver{0%{stroke:#aaa}55%{stroke:#fff}100%{stroke:#f4f4f4}}
 @keyframes vekDraw{to{stroke-dashoffset:0}}
 @keyframes vekVIntro{0%{opacity:1;transform:scale(.94)}72%{opacity:1;transform:scale(1.02)}100%{opacity:1;transform:scale(1)}}
 @keyframes vekRing{0%{opacity:0;transform:scale(.7)}36%{opacity:.48}100%{opacity:0;transform:scale(1.38)}}
