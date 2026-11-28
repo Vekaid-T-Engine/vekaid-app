@@ -17,7 +17,7 @@ class BridgeError extends Error {
 async function fetchSnapshot(endpoint,token,signal){
  const response=await fetch(endpoint,{headers:{Authorization:'Bearer '+token},cache:'no-store',credentials:'omit',redirect:'error',referrerPolicy:'no-referrer',signal});
  if(!response.ok)throw new BridgeError(response.status===401?'auth':response.status===403?'origin':response.status===503?'snapshot':'http');
- const length=response.headers.get('Content-Length');
+ const length=(response.headers?.get?.('Content-Length')??null);
  if(length!==null&&(!/^\d+$/.test(length)||Number(length)>65536))throw new BridgeError('snapshot');
  const reader=response.body?.getReader?.();
  if(!reader){
@@ -106,8 +106,8 @@ function liveIntelligence({locale,layer,$}){
   bridge.next=0;
   poll();
  };
- window.addEventListener('online',resume);
- document.addEventListener('visibilitychange',resume);
+ window.addEventListener?.('online',resume);
+ document.addEventListener?.('visibilitychange',resume);
  const agents=make('section','',root,'live-card');make('h3',t('IA / Agents','AI / Agents'),agents);
  const rows=make('div','',agents,'live-providers');
  const routing=make('p','',agents,'live-muted');
@@ -141,7 +141,7 @@ function liveIntelligence({locale,layer,$}){
  clear.disabled=!snapshot;
  }
  input.onchange=async()=>{const ticket=++revision;const file=input.files[0];if(!file)return;try{if(file.size>65536)throw Error('Size');const raw=await file.text();if(ticket!==revision||!root.isConnected)return;const incoming=JSON.parse(raw);if(incoming?.format==='vekaid.diagnostic.mission.v1'){const mission=window.VEKAID_AUTONOMY_DIAGNOSTIC.readMissionStatus(incoming);feedback.textContent=t('Mission importée','Imported mission')+' · '+mission.id+' · '+t(...importedMissionStates[mission.state]);return}const next=acceptSnapshot(snapshot,incoming);localStorage.setItem(key,JSON.stringify(next));snapshot=next;source='local';feedback.textContent='';render()}catch{if(ticket===revision&&root.isConnected)feedback.textContent=t('Rapport refusé. Dernière observation conservée.','Report rejected. Previous observation retained.')}finally{if(ticket===revision)input.value=''}};
- render();if(sessionPairing){bridge={...sessionPairing,next:0};address.value=new URL(bridge.endpoint).origin;connect.disabled=true;disconnect.disabled=false;poll()}const timer=setInterval(()=>{if(!root.isConnected){stopBridge(false);window.removeEventListener('online',resume);document.removeEventListener('visibilitychange',resume);clearInterval(timer);return}if(isStale(snapshot)!==wasStale)render();if(bridge&&Date.now()>=bridge.next)poll()},1000);
+ render();if(sessionPairing){bridge={...sessionPairing,next:0};address.value=new URL(bridge.endpoint).origin;connect.disabled=true;disconnect.disabled=false;poll()}const timer=setInterval(()=>{if(!root.isConnected){stopBridge(false);window.removeEventListener?.('online',resume);document.removeEventListener?.('visibilitychange',resume);clearInterval(timer);return}if(isStale(snapshot)!==wasStale)render();if(bridge&&Date.now()>=bridge.next)poll()},1000);
 }
 window.VEKAID_LIVE=Object.freeze({open:liveIntelligence,validate,isStale,acceptSnapshot,bridgeURL,fetchSnapshot,rememberSnapshot,retryDelay,translate,languages:Object.freeze(languages.slice())});
 })();
