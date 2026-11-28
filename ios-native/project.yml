@@ -1,0 +1,22 @@
+name: VEKAID
+options:
+  deploymentTarget:
+    iOS: "16.0"
+packages:
+  VEKAIDNative:
+    path: .
+targets:
+  VEKAID:
+    type: application
+    platform: iOS
+    sources: [App]
+    dependencies:
+      - package: VEKAIDNative
+        product: VEKAIDNative
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.vekaid.app
+        GENERATE_INFOPLIST_FILE: YES
+        INFOPLIST_KEY_CFBundleDisplayName: VEKAID
+        INFOPLIST_KEY_UILaunchScreen_Generation: YES
+        TARGETED_DEVICE_FAMILY: "1,2"

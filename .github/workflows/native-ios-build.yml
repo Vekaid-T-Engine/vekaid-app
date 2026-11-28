@@ -1,0 +1,39 @@
+name: Native iOS build
+on:
+  pull_request:
+    paths:
+      - 'ios-native/**'
+      - '.github/workflows/native-ios-build.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  build:
+    runs-on: macos-15
+    timeout-minutes: 20
+    defaults:
+      run:
+        working-directory: ios-native
+    steps:
+      - uses: actions/checkout@v4
+      - name: Inspect Xcode
+        run: xcodebuild -version && xcrun simctl list devices available
+      - name: Compile SwiftUI package for iOS Simulator
+        run: xcodebuild -scheme VEKAIDNative -destination 'generic/platform=iOS Simulator' CODE_SIGNING_ALLOWED=NO build
+      - name: Test on available iPhone simulator
+        run: |
+          DEVICE=$(xcrun simctl list devices available -j | python3 -c 'import json,sys; d=json.load(sys.stdin)["devices"]; print(next(x["udid"] for k,v in d.items() if "iOS" in k for x in v if x["name"].startswith("iPhone")))')
+          xcodebuild -scheme VEKAIDNative -destination "platform=iOS Simulator,id=$DEVICE" CODE_SIGNING_ALLOWED=NO test
+      - name: Generate Xcode application project
+        run: |
+          brew list xcodegen >/dev/null 2>&1 || brew install xcodegen
+          xcodegen generate
+      - name: Build native application
+        run: xcodebuild -project VEKAID.xcodeproj -scheme VEKAID -destination 'generic/platform=iOS Simulator' -derivedDataPath app-build CODE_SIGNING_ALLOWED=NO build
+      - name: Package simulator application
+        run: ditto -c -k --keepParent app-build/Build/Products/Debug-iphonesimulator/VEKAID.app VEKAID-simulator.zip
+      - uses: actions/upload-artifact@v4
+        with:
+          name: VEKAID-iOS-Simulator
+          path: ios-native/VEKAID-simulator.zip
+          if-no-files-found: error
