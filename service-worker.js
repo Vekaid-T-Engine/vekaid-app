@@ -8,7 +8,7 @@ self.addEventListener('fetch',e=>{
   // Independent demos must never use the PWA shell cache or offline fallback.
   if(u.pathname.startsWith(new URL('./demos/',self.registration.scope).pathname))return;
   if(u.pathname.endsWith('/daily-briefing.json')||u.pathname.endsWith('/release.json'))return;
-  const appAsset=u.pathname.endsWith('/index.html')||u.pathname.endsWith('/v23.css')||u.pathname.endsWith('/guardian-dashboard.js')||u.pathname.endsWith('/v23-core.js')||u.pathname.endsWith('/code-locales.js')||u.pathname.endsWith('/code-intelligence.js')||u.pathname.endsWith('/live-locales.js')||u.pathname.endsWith('/live-intelligence.js')||u.pathname.endsWith('/locale-lessons.js')||u.pathname.endsWith('/playbook.js')||u.pathname.endsWith('/playbook.md')||u.pathname.endsWith('/certifications.js')||u.pathname.endsWith('/manifest.webmanifest')||r.mode==='navigate';
+  const appAsset=u.pathname.endsWith('/index.html')||u.pathname.endsWith('/v23.css')||u.pathname.endsWith('/security-center.js')||u.pathname.endsWith('/guardian-dashboard.js')||u.pathname.endsWith('/v23-core.js')||u.pathname.endsWith('/code-locales.js')||u.pathname.endsWith('/code-intelligence.js')||u.pathname.endsWith('/live-locales.js')||u.pathname.endsWith('/live-intelligence.js')||u.pathname.endsWith('/locale-lessons.js')||u.pathname.endsWith('/playbook.js')||u.pathname.endsWith('/playbook.md')||u.pathname.endsWith('/certifications.js')||u.pathname.endsWith('/manifest.webmanifest')||r.mode==='navigate';
   if(appAsset){
     e.respondWith(fetch(r,{cache:'no-store'}).then(res=>{if(res&&res.ok)caches.open(CACHE).then(c=>c.put(r,res.clone()));return res}).catch(()=>caches.match(r).then(x=>x||(r.mode==='navigate'?caches.match('./index.html'):Response.error()))));
     return;
