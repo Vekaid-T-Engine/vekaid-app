@@ -1,0 +1,67 @@
+name: Restaurant commercial films
+on: [pull_request]
+permissions:
+  contents: read
+jobs:
+  record:
+    if: github.head_ref == 'media/restaurant-real-capture'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm install --no-save --package-lock=false playwright@1.56.1
+      - run: sudo apt-get update && sudo apt-get install -y ffmpeg
+      - run: npx playwright install --with-deps chromium
+      - run: |
+          mkdir -p films raw
+          python3 -m http.server 8765 > /tmp/restaurant-http.log 2>&1 &
+          sleep 2
+          cat > capture.cjs <<'EOF'
+          const {chromium}=require('playwright');
+          const fs=require('fs');
+          (async()=>{
+            const browser=await chromium.launch();
+            for(const [version,entry] of [['V1','index.html'],['V2','premium-preview.html']]){
+              for(const [mode,width,height] of [['desktop',1920,1080],['mobile',390,844]]){
+                const ctx=await browser.newContext({viewport:{width,height},isMobile:mode==='mobile',hasTouch:mode==='mobile',recordVideo:{dir:'raw',size:{width,height}}});
+                const page=await ctx.newPage();
+                const url='http://127.0.0.1:8765/demos/like-an-elephant/'+entry;
+                const response=await page.goto(url,{waitUntil:'domcontentloaded',timeout:45000});
+                if(!response.ok()) throw Error('HTTP '+response.status());
+                await page.locator('main').waitFor();
+                await page.waitForTimeout(4500);
+                for(let i=0;i<8;i++){await page.evaluate(()=>window.scrollBy({top:innerHeight*.72,behavior:'smooth'}));await page.waitForTimeout(2300);}
+                await page.evaluate(()=>window.scrollTo(0,0));
+                await page.waitForTimeout(1000);
+                for(const target of [version==='V1'?'carte.html':'premium-carte.html',version==='V1'?'galerie.html':'premium-galerie.html',version==='V1'?'reservation.html':'premium-reservation.html']){
+                  const res=await page.goto(new URL(target,url).href,{waitUntil:'domcontentloaded'});
+                  if(!res.ok()) throw Error('HTTP '+res.status());
+                  await page.waitForTimeout(2500);
+                  if(target.includes('galerie')){for(let i=0;i<7;i++){await page.evaluate(()=>window.scrollBy({top:innerHeight*.75,behavior:'smooth'}));await page.waitForTimeout(1600);}}
+                  await page.evaluate(()=>window.scrollBy({top:innerHeight*.6,behavior:'smooth'}));
+                  await page.waitForTimeout(2200);
+                }
+                const video=page.video();await ctx.close();await video.saveAs('raw/'+version+'-'+mode+'.webm');
+              }
+            }
+            await browser.close();
+          })().catch(e=>{console.error(e);process.exit(1)});
+          EOF
+          node capture.cjs
+          for v in V1 V2; do
+            ffmpeg -y -i raw/$v-desktop.webm -i raw/$v-mobile.webm -filter_complex "[0:v]scale=1920:1080:force_original_aspect_ratio=decrease,pad=1920:1080:(ow-iw)/2:(oh-ih)/2,setsar=1,fps=30[d];[1:v]scale=1920:1080:force_original_aspect_ratio=decrease,pad=1920:1080:(ow-iw)/2:(oh-ih)/2,setsar=1,fps=30[m];[d][m]concat=n=2:v=1:a=0,drawtext=text='Demonstration confidentielle - Like An Elephant':fontsize=24:fontcolor=white:box=1:boxcolor=black@0.7:x=30:y=h-th-30[out]" -map '[out]' -c:v libx264 -pix_fmt yuv420p -movflags +faststart films/$v.mp4
+            ffprobe -v error -show_entries format=duration,size films/$v.mp4
+          done
+          for v in V1 V2; do
+            ffmpeg -y -i raw/$v-desktop.webm -c:v libx264 -pix_fmt yuv420p -movflags +faststart films/$v-desktop.mp4
+            ffmpeg -y -i raw/$v-mobile.webm -c:v libx264 -pix_fmt yuv420p -movflags +faststart films/$v-mobile.mp4
+          done
+      - uses: actions/upload-artifact@v4
+        with:
+          name: restaurant-commercial-films
+          path: films/*.mp4
+          retention-days: 7
+          if-no-files-found: error
