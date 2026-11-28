@@ -1,0 +1,51 @@
+name: Official panoramic hero audit
+on:
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  audit:
+    runs-on: ubuntu-24.04
+    steps:
+      - run: pip install pillow beautifulsoup4
+      - shell: python
+        run: |
+          import urllib.request, re, io, html
+          from urllib.parse import urljoin
+          from PIL import Image
+          from bs4 import BeautifulSoup
+          base='https://www.restaurantlikeanelephant.fr/'
+          def get(u):
+            return urllib.request.urlopen(urllib.request.Request(u,headers={'User-Agent':'Mozilla/5.0'}),timeout=20).read()
+          raw=get(base).decode('utf-8','replace')
+          print('HTML image context:', '\n'.join(x[:1000] for x in raw.splitlines() if re.search(r'hero|header|background-image|og:image|data-src|zenchef.com',x,re.I))[:24000],flush=True)
+          soup=BeautifulSoup(raw,'html.parser')
+          candidates=set()
+          for tag in soup.find_all(True):
+            for k,v in tag.attrs.items():
+              if isinstance(v,str) and ('image' in k or 'src' in k or k=='style' or k=='content'):
+                for u in re.findall(r'https?://[^\s"\'<>(),;]+',v):
+                  if 'zenchef' in u or 'restaurantlikeanelephant' in u: candidates.add(u)
+          print('Candidate attributes:', sorted(candidates),flush=True)
+          for u in re.findall(r'[^\s"\'<>(),]+\.(?:jpg|jpeg|png|webp)(?:\?[^\s"\'<>(),]*)?',raw,re.I):
+            candidates.add(urljoin(base,html.unescape(u)))
+          for link in soup.select('link[rel=stylesheet][href]'):
+            try:
+              url=urljoin(base,link['href'])
+              for u in re.findall(r'url\(["\']?([^)"\']+)\)?',get(url).decode('utf-8','replace')):
+                if re.search(r'\.(jpg|jpeg|webp|png)',u,re.I): candidates.add(urljoin(url,u))
+            except Exception: pass
+          found=[]
+          for u in sorted(candidates):
+            if not u.startswith('https://'): continue
+            try:
+              im=Image.open(io.BytesIO(get(u)))
+              w,h=im.size
+              print('IMAGE',w,h,u,flush=True)
+              if w>=1400 and w/h>=1.3:
+                found.append((w,h,u))
+                print(w,h,u,flush=True)
+            except Exception as e: print('FAILED',u,str(e),flush=True)
+          if not found: raise SystemExit('No verified landscape image found')
