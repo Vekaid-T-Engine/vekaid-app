@@ -1,0 +1,28 @@
+name: Daily briefing freshness
+on:
+  schedule:
+    - cron: '30 8 * * *'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  freshness:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: |
+          python - <<'PY'
+          import json
+          from datetime import datetime
+          from zoneinfo import ZoneInfo
+          from pathlib import Path
+          tz = ZoneInfo('Europe/Paris')
+          data = json.loads(Path('daily-briefing.json').read_text())
+          stamp = datetime.fromisoformat(data['generatedAt'].replace('Z', '+00:00'))
+          now = datetime.now(tz)
+          assert stamp.tzinfo is not None
+          assert stamp <= now, 'Future briefing timestamp'
+          assert stamp.astimezone(tz).date() == now.date(), 'Daily briefing not published today'
+          assert isinstance(data['items'], list) and data['items'], 'Empty briefing'
+          print('Daily briefing publication date verified:', stamp)
+          PY
