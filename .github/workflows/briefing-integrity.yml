@@ -1,0 +1,52 @@
+name: Briefing publication integrity
+on:
+  pull_request:
+    paths: ['daily-briefing.json', '.github/workflows/briefing-integrity.yml']
+permissions:
+  contents: read
+jobs:
+  integrity:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - env:
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+        run: |
+          python - <<'PY'
+          import json, os, subprocess
+          from datetime import datetime, timedelta, timezone, date
+          from urllib.parse import urlsplit
+          from pathlib import Path
+          old = json.loads(subprocess.check_output(['git','show',os.environ['BASE_SHA']+':daily-briefing.json']))
+          new = json.loads(Path('daily-briefing.json').read_text())
+          if new == old:
+              print('Existing edition unchanged; no publication claimed')
+              raise SystemExit(0)
+          stamp = datetime.fromisoformat(new['generatedAt'].replace('Z','+00:00'))
+          now = datetime.now(timezone.utc)
+          assert now-timedelta(hours=24) <= stamp <= now
+          assert stamp > datetime.fromisoformat(old['generatedAt'].replace('Z','+00:00'))
+          assert new['version'] == old['version']
+          assert 4 <= len(new['items']) <= 5
+          langs = {'en','de','zh-Hans','es','it','pt','ja','ko','ar','ru','hi','tr','vi','nl','id'}
+          urls = set()
+          previous = {i['url'] for i in old['items']}
+          for i in new['items']:
+              u = urlsplit(i['url'])
+              assert u.scheme == 'https' and u.hostname and not u.username and not u.password
+              assert i['url'] not in urls
+              urls.add(i['url'])
+              assert stamp.date()-timedelta(days=1) <= date.fromisoformat(i['date']) <= stamp.date()
+              assert all(isinstance(i[k],str) and i[k].strip() for k in ('title','summary','category','source'))
+              assert set(i['translations']) >= langs
+              for item in [i]+[i['translations'][l] for l in langs]:
+                  assert all(isinstance(item[k],str) and item[k].strip() for k in ('title','summary','category'))
+                  assert len(item['sections']) >= 6
+                  assert all(s['heading'].strip() and s['body'].strip() for s in item['sections'])
+          assert urls - previous, 'No new source URLs'
+          print('Publication structure validated; source accuracy requires editorial verification')
+          PY
