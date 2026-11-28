@@ -8,6 +8,8 @@ on:
       - index.html
       - service-worker.js
       - tests/autonomy-diagnostic-regression.cjs
+      - tests/live-routing-locales.cjs
+      - live-locales.js
       - .github/workflows/autonomy-diagnostic.yml
 permissions:
   contents: read
@@ -21,4 +23,5 @@ jobs:
           node-version: '22'
       - run: node tests/autonomy-engine.cjs
       - run: node tests/autonomy-diagnostic-regression.cjs
+      - run: node tests/live-routing-locales.cjs
       - run: node --check live-intelligence.js && node --check service-worker.js
