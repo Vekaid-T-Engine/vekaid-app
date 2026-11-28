@@ -44,7 +44,7 @@ jobs:
               im=Image.open(io.BytesIO(get(u)))
               w,h=im.size
               print('IMAGE',w,h,u,flush=True)
-              if w>=1400 and w/h>=1.5:
+              if w>=1400 and w/h>=1.3:
                 found.append((w,h,u))
                 print(w,h,u,flush=True)
             except Exception as e: print('FAILED',u,str(e),flush=True)
