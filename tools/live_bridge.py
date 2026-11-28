@@ -90,7 +90,7 @@ def make_handler(path, token):
             self.send_header("X-Content-Type-Options", "nosniff")
             self.send_header("Content-Type", "application/json")
             self.send_header("Content-Length", str(len(payload)))
-            self.send_header("Vary", "Origin")
+            self.send_header("Vary", "Origin, Access-Control-Request-Method, Access-Control-Request-Headers, Access-Control-Request-Private-Network" if self.command == "OPTIONS" else "Origin")
             if self.headers.get("Origin") == ORIGIN:
                 self.send_header("Access-Control-Allow-Origin", ORIGIN)
                 if preflight:
@@ -104,13 +104,20 @@ def make_handler(path, token):
         def do_OPTIONS(self):
             if self.path != "/v1/snapshot" or self.headers.get("Origin") != ORIGIN or self.headers.get("Access-Control-Request-Method") != "GET":
                 return self.reply(403)
+            headers = self.headers.get("Access-Control-Request-Headers", "")
+            requested = {name.strip().lower() for name in headers.split(",") if name.strip()}
+            if requested - {"authorization"}:
+                return self.reply(403)
             self.reply(204, preflight=True)
         def do_GET(self):
             if self.path != "/v1/snapshot":
                 return self.reply(404)
             if self.headers.get("Origin") not in (None, ORIGIN):
                 return self.reply(403)
-            supplied = self.headers.get("Authorization", "").encode("utf-8")
+            credentials = self.headers.get_all("Authorization", [])
+            if len(credentials) != 1:
+                return self.reply(401)
+            supplied = credentials[0].encode("utf-8")
             if not hmac.compare_digest(supplied, ("Bearer " + token).encode("ascii")):
                 return self.reply(401)
             try:

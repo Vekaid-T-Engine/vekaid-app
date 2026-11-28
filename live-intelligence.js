@@ -10,8 +10,43 @@ function translate(a,b,locale){const row=labels.find(x=>x[0]===a);return row?.[l
 function isStale(snapshot,now=Date.now()){return !snapshot||now-Date.parse(snapshot.observed_at)>=120000}
 function acceptSnapshot(previous,input,now=Date.now()){const next=validate(input,now);if(previous&&Date.parse(next.observed_at)<Date.parse(previous.observed_at))throw Error('Older snapshot');return next}
 
-function bridgeURL(raw){const u=new URL(raw);if(u.protocol!=='https:'||u.username||u.password||u.port||!u.hostname.endsWith('.ts.net')||u.pathname!=='/'||u.search||u.hash)throw Error('Private HTTPS address required');return u.origin+'/v1/snapshot'}
-async function fetchSnapshot(endpoint,token,signal){const r=await fetch(endpoint,{headers:{Authorization:'Bearer '+token},cache:'no-store',credentials:'omit',redirect:'error',referrerPolicy:'no-referrer',signal});if(!r.ok)throw Error('Bridge unavailable');const reader=r.body?.getReader();if(!reader)throw Error('Missing body');let size=0;const chunks=[];try{for(;;){const x=await reader.read();if(x.done)break;size+=x.value.byteLength;if(size>65536)throw Error('Size');chunks.push(x.value)}}finally{await reader.cancel().catch(()=>{})}const bytes=new Uint8Array(size);let offset=0;for(const c of chunks){bytes.set(c,offset);offset+=c.length}return JSON.parse(new TextDecoder('utf-8',{fatal:true}).decode(bytes))}
+function bridgeURL(raw){const u=new URL(raw);if(u.protocol!=='https:'||u.username||u.password||u.port||!u.hostname.endsWith('.ts.net')||!['/','/v1/snapshot'].includes(u.pathname)||u.search||u.hash)throw Error('Private HTTPS address required');return u.origin+'/v1/snapshot'}
+class BridgeError extends Error {
+ constructor(code){super(code);this.code=code}
+}
+async function fetchSnapshot(endpoint,token,signal){
+ const response=await fetch(endpoint,{headers:{Authorization:'Bearer '+token},cache:'no-store',credentials:'omit',redirect:'error',referrerPolicy:'no-referrer',signal});
+ if(!response.ok)throw new BridgeError(response.status===401?'auth':response.status===403?'origin':response.status===503?'snapshot':'http');
+ const length=response.headers.get('Content-Length');
+ if(length!==null&&(!/^\d+$/.test(length)||Number(length)>65536))throw new BridgeError('snapshot');
+ const reader=response.body?.getReader?.();
+ if(!reader){
+  if(length===null)throw new BridgeError('snapshot');
+  const bytes=new Uint8Array(await response.arrayBuffer());
+  return decodeSnapshot(bytes);
+ }
+ const bytes=new Uint8Array(65536);
+ let offset=0;
+ try{
+  for(;;){
+   const chunk=await reader.read();
+   if(chunk.done)break;
+   if(offset+chunk.value.byteLength>bytes.length)throw new BridgeError('snapshot');
+   bytes.set(chunk.value,offset);
+   offset+=chunk.value.byteLength;
+  }
+ }finally{await reader.cancel().catch(()=>{})}
+ return decodeSnapshot(bytes.subarray(0,offset));
+}
+function decodeSnapshot(bytes){
+ if(bytes.byteLength>65536)throw new BridgeError('snapshot');
+ try{return JSON.parse(new TextDecoder('utf-8',{fatal:true}).decode(bytes))}
+ catch{throw new BridgeError('snapshot')}
+}
+function rememberSnapshot(storage,snapshot,key){
+ try{storage().setItem(key,JSON.stringify(snapshot))}catch{}
+}
+function retryDelay(failures){return Math.min(60000,3000*2**Math.min(failures-1,5))}
 const importedMissionStates = Object.freeze({"queued":["En attente","Queued"],"approved":["Approuvée","Approved"],"running":["En cours","Running"],"completed":["Terminée","Completed"],"failed":["En échec","Failed"],"expired":["Expirée","Expired"],"interrupted":["Interrompue","Interrupted"]});
 let sessionPairing=null;
 function liveIntelligence({locale,layer,$}){
@@ -30,7 +65,49 @@ function liveIntelligence({locale,layer,$}){
  const connect=button(t('Connecter','Connect'),connection,()=>{let endpoint;try{endpoint=bridgeURL(address.value.trim());if(!/^[A-Za-z0-9_-]{32,256}$/.test(secret.value.trim()))throw Error('token')}catch{linkStatus.textContent=t('Adresse ou jeton invalide','Invalid address or token');return}stopBridge();bridge={endpoint,token:secret.value.trim(),next:0};sessionPairing={endpoint,token:secret.value.trim()};secret.value='';connect.disabled=true;disconnect.disabled=false;poll()});
  const disconnect=button(t('Déconnecter','Disconnect'),connection,()=>{stopBridge();linkStatus.textContent=''});disconnect.disabled=true;
  function stopBridge(forget=true){if(forget)sessionPairing=null;bridge=null;requestController?.abort();requestController=null;connect.disabled=false;disconnect.disabled=true}
- async function poll(){const current=bridge;if(!current||requestController||!root.isConnected)return;const controller=new AbortController();requestController=controller;current.next=Date.now()+15000;const timeout=setTimeout(()=>controller.abort(),8000);if(!snapshot)linkStatus.textContent=t('Connexion en cours…','Connecting…');try{const raw=await fetchSnapshot(current.endpoint,current.token,controller.signal);if(bridge!==current||!root.isConnected)return;const next=acceptSnapshot(snapshot,raw);localStorage.setItem(key,JSON.stringify(next));snapshot=next;source='private';render();linkStatus.textContent=t('Dernier relevé reçu','Last snapshot received')}catch{if(bridge===current)linkStatus.textContent=t('Connexion indisponible · dernier relevé conservé','Connection unavailable · last snapshot retained')}finally{clearTimeout(timeout);if(requestController===controller)requestController=null}}
+ async function poll(){
+  const current=bridge;
+  if(!current||requestController||!root.isConnected||document.hidden)return;
+  const controller=new AbortController();
+  requestController=controller;
+  const timeout=setTimeout(()=>controller.abort(),15000);
+  try{
+   const raw=await fetchSnapshot(current.endpoint,current.token,controller.signal);
+   if(bridge!==current||!root.isConnected)return;
+   let next;
+   try{next=acceptSnapshot(snapshot,raw)}catch{throw new BridgeError('snapshot')}
+   snapshot=next;
+   source='private';
+   rememberSnapshot(()=>localStorage,next,key);
+   current.failures=0;
+   current.next=Date.now()+15000;
+   render();
+   linkStatus.textContent=t('Dernier relevé reçu','Last snapshot received');
+  }catch(error){
+   if(bridge!==current||!root.isConnected)return;
+   if(error.code==='auth'){
+    stopBridge();
+    linkStatus.textContent=t('Jeton refusé. Saisissez le jeton du pont.','Token rejected. Enter the bridge token.');
+    return;
+   }
+   current.failures=(current.failures||0)+1;
+   current.next=Date.now()+retryDelay(current.failures);
+   if(controller.signal.aborted)linkStatus.textContent=t('Délai dépassé. Nouvelle tentative automatique.','Timed out. Retrying automatically.');
+   else if(error.code==='snapshot')linkStatus.textContent=t('Relevé Windows indisponible ou invalide. Nouvelle tentative automatique.','Windows snapshot unavailable or invalid. Retrying automatically.');
+   else if(error.code==='origin')linkStatus.textContent=t('Origine refusée. Ouvrez le site VEKAID officiel directement.','Origin rejected. Open the official VEKAID site directly.');
+   else linkStatus.textContent=t('Connexion privée impossible. Vérifiez Tailscale et ouvrez VEKAID dans un onglet.','Private connection failed. Check Tailscale and open VEKAID in a browser tab.');
+  }finally{
+   clearTimeout(timeout);
+   if(requestController===controller)requestController=null;
+  }
+ }
+ const resume=()=>{
+  if(!bridge||document.hidden||!root.isConnected)return;
+  bridge.next=0;
+  poll();
+ };
+ window.addEventListener('online',resume);
+ document.addEventListener('visibilitychange',resume);
  const agents=make('section','',root,'live-card');make('h3',t('IA / Agents','AI / Agents'),agents);
  const rows=make('div','',agents,'live-providers');
  const routing=make('p','',agents,'live-muted');
@@ -64,7 +141,7 @@ function liveIntelligence({locale,layer,$}){
  clear.disabled=!snapshot;
  }
  input.onchange=async()=>{const ticket=++revision;const file=input.files[0];if(!file)return;try{if(file.size>65536)throw Error('Size');const raw=await file.text();if(ticket!==revision||!root.isConnected)return;const incoming=JSON.parse(raw);if(incoming?.format==='vekaid.diagnostic.mission.v1'){const mission=window.VEKAID_AUTONOMY_DIAGNOSTIC.readMissionStatus(incoming);feedback.textContent=t('Mission importée','Imported mission')+' · '+mission.id+' · '+t(...importedMissionStates[mission.state]);return}const next=acceptSnapshot(snapshot,incoming);localStorage.setItem(key,JSON.stringify(next));snapshot=next;source='local';feedback.textContent='';render()}catch{if(ticket===revision&&root.isConnected)feedback.textContent=t('Rapport refusé. Dernière observation conservée.','Report rejected. Previous observation retained.')}finally{if(ticket===revision)input.value=''}};
- render();if(sessionPairing){bridge={...sessionPairing,next:0};address.value=new URL(bridge.endpoint).origin;connect.disabled=true;disconnect.disabled=false;poll()}const timer=setInterval(()=>{if(!root.isConnected){stopBridge(false);clearInterval(timer);return}if(isStale(snapshot)!==wasStale)render();if(bridge&&Date.now()>=bridge.next)poll()},1000);
+ render();if(sessionPairing){bridge={...sessionPairing,next:0};address.value=new URL(bridge.endpoint).origin;connect.disabled=true;disconnect.disabled=false;poll()}const timer=setInterval(()=>{if(!root.isConnected){stopBridge(false);window.removeEventListener('online',resume);document.removeEventListener('visibilitychange',resume);clearInterval(timer);return}if(isStale(snapshot)!==wasStale)render();if(bridge&&Date.now()>=bridge.next)poll()},1000);
 }
-window.VEKAID_LIVE=Object.freeze({open:liveIntelligence,validate,isStale,acceptSnapshot,bridgeURL,fetchSnapshot,translate,languages:Object.freeze(languages.slice())});
+window.VEKAID_LIVE=Object.freeze({open:liveIntelligence,validate,isStale,acceptSnapshot,bridgeURL,fetchSnapshot,rememberSnapshot,retryDelay,translate,languages:Object.freeze(languages.slice())});
 })();
