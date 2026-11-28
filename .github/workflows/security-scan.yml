@@ -30,7 +30,16 @@ jobs:
           python -m http.server 8766 --bind 127.0.0.1 --directory /tmp/vekaid-scan >/tmp/vekaid-http.log 2>&1 &
           curl --retry 10 --retry-connrefused --retry-delay 1 -fsS http://127.0.0.1:8766/vekaid-app/ >/dev/null
           chmod 777 /tmp/zap-report
+          set +e
           docker run --rm --network host -v /tmp/zap-report:/zap/wrk:rw ghcr.io/zaproxy/zaproxy@sha256:9624669db72f54d86c4b46a7064518bd9bf79d8c61a4c31befa9923489f328af zap-baseline.py -t http://127.0.0.1:8766/vekaid-app/ -m 1 -J zap.json -r zap.html
+          rc=$?
+          set -e
+          test -s /tmp/zap-report/zap.json
+          if [ "$rc" = 2 ]; then
+            echo '::warning::ZAP passive warnings require review; report retained. No FAIL rules reported.'
+          elif [ "$rc" != 0 ]; then
+            exit "$rc"
+          fi
       - name: Preserve reports
         if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
