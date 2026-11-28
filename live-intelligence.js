@@ -32,6 +32,7 @@ function liveIntelligence({locale,layer,$}){
  async function poll(){const current=bridge;if(!current||requestController||!root.isConnected)return;const controller=new AbortController();requestController=controller;current.next=Date.now()+15000;const timeout=setTimeout(()=>controller.abort(),8000);if(!snapshot)linkStatus.textContent=t('Connexion en cours…','Connecting…');try{const raw=await fetchSnapshot(current.endpoint,current.token,controller.signal);if(bridge!==current||!root.isConnected)return;const next=acceptSnapshot(snapshot,raw);localStorage.setItem(key,JSON.stringify(next));snapshot=next;source='private';render();linkStatus.textContent=t('Dernier relevé reçu','Last snapshot received')}catch{if(bridge===current)linkStatus.textContent=t('Connexion indisponible · dernier relevé conservé','Connection unavailable · last snapshot retained')}finally{clearTimeout(timeout);if(requestController===controller)requestController=null}}
  const agents=make('section','',root,'live-card');make('h3',t('IA / Agents','AI / Agents'),agents);
  const rows=make('div','',agents,'live-providers');
+ const routing=make('p','',agents,'live-muted');
  const hardware=make('section','',root,'live-card');make('h3',t('Matériel','Hardware'),hardware);
  const metrics=make('div','',hardware,'live-metrics');
  const imports=make('section','',root,'live-card');
@@ -51,6 +52,11 @@ function liveIntelligence({locale,layer,$}){
  function render(){
  const stale=isStale(snapshot);wasStale=stale;
  status.textContent=snapshot?t('Dernière observation : ','Last observation: ')+new Date(snapshot.observed_at).toLocaleString(locale)+(stale?t(' · périmée',' · stale'):(source==='private'?t(' · récente, connexion privée',' · recent, private connection'):source==='saved'?t(' · relevé enregistré',' · saved snapshot'):t(' · récente, import local',' · recent, local import'))):t('Aucune source connectée','No source connected');
+ const engine=window.VEKAID_AUTONOMY;
+ const diagnostic=engine&&window.VEKAID_AUTONOMY_DIAGNOSTIC?.inspect(engine,snapshot,source);
+ routing.hidden=!diagnostic?.observedAt;
+ routing.textContent=diagnostic&&diagnostic.eligibleAgents.length===0
+   ? t('Aucun agent vérifié pour une mission','No agents verified for mission routing') : '';
  rows.replaceChildren();metrics.replaceChildren();
  for(const id of providers){const row=make('div','',rows,'live-provider');make('strong',({'claude':'Claude Code','codex':'Codex','chatgpt-images':'ChatGPT Images','ollama':'Ollama','wangp':'WanGP'})[id],row);const p=snapshot?.providers.find(x=>x.id===id),states={'unknown':t('Inconnu','Unknown'),'process-present':t('Processus détecté, activité inconnue','Process detected, activity unknown'),'process-absent':t('Processus non détecté','Process not detected'),'limited':t('Limité','Limited'),'available':t('Disponible selon la source','Available according to source'),'busy':t('Occupé selon la source','Busy according to source')};make('small',stale?t('État actuel inconnu','Current state unknown'):states[p?.state||'unknown'],row);if(p?.used_percent!=null)make('small',t('Dernière utilisation : ','Last usage: ')+p.used_percent+'%',row);if(p?.reset_at)make('small',t('Renouvellement annoncé : ','Reported reset: ')+new Date(p.reset_at).toLocaleString(locale),row)}
  for(const [k,name] of Object.entries({cpu_percent:'CPU',ram_percent:'RAM',gpu_percent:'GPU',gpu_temperature_c:t('Température GPU','GPU temperature'),vram_percent:'VRAM',storage_percent:t('Stockage','Storage')})){const card=make('div','',metrics,'live-metric');make('small',name,card);make('strong',(snapshot?.hardware[k]??'—')+(snapshot?.hardware[k]!=null?(k==='gpu_temperature_c'?' °C':' %'):''),card);if(stale&&snapshot)make('small',t(' (ancien)',' (stale)'),card)}

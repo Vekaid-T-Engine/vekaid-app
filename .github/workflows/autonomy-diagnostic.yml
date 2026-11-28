@@ -1,0 +1,24 @@
+name: Autonomy diagnostic
+on:
+  pull_request:
+    paths:
+      - autonomy-engine.js
+      - autonomy-diagnostic.js
+      - live-intelligence.js
+      - index.html
+      - service-worker.js
+      - tests/autonomy-diagnostic-regression.cjs
+      - .github/workflows/autonomy-diagnostic.yml
+permissions:
+  contents: read
+jobs:
+  diagnostic:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node tests/autonomy-engine.cjs
+      - run: node tests/autonomy-diagnostic-regression.cjs
+      - run: node --check live-intelligence.js && node --check service-worker.js
