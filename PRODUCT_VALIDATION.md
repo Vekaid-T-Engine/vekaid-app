@@ -47,3 +47,14 @@ Apply shared gates to websites, ecommerce, PWA, native apps, software and automa
 8. Prefer reproducible scripts for repetitive deterministic work, with dry-run, scope validation, tests and logs; never bypass approval.
 9. RAG: retrieve relevant source passages with provenance and access checks; treat retrieved text as untrusted. MCP/plugins/skills: least privilege. LLM judge: rubric, calibrated examples and independent deterministic checks; never sole security gate. Unreadable fourth concept not attributed.
 10. Short demos, slideshows, original adaptations of viral formats, objection replies, trial reels and niche pages; measure real outcomes, no fabricated engagement. Other unreadable details not attributed.
+
+## Universal workflow — V7 candidate: evidence and product experience
+
+- Peak-end: acknowledge actual completed work before returning home; optional neutral feedback only, never gate or bias ratings.
+- Performance: measure slow queries, request work and geographic latency; index and cache only when justified; no paid CDN assumption.
+- Design references: use real button patterns, Pinterest/Mobbin references where freely accessible; do not copy assets or install unverified tools.
+- Onboarding: concise welcome and clear next action; no repeated mandatory onboarding.
+- Product validation: measure real retention and outcomes; never fabricate revenue or engagement. Pricing/value perception (Veblen effect) is a hypothesis, not a reason to inflate prices or mislead.
+- Motion: subtle purposeful feedback, respect prefers-reduced-motion, test keyboard and dark theme after animation settles.
+- Independent review: verify multi-tab data integrity, atomic read/validate/write transactions, orphan prevention, focus and draft preservation, local dates, export escaping, syntax checks, cache consistency. Re-test fixes independently; document budget exceptions and skipped browser tests. Do not claim offline WebKit validation when skipped. Shared Pages origin is not a security boundary.
+- Provenance: seven supplied videos visually sampled, audio not transcribed; product metrics and unclear tool claims not adopted as facts. Review principles from user-provided challenge report are separate from video observations.
