@@ -1,0 +1,24 @@
+name: Private bridge compatibility
+on:
+  pull_request:
+    paths:
+      - live-intelligence.js
+      - tools/live_bridge.py
+      - tests/private-bridge.cjs
+      - tests/test_bridge_cors.py
+      - .github/workflows/private-bridge.yml
+permissions:
+  contents: read
+jobs:
+  compatibility:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: node tests/private-bridge.cjs
+      - run: python -B tests/test_bridge_cors.py
