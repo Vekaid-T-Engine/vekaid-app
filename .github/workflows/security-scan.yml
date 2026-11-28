@@ -1,0 +1,38 @@
+name: Security scan
+on:
+  pull_request:
+  workflow_dispatch:
+  schedule:
+    - cron: '15 4 * * 1'
+permissions:
+  contents: read
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          persist-credentials: false
+      - name: Python static security scan
+        run: |
+          python -m pip install bandit==1.8.6
+          bandit -r tools -f json -o /tmp/bandit.json -ll -ii
+      - name: ZAP passive scan on isolated static copy
+        if: always()
+        run: |
+          mkdir -p /tmp/vekaid-scan /tmp/zap-report
+          git archive HEAD | tar -x -C /tmp/vekaid-scan
+          python -m http.server 8766 --bind 127.0.0.1 --directory /tmp/vekaid-scan >/tmp/vekaid-http.log 2>&1 &
+          curl --retry 10 --retry-connrefused --retry-delay 1 -fsS http://127.0.0.1:8766/ >/dev/null
+          chmod 777 /tmp/zap-report
+          docker run --rm --network host -v /tmp/zap-report:/zap/wrk:rw ghcr.io/zaproxy/zaproxy:stable zap-baseline.py -t http://127.0.0.1:8766/ -m 1 -J zap.json -r zap.html
+      - name: Preserve reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: security-scan-reports
+          path: |
+            /tmp/bandit.json
+            /tmp/zap-report/
+          retention-days: 7
