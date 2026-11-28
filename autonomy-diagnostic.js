@@ -17,7 +17,18 @@
     };
   }
 
-  const api = Object.freeze({inspect});
+  const missionStates = new Set(["queued","approved","running","completed","failed","expired","interrupted"]);
+
+  function readMissionStatus(value) {
+    if (value?.format !== 'vekaid.diagnostic.mission.v1' ||
+        typeof value.id !== 'string' || !/^[A-Za-z0-9_-]{1,64}$/.test(value.id) ||
+        !missionStates.has(value.state)) {
+      throw Error('Invalid diagnostic mission status');
+    }
+    return {id: value.id, state: value.state};
+  }
+
+  const api = Object.freeze({inspect, readMissionStatus});
   if (typeof module !== 'undefined' && module.exports) module.exports = api;
   else root.VEKAID_AUTONOMY_DIAGNOSTIC = api;
 })(typeof window !== 'undefined' ? window : globalThis);
