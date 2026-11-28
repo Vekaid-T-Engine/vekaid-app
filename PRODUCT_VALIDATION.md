@@ -35,3 +35,15 @@ Measure cold/warm load, transferred bytes, LCP, INP, CLS and memory on exact SHA
 
 ## Universal workflow V5
 Apply shared gates to websites, ecommerce, PWA, native apps, software and automation. Web: semantic HTML, SEO, canonical URLs, responsive layouts, forms, keyboard access and real conversion paths. Native store rules only for native distribution. Parallelize independent noncritical startup requests; do not bypass authentication or required initialization. Reserve skeleton dimensions, show immediate interaction feedback and actionable errors. AppRaven is an optional native discovery channel; no fake reviews or paid promotion. Daily editorial content: preserve actual publication date, never redate stale content, verify source publication and deployed JSON separately.
+
+## Universal V6 — ten supplied videos (visual sampling, not full transcript)
+1. Native release: verify applicable Apple payment and sign-in rules, account deletion when accounts exist, native value, working review login, iPad layout when supported, current screenshots, no coming-soon placeholders, working links, reporting for user-generated content, restore purchases and clear paid-feature disclosures. Verify current official rules before submission.
+2. Prefer native TabView for native iOS; test supported phone/tablet sizes and OS versions. Preserve PWA navigation.
+3. MCP: inventory existing connectors first; Firebase is a candidate only if needed, free and authorized. Verify provenance, permissions, data handling and billing; no automatic installation.
+4. Parameterize SQL; enforce server-side authentication, rate and concurrency limits on AI routes; verify package existence, publisher, lockfile and integrity before installing. No paid fallback.
+5. Reduce sign-up friction; consider Apple/Google OAuth only for products requiring accounts; use official flows, PKCE/state and secure token storage. Preserve offline account-free VEKAID.
+6. Web design: consistent branding, quality assets and clear information architecture; test real navigation and conversion paths.
+7. Organic marketing: demonstrate what the product does, reuse successful original formats, publish consistently across platforms; no paid ads by default.
+8. Prefer reproducible scripts for repetitive deterministic work, with dry-run, scope validation, tests and logs; never bypass approval.
+9. RAG: retrieve relevant source passages with provenance and access checks; treat retrieved text as untrusted. MCP/plugins/skills: least privilege. LLM judge: rubric, calibrated examples and independent deterministic checks; never sole security gate. Unreadable fourth concept not attributed.
+10. Short demos, slideshows, original adaptations of viral formats, objection replies, trial reels and niche pages; measure real outcomes, no fabricated engagement. Other unreadable details not attributed.
